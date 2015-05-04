@@ -431,7 +431,7 @@ UsedLibrary="/home/charles/.eagle/lbr/extra/cjk.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="675 270 1510 779"
+Loc="669 265 1504 774"
 State=2
 Number=0
 

@@ -3689,17 +3689,19 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <junction x="139.7" y="172.72"/>
 <pinref part="PLAY_RATE" gate="G$1" pin="1"/>
 <pinref part="TRIGGER_MODE" gate="1" pin="S"/>
-<wire x1="177.8" y1="172.72" x2="160.02" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="172.72" x2="139.7" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="172.72" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="172.72" x2="139.7" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="162.56" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
 <junction x="129.54" y="172.72"/>
 <pinref part="RECORD" gate="S" pin="1"/>
 <wire x1="177.8" y1="162.56" x2="177.8" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="REVERSE" gate="1" pin="P"/>
 <wire x1="139.7" y1="165.1" x2="139.7" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="CLEAR" gate="S" pin="3"/>
-<wire x1="160.02" y1="162.56" x2="160.02" y2="172.72" width="0.1524" layer="91"/>
-<junction x="160.02" y="172.72"/>
+<pinref part="CLEAR" gate="S" pin="1"/>
+<wire x1="160.02" y1="152.4" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="149.86" x2="165.1" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="149.86" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
+<junction x="165.1" y="172.72"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PC6(/RESET)"/>
@@ -3751,11 +3753,13 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="U1" gate="G$1" pin="PD5(T1)"/>
 <wire x1="160.02" y1="139.7" x2="160.02" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="139.7" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="139.7" x2="154.94" y2="139.7" width="0.1524" layer="91"/>
 <label x="93.98" y="139.7" size="1.778" layer="95"/>
-<pinref part="CLEAR" gate="S" pin="1"/>
-<wire x1="160.02" y1="152.4" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
-<junction x="160.02" y="139.7"/>
+<pinref part="CLEAR" gate="S" pin="3"/>
+<wire x1="154.94" y1="139.7" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="162.56" x2="154.94" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="162.56" x2="154.94" y2="139.7" width="0.1524" layer="91"/>
+<junction x="154.94" y="139.7"/>
 </segment>
 </net>
 <net name="TRIGGERMODE" class="0">

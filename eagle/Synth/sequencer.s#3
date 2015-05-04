@@ -3614,7 +3614,7 @@ Standard 8.5x11 US Letter frame</description>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="NO_PACKAGE">
-<attribute name="DESIGNER" value="&gt;DESIGNER"/>
+<attribute name="DESIGNER" value="Charles Julian Knight"/>
 </part>
 </parts>
 <sheets>
@@ -3661,8 +3661,8 @@ Standard 8.5x11 US Letter frame</description>
 <instance part="GND11" gate="1" x="20.32" y="127"/>
 <instance part="GND12" gate="1" x="35.56" y="127"/>
 <instance part="FRAME1" gate="G$1" x="-33.02" y="48.26">
-<attribute name="DESIGNER" x="-33.02" y="48.26" size="1.778" layer="96"/>
-<attribute name="VERSION" x="-33.02" y="48.26" size="1.778" layer="96"/>
+<attribute name="DESIGNER" x="-33.02" y="48.26" size="1.778" layer="96" display="off"/>
+<attribute name="VERSION" x="-33.02" y="48.26" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="FRAME1" gate="V" x="114.3" y="48.26"/>
 </instances>

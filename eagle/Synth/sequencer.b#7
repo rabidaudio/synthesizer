@@ -5924,7 +5924,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="U$1" library="cjk" package="RABID.AUDIO2" value="" x="5.08" y="12.7" rot="MR90"/>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="DUMMY" value="" x="0" y="-1.27">
 <attribute name="VERSION" value="v01" x="0" y="-1.27" size="1.778" layer="27" display="off"/>
-<attribute name="DESIGNER" value="Nobody" x="0" y="-1.27" size="1.778" layer="27" display="off"/>
+<attribute name="DESIGNER" value="Charles Julian Knight" x="0" y="-1.27" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
