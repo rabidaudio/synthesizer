@@ -1,6 +1,6 @@
 
-#define BUFF_SIZE 768
-#define DEBUG 0
+#define BUFF_SIZE 768 //this is pretty close to maxing out the memory of a ATMEGA328P. Chosen because it's a power-of-two-ish number
+#define DEBUG 0       //set to 1 to see Serial ouput
 
 #define analogInPin A0
 #define analogOutPin 9
@@ -16,20 +16,19 @@
 #define triggerInterrupt 1
 #define triggerPin 3
 
-// Sample memory
-short BUFFER[BUFF_SIZE];
-// pointers to read/write positions
-int readIndex = 0;
-int writeIndex = 0;
+short BUFFER[BUFF_SIZE];         // Sample memory
+int readIndex, writeIndex = 0;   // pointers to read/write positions
 
 //state variables
-boolean recordBtn, clearBtn;
-boolean playbackReverse = false;
-boolean triggerMode = false;
-boolean triggered = false;
-boolean playing = false;
+boolean recordBtn, clearBtn;     //are these buttons pressed?
+boolean playbackReverse = false; //are we in reverse playback mode?
+boolean triggerMode = false;     // are we in trigger mode (playback doesn't loop but starts on interrupt)?
+boolean triggered = false;       // has a sample trigger been fired and hasn't completed?
+boolean playing = false;         // is there a sample actually playing back right now?
 
-//TODO maybe smarter to replace triggerMode with contenous mode that triggers at end
+
+//TODO maybe smarter to replace current triggerMode implementation where we are always
+// in trigger mode, and you can send a onComplete pulse back to the trigger to loop
 
 void setup() {
   if(DEBUG) Serial.begin(9600); 
@@ -42,20 +41,24 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(playbackGatePin, OUTPUT);
   
+  //when we get a signal on interrupt0, play/record. This way the sample rate
+  // is externally controllable
   attachInterrupt(sampleInterrupt, sample, RISING);
 }
 
 void loop() {
-  //this is where we sample user inputs (switches and the like)
+  //this is where less timing-critical code goes.
+  // Here we sample user inputs (switches and the like)
   
   recordBtn = digitalRead(recordPin);
   clearBtn = digitalRead(clearPin);
-  digitalWrite(ledPin, (recordBtn ? HIGH : LOW));
-  digitalWrite(playbackGatePin, (playing ? HIGH : LOW));
+  digitalWrite(ledPin, (recordBtn ? HIGH : LOW)); //light up LED when recording
+  digitalWrite(playbackGatePin, (playing ? HIGH : LOW)); //pull the playbackGate high when playing
   
-  // s
+  // check if there was a change in trigger mode
   if(digitalRead(triggerModePin) != triggerMode){
     triggerMode = !triggerMode;
+    // enable/disable the trigger interrupt
     if(triggerMode){
       attachInterrupt(triggerInterrupt, trigger, RISING); 
     }else{
@@ -69,9 +72,11 @@ void loop() {
     playbackReverse = !playbackReverse;
   }
   if(clearBtn){
-    //clear
+    //to clear the memory, we don't actually need to touch the BUFFER at all.
+    // just need to reset the write index back to zero. Past data will get overwritten
+    // on the next record
     readIndex = writeIndex = 0;
-    analogWrite(analogOutPin, 0);
+    analogWrite(analogOutPin, 0); //explicitly pull the output low
   }
   
   if(DEBUG) debugPrint();
@@ -87,12 +92,12 @@ void trigger(){
 
 void sample(){
   
-  //record
-  if(recordBtn && writeIndex < BUFF_SIZE){
+  if(recordBtn && writeIndex < BUFF_SIZE){ //if record is pressed and there's still memory in the BUFFER
+    //record
     BUFFER[writeIndex++] = analogRead(analogInPin);
   
-  //play
   }else if(writeIndex > 0){// if there are samples to play
+    //play
     if(!triggerMode || triggered){
       playing = true;      
       analogWrite(analogOutPin, BUFFER[readIndex]);
@@ -116,6 +121,7 @@ void sample(){
 
 
 void debugPrint(){
+    // sanity checks
     Serial.print(readIndex);
     Serial.print("\t");
     Serial.print(writeIndex);
@@ -124,9 +130,11 @@ void debugPrint(){
     Serial.print("\t");
     Serial.print(recordBtn);
     Serial.print("\t");
+    Serial.print(clearBtn);
+    Serial.print("\t");
     Serial.print(triggerMode);
     Serial.print("\t");
     Serial.print(triggered);
     Serial.print("\t");
-    Serial.println(clearBtn);
+    Serial.println(playing);
 }
