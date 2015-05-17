@@ -106,6 +106,6 @@ Aaron Lanterman
 
 @charlesjuliank
 
-github.com/rabidaudio/synth
+github.com/rabidaudio/synthesizer
 
 rabid.audio/blog
