@@ -40,11 +40,11 @@ Well, synthesizers are a great jumping off point into analog electronics.
 
 ---
 
-# Why snythesizers?
+# Why synthesizers?
 
 ???
 
-So why learn electronics with snythesizers?
+So why learn electronics with synthesizers?
 
 ---
 name: whysynth
@@ -61,7 +61,7 @@ It's a form of artistic expression. It's very sensory driven. Turning knobs chan
 
 ???
 
-This stuff is old-fasioned. Nowadays everything is smaller, more complicated, and harder to use.
+This stuff is old-fashioned. Nowadays everything is smaller, more complicated, and harder to use.
 Old stuff like this, the components are bigger, the circuits are simpler, and the patents have started to expire.
 
 ---
@@ -79,7 +79,7 @@ rising popularity of EDM and Dubstep.
 
 ## Anatomy of a synthesizer
 
-.left-column[
+.my-left-column[
 ### pitch
 ### loudness
 ### timbre
@@ -87,7 +87,7 @@ rising popularity of EDM and Dubstep.
 
 <i class="fa fa-arrow-right myarrow"></i>
 
-.right-column[
+.my-right-column[
 ### frequency
 ### amplitude
 ### shape (harmonics)
@@ -120,14 +120,14 @@ class: webcam
 
 ???
 
-# Demo 1
+### Demo 1
 
-First we use an osciallator to make a wave. We can control the frequency, and the shape (square vs. saw).
+First we use an oscillator to make a wave. We can control the frequency, and the shape (square vs. saw).
 Then we pass it through a filter, were we can control more of the shape by cutting off higher harmonics
 or even adding more.
 Finally we pass it through an amplifier to control the loudness.
 
-
+Filter cutoff is wah sound for guitarists in the room
 
 ---
 
@@ -139,3 +139,137 @@ background-image: url(/i/module.png)
 
 ---
 background-image: url(/i/VCF.png)
+
+---
+
+# Modulation
+
+???
+
+### GO BACK TO DEMO
+
+filter sweep at a regular rate?
+External modulation: LFO filter sweep
+Vibrato
+FM modulation
+
+---
+
+# So what did *you* build?
+
+---
+class: list
+
+# LFO
+
+- Oscillates  roughly .1Hz to 100Hz
+- Square and triangle outputs
+- Adjustable amount
+
+.footnote[*not yet voltage controllable]
+
+???
+
+## Go back to demo
+
+- just my LFO
+- my LFO at a different rate than bult-in
+- mine adjusting the rate of the built-in
+
+---
+class: list
+
+# Sequencer
+
+- 
+
+---
+
+.left-column[
+## Memory
+
+## onRecord
+
+## onPlay
+]
+
+.right-column[
+```C
+short buffer[512];
+```
+
+```C
+while(record){
+  buffer.push(analogRead(input));
+}
+```
+
+```C
+while(play){
+  analogWrite(buffer.next(), output);
+}
+```
+]
+
+.footnote[
+  Super simplified. See Github for source.
+]
+
+
+???
+
+
+
+
+10 bit vs. 16 bit
+
+features:
+
+- reverse
+- adjustable rate
+- clear
+-trigger mode
+
+---
+background-image: url(/i/schem.png)
+
+???
+
+Doing PCB layouts in Eagle. The Schematic is done
+
+---
+class: bgblack
+background-image: url(/i/board.png)
+
+???
+
+The board needs a little work
+
+
+---
+class: list
+
+# Future work
+
+- Entirely custom modules
+- 3 filters: 4-pole LP, HP, state-variable
+- Buffed-up VCA
+- Extra LFOs
+- Second VCO with relative tune control
+- MIDI keyboard
+- Patch memory
+
+
+???
+
+- replace Werkstatt with all custom modules
+- 3 filters: 4-pole LP, HP, state-variable
+- buffed-up VCA
+  - individually-controllable inputs (mixer)
+  - higher output
+  - stereo output
+  - ability to invert stereo phase
+- a couple 4-decade LFO's with clock input, PWM control
+- second oscillator with relative tune control
+- MIDI keyboard+EV replacement
+- patch memory

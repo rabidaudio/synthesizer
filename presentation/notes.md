@@ -32,24 +32,13 @@ all things musicians like to do
 
 #### Magic in the modulation
 
-filter sweep at a regular rate?
 
-External modulation: LFO filter sweep
-
-Vibrato
-
-FM modulation
-
-## So what did **you** build?
 
 
 ### LFO
 
 LFO
-wide oscillation range, roughly .1Hz to 100Hz
-Square and triangle
-Ammount is adjustable
-currently not voltage controllable - future
+
 
 Demo:
 just my LFO
