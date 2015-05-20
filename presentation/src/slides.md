@@ -79,6 +79,20 @@ rising popularity of EDM and Dubstep.
 
 ## Anatomy of a synthesizer
 
+.left-column[
+### pitch
+### loudness
+### timbre
+]
+
+<i class="fa fa-arrow-right myarrow"></i>
+
+.right-column[
+### frequency
+### amplitude
+### shape (harmonics)
+]
+
 ???
 
 Some of you probably don't have any idea how a synthesizer works or what it does, so here's a 
@@ -96,11 +110,6 @@ These are directly related concepts to signals:
 - amplitude
 - shape (harmonics)
 
-First we use an osciallator to make a wave. We can control the frequency, and the shape (square vs. saw).
-Then we pass it through a filter, were we can control more of the shape by cutting off higher harmonics
-or even adding more.
-Finally we pass it through an amplifier to control the loudness.
-
 
 ### 
 
@@ -109,4 +118,24 @@ class: webcam
 
 <!-- Webcam -->
 
+???
+
+# Demo 1
+
+First we use an osciallator to make a wave. We can control the frequency, and the shape (square vs. saw).
+Then we pass it through a filter, were we can control more of the shape by cutting off higher harmonics
+or even adding more.
+Finally we pass it through an amplifier to control the loudness.
+
+
+
 ---
+
+# Modularity
+### Where the magic comes from
+
+---
+background-image: url(/i/module.png)
+
+---
+background-image: url(/i/VCF.png)

@@ -138,14 +138,24 @@ li {
 .left-column {
   color: #777;
   width: 20%;
-  height: 92%;
+  height: 70%;
   float: left;
+  text-align: left;
 }
-  .left-column h2:last-of-type, .left-column h3:last-child {
+/*  .left-column h2:last-of-type, .left-column h3:last-child {
     color: #000;
-  }
+  }*/
 .right-column {
+  color: #777;
   width: 75%;
   float: right;
-  padding-top: 2em;
+  text-align: right;
+  /*padding-top: 2em;*/
+
+}
+
+.myarrow {
+  position: absolute;
+  left: 46%;
+  top: 50%;
 }
