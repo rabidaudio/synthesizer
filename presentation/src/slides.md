@@ -20,18 +20,6 @@ development so that I can just do side projects for a living.
 Today I thought I'd show you one of my side projects, the synthesizer I'm putting together,
 and maybe inspire you to dive into hardware.
 
----
-
-# Why?
-
-???
-
----
-
-# Learn
-
-???
-
 I figure most of the people in this room are software people. And I suspect there are a few people
 who've maybe played with an arduino or a raspberry pi, sensors and LEDs and the like, but the 
 thought of transistors or capacitors intimidates you. 
@@ -53,7 +41,9 @@ name: whysynth
 
 ???
 
-It's a form of artistic expression. It's very sensory driven. Turning knobs changes what you hear, etc.
+It's a form of artistic expression. connecting the technical with the artistic.
+
+It's very sensory driven. Turning knobs changes what you hear, etc.
 
 ---
 ## 2
@@ -123,12 +113,16 @@ class: webcam
 
 ### Demo 1
 
+I have here a Moog Werkstatt. It's an open-source hackable synthesizer. 
+
 First we use an oscillator to make a wave. We can control the frequency, and the shape (square vs. saw).
 Then we pass it through a filter, were we can control more of the shape by cutting off higher harmonics
 or even adding more.
 Finally we pass it through an amplifier to control the loudness.
 
 Filter cutoff is wah sound for guitarists in the room
+
+So the nice thing is all of these are modules
 
 ---
 
@@ -138,14 +132,31 @@ Filter cutoff is wah sound for guitarists in the room
 ---
 background-image: url(/i/module.png)
 
+???
+
+All modules basically work like so.
+
+You have a signal input and output, and you control how the signal is changed through control voltages.
+
 ---
 background-image: url(/i/VCF.png)
+
+???
+
+So here's the same diagram for the filter i just showed you.
+
+VCF stands for voltage controlled filter
+
+We've got two controls for our filter, cutoff frequency and resonance. it would take too long 
+to explain exactly what the resonance does, but for now just know it adds higher harmonics.
 
 ---
 
 # Modulation
 
 ???
+
+And Modularity gives us Modulation
 
 ### GO BACK TO DEMO
 
