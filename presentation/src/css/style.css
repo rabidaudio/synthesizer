@@ -157,7 +157,7 @@ height: 92%;
 .my-left-column {
   color: #777;
   width: 20%;
-  height: 70%;
+  height: 0;
   float: left;
   text-align: left;
 }
@@ -183,9 +183,10 @@ height: 92%;
 }
 
 .list ul {
+  margin-top: 10%;
   text-align: left;
 }
-.list h1 {
+.list h1, .list h2 {
   position: absolute;
   top: 0;
   left: 0;

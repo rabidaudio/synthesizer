@@ -76,6 +76,7 @@ Analog systems are starting to make a comeback, and I think it is thanks to an i
 rising popularity of EDM and Dubstep. 
 
 ---
+class: list
 
 ## Anatomy of a synthesizer
 
@@ -245,6 +246,50 @@ background-image: url(/i/board.png)
 
 The board needs a little work
 
+---
+# Others
+
+---
+class: list
+# Octopus VCF
+
+???
+
+For class, we build a Low pass filter using Vactrols, which
+are LEDs glued to voltage-controlled resistors. 
+
+We 3d printed a little box for the LEDs and designed the board. 
+
+Had to turn it in, so I couldn't bring it but to show, but I'm going
+to make another one soon. 
+
+---
+background-image: url(/i/octopus.jpg)
+
+???
+
+- 4-pole lowpass filter
+- cutoff and resonance controls
+- custom vactrols
+- combined Buchla's vactrol current circuits with Ray Wilson's 4-pole design
+
+---
+background-image: url(/i/box.png)
+
+---
+# Second VCO
+
+---
+background-image: url(/i/vco.jpg)
+
+???
+
+I'm also adding a second VCO to the mix.
+
+It doesn't work yet, and you can probably tell why. 
+
+It will be tunable relative to the first vVCO
+so they can be in tune, or in thirds, or fifths or octaves above or below
 
 ---
 class: list
@@ -255,7 +300,7 @@ class: list
 - 3 filters: 4-pole LP, HP, state-variable
 - Buffed-up VCA
 - Extra LFOs
-- Second VCO with relative tune control
+- Second VCO with relative tune
 - MIDI keyboard
 - Patch memory
 
@@ -273,3 +318,20 @@ class: list
 - second oscillator with relative tune control
 - MIDI keyboard+EV replacement
 - patch memory
+
+
+---
+class: inverse
+
+### Learn more
+[rabidaudio/synthesizer](https://github.com/rabidaudio/synthesizer)  
+[rabid.audio/blog](http://rabid.audio/blog)
+
+### DIY Synth resources
+[Ray Wilson, *Make: Analog Synthesizers*](http://www.amazon.com/Make-Analog-Synthesizers-Ray-Wilson/dp/1449345220)  
+[Aaron Lanterman's class notes](http://users.ece.gatech.edu/lanterma/acms)
+
+
+.footnote[
+  @charlesjuliank
+]
