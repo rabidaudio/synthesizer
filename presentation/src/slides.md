@@ -182,7 +182,26 @@ class: list
 
 # Sequencer
 
-- 
+- Record patterns and play them back
+- Change the playback rate
+- ~30 seconds of record time
+- reverse mode
+- trigger mode
+
+???
+
+### Demo!!!
+
+- show recording a pattern
+- changing speed
+- reverse mode
+- trigger mode
+
+You might notice it's a little out of tune.
+the ATMega has 10 bit DACs and ADCs, so a single bit
+of variation is a pretty significant pitch change (you can hear it)
+
+I bought some external 16-bit DACs and ADCs. However, they are really small
 
 ---
 
@@ -219,17 +238,19 @@ while(play){
 
 ???
 
+Here's the basicly what the microprocessor does it half-C,
+half-javascript Frankenstein pseudo-code.
 
+The source code is out on the github link if you want to see it.
 
+---
+# TI ADS1110
+### 16-bit I<sup>2</sup>C
 
-10 bit vs. 16 bit
+![adc](/i/quarter-s.jpg)
 
-features:
-
-- reverse
-- adjustable rate
-- clear
--trigger mode
+---
+background-image: url(/i/quarter2.jpg)
 
 ---
 background-image: url(/i/schem.png)
@@ -250,7 +271,6 @@ The board needs a little work
 # Others
 
 ---
-class: list
 # Octopus VCF
 
 ???
