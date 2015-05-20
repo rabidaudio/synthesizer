@@ -19,6 +19,9 @@ The modular is a big one for you software types.
 
 ### Intro to Synths
 
+Some of you probably don't have any idea how a synthesizer works or what it does, so here's a 
+very brief, simplified introduction. 
+
 ### No calculus
 
 Just like software developers, hardware developers are lazy
