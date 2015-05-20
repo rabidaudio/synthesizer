@@ -4206,7 +4206,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="R7" library="SparkFun-Passives" deviceset="RESISTOR" device="1206" value="10k"/>
-<part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="1206" value="100n"/>
+<part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="1206" value=".1u"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="R9" library="SparkFun-Passives" deviceset="RESISTOR" device="1206" value="10k"/>
 <part name="IC2" library="ads11xx" deviceset="ADS1110" device=""/>
