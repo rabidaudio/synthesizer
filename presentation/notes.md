@@ -22,43 +22,68 @@ The modular is a big one for you software types.
 Some of you probably don't have any idea how a synthesizer works or what it does, so here's a 
 very brief, simplified introduction. 
 
-### No calculus
+When making music, you've basically got control of three parameters:
 
-Just like software developers, hardware developers are lazy
+- pitch
+- loudness
+- timbre
 
-##### 4 equations
+These are directly related concepts to signals:
 
-- V=I*R (Ohm's law)
-- fo = 1/(2*pi*R*C) (RC filter cutoff)
-- (Ideal Op amps) Vo/Vi = -Rf/Ri, Rf/Ri + 1
-- ???
+- frequency
+- amplitude
+- shape (harmonics)
 
+First we use an osciallator to make a wave. We can control the frequency, and the shape (square vs. saw).
+Then we pass it through a filter, were we can control more of the shape by cutting off higher harmonics
+or even adding more.
+Finally we pass it through an amplifier to control the loudness.
 
-### Modules
+Demo:
+
+<!-- Frequency about 11, filter full open, EG, no modulation -->
+
+Filter cutoff is wah sound for guitarists in the room
+
+#### Modules 
+
+The idea behind an analog synthesizer is modularity. Each of these parts act independantly, like so:
 
     CV CV
      | |
 in->[   ]->out
 
-VCO(oneVoltPerOctaveFrequencyCV, shape){
-  exponentialVoltage = LinearExponentialConvert(oneVoltPerOctaveFrequencyCV);
-  resistorFrequencyCV = OTA(exponentialVoltage);
-  [square, triangle] = 2OpAmpSqTriOsc(resistorFrequencyCV);
-  sine = WaveShape(triangle);
+For our filter, signal in, signal out, cutoff control, resonance control
 
-  switch(shape){
-    case 'square': wave = square;
-    case 'triangle': wave = triangle;
-    case 'sine': wave = sine;
-  }
+The value:
+move them around, use them for things they weren't indended for, add more of them
+all things musicians like to do
 
-  return wave;
-}
+#### Magic in the modulation
+
+filter sweep at a regular rate?
+
+External modulation: LFO filter sweep
+
+Vibrato
+
+FM modulation
+
+## So what did **you** build?
 
 
 ### LFO
 
+LFO
+wide oscillation range, roughly .1Hz to 100Hz
+Square and triangle
+Ammount is adjustable
+currently not voltage controllable - future
 
+Demo:
+just my LFO
+my LFO at a different rate than bult-in
+mine adjusting the rate of the built-in
 
 ### Sequencer
 
@@ -81,6 +106,10 @@ features:
 - adjustable rate
 - clear
 -trigger mode
+
+### Octopus
+
+
 
 ### Boards
 

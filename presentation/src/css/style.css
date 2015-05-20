@@ -1,29 +1,38 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 body {
-  font-family: 'Droid Serif';
+  font-family: 'Droid Sans';
   font-size: 20px;
 }
 h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: 'Montserrat';
   font-weight: 400;
   margin-bottom: 0;
 }
 h1 { font-size: 4em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.6em; }
+
+.webcam {
+  padding: 0 !important;
+}
+
 .footnote {
   position: absolute;
   bottom: 3em;
 }
 li p { line-height: 1.25em; }
-.red { color: #fa0000; }
 .large { font-size: 2em; }
-a, a > code {
+a {
+  font-family: 'monospace';
+  font-size: .9em;
+  color: #ffffff;
+}
+/*a, a > code {
   color: rgb(249, 38, 114);
   text-decoration: none;
-}
+}*/
 code {
   -moz-border-radius: 5px;
   -web-border-radius: 5px;
@@ -50,12 +59,12 @@ code {
   padding: 15px;
 }
 .inverse {
-  background: #272822;
-  color: #777872;
+  background: #0D5578;
+  color: #ffffff;
   text-shadow: 0 0 20px #333;
 }
 .inverse h1, .inverse h2 {
-  color: #f3f3f3;
+  color: #ffffff;
   line-height: 0.8em;
 }
 
