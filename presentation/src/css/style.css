@@ -8,7 +8,7 @@ body {
 h1, h2, h3 {
   font-family: 'Montserrat';
   font-weight: 400;
-  margin-bottom: 0;
+  margin-bottom: 2em;
 }
 h1 { font-size: 4em; }
 h2 { font-size: 2em; }
@@ -33,12 +33,21 @@ a {
   color: rgb(249, 38, 114);
   text-decoration: none;
 }*/
+.top {
+  position: absolute;
+  top:3em;
+}
+
 code {
   -moz-border-radius: 5px;
   -web-border-radius: 5px;
   background: #e7e8e2;
   border-radius: 5px;
   font-size: 16px;
+}
+
+li {
+  list-style-position: inside;
 }
 .pull-left {
   float: left;
@@ -101,6 +110,28 @@ code {
   position: relative;
   background: #fff;
   z-index: 0;
+}
+.center-column {
+  width: 100%;
+  padding-top: 2em;
+}
+
+.hide {
+  display: none;
+}
+
+.big-center{
+  font-size: 3em;
+}
+.big-center ol {
+  text-align: left;
+  position: absolute;
+  top:20%;
+  /*margin: 0;*/
+}
+.big-center li {
+  /*margin: 0px;*/
+  margin-bottom: 5%;
 }
 
 /* Two-column layout */

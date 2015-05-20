@@ -1,15 +1,4 @@
-I'm Julian. By day I write software for drones, and by night I make side projects.
-As the week progresses my nights take over my days, so I freelance hardware and software
-development so that I can just do side projects for a living.
 
-Today I thought I'd show you one of my side projects, the synthesizer I'm putting together,
-and maybe inspire you to dive into hardware.
-
-I figure most of the people in this room are software people. And I suspect there are a few people
-who've maybe played with an arduino or a raspberry pi, sensors and LEDs and the like, but the 
-thought of transistors or capacitors intimidates you. 
-
-Well, synthesizers are a great jumping off point into analog electronics. 
 
 1. They're modular
 2. You interact with them on a human level, artistic
@@ -19,25 +8,7 @@ The modular is a big one for you software types.
 
 ### Intro to Synths
 
-Some of you probably don't have any idea how a synthesizer works or what it does, so here's a 
-very brief, simplified introduction. 
 
-When making music, you've basically got control of three parameters:
-
-- pitch
-- loudness
-- timbre
-
-These are directly related concepts to signals:
-
-- frequency
-- amplitude
-- shape (harmonics)
-
-First we use an osciallator to make a wave. We can control the frequency, and the shape (square vs. saw).
-Then we pass it through a filter, were we can control more of the shape by cutting off higher harmonics
-or even adding more.
-Finally we pass it through an amplifier to control the loudness.
 
 Demo:
 
