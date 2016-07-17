@@ -8,16 +8,17 @@ void setup()
  Wire.begin();
 
 // ADC default setup
-//Wire.beginTransmission(ads1110);
-//Wire.write(0x8C); 
-//Wire.endTransmission();
+Wire.beginTransmission(ads1110);
+Wire.write(0x8C); 
+Wire.endTransmission();
 }
 void loop()
 {
  data = readADC();
  Serial.print("Data >> ");
- Serial.println(data, DEC);
- delay(1000);
+// double d = data / 65535.0;
+ Serial.println(data);
+ delay(100);
 }
 
 uint16_t readADC(){
