@@ -900,4 +900,8 @@ Connection ~ 5400 5300
 Wire Wire Line
 	6650 4600 6650 4350
 Connection ~ 6650 4350
+Text Notes 5650 5750 0    60   ~ 0
+MASTER-VCO
+Text Notes 8150 2000 0    60   ~ 0
+HEADPHONE_AMP
 $EndSCHEMATC

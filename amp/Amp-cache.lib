@@ -44,35 +44,6 @@ P 6 0 1 0 0 0 0 50 30 50 0 100 -30 50 0 50 F
 ENDDRAW
 ENDDEF
 #
-# 2N5457_NonStock
-#
-DEF 2N5457_NonStock Q 0 0 Y Y 1 F N
-F0 "Q" -106 143 60 H V R CNN
-F1 "2N5457_NonStock" -252 -244 60 H V C CNN
-F2 "digikey-footprints:TO-92-3" 200 200 60 H I L CNN
-F3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" 200 300 60 H I L CNN
-F4 "2N5457-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "2N5457" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - JFETs" 200 700 60 H I L CNN "Family"
-F8 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5457-5459.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/central-semiconductor-corp/2N5457/2N5457-ND/4806918" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "JFET N-CH 25V 0.31W TO-92" 200 1000 60 H I L CNN "Description"
-F11 "Central Semiconductor Corp" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active NonStock" 200 1200 60 H I L CNN "Status"
-DRAW
-P 2 0 1 0 -25 -100 -25 100 N
-P 2 0 1 0 -25 0 -175 0 N
-P 3 0 1 0 -25 -75 100 -75 100 -150 N
-P 3 0 1 0 -25 75 100 75 100 150 N
-C 0 0 152 1 1 0 f
-P 4 1 1 0 -75 25 -75 -25 -25 0 -75 25 F
-X D 1 100 -300 200 U 50 50 1 1 P
-X S 2 100 300 200 D 50 50 1 1 P
-X G 3 -300 0 200 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # C
 #
 DEF C C 0 10 N Y 1 F N
@@ -163,6 +134,49 @@ X ~ 5 300 0 100 L 50 50 1 1 O
 X V+ 6 -100 300 150 D 50 50 1 1 W
 X ~ 7 0 300 150 D 50 50 1 1 I
 X ~ 8 100 -300 150 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# MAT02
+#
+DEF MAT02 Q 0 0 Y N 2 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "MAT02" 200 0 50 H V L CNN
+F2 "TO-78" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 0 0 25 0 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X C 1 100 200 100 D 50 50 1 1 P
+X B 2 -200 0 200 R 50 50 1 1 I
+X E 7 100 -200 100 U 50 50 1 1 P
+X E 5 100 -200 100 U 50 50 2 1 P
+X B 6 -200 0 200 R 50 50 2 1 I
+X C 7 100 200 100 D 50 50 2 1 P
+ENDDRAW
+ENDDEF
+#
+# POT
+#
+DEF POT RV 0 40 N N 1 F N
+F0 "RV" -175 0 50 V V C CNN
+F1 "POT" -100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+S 40 100 -40 -100 0 1 10 N
+P 2 0 1 0 100 0 60 0 N
+P 3 0 1 0 45 0 90 20 90 -20 F
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+X 3 3 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

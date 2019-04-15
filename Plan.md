@@ -1,6 +1,9 @@
 Good Intro:
 
 - https://aisynthesis.com/how-to-get-started-in-synth-diy/
+- https://www.schmitzbits.de/index.html
+- http://www5b.biglobe.ne.jp/~houshu/synth/
+
 
 # Format
 
@@ -16,6 +19,9 @@ https://en.wikipedia.org/wiki/Eurorack
 - Trigger, Gate or Clock signals are digital 0V-5V pulses typically used for timing and event signalling
 - 100K input impedance [typical](https://learningmodular.com/glossary/impedance/)
 
+[Pinout](http://www.davidhaillant.com/wp/wp-content/uploads/bus_eurorack1.pdf):
+
+![Pinout-Diagram](pinout.png)
 
 # Case:
 
@@ -57,6 +63,10 @@ Features:
 - Multiple input ports to same channel (allowing mixing different sources)
 - Main out (1/4") plus embedded headphone amplifier and stereo headphone jack
 
+Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-L3UJJyRrtGQZKEftU/edit#gid=1448634371
 
 - https://www.onsemi.com/pub/Collateral/2N5457-D.PDF
 - http://www.ti.com/lit/ds/symlink/lm386.pdf
+- https://www.schmitzbits.de/vca.html#
+- http://www.ecircuitcenter.com/Circuits/BJT_Diffamp1/BJT_Diffamp1.htm
+
