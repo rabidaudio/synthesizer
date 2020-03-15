@@ -1,0 +1,52 @@
+Info: Backing up file “/Users/cjk/projects/synthesizer/amp/sym-lib-table” to file “/Users/cjk/projects/synthesizer/amp/rescue-backup/sym-lib-table-2020-03-15-19-12-47”.
+Info: Backing up file “/Users/cjk/projects/synthesizer/amp/Amp.sch” to file “/Users/cjk/projects/synthesizer/amp/rescue-backup/Amp-2020-03-15-19-12-47.sch”.
+Info: Backing up file “/Users/cjk/projects/synthesizer/amp/Amp.pro” to file “/Users/cjk/projects/synthesizer/amp/rescue-backup/Amp-2020-03-15-19-12-47.pro”.
+Info: Backing up file “/Users/cjk/projects/synthesizer/amp/Amp-cache.lib” to file “/Users/cjk/projects/synthesizer/amp/rescue-backup/Amp-cache-2020-03-15-19-12-47.lib”.
+Info: Backing up file “/Users/cjk/projects/synthesizer/amp/Amp-rescue.lib” to file “/Users/cjk/projects/synthesizer/amp/rescue-backup/Amp-rescue-2020-03-15-19-12-47.lib”.
+Info: Backing up file “/Users/cjk/projects/synthesizer/amp/Amp-rescue.dcm” to file “/Users/cjk/projects/synthesizer/amp/rescue-backup/Amp-rescue-2020-03-15-19-12-47.dcm”.
+Info: Adding library “Amp-rescue”, file “${KIPRJMOD}/Amp-rescue.lib” to project symbol library table.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “TL072” mapped to symbol library “Amp-rescue”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “+12VA” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “LM13700” mapped to symbol library “Amp-rescue”.
+Symbol “LM13700” mapped to symbol library “Amp-rescue”.
+Symbol “+12VA” mapped to symbol library “power”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “+12VA” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “2N3906” mapped to symbol library “Amp-rescue”.
+Symbol “2N3906” mapped to symbol library “Amp-rescue”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “POT” mapped to symbol library “Amp-rescue”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “C” mapped to symbol library “Device”.
+Symbol “TL072” mapped to symbol library “Amp-rescue”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “+12VA” mapped to symbol library “power”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “TL072” mapped to symbol library “Amp-rescue”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “+12VA” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “-12VA” mapped to symbol library “power”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “R” mapped to symbol library “Device”.
+Symbol “GND” mapped to symbol library “power”.
+Symbol “-12VA” mapped to symbol library “power”.
+Info: Symbol library table mapping complete!

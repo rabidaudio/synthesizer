@@ -80,6 +80,7 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
 - [ ] Osc sync
   - Zero-cross detector shorts fet to ground?
 - [x] tiny Breakout pcbs for headphone jacks
+- [ ] transistor matcher circuit
 - [ ] PCB for oscilator
 - [ ] PoC for LFO
 - [ ] PoC for VCF

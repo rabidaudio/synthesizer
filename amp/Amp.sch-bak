@@ -174,6 +174,28 @@ F 3 "" H 10200 4550 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
+L Amp-rescue:2N3906 Q?
+U 1 1 5CEB5B87
+P 4100 1850
+F 0 "Q?" H 4300 1925 50  0000 L CNN
+F 1 "2N3906" H 4300 1850 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 4300 1775 50  0001 L CIN
+F 3 "" H 4100 1850 50  0001 L CNN
+	1    4100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amp-rescue:2N3906 Q?
+U 1 1 5CEB5D45
+P 4100 2750
+F 0 "Q?" H 4300 2825 50  0000 L CNN
+F 1 "2N3906" H 4300 2750 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 4300 2675 50  0001 L CIN
+F 3 "" H 4100 2750 50  0001 L CNN
+	1    4100 2750
+	1    0    0    1   
+$EndComp
+$Comp
 L power:-12VA #PWR?
 U 1 1 5CEB62E9
 P 3900 4150
@@ -563,7 +585,7 @@ F 1 "TL072" H 4600 3976 50  0000 C CNN
 F 2 "" H 4600 3700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 3700 50  0001 C CNN
 	1    4600 3700
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U?
@@ -600,26 +622,4 @@ Wire Wire Line
 Wire Wire Line
 	10150 1750 9750 1750
 Connection ~ 9750 1750
-$Comp
-L Transistor_BJT:2N3906 Q?
-U 1 1 5E6F5733
-P 4100 1850
-F 0 "Q?" H 4290 1896 50  0000 L CNN
-F 1 "2N3906" H 4290 1805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4300 1775 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 4100 1850 50  0001 L CNN
-	1    4100 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:2N3906 Q?
-U 1 1 5E6FAB56
-P 4100 2750
-F 0 "Q?" H 4290 2704 50  0000 L CNN
-F 1 "2N3906" H 4290 2795 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4300 2675 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 4100 2750 50  0001 L CNN
-	1    4100 2750
-	1    0    0    1   
-$EndComp
 $EndSCHEMATC
