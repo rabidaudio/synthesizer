@@ -1,0 +1,100 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:hp_breakout-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Audio-Jack-3_2Switches J1
+U 1 1 5E6E5861
+P 2300 2650
+F 0 "J1" H 2300 2940 50  0000 C CNN
+F 1 "Audio-Jack-3_2Switches" H 2150 2450 50  0000 L CNN
+F 2 "" H 2550 2750 50  0001 C CNN
+F 3 "" H 2550 2750 50  0001 C CNN
+	1    2300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05_Male J2
+U 1 1 5E6E5892
+P 3600 2650
+F 0 "J2" H 3600 2950 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 3600 2350 50  0000 C CNN
+F 2 "Connectors_Samtec:SL-105-X-XX_1x05" H 3600 2650 50  0001 C CNN
+F 3 "" H 3600 2650 50  0001 C CNN
+	1    3600 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 2650 3100 2650
+Wire Wire Line
+	3100 2650 3100 2450
+Wire Wire Line
+	3100 2450 3400 2450
+Wire Wire Line
+	2500 2750 2500 2850
+Wire Wire Line
+	2500 2850 3400 2850
+Wire Wire Line
+	2500 2550 3200 2550
+Wire Wire Line
+	3200 2550 3200 2650
+Wire Wire Line
+	3200 2650 3400 2650
+Wire Wire Line
+	2500 2450 3000 2450
+Wire Wire Line
+	3000 2450 3000 2500
+Wire Wire Line
+	3000 2500 3400 2500
+Wire Wire Line
+	3400 2500 3400 2550
+Wire Wire Line
+	2100 2850 2100 2950
+Wire Wire Line
+	2100 2950 3250 2950
+Wire Wire Line
+	3250 2950 3250 2750
+Wire Wire Line
+	3250 2750 3400 2750
+$EndSCHEMATC

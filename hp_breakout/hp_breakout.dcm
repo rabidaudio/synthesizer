@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AudioJack2_Ground_Switch
+D Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve, Switched Pole (Normalling)
+K audio jack receptacle mono headphones phone TS connector
+F ~
+$ENDCMP
+#
+#End Doc Library

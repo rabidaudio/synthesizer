@@ -70,3 +70,16 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
 - https://www.schmitzbits.de/vca.html#
 - http://www.ecircuitcenter.com/Circuits/BJT_Diffamp1/BJT_Diffamp1.htm
 
+
+# TODO
+
+- [ ] PoC amp
+- [ ] PCB for complete amplifier
+- [ ] PoC osc
+- [ ] PoC waveshaper
+- [ ] Osc sync
+  - Zero-cross detector shorts fet to ground?
+- [ ] tiny Breakout pcbs for headphone jacks
+- [ ] PCB for oscilator
+- [ ] PoC for LFO
+- [ ] PoC for VCF
