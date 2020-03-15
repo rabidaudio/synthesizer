@@ -79,7 +79,7 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
 - [ ] PoC waveshaper
 - [ ] Osc sync
   - Zero-cross detector shorts fet to ground?
-- [ ] tiny Breakout pcbs for headphone jacks
+- [x] tiny Breakout pcbs for headphone jacks
 - [ ] PCB for oscilator
 - [ ] PoC for LFO
 - [ ] PoC for VCF
