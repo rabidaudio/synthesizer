@@ -73,14 +73,28 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
 
 # TODO
 
-- [ ] PoC amp
-- [ ] PCB for complete amplifier
-- [ ] PoC osc
-- [ ] PoC waveshaper
-- [ ] Osc sync
-  - Zero-cross detector shorts fet to ground?
-- [x] tiny Breakout pcbs for headphone jacks
-- [ ] transistor matcher circuit
-- [ ] PCB for oscilator
-- [ ] PoC for LFO
-- [ ] PoC for VCF
+- VCA
+  - [ ] Confirm amp on breadboard, finalize CV levels
+  - [ ] build PoC amp and test with real synth
+  - [ ] finish PCB schematic for complete amplifier
+  - [ ] Design housing
+    - laser cut acrylic?
+    - spacing?
+    - mounting screws?
+  - [ ] Create PCB
+- VCO
+  - [ ] Confirm amp on breadboard, finalize CV levels
+    - core osc (square/ramp or square/triangle)
+    - wave shaper (sine)
+    - sync? Zero-cross detector shorts fet to ground?
+  - [ ] Build PoC osc
+  - [ ] PCB for oscilator
+- LFO
+  - TBD
+- VCF
+  - TBD
+- Sequencer
+  - TBD
+- Utils
+  - [x] tiny Breakout pcbs for headphone jacks
+  - [ ] transistor matcher circuit
