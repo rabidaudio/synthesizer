@@ -1258,4 +1258,6 @@ Wire Wire Line
 Connection ~ 3450 4500
 Wire Wire Line
 	3450 4500 5050 4500
+Text Notes 7900 2700 0    50   ~ 0
+TODO: this might be a backwards mirror, that starts at IREF\nand adds exponentially. If that’s the case, instead we should\nswitch to a NPN design, and then use a PNP current mirror to\nmirror the current to positive. That might simplify the CV\nscale stage, which I suspect is also backwards.
 $EndSCHEMATC
