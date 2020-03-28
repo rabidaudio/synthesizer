@@ -554,4 +554,77 @@ Text GLabel 10800 4700 2    50   Input ~ 0
 VREF
 Wire Wire Line
 	10800 4700 10350 4700
+$Comp
+L Relay:DIPxx-1Cxx-51x K?
+U 1 1 5E7FFE7E
+P 5150 6050
+F 0 "K?" V 4583 6050 50  0000 C CNN
+F 1 "DIPxx-1Cxx-51x" V 4674 6050 50  0000 C CNN
+F 2 "Relay_THT:Relay_StandexMeder_DIP_LowProfile" H 5600 6000 50  0001 L CNN
+F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.pdf" H 5150 6050 50  0001 C CNN
+	1    5150 6050
+	0    1    1    0   
+$EndComp
+Text GLabel 4650 6250 0    50   Input ~ 0
+VA
+Wire Wire Line
+	4650 6250 4850 6250
+Text GLabel 5850 6350 2    50   Input ~ 0
+VB
+Wire Wire Line
+	5850 6350 5450 6350
+$Comp
+L power:GND #PWR?
+U 1 1 5E80C2C5
+P 5750 5950
+F 0 "#PWR?" H 5750 5700 50  0001 C CNN
+F 1 "GND" H 5755 5777 50  0000 C CNN
+F 2 "" H 5750 5950 50  0001 C CNN
+F 3 "" H 5750 5950 50  0001 C CNN
+	1    5750 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5950 5750 5850
+Wire Wire Line
+	5750 5850 5450 5850
+$Comp
+L Device:R R?
+U 1 1 5E80EAE7
+P 4250 6050
+F 0 "R?" H 4180 6004 50  0000 R CNN
+F 1 "10K" H 4180 6095 50  0000 R CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4180 6050 50  0001 C CNN
+F 3 "~" H 4250 6050 50  0001 C CNN
+	1    4250 6050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 5900 4250 5850
+Wire Wire Line
+	4250 5850 4850 5850
+Text GLabel 4050 5850 0    50   Input ~ 0
+ZERO
+Wire Wire Line
+	4050 5850 4250 5850
+Connection ~ 4250 5850
+Text GLabel 8700 5300 0    50   Input ~ 0
+ZERO
+Wire Wire Line
+	8700 5300 8950 5300
+Text Notes 3900 6800 0    50   ~ 0
+This relay temporarily shorts VA and VB together, so that the MCU\ncan measure VREF. This could probably be done with transistors, but\na relay ensures there’s no bias currents to worry about.
+$Comp
+L power:GND #PWR?
+U 1 1 5E81680B
+P 4250 6300
+F 0 "#PWR?" H 4250 6050 50  0001 C CNN
+F 1 "GND" H 4255 6127 50  0000 C CNN
+F 2 "" H 4250 6300 50  0001 C CNN
+F 3 "" H 4250 6300 50  0001 C CNN
+	1    4250 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 6300 4250 6200
 $EndSCHEMATC

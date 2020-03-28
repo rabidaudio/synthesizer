@@ -58,7 +58,7 @@ U 1 1 5E748770
 P 5500 3300
 F 0 "R3" V 5400 3300 50  0000 C CNN
 F 1 "100" V 5500 3300 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 5430 3300 50  0001 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5430 3300 50  0001 C CNN
 F 3 "~" H 5500 3300 50  0001 C CNN
 	1    5500 3300
 	0    1    1    0   
@@ -101,7 +101,7 @@ U 1 1 5E749CF5
 P 1650 1400
 F 0 "R4" H 1580 1354 50  0000 R CNN
 F 1 "220" H 1580 1445 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 1580 1400 50  0001 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1580 1400 50  0001 C CNN
 F 3 "~" H 1650 1400 50  0001 C CNN
 	1    1650 1400
 	-1   0    0    1   
@@ -112,7 +112,7 @@ U 1 1 5E74A642
 P 1650 1850
 F 0 "R5" H 1580 1804 50  0000 R CNN
 F 1 "220" H 1580 1895 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 1580 1850 50  0001 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1580 1850 50  0001 C CNN
 F 3 "~" H 1650 1850 50  0001 C CNN
 	1    1650 1850
 	-1   0    0    1   
@@ -145,7 +145,7 @@ U 1 1 5E754E85
 P 1650 3300
 F 0 "R1" H 1580 3254 50  0000 R CNN
 F 1 "10K" H 1580 3345 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 1580 3300 50  0001 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1580 3300 50  0001 C CNN
 F 3 "~" H 1650 3300 50  0001 C CNN
 	1    1650 3300
 	-1   0    0    1   
@@ -237,7 +237,7 @@ U 1 1 5E7A0721
 P 9900 1050
 F 0 "R6" H 9830 1004 50  0000 R CNN
 F 1 "4K7" H 9830 1095 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 9830 1050 50  0001 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 9830 1050 50  0001 C CNN
 F 3 "~" H 9900 1050 50  0001 C CNN
 	1    9900 1050
 	-1   0    0    1   
@@ -264,7 +264,7 @@ U 1 1 5E7B97AD
 P 9900 1900
 F 0 "R7" H 9830 1854 50  0000 R CNN
 F 1 "4K7" H 9830 1945 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 9830 1900 50  0001 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 9830 1900 50  0001 C CNN
 F 3 "~" H 9900 1900 50  0001 C CNN
 	1    9900 1900
 	-1   0    0    1   
