@@ -35,17 +35,6 @@ F 3 "" H 6200 3850 50  0001 C CNN
 	1    6200 3850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR0102
-U 1 1 5E74784D
-P 6200 2650
-F 0 "#PWR0102" H 6200 2500 50  0001 C CNN
-F 1 "+5V" H 6215 2823 50  0000 C CNN
-F 2 "" H 6200 2650 50  0001 C CNN
-F 3 "" H 6200 2650 50  0001 C CNN
-	1    6200 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6200 2650 6200 2950
 Wire Wire Line
@@ -57,7 +46,7 @@ L Device:R R3
 U 1 1 5E748770
 P 5500 3300
 F 0 "R3" V 5400 3300 50  0000 C CNN
-F 1 "100" V 5500 3300 50  0000 C CNN
+F 1 "1K" V 5500 3300 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5430 3300 50  0001 C CNN
 F 3 "~" H 5500 3300 50  0001 C CNN
 	1    5500 3300
@@ -73,17 +62,6 @@ Wire Wire Line
 	5250 3400 5250 3300
 Wire Wire Line
 	5250 3300 5350 3300
-$Comp
-L power:+5V #PWR0103
-U 1 1 5E7492AC
-P 650 850
-F 0 "#PWR0103" H 650 700 50  0001 C CNN
-F 1 "+5V" H 665 1023 50  0000 C CNN
-F 2 "" H 650 850 50  0001 C CNN
-F 3 "" H 650 850 50  0001 C CNN
-	1    650  850 
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0104
 U 1 1 5E74974A
@@ -111,7 +89,7 @@ L Device:R R5
 U 1 1 5E74A642
 P 1650 1850
 F 0 "R5" H 1580 1804 50  0000 R CNN
-F 1 "220" H 1580 1895 50  0000 R CNN
+F 1 "70" H 1580 1895 50  0000 R CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1580 1850 50  0001 C CNN
 F 3 "~" H 1650 1850 50  0001 C CNN
 	1    1650 1850
@@ -151,7 +129,7 @@ F 3 "~" H 1650 3300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Notes 2600 4850 0    50   ~ 0
-By setting the base voltage to 2.5V,\nwe ensure the measurement point is\neither 3.1V or 1.9V, depending on\nPNP or NPN. This is to keep the CMRR\nIn the tolerences specified in the datasheet:\n\n-VS + .01V  <  0.6V + VCM +/- abs(VDIFF)*G / 10  <  +VS - .1V\n.01V  <  0.6 + 0.6 + 5 / 10 = 1.7V  <  4.9V
+By setting the base voltage to 1.65V,\nwe ensure the measurement point is\neither 2.25V or 1.05V, depending on\nPNP or NPN. This is to keep the CMRR\nIn the tolerences specified in the datasheet:\n\n-VS + .01V  <  0.6V + VCM +/- abs(VDIFF)*G / 10  <  +VS - .1V\n.01V  <  0.6 + 1.65 + 3.3 / 10 = 2.58V  <  3.3V
 Text GLabel 1900 1100 2    50   Input ~ 0
 VREF
 Text GLabel 6600 3600 2    50   Input ~ 0
@@ -177,17 +155,6 @@ Text GLabel 4600 2950 0    50   Input ~ 0
 VA
 Text GLabel 1950 4500 0    50   Input ~ 0
 VB
-$Comp
-L power:+5V #PWR0105
-U 1 1 5E7609E6
-P 850 2850
-F 0 "#PWR0105" H 850 2700 50  0001 C CNN
-F 1 "+5V" H 865 3023 50  0000 C CNN
-F 2 "" H 850 2850 50  0001 C CNN
-F 3 "" H 850 2850 50  0001 C CNN
-	1    850  2850
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 5E7616F7
@@ -232,62 +199,6 @@ Wire Wire Line
 Text GLabel 8700 5000 0    50   Input ~ 0
 SCL
 $Comp
-L Device:R R6
-U 1 1 5E7A0721
-P 9900 1050
-F 0 "R6" H 9830 1004 50  0000 R CNN
-F 1 "4K7" H 9830 1095 50  0000 R CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 9830 1050 50  0001 C CNN
-F 3 "~" H 9900 1050 50  0001 C CNN
-	1    9900 1050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9900 1200 9900 1300
-$Comp
-L power:+5V #PWR0113
-U 1 1 5E7A8C07
-P 9900 800
-F 0 "#PWR0113" H 9900 650 50  0001 C CNN
-F 1 "+5V" H 9915 973 50  0000 C CNN
-F 2 "" H 9900 800 50  0001 C CNN
-F 3 "" H 9900 800 50  0001 C CNN
-	1    9900 800 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9900 800  9900 900 
-Connection ~ 9900 1300
-$Comp
-L Device:R R7
-U 1 1 5E7B97AD
-P 9900 1900
-F 0 "R7" H 9830 1854 50  0000 R CNN
-F 1 "4K7" H 9830 1945 50  0000 R CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 9830 1900 50  0001 C CNN
-F 3 "~" H 9900 1900 50  0001 C CNN
-	1    9900 1900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9900 2050 9900 2150
-$Comp
-L power:+5V #PWR0114
-U 1 1 5E7B97B8
-P 9900 1650
-F 0 "#PWR0114" H 9900 1500 50  0001 C CNN
-F 1 "+5V" H 9915 1823 50  0000 C CNN
-F 2 "" H 9900 1650 50  0001 C CNN
-F 3 "" H 9900 1650 50  0001 C CNN
-	1    9900 1650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9900 1650 9900 1750
-Connection ~ 9900 2150
-Text Notes 9650 1550 2    50   ~ 0
-TODO:  display may have pull-ups
-$Comp
 L Connector:Conn_01x04_Male J3
 U 1 1 5E7FBEF9
 P 10850 2250
@@ -309,29 +220,12 @@ F 3 "" H 10550 2450 50  0001 C CNN
 	1    10550 2450
 	1    0    0    -1  
 $EndComp
-Text GLabel 8950 1300 0    50   Input ~ 0
+Text GLabel 10400 2050 0    50   Input ~ 0
 SCL
-Text GLabel 8950 2150 0    50   Input ~ 0
+Text GLabel 10400 2150 0    50   Input ~ 0
 SDA
 Wire Wire Line
-	9900 2150 10650 2150
-Wire Wire Line
-	10400 1300 10400 2050
-Wire Wire Line
 	10400 2050 10650 2050
-Wire Wire Line
-	9900 1300 10400 1300
-$Comp
-L power:+5V #PWR0116
-U 1 1 5E82BCFC
-P 10550 1950
-F 0 "#PWR0116" H 10550 1800 50  0001 C CNN
-F 1 "+5V" H 10565 2123 50  0000 C CNN
-F 2 "" H 10550 1950 50  0001 C CNN
-F 3 "" H 10550 1950 50  0001 C CNN
-	1    10550 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10550 1950 10550 2250
 Wire Wire Line
@@ -410,17 +304,6 @@ Wire Wire Line
 	2300 5550 2300 5450
 Wire Wire Line
 	2300 5450 2150 5450
-$Comp
-L power:+5V #PWR0117
-U 1 1 5E7BAA7F
-P 2300 5200
-F 0 "#PWR0117" H 2300 5050 50  0001 C CNN
-F 1 "+5V" H 2315 5373 50  0000 C CNN
-F 2 "" H 2300 5200 50  0001 C CNN
-F 3 "" H 2300 5200 50  0001 C CNN
-	1    2300 5200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2300 5200 2300 5250
 Wire Wire Line
@@ -467,10 +350,6 @@ Wire Wire Line
 Connection ~ 1650 4200
 Wire Wire Line
 	1650 4200 1800 4200
-Wire Wire Line
-	8950 2150 9900 2150
-Wire Wire Line
-	8950 1300 9900 1300
 $Comp
 L teensy:Teensy2.0_(Arduino) U3
 U 1 1 5E786984
@@ -627,4 +506,61 @@ F 3 "" H 4250 6300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4250 6300 4250 6200
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E81E7F2
+P 650 850
+F 0 "#PWR?" H 650 700 50  0001 C CNN
+F 1 "+3V3" H 665 1023 50  0000 C CNN
+F 2 "" H 650 850 50  0001 C CNN
+F 3 "" H 650 850 50  0001 C CNN
+	1    650  850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E821492
+P 850 2850
+F 0 "#PWR?" H 850 2700 50  0001 C CNN
+F 1 "+3V3" H 865 3023 50  0000 C CNN
+F 2 "" H 850 2850 50  0001 C CNN
+F 3 "" H 850 2850 50  0001 C CNN
+	1    850  2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E824339
+P 6200 2650
+F 0 "#PWR?" H 6200 2500 50  0001 C CNN
+F 1 "+3V3" H 6215 2823 50  0000 C CNN
+F 2 "" H 6200 2650 50  0001 C CNN
+F 3 "" H 6200 2650 50  0001 C CNN
+	1    6200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E827555
+P 10550 1950
+F 0 "#PWR?" H 10550 1800 50  0001 C CNN
+F 1 "+3V3" H 10565 2123 50  0000 C CNN
+F 2 "" H 10550 1950 50  0001 C CNN
+F 3 "" H 10550 1950 50  0001 C CNN
+	1    10550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E82FB83
+P 2300 5200
+F 0 "#PWR?" H 2300 5050 50  0001 C CNN
+F 1 "+3V3" H 2315 5373 50  0000 C CNN
+F 2 "" H 2300 5200 50  0001 C CNN
+F 3 "" H 2300 5200 50  0001 C CNN
+	1    2300 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 2150 10650 2150
 $EndSCHEMATC
