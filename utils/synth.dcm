@@ -1,0 +1,21 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 2N3905
+D -0.2A Ic, -40V Vce, Small Signal PNP Transistor, TO-92
+K PNP Transistor
+F https://www.fairchildsemi.com/datasheets/2N/2N3905.pdf
+$ENDCMP
+#
+$CMP DMMT5401
+D 150V DUAL PNP SMALL SIGNAL SURFACE MOUNT TRANSISTOR - SOT26
+K PNP Transistor Pair
+F https://www.diodes.com/assets/Datasheets/ds30437.pdf
+$ENDCMP
+#
+$CMP DMMT5551
+D ATCHED NPN SMALL SIGNAL SURFACE MOUNT TRANSISTOR - SOT26
+K NPN Transistor
+F https://www.diodes.com/assets/Datasheets/ds30436.pdf
+$ENDCMP
+#
+#End Doc Library
