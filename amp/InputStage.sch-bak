@@ -1,0 +1,531 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title "Input Stage"
+Date "2020-04-04"
+Rev ""
+Comp "RabidAudio"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 2000 5250 2    60   Input ~ 0
+A_CV
+$Comp
+L Device:R_POT RV?
+U 1 1 5EB3C13E
+P 3600 1950
+F 0 "RV?" H 3531 1996 50  0000 R CNN
+F 1 "100K" H 3531 1905 50  0000 R CNN
+F 2 "" H 3600 1950 50  0001 C CNN
+F 3 "~" H 3600 1950 50  0001 C CNN
+	1    3600 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5EB3C144
+P 3650 3400
+F 0 "RV?" H 3581 3446 50  0000 R CNN
+F 1 "100K" H 3581 3355 50  0000 R CNN
+F 2 "" H 3650 3400 50  0001 C CNN
+F 3 "~" H 3650 3400 50  0001 C CNN
+	1    3650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5EB3C14A
+P 3650 2900
+F 0 "RV?" H 3581 2946 50  0000 R CNN
+F 1 "100K" H 3581 2855 50  0000 R CNN
+F 2 "" H 3650 2900 50  0001 C CNN
+F 3 "~" H 3650 2900 50  0001 C CNN
+	1    3650 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C150
+P 3600 2100
+F 0 "#PWR?" H 3600 1850 50  0001 C CNN
+F 1 "GND" H 3600 1950 50  0000 C CNN
+F 2 "" H 3600 2100 50  0001 C CNN
+F 3 "" H 3600 2100 50  0001 C CNN
+	1    3600 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C156
+P 3650 3050
+F 0 "#PWR?" H 3650 2800 50  0001 C CNN
+F 1 "GND" H 3650 2900 50  0000 C CNN
+F 2 "" H 3650 3050 50  0001 C CNN
+F 3 "" H 3650 3050 50  0001 C CNN
+	1    3650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C15C
+P 3650 3550
+F 0 "#PWR?" H 3650 3300 50  0001 C CNN
+F 1 "GND" H 3650 3400 50  0000 C CNN
+F 2 "" H 3650 3550 50  0001 C CNN
+F 3 "" H 3650 3550 50  0001 C CNN
+	1    3650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 5EB3C162
+P 3600 1450
+F 0 "RV?" H 3531 1496 50  0000 R CNN
+F 1 "100K" H 3531 1405 50  0000 R CNN
+F 2 "" H 3600 1450 50  0001 C CNN
+F 3 "~" H 3600 1450 50  0001 C CNN
+	1    3600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C168
+P 3600 1600
+F 0 "#PWR?" H 3600 1350 50  0001 C CNN
+F 1 "GND" H 3600 1450 50  0000 C CNN
+F 2 "" H 3600 1600 50  0001 C CNN
+F 3 "" H 3600 1600 50  0001 C CNN
+	1    3600 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3400 4000 3400
+Wire Wire Line
+	3800 2900 4000 2900
+Wire Wire Line
+	3750 1950 3950 1950
+Wire Wire Line
+	3750 1450 3950 1450
+Text GLabel 3250 1300 0    50   Input ~ 0
+AIN1
+Text GLabel 3250 1800 0    50   Input ~ 0
+AIN2
+Text GLabel 3300 2750 0    50   Input ~ 0
+BIN1
+Text GLabel 3300 3250 0    50   Input ~ 0
+BIN2
+$Comp
+L Connector:AudioJack2_Ground_Switch J?
+U 1 1 5EB3C179
+P 1400 5250
+F 0 "J?" H 1550 5050 50  0000 C CNN
+F 1 "ACV_Jack" V 1150 5200 50  0000 C CNN
+F 2 "" H 1400 5450 50  0001 C CNN
+F 3 "~" H 1400 5450 50  0001 C CNN
+	1    1400 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C187
+P 1650 5650
+F 0 "#PWR?" H 1650 5400 50  0001 C CNN
+F 1 "GND" H 1650 5500 50  0000 C CNN
+F 2 "" H 1650 5650 50  0001 C CNN
+F 3 "" H 1650 5650 50  0001 C CNN
+	1    1650 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5150 1600 5150
+Wire Wire Line
+	1600 5050 1650 5050
+Wire Wire Line
+	1650 5050 1650 5150
+Wire Wire Line
+	1600 5250 2000 5250
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C19E
+P 1700 3850
+F 0 "#PWR?" H 1700 3600 50  0001 C CNN
+F 1 "GND" H 1700 3700 50  0000 C CNN
+F 2 "" H 1700 3850 50  0001 C CNN
+F 3 "" H 1700 3850 50  0001 C CNN
+	1    1700 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1300 3600 1300
+Wire Wire Line
+	3250 1800 3600 1800
+Wire Wire Line
+	3650 2750 3300 2750
+Wire Wire Line
+	3300 3250 3650 3250
+Wire Wire Line
+	1400 3800 1700 3800
+Wire Wire Line
+	1700 3800 1700 3850
+Wire Wire Line
+	1600 3600 1700 3600
+Wire Wire Line
+	1700 3600 1700 3800
+Connection ~ 1700 3800
+Wire Wire Line
+	1600 3400 1700 3400
+Wire Wire Line
+	1700 3400 1700 3600
+Connection ~ 1700 3600
+Wire Wire Line
+	1600 3300 1700 3300
+Wire Wire Line
+	1700 3300 1700 3400
+Connection ~ 1700 3400
+Wire Wire Line
+	2000 3500 1600 3500
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C1BA
+P 1700 3000
+F 0 "#PWR?" H 1700 2750 50  0001 C CNN
+F 1 "GND" H 1700 2850 50  0000 C CNN
+F 2 "" H 1700 3000 50  0001 C CNN
+F 3 "" H 1700 3000 50  0001 C CNN
+	1    1700 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2950 1700 2950
+Wire Wire Line
+	1700 2950 1700 3000
+Wire Wire Line
+	1600 2750 1700 2750
+Wire Wire Line
+	1700 2750 1700 2950
+Connection ~ 1700 2950
+Wire Wire Line
+	1600 2550 1700 2550
+Wire Wire Line
+	1700 2550 1700 2750
+Connection ~ 1700 2750
+Wire Wire Line
+	1600 2450 1700 2450
+Wire Wire Line
+	1700 2450 1700 2550
+Connection ~ 1700 2550
+Wire Wire Line
+	2000 2650 1600 2650
+$Comp
+L Connector:AudioJack2_Ground_Switch J?
+U 1 1 5EB3C1CC
+P 1400 1850
+F 0 "J?" H 1550 1650 50  0000 C CNN
+F 1 "AIN4_Jack" V 1150 1800 50  0000 C CNN
+F 2 "" H 1400 2050 50  0001 C CNN
+F 3 "~" H 1400 2050 50  0001 C CNN
+	1    1400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C1D2
+P 1700 2200
+F 0 "#PWR?" H 1700 1950 50  0001 C CNN
+F 1 "GND" H 1700 2050 50  0000 C CNN
+F 2 "" H 1700 2200 50  0001 C CNN
+F 3 "" H 1700 2200 50  0001 C CNN
+	1    1700 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 2150 1700 2150
+Wire Wire Line
+	1700 2150 1700 2200
+Wire Wire Line
+	1600 1950 1700 1950
+Wire Wire Line
+	1700 1950 1700 2150
+Connection ~ 1700 2150
+Wire Wire Line
+	1600 1750 1700 1750
+Wire Wire Line
+	1700 1750 1700 1950
+Connection ~ 1700 1950
+Wire Wire Line
+	1600 1650 1700 1650
+Wire Wire Line
+	1700 1650 1700 1750
+Connection ~ 1700 1750
+Wire Wire Line
+	2000 1850 1600 1850
+$Comp
+L Connector:AudioJack2_Ground_Switch J?
+U 1 1 5EB3C1E4
+P 1400 1000
+F 0 "J?" H 1550 800 50  0000 C CNN
+F 1 "AIN4_Jack" V 1150 950 50  0000 C CNN
+F 2 "" H 1400 1200 50  0001 C CNN
+F 3 "~" H 1400 1200 50  0001 C CNN
+	1    1400 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C1EA
+P 1700 1350
+F 0 "#PWR?" H 1700 1100 50  0001 C CNN
+F 1 "GND" H 1700 1200 50  0000 C CNN
+F 2 "" H 1700 1350 50  0001 C CNN
+F 3 "" H 1700 1350 50  0001 C CNN
+	1    1700 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1300 1700 1300
+Wire Wire Line
+	1700 1300 1700 1350
+Wire Wire Line
+	1600 1100 1700 1100
+Wire Wire Line
+	1700 1100 1700 1300
+Connection ~ 1700 1300
+Wire Wire Line
+	1600 900  1700 900 
+Wire Wire Line
+	1700 900  1700 1100
+Connection ~ 1700 1100
+Wire Wire Line
+	1600 800  1700 800 
+Wire Wire Line
+	1700 800  1700 900 
+Connection ~ 1700 900 
+Wire Wire Line
+	2000 1000 1600 1000
+Text GLabel 2000 6350 2    60   Input ~ 0
+B_CV
+$Comp
+L Connector:AudioJack2_Ground_Switch J?
+U 1 1 5EB3C1FD
+P 1400 6350
+F 0 "J?" H 1550 6150 50  0000 C CNN
+F 1 "BCV_Jack" V 1150 6300 50  0000 C CNN
+F 2 "" H 1400 6550 50  0001 C CNN
+F 3 "~" H 1400 6550 50  0001 C CNN
+	1    1400 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB3C20A
+P 1650 6750
+F 0 "#PWR?" H 1650 6500 50  0001 C CNN
+F 1 "GND" H 1650 6600 50  0000 C CNN
+F 2 "" H 1650 6750 50  0001 C CNN
+F 3 "" H 1650 6750 50  0001 C CNN
+	1    1650 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 6250 1600 6250
+Wire Wire Line
+	1600 6150 1650 6150
+Wire Wire Line
+	1650 6150 1650 6250
+Wire Wire Line
+	1600 6350 2000 6350
+Text GLabel 2000 6450 2    60   Input ~ 0
+A_CV
+Wire Wire Line
+	4000 2900 4000 3250
+Text Notes 2850 2350 1    50   ~ 0
+0-5V Signal
+Wire Wire Line
+	3950 1450 3950 1750
+Text GLabel 4000 1750 2    50   Input ~ 0
+AIN_SUM
+Wire Wire Line
+	4000 1750 3950 1750
+Connection ~ 3950 1750
+Wire Wire Line
+	3950 1750 3950 1950
+$Comp
+L power:+12VA #PWR?
+U 1 1 5EB3C220
+P 2450 5200
+F 0 "#PWR?" H 2450 5050 50  0001 C CNN
+F 1 "+12VA" H 2450 5340 50  0000 C CNN
+F 2 "" H 2450 5200 50  0001 C CNN
+F 3 "" H 2450 5200 50  0001 C CNN
+	1    2450 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EB3C226
+P 2150 5350
+F 0 "R?" V 2230 5350 50  0000 C CNN
+F 1 "150K" V 2150 5350 50  0000 C CNN
+F 2 "" V 2080 5350 50  0001 C CNN
+F 3 "" H 2150 5350 50  0001 C CNN
+	1    2150 5350
+	0    1    1    0   
+$EndComp
+Text Notes 1850 5650 0    50   ~ 0
+If ACV isn’t supplied,\nDefault CV = 4.8V
+Wire Wire Line
+	1600 6450 2000 6450
+Wire Wire Line
+	1650 6750 1650 6700
+Connection ~ 1650 6250
+Wire Wire Line
+	1400 6650 1400 6700
+Wire Wire Line
+	1400 6700 1650 6700
+Connection ~ 1650 6700
+Wire Wire Line
+	1650 6700 1650 6250
+Wire Wire Line
+	1650 5650 1650 5600
+Connection ~ 1650 5150
+Wire Wire Line
+	1400 5550 1400 5600
+Wire Wire Line
+	1400 5600 1650 5600
+Connection ~ 1650 5600
+Wire Wire Line
+	1650 5600 1650 5150
+Wire Wire Line
+	1600 5350 2000 5350
+Wire Wire Line
+	2450 5200 2450 5350
+Wire Wire Line
+	2450 5350 2300 5350
+Text GLabel 2000 1850 2    50   Input ~ 0
+AIN2
+Text GLabel 2000 1000 2    50   Input ~ 0
+AIN1
+Text GLabel 2000 3500 2    50   Input ~ 0
+BIN2
+Text GLabel 2000 2650 2    50   Input ~ 0
+BIN1
+$Comp
+L Connector:AudioJack2_Ground_Switch J?
+U 1 1 5EB3C198
+P 1400 3500
+F 0 "J?" H 1550 3300 50  0000 C CNN
+F 1 "BIN2_Jack" V 1150 3450 50  0000 C CNN
+F 2 "" H 1400 3700 50  0001 C CNN
+F 3 "~" H 1400 3700 50  0001 C CNN
+	1    1400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_Ground_Switch J?
+U 1 1 5EB3C1B4
+P 1400 2650
+F 0 "J?" H 1550 2450 50  0000 C CNN
+F 1 "BIN1_Jack" V 1150 2600 50  0000 C CNN
+F 2 "" H 1400 2850 50  0001 C CNN
+F 3 "~" H 1400 2850 50  0001 C CNN
+	1    1400 2650
+	1    0    0    -1  
+$EndComp
+Text Notes 1800 6850 0    50   ~ 0
+If BCV isn’t supplied, use ACV\nThis means you can either use ACV as master,\nor control individually
+Text GLabel 4050 3250 2    50   Input ~ 0
+BIN_SUM
+Wire Wire Line
+	4050 3250 4000 3250
+Connection ~ 4000 3250
+Wire Wire Line
+	4000 3250 4000 3400
+$Comp
+L power:+12VA #PWR?
+U 1 1 5EBFE06E
+P 5750 1350
+F 0 "#PWR?" H 5750 1200 50  0001 C CNN
+F 1 "+12VA" H 5750 1490 50  0000 C CNN
+F 2 "" H 5750 1350 50  0001 C CNN
+F 3 "" H 5750 1350 50  0001 C CNN
+	1    5750 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12VA #PWR?
+U 1 1 5EBFE074
+P 5750 2300
+F 0 "#PWR?" H 5750 2150 50  0001 C CNN
+F 1 "-12VA" H 5750 2440 50  0000 C CNN
+F 2 "" H 5750 2300 50  0001 C CNN
+F 3 "" H 5750 2300 50  0001 C CNN
+	1    5750 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5750 1350 5750 1400
+Wire Wire Line
+	5750 2300 5750 2200
+$Comp
+L Amplifier_Operational:LM13700 U?
+U 5 1 5EBFE07C
+P 5850 1850
+F 0 "U?" H 5808 1896 50  0000 L CNN
+F 1 "LM13700" H 5808 1805 50  0000 L CNN
+F 2 "" H 5550 1875 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5550 1875 50  0001 C CNN
+	5    5850 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1500 6250 1400
+Connection ~ 5750 1400
+Wire Wire Line
+	5750 1400 5750 1550
+Wire Wire Line
+	6650 1500 6650 1400
+Wire Wire Line
+	5750 1400 6250 1400
+Connection ~ 6250 1400
+Wire Wire Line
+	6250 1400 6650 1400
+Wire Wire Line
+	6250 2100 6250 2200
+Wire Wire Line
+	6250 2200 5750 2200
+Connection ~ 5750 2200
+Wire Wire Line
+	5750 2200 5750 2150
+Wire Wire Line
+	6650 2100 6650 2200
+Wire Wire Line
+	6650 2200 6250 2200
+Connection ~ 6250 2200
+$Comp
+L Amplifier_Operational:TL074 U?
+U 5 1 5EBFE090
+P 6350 1800
+F 0 "U?" H 6308 1846 50  0000 L CNN
+F 1 "TL074" H 6308 1755 50  0000 L CNN
+F 2 "" H 6300 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6400 2000 50  0001 C CNN
+	5    6350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U?
+U 5 1 5EBFE096
+P 6750 1800
+F 0 "U?" H 6708 1846 50  0000 L CNN
+F 1 "TL074" H 6708 1755 50  0000 L CNN
+F 2 "" H 6700 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6800 2000 50  0001 C CNN
+	5    6750 1800
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
