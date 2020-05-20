@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 3
 Title "VCA Module"
 Date "2020-04-04"
 Rev ""
@@ -24,17 +24,5 @@ S 700  2000 1150 750
 U 5EBA9693
 F0 "AVCA" 50
 F1 "AVCA.sch" 50
-$EndSheet
-$Sheet
-S 700  3000 1150 750 
-U 5EBC1861
-F0 "BVCA" 50
-F1 "BVCA.sch" 50
-$EndSheet
-$Sheet
-S 700  4000 1150 750 
-U 5EC009ED
-F0 "OutputStage" 50
-F1 "OutputStage.sch" 50
 $EndSheet
 $EndSCHEMATC
