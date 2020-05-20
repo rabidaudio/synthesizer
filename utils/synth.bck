@@ -18,15 +18,14 @@ K NPN Transistor
 F https://www.diodes.com/assets/Datasheets/ds30436.pdf
 $ENDCMP
 #
+$CMP EURORACK_CONN_16
+K connector eurorack euro synth
+F https://division-6.com/learn/eurorack-power/
+$ENDCMP
+#
 $CMP SW_4PDT_x4
 D Switch, quad pole double throw, separate symbols
 K switch quad-pole double-throw 4PDT ON-ON
-F ~
-$ENDCMP
-#
-$CMP SW_DPDT_x2
-D Switch, dual pole double throw, separate symbols
-K switch dual-pole double-throw DPDT spdt ON-ON
 F ~
 $ENDCMP
 #

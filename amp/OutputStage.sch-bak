@@ -700,4 +700,6 @@ F 3 "~" H 2150 4900 50  0001 C CNN
 $EndComp
 Text Notes 7700 3700 0    50   ~ 0
 TODO: we’ve got 2 more buffers, should we add\na separate headphone out?
+Text Notes 900  5400 0    50   ~ 0
+TODO: I don’t think compensating for the error in these resistors\nis super necessary, but hand-matching resistors or buying 1% or 5%\nmight be a smart move.
 $EndSCHEMATC

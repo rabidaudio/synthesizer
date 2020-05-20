@@ -25,11 +25,13 @@ https://en.wikipedia.org/wiki/Eurorack
 
 # Case:
 
-LACKRack is a cheap Ikea way to create a rack.
-
-https://wiki.eth0.nl/index.php/LackRack
-
 TipTop is good starter product, has it has adapter for mounting modules in 19" rack, and included power supply
+
+Power supply:
+
+- 2000mA at +12V
+- 500mA at -12V
+- 170mA at +5V
 
 - https://www.sweetwater.com/store/detail/HappyEndSV--tiptop-audio-happy-ending-kit-silver
 - https://www.amazon.com/Tiptop-Audio-Happy-Ending-Kit/dp/B074B29GPR
@@ -70,17 +72,19 @@ TipTop is good starter product, has it has adapter for mounting modules in 19" r
     - Ideally, one cascade switch between each signal path
       - need to find a way to do this while still respecting modularity
       - Perhaps defaults are controlled by a module which controls modes?
+    - LED feedback is critical
   - Modules
-    - MIDI-CV converter
-      - digital MIDI input to OSC CV
-      - up to 4 voices
-    - Sequencer
-      - clock source for LFO? Or LFO input as clock?
-      - divide down clocks?
-      - likely digital
-        - if MIDI output, can simplify duplicating VC outs for tuning,
-          can leverage MIDI converter for this
-    - Oscillator
+    1. Amplifier:
+      - LM13700
+      - matched-pair PNP exponential converter
+      - CV of 5V -> Gain=1
+      - CV of <=0V -> Gain=\~0, 6 decades below Gain=1
+      - allow overdrive to 6V
+        - ideally this would begin to clip
+      - mixdown
+        - mono - full mix -> left and right
+        - stereo split - A+C->left B+D->right
+    2. Oscillator
       - 0-10V, 1V/octave, A0 to A10
       - Square/Triangle core via LM13700
       - Waveshapper for triangle -> sine
@@ -88,30 +92,41 @@ TipTop is good starter product, has it has adapter for mounting modules in 19" r
       - blending shapes isn't useful here, since we could use other oscillators for that
       - square CV output for clocking?
       - Option to sync with another osc?
-    - LFO
-      - 2x is plenty I  think
-      - 555 or relaxation
-      - CV and digital out
-      - ideally multi-shape: sine,tri,squ,ramp up,ramp down
-      - Trigger input (e.g. envelope or clock)
-    - Filter:
+      - CV control for shape?
+    3. MIDI-CV converter
+      - digital MIDI input to OSC CV
+      - up to 4 voices
+    4. Filter:
       -  4P LP(/HP?)
       - Moog Ladder?
       - CV control of cutoff, resonance
       - Default to track cutoff with VCO-CV
-    - Amplifier:
-      - LM13700
-      - matched-pair PNP exponential converter
-      - CV of 5V -> Gain=1
-      - CV of <=0V -> Gain=\~0, 6 decades below Gain=1
-      - allow overdrive to 6V
-        - ideally this would begin to clip
-      - A/D/S/R envelope
-        - is envelope required for each channel?
-      - mixdown
-        - mono - full mix -> left and right
-        - stereo split - A+B->left C+D->right
-    - Delay, overdrive, etc. are gimmicky and not useful, can be done via effects pedals
+    5. A/D/S/R envelope
+      - 4 envelopes required for 4-voice polyphony
+      - wired to VCA by default
+      - fully modular could mean you could borrow one for VCF instead
+        - alternatively, perhaps simpler A/D envelope for VCF?
+    6. LFO
+      - 2x is plenty I think?
+      - 555 or relaxation
+      - CV (+/- 5V) and digital out
+      - ideally multi-shape: sine,tri,squ,ramp up,ramp down
+      - CV control for shape
+      - Trigger input (e.g. envelope or clock)
+    Future:
+      - Sequencer
+        - clock source for LFO? Or LFO input as clock?
+        - divide down clocks?
+        - likely digital
+          - if MIDI output, can simplify duplicating VC outs for tuning,
+            can leverage MIDI converter for this
+          - however, key-based offsets of patterns wouldn't work
+      - White noise generator?
+      - Sample+Hold?
+        - combined with white noise creates RNG
+        - alternatively sequencer could do RNG digitally
+        - S+H has little use to me outside of random
+      - Delay, overdrive, etc. are gimmicky and not useful, can be done via effects pedals
 
 
 # Amplifier
@@ -142,12 +157,15 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
     - sync? Zero-cross detector shorts fet to ground?
   - [ ] Build PoC osc
   - [ ] PCB for oscilator
-- LFO
+- MIDI/envelopes
   - TBD
 - VCF
+  - TBD
+- LFO
   - TBD
 - Sequencer
   - TBD
 - Utils
   - [x] tiny Breakout pcbs for headphone jacks
-  - [ ] transistor matcher circuit
+  - ~~transistor matcher circuit~~
+    - bought 100s of matched pair BJTs instead

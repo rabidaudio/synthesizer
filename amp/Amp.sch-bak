@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 800  900  1100 700 
+S 750  900  1100 700 
 U 5EB23D44
 F0 "InputStage" 50
 F1 "InputStage.sch" 50

@@ -329,10 +329,10 @@ F 3 "" H 6000 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U1
+L Amplifier_Operational:TL074 U?
 U 1 1 5EF7503E
 P 6500 1300
-F 0 "U1" H 6500 933 50  0000 C CNN
+F 0 "U?" H 6500 933 50  0000 C CNN
 F 1 "TL074" H 6500 1024 50  0000 C CNN
 F 2 "" H 6450 1400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6550 1500 50  0001 C CNN
@@ -449,10 +449,10 @@ $EndComp
 Text GLabel 6050 2500 0    60   Input ~ 0
 A_CV
 $Comp
-L Amplifier_Operational:TL074 U1
+L Amplifier_Operational:TL074 U?
 U 5 1 5EFB9B95
 P 10100 1150
-F 0 "U1" H 10058 1196 50  0000 L CNN
+F 0 "U?" H 10058 1196 50  0000 L CNN
 F 1 "TL074" H 10058 1105 50  0000 L CNN
 F 2 "" H 10050 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10150 1350 50  0001 C CNN
@@ -560,10 +560,10 @@ Wire Wire Line
 Wire Wire Line
 	10000 2200 10000 2250
 $Comp
-L Amplifier_Operational:TL074 U2
+L Amplifier_Operational:TL074 U?
 U 1 1 5F0F5B47
 P 6550 2400
-F 0 "U2" H 6550 2033 50  0000 C CNN
+F 0 "U?" H 6550 2033 50  0000 C CNN
 F 1 "TL074" H 6550 2124 50  0000 C CNN
 F 2 "" H 6500 2500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 2600 50  0001 C CNN
@@ -571,10 +571,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 2600 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U3
+L Amplifier_Operational:TL074 U?
 U 1 1 5F0F793C
 P 6550 3050
-F 0 "U3" H 6550 2683 50  0000 C CNN
+F 0 "U?" H 6550 2683 50  0000 C CNN
 F 1 "TL074" H 6550 2774 50  0000 C CNN
 F 2 "" H 6500 3150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3250 50  0001 C CNN
@@ -582,10 +582,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3250 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U4
+L Amplifier_Operational:TL074 U?
 U 1 1 5F0F8F3C
 P 6550 3700
-F 0 "U4" H 6550 3333 50  0000 C CNN
+F 0 "U?" H 6550 3333 50  0000 C CNN
 F 1 "TL074" H 6550 3424 50  0000 C CNN
 F 2 "" H 6500 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3900 50  0001 C CNN
@@ -593,10 +593,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3900 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U2
+L Amplifier_Operational:TL074 U?
 U 5 1 5F0FE5A5
 P 10450 1150
-F 0 "U2" H 10408 1196 50  0000 L CNN
+F 0 "U?" H 10408 1196 50  0000 L CNN
 F 1 "TL074" H 10408 1105 50  0000 L CNN
 F 2 "" H 10400 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10500 1350 50  0001 C CNN
@@ -604,10 +604,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10500 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U3
+L Amplifier_Operational:TL074 U?
 U 5 1 5F0FF34F
 P 10800 1150
-F 0 "U3" H 10758 1196 50  0000 L CNN
+F 0 "U?" H 10758 1196 50  0000 L CNN
 F 1 "TL074" H 10758 1105 50  0000 L CNN
 F 2 "" H 10750 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10850 1350 50  0001 C CNN
@@ -615,10 +615,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10850 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U4
+L Amplifier_Operational:TL074 U?
 U 5 1 5F0FFC0C
 P 11100 1150
-F 0 "U4" H 11058 1196 50  0000 L CNN
+F 0 "U?" H 11058 1196 50  0000 L CNN
 F 1 "TL074" H 11058 1105 50  0000 L CNN
 F 2 "" H 11050 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 11150 1350 50  0001 C CNN
@@ -690,4 +690,102 @@ Wire Wire Line
 Connection ~ 10000 3100
 Wire Wire Line
 	10000 3100 10000 3000
+Text Notes 8900 3900 0    50   ~ 0
+Q Current requirements:\n+12V supply: 4*(2) + 2*20 + (4*4+2+2)*2.5/2 = 73mA\n-12V supply: 4*(.05+.12+1) + (4*4+2+2)*2.5/2 = 30mA\n5V supply: 0
+Text Notes 1400 4650 0    50   ~ 0
+TODO: should we add amp outputs?\nIf so, we should also have output amplifier inputs for return signal
+$Comp
+L Connector_Generic:Conn_02x04_Counter_Clockwise J?
+U 1 1 5F189CDE
+P 1750 5350
+F 0 "J?" H 1800 5667 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 1800 5576 50  0000 C CNN
+F 2 "" H 1750 5350 50  0001 C CNN
+F 3 "~" H 1750 5350 50  0001 C CNN
+	1    1750 5350
+	1    0    0    -1  
+$EndComp
+Text GLabel 1400 5250 0    50   Input ~ 0
+AIN_DEFAULT
+Text GLabel 1400 5350 0    50   Input ~ 0
+BIN_DEFAULT
+Text GLabel 1400 5450 0    50   Input ~ 0
+CIN_DEFAULT
+Text GLabel 1400 5550 0    50   Input ~ 0
+DIN_DEFAULT
+$Comp
+L synth:EURORACK_CONN_16 J?
+U 1 1 5F1A22AA
+P 1500 6650
+F 0 "J?" H 1500 7267 50  0000 C CNN
+F 1 "EURORACK_CONN_16" H 1500 7176 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Connector_IDC.pretty:IDC-Header_2x08_P2.54mm_Vertical" H 1550 6650 50  0001 C CNN
+F 3 "https://division-6.com/learn/eurorack-power/" H 1550 6650 50  0001 C CNN
+	1    1500 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12VA #PWR?
+U 1 1 5F1AC43F
+P 1650 6350
+AR Path="/5F1AC43F" Ref="#PWR?"  Part="1" 
+AR Path="/5EB23D44/5F1AC43F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1650 6200 50  0001 C CNN
+F 1 "+12VA" H 1650 6490 50  0000 C CNN
+F 2 "" H 1650 6350 50  0001 C CNN
+F 3 "" H 1650 6350 50  0001 C CNN
+	1    1650 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12VA #PWR?
+U 1 1 5F1AD093
+P 1650 7050
+AR Path="/5F1AD093" Ref="#PWR?"  Part="1" 
+AR Path="/5EB23D44/5F1AD093" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1650 6900 50  0001 C CNN
+F 1 "-12VA" H 1650 7190 50  0000 C CNN
+F 2 "" H 1650 7050 50  0001 C CNN
+F 3 "" H 1650 7050 50  0001 C CNN
+	1    1650 7050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1AD919
+P 1400 7000
+F 0 "#PWR?" H 1400 6750 50  0001 C CNN
+F 1 "GND" H 1400 6850 50  0000 C CNN
+F 2 "" H 1400 7000 50  0001 C CNN
+F 3 "" H 1400 7000 50  0001 C CNN
+	1    1400 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F1B98F3
+P 1400 6350
+F 0 "#PWR?" H 1400 6200 50  0001 C CNN
+F 1 "+5V" H 1415 6523 50  0000 C CNN
+F 2 "" H 1400 6350 50  0001 C CNN
+F 3 "" H 1400 6350 50  0001 C CNN
+	1    1400 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 6350 1650 6400
+Wire Wire Line
+	1400 6400 1400 6350
+Wire Wire Line
+	1400 7000 1400 6900
+Wire Wire Line
+	1650 7050 1650 6900
+Wire Wire Line
+	1400 5550 1550 5550
+Wire Wire Line
+	1550 5450 1400 5450
+Wire Wire Line
+	1400 5350 1550 5350
+Wire Wire Line
+	1550 5250 1400 5250
 $EndSCHEMATC
