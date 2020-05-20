@@ -87,14 +87,18 @@ TipTop is good starter product, has it has adapter for mounting modules in 19" r
       - abs(triangle) can be used for 2x square
       - blending shapes isn't useful here, since we could use other oscillators for that
       - square CV output for clocking?
+      - Option to sync with another osc?
     - LFO
       - 2x is plenty I  think
       - 555 or relaxation
       - CV and digital out
       - ideally multi-shape: sine,tri,squ,ramp up,ramp down
+      - Trigger input (e.g. envelope or clock)
     - Filter:
       -  4P LP(/HP?)
       - Moog Ladder?
+      - CV control of cutoff, resonance
+      - Default to track cutoff with VCO-CV
     - Amplifier:
       - LM13700
       - matched-pair PNP exponential converter

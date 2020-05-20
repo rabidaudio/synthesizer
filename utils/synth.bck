@@ -24,4 +24,10 @@ K switch quad-pole double-throw 4PDT ON-ON
 F ~
 $ENDCMP
 #
+$CMP SW_DPDT_x2
+D Switch, dual pole double throw, separate symbols
+K switch dual-pole double-throw DPDT spdt ON-ON
+F ~
+$ENDCMP
+#
 #End Doc Library
