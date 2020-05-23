@@ -6,6 +6,12 @@ K PNP Transistor
 F https://www.fairchildsemi.com/datasheets/2N/2N3905.pdf
 $ENDCMP
 #
+$CMP AudioJack2_Ground_Switch
+D Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve, Switched Pole (Normalling)
+K audio jack receptacle mono headphones phone TS connector
+F ~
+$ENDCMP
+#
 $CMP DMMT5401
 D 150V DUAL PNP SMALL SIGNAL SURFACE MOUNT TRANSISTOR - SOT26
 K PNP Transistor Pair
@@ -19,6 +25,11 @@ F https://www.diodes.com/assets/Datasheets/ds30436.pdf
 $ENDCMP
 #
 $CMP EURORACK_CONN_16
+K connector eurorack euro synth
+F https://division-6.com/learn/eurorack-power/
+$ENDCMP
+#
+$CMP EURORACK_CONN_16_GATE_CV
 K connector eurorack euro synth
 F https://division-6.com/learn/eurorack-power/
 $ENDCMP
