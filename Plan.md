@@ -121,6 +121,26 @@ Power supply:
           - if MIDI output, can simplify duplicating VC outs for tuning,
             can leverage MIDI converter for this
           - however, key-based offsets of patterns wouldn't work
+        - 7-segment display of BPM for source clock?
+        - sweep control option
+          - LFO or voltages to trigger and CV external LFO for 4-bar sweep
+          - e.g. automatic filter sweeps
+        - random note drop feature
+        - Could be externally controlled, e.g. iPad
+          - save space and iterate on features
+          - allow it to be used as a drum machine too
+      - Utilities
+        - Buffer, Sum, Attenuate, Invert, Gate
+        - Could be all-in one
+          - A input (default ground)
+          - B input (default ground)
+          - level knob attenuator
+          - gate digital CV in, default on
+          - (A+B)*level*gate output
+          - -(A+B)*level*gate output
+          - 2 opamps and a FET
+            - one opamp if we scrap the inverter
+            - 4 of these would be cost+space efficent
       - White noise generator?
       - Sample+Hold?
         - combined with white noise creates RNG

@@ -366,7 +366,7 @@ Wire Wire Line
 Text Notes 3900 3050 0    50   ~ 0
 100mV/V * 40mV/V = 4mV/V\n5V -> 20mV
 Text GLabel 3700 2600 0    50   Input ~ 0
-AIN_MIX
+AIN
 Wire Wire Line
 	3700 2600 3800 2600
 $Comp
