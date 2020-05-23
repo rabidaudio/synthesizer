@@ -63,6 +63,8 @@ $Comp
 L synth:DMMT5401 Q?
 U 2 1 5EBBC299
 P 6650 4100
+AR Path="/5EBBC299" Ref="Q?"  Part="2" 
+AR Path="/5EBA9693/5EBBC299" Ref="Q?"  Part="2" 
 F 0 "Q?" H 6500 4250 50  0000 L CNN
 F 1 "DMMT5401" V 6850 3900 50  0000 L CNN
 F 2 "KiCad/kicad-footprints/Package_TO_SOT_SMD.pretty:SOT-23-6" H 6850 4025 50  0001 L CIN
@@ -77,6 +79,8 @@ $Comp
 L synth:DMMT5401 Q?
 U 1 1 5EBBC2A1
 P 6000 4100
+AR Path="/5EBBC2A1" Ref="Q?"  Part="1" 
+AR Path="/5EBA9693/5EBBC2A1" Ref="Q?"  Part="1" 
 F 0 "Q?" H 5850 4250 50  0000 L CNN
 F 1 "DMMT5401" V 6250 3900 50  0000 L CNN
 F 2 "KiCad/kicad-footprints/Package_TO_SOT_SMD.pretty:SOT-23-6" H 6200 4025 50  0001 L CIN
