@@ -27,119 +27,119 @@ $EndComp
 $Comp
 L Device:R R1
 U 1 1 5ECB39F0
-P 3400 4150
-F 0 "R1" V 3193 4150 50  0000 C CNN
-F 1 "100K" V 3284 4150 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3330 4150 50  0001 C CNN
-F 3 "~" H 3400 4150 50  0001 C CNN
-	1    3400 4150
+P 3250 3450
+F 0 "R1" V 3043 3450 50  0000 C CNN
+F 1 "100K" V 3134 3450 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3180 3450 50  0001 C CNN
+F 3 "~" H 3250 3450 50  0001 C CNN
+	1    3250 3450
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5ECB414F
-P 3400 4450
-F 0 "R2" V 3193 4450 50  0000 C CNN
-F 1 "100K" V 3284 4450 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3330 4450 50  0001 C CNN
-F 3 "~" H 3400 4450 50  0001 C CNN
-	1    3400 4450
+P 3250 3750
+F 0 "R2" V 3043 3750 50  0000 C CNN
+F 1 "100K" V 3134 3750 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3180 3750 50  0001 C CNN
+F 3 "~" H 3250 3750 50  0001 C CNN
+	1    3250 3750
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5ECB8733
-P 3700 4750
-F 0 "#PWR05" H 3700 4500 50  0001 C CNN
-F 1 "GND" H 3705 4577 50  0000 C CNN
-F 2 "" H 3700 4750 50  0001 C CNN
-F 3 "" H 3700 4750 50  0001 C CNN
-	1    3700 4750
+P 3550 4050
+F 0 "#PWR05" H 3550 3800 50  0001 C CNN
+F 1 "GND" H 3555 3877 50  0000 C CNN
+F 2 "" H 3550 4050 50  0001 C CNN
+F 3 "" H 3550 4050 50  0001 C CNN
+	1    3550 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3700 4750 3700 4650
+	3550 4050 3550 3950
 Wire Wire Line
-	3700 4650 3800 4650
+	3550 3950 3650 3950
 Wire Wire Line
-	3550 4450 3600 4450
+	3400 3750 3450 3750
 Wire Wire Line
-	3550 4150 3600 4150
+	3400 3450 3450 3450
 Wire Wire Line
-	3600 4150 3600 4450
-Connection ~ 3600 4450
+	3450 3450 3450 3750
+Connection ~ 3450 3750
 Wire Wire Line
-	3600 4450 3750 4450
-Connection ~ 3750 4450
+	3450 3750 3600 3750
+Connection ~ 3600 3750
 Wire Wire Line
-	3750 4450 3800 4450
+	3600 3750 3650 3750
 $Comp
 L power:GND #PWR07
 U 1 1 5ECD1341
-P 5950 5300
-F 0 "#PWR07" H 5950 5050 50  0001 C CNN
-F 1 "GND" H 5955 5127 50  0000 C CNN
-F 2 "" H 5950 5300 50  0001 C CNN
-F 3 "" H 5950 5300 50  0001 C CNN
-	1    5950 5300
+P 5800 4600
+F 0 "#PWR07" H 5800 4350 50  0001 C CNN
+F 1 "GND" H 5805 4427 50  0000 C CNN
+F 2 "" H 5800 4600 50  0001 C CNN
+F 3 "" H 5800 4600 50  0001 C CNN
+	1    5800 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5950 5300 5950 5200
+	5800 4600 5800 4500
 Wire Wire Line
-	5950 5200 6050 5200
+	5800 4500 5900 4500
 Wire Wire Line
-	6800 4650 6800 5100
+	6650 3950 6650 4400
 Wire Wire Line
-	6800 5100 6650 5100
+	6650 4400 6500 4400
 Wire Wire Line
-	5900 5000 6000 5000
+	5750 4300 5850 4300
 Wire Wire Line
-	6600 4650 6800 4650
+	6450 3950 6650 3950
 Wire Wire Line
-	6300 4650 6000 4650
+	6150 3950 5850 3950
 Wire Wire Line
-	6000 4650 6000 5000
-Connection ~ 6000 5000
+	5850 3950 5850 4300
+Connection ~ 5850 4300
 Wire Wire Line
-	6000 5000 6050 5000
+	5850 4300 5900 4300
 $Comp
 L Device:R R5
 U 1 1 5ECD4025
-P 6450 4650
-F 0 "R5" V 6657 4650 50  0000 C CNN
-F 1 "100K" V 6566 4650 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 6380 4650 50  0001 C CNN
-F 3 "~" H 6450 4650 50  0001 C CNN
-	1    6450 4650
+P 6300 3950
+F 0 "R5" V 6507 3950 50  0000 C CNN
+F 1 "100K" V 6416 3950 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 6230 3950 50  0001 C CNN
+F 3 "~" H 6300 3950 50  0001 C CNN
+	1    6300 3950
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5ECC6761
-P 5750 5000
-F 0 "R4" V 5957 5000 50  0000 C CNN
-F 1 "100K" V 5866 5000 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 5680 5000 50  0001 C CNN
-F 3 "~" H 5750 5000 50  0001 C CNN
-	1    5750 5000
+P 5600 4300
+F 0 "R4" V 5807 4300 50  0000 C CNN
+F 1 "100K" V 5716 4300 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 5530 4300 50  0001 C CNN
+F 3 "~" H 5600 4300 50  0001 C CNN
+	1    5600 4300
 	0    -1   -1   0   
 $EndComp
-Text GLabel 3150 4150 0    50   Input ~ 0
+Text GLabel 3000 3450 0    50   Input ~ 0
 AIN
-Text GLabel 3150 4450 0    50   Input ~ 0
+Text GLabel 3000 3750 0    50   Input ~ 0
 BIN
-Text GLabel 5600 4550 2    50   Input ~ 0
+Text GLabel 5450 3850 2    50   Input ~ 0
 ~OUT
-Text GLabel 7000 5100 2    50   Input ~ 0
+Text GLabel 6850 4400 2    50   Input ~ 0
 OUT
 Wire Wire Line
-	7000 5100 6800 5100
-Connection ~ 6800 5100
+	6850 4400 6650 4400
+Connection ~ 6650 4400
 Wire Wire Line
-	3250 4150 3150 4150
+	3100 3450 3000 3450
 Wire Wire Line
-	3250 4450 3150 4450
+	3100 3750 3000 3750
 $Comp
 L synth:AudioJack2_Ground_Switch J1
 U 1 1 5EC96195
@@ -362,9 +362,9 @@ Wire Wire Line
 	1200 3300 1200 3750
 Wire Wire Line
 	1350 3500 1100 3500
-Text Notes 3850 4850 0    50   ~ 0
+Text Notes 3700 4150 0    50   ~ 0
 inverting sum
-Text Notes 6400 5300 0    50   ~ 0
+Text Notes 6250 4600 0    50   ~ 0
 re-invert
 Wire Wire Line
 	1050 5100 1000 5100
@@ -383,23 +383,23 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:TL072 U1
 U 1 1 5ECD72AD
-P 4100 4550
-F 0 "U1" H 4250 4400 50  0000 C CNN
-F 1 "TL072" H 4050 4550 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 4100 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4100 4550 50  0001 C CNN
-	1    4100 4550
+P 3950 3850
+F 0 "U1" H 4100 3700 50  0000 C CNN
+F 1 "TL072" H 3900 3850 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 3950 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3950 3850 50  0001 C CNN
+	1    3950 3850
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 2 1 5ECD970A
-P 6350 5100
-F 0 "U1" H 6400 4950 50  0000 C CNN
-F 1 "TL072" H 6300 5100 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 6350 5100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6350 5100 50  0001 C CNN
-	2    6350 5100
+P 6200 4400
+F 0 "U1" H 6250 4250 50  0000 C CNN
+F 1 "TL072" H 6150 4400 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 6200 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6200 4400 50  0001 C CNN
+	2    6200 4400
 	1    0    0    1   
 $EndComp
 $Comp
@@ -413,45 +413,45 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10700 1850 50  0001 C CNN
 	3    10700 1850
 	1    0    0    -1  
 $EndComp
-Text Notes 3000 5150 0    50   ~ 0
+Text Notes 2850 4450 0    50   ~ 0
 gain 0-2\nideally 1 detent pot so it sits at g=1
-Text Notes 6350 3500 2    50   ~ 0
+Text Notes 6200 2800 2    50   ~ 0
 Considered an LED here, but most require 20mA\nwhich is a serious bite out of the power supply
 $Comp
 L 4xxx:4066 U2
 U 1 1 5EE18756
-P 5150 4550
-F 0 "U2" H 5150 4377 50  0000 C CNN
-F 1 "4066" H 5150 4286 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 5150 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5150 4550 50  0001 C CNN
-	1    5150 4550
+P 5000 3850
+F 0 "U2" H 5000 3677 50  0000 C CNN
+F 1 "4066" H 5000 3586 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 5000 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5000 3850 50  0001 C CNN
+	1    5000 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5450 4550 5500 4550
+	5300 3850 5350 3850
 Wire Wire Line
-	5500 4550 5500 5000
+	5350 3850 5350 4300
 Wire Wire Line
-	5500 5000 5600 5000
+	5350 4300 5450 4300
 $Comp
 L Device:R R3
 U 1 1 5EE4AAAD
-P 4850 3900
-F 0 "R3" V 5057 3900 50  0000 C CNN
-F 1 "100K" V 4966 3900 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 4780 3900 50  0001 C CNN
-F 3 "~" H 4850 3900 50  0001 C CNN
-	1    4850 3900
+P 4700 3200
+F 0 "R3" V 4907 3200 50  0000 C CNN
+F 1 "100K" V 4816 3200 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 4630 3200 50  0001 C CNN
+F 3 "~" H 4700 3200 50  0001 C CNN
+	1    4700 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 4250 5150 3650
-Text GLabel 4700 3650 0    50   Input ~ 0
+	5000 3550 5000 2950
+Text GLabel 4550 2950 0    50   Input ~ 0
 GATE
 Wire Wire Line
-	5600 4550 5500 4550
-Connection ~ 5500 4550
+	5450 3850 5350 3850
+Connection ~ 5350 3850
 $Comp
 L 4xxx:4066 U2
 U 5 1 5EE7A259
@@ -588,36 +588,36 @@ The CD4066 has a max power supply voltage of 20V,\nso we step the 24V down to ab
 $Comp
 L Device:R_POT RV1
 U 1 1 5ECB664B
-P 4200 4000
-F 0 "RV1" V 3993 4000 50  0000 C CNN
-F 1 "200K" V 4084 4000 50  0000 C CNN
-F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 4200 4000 50  0001 C CNN
-F 3 "~" H 4200 4000 50  0001 C CNN
-	1    4200 4000
+P 4050 3300
+F 0 "RV1" V 3843 3300 50  0000 C CNN
+F 1 "200K" V 3934 3300 50  0000 C CNN
+F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 4050 3300 50  0001 C CNN
+F 3 "~" H 4050 3300 50  0001 C CNN
+	1    4050 3300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3750 4000 3750 4450
+	3600 3300 3600 3750
 Wire Wire Line
-	3750 4000 3950 4000
+	3600 3300 3800 3300
 Wire Wire Line
-	4200 4150 4200 4200
+	4050 3450 4050 3500
 Wire Wire Line
-	4200 4200 3950 4200
+	4050 3500 3800 3500
 Wire Wire Line
-	3950 4200 3950 4000
-Connection ~ 3950 4000
+	3800 3500 3800 3300
+Connection ~ 3800 3300
 Wire Wire Line
-	3950 4000 4050 4000
+	3800 3300 3900 3300
 Wire Wire Line
-	4400 4550 4500 4550
+	4250 3850 4350 3850
 Wire Wire Line
-	4350 4000 4500 4000
+	4200 3300 4350 3300
 Wire Wire Line
-	4500 4000 4500 4550
-Connection ~ 4500 4550
+	4350 3300 4350 3850
+Connection ~ 4350 3850
 Wire Wire Line
-	4500 4550 4850 4550
+	4350 3850 4700 3850
 $Comp
 L synth:EURORACK_CONN_10 J4
 U 1 1 5ED02358
@@ -693,25 +693,154 @@ F 3 "" H 1350 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 3650 4850 3650
+	4550 2950 4700 2950
 Wire Wire Line
-	4850 3750 4850 3650
-Connection ~ 4850 3650
+	4700 3050 4700 2950
+Connection ~ 4700 2950
 Wire Wire Line
-	4850 3650 5150 3650
+	4700 2950 5000 2950
 $Comp
 L power:-10V #PWR06
 U 1 1 5EE1DB80
-P 4850 4250
-F 0 "#PWR06" H 4850 4350 50  0001 C CNN
-F 1 "-10V" H 4865 4423 50  0000 C CNN
-F 2 "" H 4850 4250 50  0001 C CNN
-F 3 "" H 4850 4250 50  0001 C CNN
-	1    4850 4250
+P 4700 3550
+F 0 "#PWR06" H 4700 3650 50  0001 C CNN
+F 1 "-10V" H 4715 3723 50  0000 C CNN
+F 2 "" H 4700 3550 50  0001 C CNN
+F 3 "" H 4700 3550 50  0001 C CNN
+	1    4700 3550
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4850 4050 4850 4250
-Text Notes 5050 5000 0    50   ~ 0
+	4700 3350 4700 3550
+Text Notes 4900 4300 0    50   ~ 0
 gate
+$Comp
+L 4xxx:4066 U2
+U 2 1 5EE28600
+P 7200 6100
+F 0 "U2" H 7200 5927 50  0000 C CNN
+F 1 "4066" H 7200 5836 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 7200 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 7200 6100 50  0001 C CNN
+	2    7200 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4066 U2
+U 3 1 5EE292FA
+P 8700 6100
+F 0 "U2" H 8700 5927 50  0000 C CNN
+F 1 "4066" H 8700 5836 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 8700 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 8700 6100 50  0001 C CNN
+	3    8700 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4066 U2
+U 4 1 5EE2A725
+P 10250 6100
+F 0 "U2" H 10250 5927 50  0000 C CNN
+F 1 "4066" H 10250 5836 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 10250 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 10250 6100 50  0001 C CNN
+	4    10250 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J8
+U 1 1 5EE2F88B
+P 10100 5000
+F 0 "J8" H 10180 5042 50  0000 L CNN
+F 1 "Conn_01x05" H 10180 4951 50  0000 L CNN
+F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x05" H 10100 5000 50  0001 C CNN
+F 3 "~" H 10100 5000 50  0001 C CNN
+	1    10100 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J7
+U 1 1 5EE2E54C
+P 8850 4900
+F 0 "J7" H 8768 5217 50  0000 C CNN
+F 1 "Conn_01x04" H 8768 5126 50  0000 C CNN
+F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x04" H 8850 4900 50  0001 C CNN
+F 3 "~" H 8850 4900 50  0001 C CNN
+	1    8850 4900
+	-1   0    0    -1  
+$EndComp
+Text GLabel 9850 5200 0    50   Input ~ 0
+4066_8
+Text GLabel 9850 5100 0    50   Input ~ 0
+4066_9
+Text GLabel 9850 5000 0    50   Input ~ 0
+4066_10
+Text GLabel 9850 4900 0    50   Input ~ 0
+4066_11
+Text GLabel 9850 4800 0    50   Input ~ 0
+4066_12
+Text GLabel 9100 5100 2    50   Input ~ 0
+4066_6
+Text GLabel 9100 5000 2    50   Input ~ 0
+4066_5
+Text GLabel 9100 4900 2    50   Input ~ 0
+4066_4
+Text GLabel 9100 4800 2    50   Input ~ 0
+4066_3
+Text Notes 8400 5450 0    50   ~ 0
+Because we are sharing the 4066 across 4 duplicate PCBs,\nwe have to expose some connectors for the other switches
+Wire Wire Line
+	9100 4800 9050 4800
+Wire Wire Line
+	9050 4900 9100 4900
+Wire Wire Line
+	9100 5000 9050 5000
+Wire Wire Line
+	9050 5100 9100 5100
+Wire Wire Line
+	9850 5200 9900 5200
+Wire Wire Line
+	9900 5100 9850 5100
+Wire Wire Line
+	9850 5000 9900 5000
+Wire Wire Line
+	9900 4900 9850 4900
+Wire Wire Line
+	9900 4800 9850 4800
+Text GLabel 7550 6100 2    50   Input ~ 0
+4066_3
+Text GLabel 6850 6100 0    50   Input ~ 0
+4066_4
+Text GLabel 7200 5750 0    50   Input ~ 0
+4066_5
+Text GLabel 8700 5750 0    50   Input ~ 0
+4066_6
+Text GLabel 8350 6100 0    50   Input ~ 0
+4066_8
+Text GLabel 9050 6100 2    50   Input ~ 0
+4066_9
+Text GLabel 10600 6100 2    50   Input ~ 0
+4066_10
+Text GLabel 9900 6100 0    50   Input ~ 0
+4066_11
+Text GLabel 10250 5750 0    50   Input ~ 0
+4066_12
+Wire Wire Line
+	10250 5750 10250 5800
+Wire Wire Line
+	10600 6100 10550 6100
+Wire Wire Line
+	9950 6100 9900 6100
+Wire Wire Line
+	9050 6100 9000 6100
+Wire Wire Line
+	8700 5800 8700 5750
+Wire Wire Line
+	8400 6100 8350 6100
+Wire Wire Line
+	7550 6100 7500 6100
+Wire Wire Line
+	7200 5800 7200 5750
+Wire Wire Line
+	6900 6100 6850 6100
 $EndSCHEMATC
