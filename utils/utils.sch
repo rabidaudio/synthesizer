@@ -96,7 +96,7 @@ U 1 1 5ECB4AC2
 P 3350 2000
 F 0 "RV1" V 3143 2000 50  0000 C CNN
 F 1 "200K" V 3234 2000 50  0000 C CNN
-F 2 "KiCad/Potentiometers.pretty:Potentiometer_Trimmer_Vishay_T73YP_Horizontal" H 3350 2000 50  0001 C CNN
+F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 3350 2000 50  0001 C CNN
 F 3 "~" H 3350 2000 50  0001 C CNN
 	1    3350 2000
 	0    1    1    0   
@@ -144,7 +144,7 @@ U 1 1 5ECC53AF
 P 3200 1350
 F 0 "Q1" V 3449 1350 50  0000 C CNN
 F 1 "2N7000" V 3540 1350 50  0000 C CNN
-F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-92_Molded_Narrow" H 3400 1275 50  0001 L CIN
+F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-92_Inline_Wide" H 3400 1275 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 3200 1350 50  0001 L CNN
 	1    3200 1350
 	0    1    1    0   
@@ -277,7 +277,7 @@ U 1 1 5EC96195
 P 800 1000
 F 0 "J1" H 832 1425 50  0000 C CNN
 F 1 "1_AIN" H 832 1334 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 800 1200 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 800 1200 50  0001 C CNN
 F 3 "~" H 800 1200 50  0001 C CNN
 	1    800  1000
 	1    0    0    -1  
@@ -324,7 +324,7 @@ U 1 1 5EC9F2C7
 P 800 2150
 F 0 "J2" H 832 2575 50  0000 C CNN
 F 1 "1_BIN" H 832 2484 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 800 2350 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 800 2350 50  0001 C CNN
 F 3 "~" H 800 2350 50  0001 C CNN
 	1    800  2150
 	1    0    0    -1  
@@ -371,7 +371,7 @@ U 1 1 5ECA298E
 P 800 3250
 F 0 "J3" H 832 3675 50  0000 C CNN
 F 1 "1_GATE" H 832 3584 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 800 3450 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 800 3450 50  0001 C CNN
 F 3 "~" H 800 3450 50  0001 C CNN
 	1    800  3250
 	1    0    0    -1  
@@ -411,7 +411,7 @@ U 1 1 5ECA5DD5
 P 6200 1050
 F 0 "J7" H 6020 1074 50  0000 R CNN
 F 1 "1_~OUT" H 6020 976 50  0000 R CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6200 1250 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 6200 1250 50  0001 C CNN
 F 3 "~" H 6200 1250 50  0001 C CNN
 	1    6200 1050
 	-1   0    0    -1  
@@ -453,7 +453,7 @@ U 1 1 5ECB6AB3
 P 6250 2150
 F 0 "J9" H 6070 2168 50  0000 R CNN
 F 1 "1_OUT" H 6070 2077 50  0000 R CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6250 2350 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 6250 2350 50  0001 C CNN
 F 3 "~" H 6250 2350 50  0001 C CNN
 	1    6250 2150
 	-1   0    0    -1  
@@ -562,7 +562,7 @@ U 1 1 5ECFBC41
 P 3350 5650
 F 0 "RV2" V 3143 5650 50  0000 C CNN
 F 1 "200K" V 3234 5650 50  0000 C CNN
-F 2 "KiCad/Potentiometers.pretty:Potentiometer_Trimmer_Vishay_T73YP_Horizontal" H 3350 5650 50  0001 C CNN
+F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 3350 5650 50  0001 C CNN
 F 3 "~" H 3350 5650 50  0001 C CNN
 	1    3350 5650
 	0    1    1    0   
@@ -610,7 +610,7 @@ U 1 1 5ECFBC63
 P 3200 5000
 F 0 "Q2" V 3449 5000 50  0000 C CNN
 F 1 "2N7000" V 3540 5000 50  0000 C CNN
-F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-92_Molded_Narrow" H 3400 4925 50  0001 L CIN
+F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-92_Inline_Wide" H 3400 4925 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 3200 5000 50  0001 L CNN
 	1    3200 5000
 	0    1    1    0   
@@ -743,7 +743,7 @@ U 1 1 5ECFBCC4
 P 800 4650
 F 0 "J4" H 832 5075 50  0000 C CNN
 F 1 "2_AIN" H 832 4984 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 800 4850 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 800 4850 50  0001 C CNN
 F 3 "~" H 800 4850 50  0001 C CNN
 	1    800  4650
 	1    0    0    -1  
@@ -790,7 +790,7 @@ U 1 1 5ECFBCE6
 P 800 5800
 F 0 "J5" H 832 6225 50  0000 C CNN
 F 1 "2_BIN" H 832 6134 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 800 6000 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 800 6000 50  0001 C CNN
 F 3 "~" H 800 6000 50  0001 C CNN
 	1    800  5800
 	1    0    0    -1  
@@ -837,7 +837,7 @@ U 1 1 5ECFBD08
 P 800 6900
 F 0 "J6" H 832 7325 50  0000 C CNN
 F 1 "2_GATE" H 832 7234 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 800 7100 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 800 7100 50  0001 C CNN
 F 3 "~" H 800 7100 50  0001 C CNN
 	1    800  6900
 	1    0    0    -1  
@@ -877,7 +877,7 @@ U 1 1 5ECFBD26
 P 6200 4700
 F 0 "J8" H 6020 4724 50  0000 R CNN
 F 1 "2_~OUT" H 6020 4626 50  0000 R CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6200 4900 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 6200 4900 50  0001 C CNN
 F 3 "~" H 6200 4900 50  0001 C CNN
 	1    6200 4700
 	-1   0    0    -1  
@@ -919,7 +919,7 @@ U 1 1 5ECFBD45
 P 6250 5800
 F 0 "J10" H 6070 5818 50  0000 R CNN
 F 1 "2_OUT" H 6070 5727 50  0000 R CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6250 6000 50  0001 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 6250 6000 50  0001 C CNN
 F 3 "~" H 6250 6000 50  0001 C CNN
 	1    6250 5800
 	-1   0    0    -1  
