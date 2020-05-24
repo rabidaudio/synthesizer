@@ -30,9 +30,16 @@ https://en.wikipedia.org/wiki/Eurorack
 - Knob/switch spacing?
 
 - 1HP=1/5"=5.08mm
-- 84 HPs of usable space in a 19" rack
-- rounding jack spacing to 15mm means each jack is 3HP wide...
-- 30mm knob spacing
+  - standard graph paper is 5 squares per inch, meaning exactly 1 real world HP per square
+- 84 HPs (426mm) of usable horizontal space in a 19" rack
+- 128.5mm of useable vertical space in 3U
+- Maximum control density:
+  - jacks: x: 15mm, y: 14mm
+  - knobs: x: 30mm, y: 28mm
+  - this creates an easy bounding box to work with
+  - each jack is 3HP wide, each knob is 6HP wide
+  - with this almost-square factor, we have 9 jacks of vertical space
+    - 27 "virtical HPs"
 
 - https://syntherjack.net/eurorack-module-diy-tutorial-1-drilling/
 - http://www.doepfer.de/a100_man/a100m_e.htm
