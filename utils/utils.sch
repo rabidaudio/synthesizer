@@ -504,41 +504,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8750 1700 50  0001 C CNN
 	3    8750 1700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_POT_Dual RV1
-U 1 1 5ECF889E
-P 4550 3800
-F 0 "RV1" H 4450 3900 50  0000 C CNN
-F 1 "100K" H 4550 3600 50  0000 C CNN
-F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 4800 3725 50  0001 C CNN
-F 3 "~" H 4800 3725 50  0001 C CNN
-	1    4550 3800
-	1    0    0    1   
-$EndComp
-Text Notes 5000 3550 2    50   ~ 0
-I was originally targeting a 200K pot. However,\nThe only 1 Detent PDB18X available was a 100K\n2 gang pot, so instead we use both gangs in series\nand can keep the input impedance at 100K and still\nget a gain of 0-2
-Wire Wire Line
-	4050 3700 4050 3900
-Wire Wire Line
-	4650 3700 4550 3700
-Wire Wire Line
-	4800 3900 4550 3900
-Wire Wire Line
-	4550 3900 4550 3700
-Connection ~ 4550 3700
-Wire Wire Line
-	4550 3700 4450 3700
-Wire Wire Line
-	4950 3700 5050 3700
+Text Notes 4850 3350 2    50   ~ 0
+gain 0-2\nideally 1 detent pot so it sits at g=1
 Text Notes 7900 3450 2    50   ~ 0
 Considered an LED here, but most require 20mA\nwhich is a serious bite out of the power supply
-Wire Wire Line
-	4050 3700 4150 3700
-Wire Wire Line
-	4050 3900 4300 3900
-Connection ~ 4050 3900
-Wire Wire Line
-	4050 3900 4050 4150
 $Comp
 L 4xxx:4066 U2
 U 1 1 5EE18756
@@ -550,13 +519,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5450 4250 50  0001 C CNN
 	1    5450 4250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5050 3700 5050 4250
-Wire Wire Line
-	4700 4250 5050 4250
-Connection ~ 5050 4250
-Wire Wire Line
-	5050 4250 5150 4250
 Wire Wire Line
 	5750 4250 5800 4250
 Wire Wire Line
@@ -768,145 +730,37 @@ Wire Wire Line
 Connection ~ 10000 2600
 Text Notes 9050 3200 0    50   ~ 0
 The CD4066 has a max power supply voltage of 20V,\nso we step the 24V down to about 19.5 via regulators.\nIn theory we could hacky do this with 6 diodes instead
-Text Notes 1150 7500 0    50   ~ 0
-In order to share the switches of a single CD4066\nacross multiple boards, there are some hacks in the\nPCB design. The CD4066 and the LM*37s are only\nrequired on one board
 $Comp
-L 4xxx:4066 U2
-U 2 1 5EF33DA8
-P 1050 5900
-F 0 "U2" H 1050 5727 50  0000 C CNN
-F 1 "4066" H 1050 5636 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 1050 5900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 1050 5900 50  0001 C CNN
-	2    1050 5900
-	1    0    0    -1  
+L Device:R_POT RV1
+U 1 1 5ECB664B
+P 4500 3700
+F 0 "RV1" V 4293 3700 50  0000 C CNN
+F 1 "200K" V 4384 3700 50  0000 C CNN
+F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 4500 3700 50  0001 C CNN
+F 3 "~" H 4500 3700 50  0001 C CNN
+	1    4500 3700
+	0    1    1    0   
 $EndComp
-$Comp
-L 4xxx:4066 U2
-U 3 1 5EF34E81
-P 1900 5900
-F 0 "U2" H 1900 5727 50  0000 C CNN
-F 1 "4066" H 1900 5636 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 1900 5900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 1900 5900 50  0001 C CNN
-	3    1900 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L 4xxx:4066 U2
-U 4 1 5EF35DAB
-P 2700 5900
-F 0 "U2" H 2700 5727 50  0000 C CNN
-F 1 "4066" H 2700 5636 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 2700 5900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 2700 5900 50  0001 C CNN
-	4    2700 5900
-	1    0    0    -1  
-$EndComp
-Text GLabel 1500 6500 2    50   Input ~ 0
-4066_3
-Text GLabel 1500 6600 2    50   Input ~ 0
-4066_4
-Text GLabel 1500 6700 2    50   Input ~ 0
-4066_5
-Text GLabel 1500 6800 2    50   Input ~ 0
-4066_6
-Text GLabel 2250 6500 0    50   Input ~ 0
-4066_12
-Text GLabel 2250 6600 0    50   Input ~ 0
-4066_11
-Text GLabel 2250 6700 0    50   Input ~ 0
-4066_10
-Text GLabel 2250 6800 0    50   Input ~ 0
-4066_9
-Text GLabel 2250 6900 0    50   Input ~ 0
-4066_8
 Wire Wire Line
-	2400 6900 2250 6900
+	4050 3700 4050 4150
 Wire Wire Line
-	2250 6800 2400 6800
+	4050 3700 4250 3700
 Wire Wire Line
-	2400 6700 2250 6700
+	4500 3850 4500 3900
 Wire Wire Line
-	2250 6600 2400 6600
+	4500 3900 4250 3900
 Wire Wire Line
-	2400 6500 2250 6500
+	4250 3900 4250 3700
+Connection ~ 4250 3700
 Wire Wire Line
-	1350 6800 1500 6800
+	4250 3700 4350 3700
 Wire Wire Line
-	1350 6700 1500 6700
+	4700 4250 4800 4250
 Wire Wire Line
-	1500 6600 1350 6600
+	4650 3700 4800 3700
 Wire Wire Line
-	1350 6500 1500 6500
-$Comp
-L Connector_Generic:Conn_01x05 J8
-U 1 1 5EFFDABB
-P 2600 6700
-F 0 "J8" H 2680 6742 50  0000 L CNN
-F 1 "Conn_01x05" H 2680 6651 50  0000 L CNN
-F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x05" H 2600 6700 50  0001 C CNN
-F 3 "~" H 2600 6700 50  0001 C CNN
-	1    2600 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J7
-U 1 1 5EFFF3AA
-P 1150 6600
-F 0 "J7" H 1068 6917 50  0000 C CNN
-F 1 "Conn_01x04" H 1068 6826 50  0000 C CNN
-F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x04" H 1150 6600 50  0001 C CNN
-F 3 "~" H 1150 6600 50  0001 C CNN
-	1    1150 6600
-	-1   0    0    -1  
-$EndComp
-Text GLabel 1400 5850 1    50   Input ~ 0
-4066_3
-Text GLabel 700  5850 1    50   Input ~ 0
-4066_4
-Text GLabel 1050 5500 1    50   Input ~ 0
-4066_5
-Text GLabel 1900 5500 1    50   Input ~ 0
-4066_6
-Text GLabel 1550 5850 1    50   Input ~ 0
-4066_8
-Text GLabel 2250 5850 1    50   Input ~ 0
-4066_9
-Text GLabel 3050 5850 1    50   Input ~ 0
-4066_10
-Text GLabel 2350 5850 1    50   Input ~ 0
-4066_11
-Text GLabel 2700 5500 1    50   Input ~ 0
-4066_12
+	4800 3700 4800 4250
+Connection ~ 4800 4250
 Wire Wire Line
-	2700 5500 2700 5600
-Wire Wire Line
-	3050 5850 3050 5900
-Wire Wire Line
-	3050 5900 3000 5900
-Wire Wire Line
-	2400 5900 2350 5900
-Wire Wire Line
-	2350 5900 2350 5850
-Wire Wire Line
-	2200 5900 2250 5900
-Wire Wire Line
-	2250 5900 2250 5850
-Wire Wire Line
-	1900 5600 1900 5500
-Wire Wire Line
-	1600 5900 1550 5900
-Wire Wire Line
-	1550 5900 1550 5850
-Wire Wire Line
-	1400 5850 1400 5900
-Wire Wire Line
-	1400 5900 1350 5900
-Wire Wire Line
-	1050 5600 1050 5500
-Wire Wire Line
-	750  5900 700  5900
-Wire Wire Line
-	700  5900 700  5850
+	4800 4250 5150 4250
 $EndSCHEMATC
