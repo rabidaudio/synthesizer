@@ -24,6 +24,11 @@ K NPN Transistor
 F https://www.diodes.com/assets/Datasheets/ds30436.pdf
 $ENDCMP
 #
+$CMP EURORACK_CONN_10
+K connector eurorack euro synth
+F https://division-6.com/learn/eurorack-power/
+$ENDCMP
+#
 $CMP EURORACK_CONN_16
 K connector eurorack euro synth
 F https://division-6.com/learn/eurorack-power/
