@@ -29,6 +29,14 @@ https://en.wikipedia.org/wiki/Eurorack
 - 14mm spacing between jacks (center to center) in both directions
 - Knob/switch spacing?
 
+- 1HP=1/5"=5.08mm
+- 84 HPs of usable space in a 19" rack
+- rounding jack spacing to 15mm means each jack is 3HP wide...
+- 30mm knob spacing
+
+- https://syntherjack.net/eurorack-module-diy-tutorial-1-drilling/
+- http://www.doepfer.de/a100_man/a100m_e.htm
+
 # Case:
 
 TipTop is good starter product, has it has adapter for mounting modules in 19" rack, and included power supply
