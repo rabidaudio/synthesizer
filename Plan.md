@@ -23,6 +23,12 @@ https://en.wikipedia.org/wiki/Eurorack
 
 ![Pinout-Diagram](pinout.png)
 
+## Layout
+
+- Jacks at the top, controls at the bottom
+- 14mm spacing between jacks (center to center) in both directions
+- Knob/switch spacing?
+
 # Case:
 
 TipTop is good starter product, has it has adapter for mounting modules in 19" rack, and included power supply

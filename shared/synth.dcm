@@ -34,6 +34,12 @@ K connector eurorack euro synth
 F https://division-6.com/learn/eurorack-power/
 $ENDCMP
 #
+$CMP J109
+D N-JFET transistor, interchangable drain/source
+K transistor NJFET N-JFET J109 2N5457
+F ~
+$ENDCMP
+#
 $CMP SW_4PDT_x4
 D Switch, quad pole double throw, separate symbols
 K switch quad-pole double-throw 4PDT ON-ON
