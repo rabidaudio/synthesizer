@@ -768,6 +768,145 @@ Wire Wire Line
 Connection ~ 10000 2600
 Text Notes 9050 3200 0    50   ~ 0
 The CD4066 has a max power supply voltage of 20V,\nso we step the 24V down to about 19.5 via regulators.\nIn theory we could hacky do this with 6 diodes instead
-Text Notes 4450 7450 0    50   ~ 0
+Text Notes 1150 7500 0    50   ~ 0
 In order to share the switches of a single CD4066\nacross multiple boards, there are some hacks in the\nPCB design. The CD4066 and the LM*37s are only\nrequired on one board
+$Comp
+L 4xxx:4066 U2
+U 2 1 5EF33DA8
+P 1050 5900
+F 0 "U2" H 1050 5727 50  0000 C CNN
+F 1 "4066" H 1050 5636 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 1050 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 1050 5900 50  0001 C CNN
+	2    1050 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4066 U2
+U 3 1 5EF34E81
+P 1900 5900
+F 0 "U2" H 1900 5727 50  0000 C CNN
+F 1 "4066" H 1900 5636 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 1900 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 1900 5900 50  0001 C CNN
+	3    1900 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4066 U2
+U 4 1 5EF35DAB
+P 2700 5900
+F 0 "U2" H 2700 5727 50  0000 C CNN
+F 1 "4066" H 2700 5636 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 2700 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 2700 5900 50  0001 C CNN
+	4    2700 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 1500 6500 2    50   Input ~ 0
+4066_3
+Text GLabel 1500 6600 2    50   Input ~ 0
+4066_4
+Text GLabel 1500 6700 2    50   Input ~ 0
+4066_5
+Text GLabel 1500 6800 2    50   Input ~ 0
+4066_6
+Text GLabel 2250 6500 0    50   Input ~ 0
+4066_12
+Text GLabel 2250 6600 0    50   Input ~ 0
+4066_11
+Text GLabel 2250 6700 0    50   Input ~ 0
+4066_10
+Text GLabel 2250 6800 0    50   Input ~ 0
+4066_9
+Text GLabel 2250 6900 0    50   Input ~ 0
+4066_8
+Wire Wire Line
+	2400 6900 2250 6900
+Wire Wire Line
+	2250 6800 2400 6800
+Wire Wire Line
+	2400 6700 2250 6700
+Wire Wire Line
+	2250 6600 2400 6600
+Wire Wire Line
+	2400 6500 2250 6500
+Wire Wire Line
+	1350 6800 1500 6800
+Wire Wire Line
+	1350 6700 1500 6700
+Wire Wire Line
+	1500 6600 1350 6600
+Wire Wire Line
+	1350 6500 1500 6500
+$Comp
+L Connector_Generic:Conn_01x05 J8
+U 1 1 5EFFDABB
+P 2600 6700
+F 0 "J8" H 2680 6742 50  0000 L CNN
+F 1 "Conn_01x05" H 2680 6651 50  0000 L CNN
+F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x05" H 2600 6700 50  0001 C CNN
+F 3 "~" H 2600 6700 50  0001 C CNN
+	1    2600 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J7
+U 1 1 5EFFF3AA
+P 1150 6600
+F 0 "J7" H 1068 6917 50  0000 C CNN
+F 1 "Conn_01x04" H 1068 6826 50  0000 C CNN
+F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x04" H 1150 6600 50  0001 C CNN
+F 3 "~" H 1150 6600 50  0001 C CNN
+	1    1150 6600
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1400 5850 1    50   Input ~ 0
+4066_3
+Text GLabel 700  5850 1    50   Input ~ 0
+4066_4
+Text GLabel 1050 5500 1    50   Input ~ 0
+4066_5
+Text GLabel 1900 5500 1    50   Input ~ 0
+4066_6
+Text GLabel 1550 5850 1    50   Input ~ 0
+4066_8
+Text GLabel 2250 5850 1    50   Input ~ 0
+4066_9
+Text GLabel 3050 5850 1    50   Input ~ 0
+4066_10
+Text GLabel 2350 5850 1    50   Input ~ 0
+4066_11
+Text GLabel 2700 5500 1    50   Input ~ 0
+4066_12
+Wire Wire Line
+	2700 5500 2700 5600
+Wire Wire Line
+	3050 5850 3050 5900
+Wire Wire Line
+	3050 5900 3000 5900
+Wire Wire Line
+	2400 5900 2350 5900
+Wire Wire Line
+	2350 5900 2350 5850
+Wire Wire Line
+	2200 5900 2250 5900
+Wire Wire Line
+	2250 5900 2250 5850
+Wire Wire Line
+	1900 5600 1900 5500
+Wire Wire Line
+	1600 5900 1550 5900
+Wire Wire Line
+	1550 5900 1550 5850
+Wire Wire Line
+	1400 5850 1400 5900
+Wire Wire Line
+	1400 5900 1350 5900
+Wire Wire Line
+	1050 5600 1050 5500
+Wire Wire Line
+	750  5900 700  5900
+Wire Wire Line
+	700  5900 700  5850
 $EndSCHEMATC
