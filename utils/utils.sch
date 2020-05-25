@@ -408,8 +408,8 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10700 1850 50  0001 C CNN
 $EndComp
 Text Notes 4250 3000 2    50   ~ 0
 gain 0-2\nideally 1 detent pot so it sits at g=1
-Text Notes 3850 7200 0    50   ~ 0
-This is a trick to only use the LED to show gate state\nif the GATE jack is used. When jack is unplugged,\nGATE_CONN is grounded, turning off the transistor.\nWhen jack is plugged, GATE_CONN floats, allowing\nthe gate to control the transistor. R10 gives an input\nimpedance of 100K, since LED is driven by power\nsupply. LED on current about 4.3mA\n\nTODO: is this enough current, or do we need to adjust R11 for brightness?
+Text Notes 3900 7600 0    50   ~ 0
+This is a trick to only use the LED to show gate state\nif the GATE jack is used. When jack is unplugged,\nGATE_CONN is grounded, turning off the transistor.\nWhen jack is plugged, GATE_CONN floats, allowing\nthe gate to control the transistor. R10 gives an input\nimpedance of 100K, since LED is driven by power\nsupply. LED on current about 4mA\n\nTODO: is this enough current? does the slow turn-on time\nmake the LED not match the on state? a resistor ladder from\nV+ -> base -> t. gate -> V- allows turning the diode on at lower\ngate voltages, at the cost of current gain
 $Comp
 L 4xxx:4066 U2
 U 1 1 5EE18756
@@ -806,23 +806,23 @@ Wire Wire Line
 $Comp
 L Device:LED D1
 U 1 1 5ECB63E0
-P 3550 5850
-F 0 "D1" V 3589 5733 50  0000 R CNN
-F 1 "LED" V 3498 5733 50  0000 R CNN
-F 2 "" H 3550 5850 50  0001 C CNN
-F 3 "~" H 3550 5850 50  0001 C CNN
-	1    3550 5850
+P 3600 6250
+F 0 "D1" V 3639 6133 50  0000 R CNN
+F 1 "LED" V 3548 6133 50  0000 R CNN
+F 2 "" H 3600 6250 50  0001 C CNN
+F 3 "~" H 3600 6250 50  0001 C CNN
+	1    3600 6250
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R11
 U 1 1 5ECB7499
-P 3550 6750
-F 0 "R11" H 3620 6796 50  0000 L CNN
-F 1 "1K" H 3620 6705 50  0000 L CNN
-F 2 "" V 3480 6750 50  0001 C CNN
-F 3 "~" H 3550 6750 50  0001 C CNN
-	1    3550 6750
+P 3600 7150
+F 0 "R11" H 3670 7196 50  0000 L CNN
+F 1 "1K" H 3670 7105 50  0000 L CNN
+F 2 "" V 3530 7150 50  0001 C CNN
+F 3 "~" H 3600 7150 50  0001 C CNN
+	1    3600 7150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -830,76 +830,76 @@ Wire Wire Line
 $Comp
 L Transistor_BJT:2N3904 Q1
 U 1 1 5ECC1DA3
-P 3450 6300
-F 0 "Q1" H 3640 6346 50  0000 L CNN
-F 1 "2N3904" H 3640 6255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3650 6225 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3450 6300 50  0001 L CNN
-	1    3450 6300
+P 3500 6700
+F 0 "Q1" H 3690 6746 50  0000 L CNN
+F 1 "2N3904" H 3690 6655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3700 6625 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3500 6700 50  0001 L CNN
+	1    3500 6700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5ECC2E81
-P 3550 7000
-F 0 "#PWR012" H 3550 6750 50  0001 C CNN
-F 1 "GND" H 3555 6827 50  0000 C CNN
-F 2 "" H 3550 7000 50  0001 C CNN
-F 3 "" H 3550 7000 50  0001 C CNN
-	1    3550 7000
+P 3600 7400
+F 0 "#PWR012" H 3600 7150 50  0001 C CNN
+F 1 "GND" H 3605 7227 50  0000 C CNN
+F 2 "" H 3600 7400 50  0001 C CNN
+F 3 "" H 3600 7400 50  0001 C CNN
+	1    3600 7400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 7000 3550 6900
+	3600 7400 3600 7300
 Text GLabel 1450 3300 2    50   Input ~ 0
 GATE_CONN
 Wire Wire Line
 	1450 3300 1100 3300
-Text GLabel 3050 6450 0    50   Input ~ 0
+Text GLabel 3100 6850 0    50   Input ~ 0
 GATE_CONN
 Wire Wire Line
-	3550 6600 3550 6500
-Text GLabel 3000 5750 0    50   Input ~ 0
+	3600 7000 3600 6900
+Text GLabel 3050 6150 0    50   Input ~ 0
 GATE
 $Comp
 L power:+10V #PWR011
 U 1 1 5ECF0203
-P 3550 5600
-F 0 "#PWR011" H 3550 5450 50  0001 C CNN
-F 1 "+10V" H 3565 5773 50  0000 C CNN
-F 2 "" H 3550 5600 50  0001 C CNN
-F 3 "" H 3550 5600 50  0001 C CNN
-	1    3550 5600
+P 3600 6000
+F 0 "#PWR011" H 3600 5850 50  0001 C CNN
+F 1 "+10V" H 3615 6173 50  0000 C CNN
+F 2 "" H 3600 6000 50  0001 C CNN
+F 3 "" H 3600 6000 50  0001 C CNN
+	1    3600 6000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 5ECF0A91
-P 3100 6050
-F 0 "R10" H 3170 6096 50  0000 L CNN
-F 1 "100K" H 3170 6005 50  0000 L CNN
-F 2 "" V 3030 6050 50  0001 C CNN
-F 3 "~" H 3100 6050 50  0001 C CNN
-	1    3100 6050
+P 3150 6450
+F 0 "R10" H 3220 6496 50  0000 L CNN
+F 1 "100K" H 3220 6405 50  0000 L CNN
+F 2 "" V 3080 6450 50  0001 C CNN
+F 3 "~" H 3150 6450 50  0001 C CNN
+	1    3150 6450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 6450 3100 6450
+	3100 6850 3150 6850
 Wire Wire Line
-	3100 6450 3100 6300
+	3150 6850 3150 6700
 Wire Wire Line
-	3250 6300 3100 6300
-Connection ~ 3100 6300
+	3300 6700 3150 6700
+Connection ~ 3150 6700
 Wire Wire Line
-	3100 6300 3100 6200
+	3150 6700 3150 6600
 Wire Wire Line
-	3550 6000 3550 6100
+	3600 6400 3600 6500
 Wire Wire Line
-	3550 5600 3550 5700
+	3600 6000 3600 6100
 Wire Wire Line
-	3000 5750 3100 5750
+	3050 6150 3150 6150
 Wire Wire Line
-	3100 5750 3100 5900
+	3150 6150 3150 6300
 Wire Wire Line
 	4900 3400 5000 3400
 Wire Wire Line
