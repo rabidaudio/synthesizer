@@ -120,6 +120,8 @@ Power supply:
     4. Filter:
       -  4P LP(/HP?)
       - Moog Ladder?
+      - Alternatively, filter we designed for class
+        - standard vactrols are available on Thonk
       - CV control of cutoff, resonance
       - Default to track cutoff with VCO-CV
     5. A/D/S/R envelope
