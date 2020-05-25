@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/cjk/projects/synthesizer/breadboard-supply-adapter/breadboard-supply-adapter.sch)
-    (date "Monday, May 25, 2020 at 11:01:41 AM")
+    (date "Monday, May 25, 2020 at 04:45:10 PM")
     (tool "Eeschema (5.1.5-0-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -157,7 +157,7 @@
       (node (ref J4) (pin 1))
       (node (ref J2) (pin 1))
       (node (ref J3) (pin 3))
-      (node (ref C2) (pin 2)))
+      (node (ref C2) (pin 1)))
     (net (code 5) (name "Net-(J3-Pad13)")
       (node (ref J3) (pin 13))
       (node (ref J4) (pin 3)))
@@ -166,7 +166,7 @@
       (node (ref J4) (pin 4)))
     (net (code 7) (name -12V)
       (node (ref R2) (pin 2))
-      (node (ref C2) (pin 1))
+      (node (ref C2) (pin 2))
       (node (ref J3) (pin 1)))
     (net (code 8) (name "Net-(J2-Pad2)")
       (node (ref R2) (pin 1))

@@ -237,10 +237,10 @@ U 1 1 5ECEC081
 P 6350 3800
 F 0 "C2" V 6605 3800 50  0000 C CNN
 F 1 "CP" V 6514 3800 50  0000 C CNN
-F 2 "" H 6388 3650 50  0001 C CNN
+F 2 "KiCad/kicad-footprints/Capacitor_THT.pretty:CP_Radial_D5.0mm_P2.00mm" H 6388 3650 50  0001 C CNN
 F 3 "~" H 6350 3800 50  0001 C CNN
 	1    6350 3800
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:CP C1
@@ -248,7 +248,7 @@ U 1 1 5ECEE074
 P 6400 2850
 F 0 "C1" V 6655 2850 50  0000 C CNN
 F 1 "CP" V 6564 2850 50  0000 C CNN
-F 2 "" H 6438 2700 50  0001 C CNN
+F 2 "KiCad/kicad-footprints/Capacitor_THT.pretty:CP_Radial_D5.0mm_P2.00mm" H 6438 2700 50  0001 C CNN
 F 3 "~" H 6400 2850 50  0001 C CNN
 	1    6400 2850
 	0    -1   -1   0   

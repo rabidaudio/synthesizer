@@ -90,17 +90,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 2800 3950 2750
 Wire Wire Line
-	3950 2750 3400 2750
-Wire Wire Line
-	3400 2750 3400 3250
-Wire Wire Line
-	3400 3250 3150 3250
-Wire Wire Line
 	3900 3400 3900 3450
-Wire Wire Line
-	3150 3350 3400 3350
-Wire Wire Line
-	3400 3350 3400 3450
 Wire Wire Line
 	3400 3450 3900 3450
 Connection ~ 3900 3450
@@ -240,7 +230,7 @@ F 1 "CP" V 6514 3800 50  0000 C CNN
 F 2 "KiCad/kicad-footprints/Capacitor_THT.pretty:CP_Radial_D5.0mm_P2.00mm" H 6388 3650 50  0001 C CNN
 F 3 "~" H 6350 3800 50  0001 C CNN
 	1    6350 3800
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:CP C1
@@ -253,4 +243,14 @@ F 3 "~" H 6400 2850 50  0001 C CNN
 	1    6400 2850
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	3400 3250 3150 3250
+Wire Wire Line
+	3400 3250 3400 3450
+Wire Wire Line
+	3250 2750 3250 3350
+Wire Wire Line
+	3250 3350 3150 3350
+Wire Wire Line
+	3250 2750 3950 2750
 $EndSCHEMATC
