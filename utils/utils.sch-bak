@@ -409,7 +409,7 @@ $EndComp
 Text Notes 3950 1650 2    50   ~ 0
 gain 0-2\nideally 1 detent pot so it sits at g=1
 Text Notes 3250 7600 0    50   ~ 0
-This is a trick to only use the LED to show gate state\nif the GATE jack is used. When jack is unplugged,\nGATE_CONN is grounded, turning off the transistor.\nWhen jack is plugged, GATE_CONN floats, allowing\nthe gate to control the transistor. R10 gives an input\nimpedance of 100K, since LED is driven by power\nsupply. LED on current about 4mA\n\nTODO: is this enough current? does the slow turn-on time\nmake the LED not match the on state? a resistor ladder from\nV+ -> base -> t. gate -> V- allows turning the diode on at lower\ngate voltages, at the cost of current gain
+This is a trick to only use the LED to show gate state\nif the GATE jack is used. When jack is unplugged,\nGATE_CONN is grounded, turning off the transistor.\nWhen jack is plugged, GATE_CONN floats, allowing\nthe gate to control the transistor. R10 gives an input\nimpedance of 100K, since LED is driven by power\nsupply. LED on current depends on GATE but maxes\nabout 4mA
 $Comp
 L 4xxx:4066 U2
 U 1 1 5EE18756
@@ -571,7 +571,7 @@ U 1 1 5ECB664B
 P 3750 1950
 F 0 "RV1" V 3543 1950 50  0000 C CNN
 F 1 "200K" V 3634 1950 50  0000 C CNN
-F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 3750 1950 50  0001 C CNN
+F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x02" H 3750 1950 50  0001 C CNN
 F 3 "~" H 3750 1950 50  0001 C CNN
 	1    3750 1950
 	0    1    1    0   

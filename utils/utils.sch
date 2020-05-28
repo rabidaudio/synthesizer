@@ -571,7 +571,7 @@ U 1 1 5ECB664B
 P 3750 1950
 F 0 "RV1" V 3543 1950 50  0000 C CNN
 F 1 "200K" V 3634 1950 50  0000 C CNN
-F 2 "rdeterre/misc.pretty:Potentiometer_Bourns_PDB182-K_Dual" H 3750 1950 50  0001 C CNN
+F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x03" H 3750 1950 50  0001 C CNN
 F 3 "~" H 3750 1950 50  0001 C CNN
 	1    3750 1950
 	0    1    1    0   
