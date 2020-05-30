@@ -119,10 +119,12 @@ Power supply:
       - 0-10V, 1V/octave, A0 to A10
       - Square/Triangle core via LM13700
       - Waveshapper for triangle -> sine
+      - PWM control
+        - triangle wave applied to 555 timer trigger outputs a square wave, with CV controlling PWM by changing comparator reference (meaning it's independant of frequency). Triangle wave means CV is linear
       - abs(triangle) can be used for 2x square
       - blending shapes isn't useful here, since we could use other oscillators for that
-      - square CV output for clocking?
       - Option to sync with another osc?
+        - in theory, grounding osc at a regular interval would reset the osc over and over, effectively changing it's frequency
       - CV control for shape?
     3. MIDI-CV converter
       - digital MIDI input to OSC CV
@@ -147,6 +149,19 @@ Power supply:
       - ideally multi-shape: sine,tri,squ,ramp up,ramp down
       - CV control for shape
       - Trigger input (e.g. envelope or clock)
+    7. Utilities
+      - Buffer, Sum, Attenuate, Invert, Gate
+      - Could be all-in one
+        - A input (default ground)
+        - B input (default ground)
+        - level knob attenuator
+        - gate digital CV in, default on
+        - (A+B)*level*gate output
+        - -(A+B)*level*gate output
+        - 2 opamps and a FET
+          - one opamp if we scrap the inverter
+          - 4 of these would be cost+space efficent
+        - Constant CV out if A/B disconnected?
     Future:
       - Sequencer
         - clock source for LFO? Or LFO input as clock?
@@ -163,18 +178,6 @@ Power supply:
         - Could be externally controlled, e.g. iPad
           - save space and iterate on features
           - allow it to be used as a drum machine too
-      - Utilities
-        - Buffer, Sum, Attenuate, Invert, Gate
-        - Could be all-in one
-          - A input (default ground)
-          - B input (default ground)
-          - level knob attenuator
-          - gate digital CV in, default on
-          - (A+B)*level*gate output
-          - -(A+B)*level*gate output
-          - 2 opamps and a FET
-            - one opamp if we scrap the inverter
-            - 4 of these would be cost+space efficent
       - White noise generator?
       - Sample+Hold?
         - combined with white noise creates RNG
