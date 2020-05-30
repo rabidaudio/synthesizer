@@ -32,19 +32,29 @@ https://en.wikipedia.org/wiki/Eurorack
 - 1HP=1/5"=5.08mm
   - standard graph paper is 5 squares per inch, meaning exactly 1 real world HP per square
 - 84 HPs (426mm) of usable horizontal space in a 19" rack
-- 128.5mm of useable vertical space in 3U
+- 3U=128.5mm
+  - 116.5mm of useable vertical space after leaving room for mounting screws
 - Maximum control density:
-  - jacks: x: 15mm, y: 14mm
-  - knobs: x: 30mm, y: 28mm
+  - jacks = 14mm
+  - knobs = 21mm
+- Bounding squares
+  - jacks: x: 15mm, y: 14.5mm
+  - knobs: x: 30mm, y: 29mm
   - this creates an easy bounding box to work with
   - each jack is 3HP wide, each knob is 6HP wide
-  - with this almost-square factor, we have 9 jacks of vertical space
-    - 27 "VPs" @ 4.66mm
+  - with this almost-square factor, we have 8 jacks of vertical space
+    - 24 "VPs" @ 4.833mm
+
+Reference for dimensions: http://www.doepfer.de/a100_man/a100m_e.htm
+
+## Panels
+
+This series of posts is super helpful for aluminum panel cutting and applying graphics with transfer paper:
 
 - https://syntherjack.net/eurorack-module-diy-tutorial-1-drilling/
-- http://www.doepfer.de/a100_man/a100m_e.htm
+- https://syntherjack.net/eurorack-module-diy-tutorial-2-graphics/
 
-# Case:
+## Case
 
 TipTop is good starter product, has it has adapter for mounting modules in 19" rack, and included power supply
 
@@ -127,6 +137,7 @@ Power supply:
     5. A/D/S/R envelope
       - 4 envelopes required for 4-voice polyphony
       - wired to VCA by default
+      - could save surface area with 1 set of ADSR controls for a pair of envelopes
       - fully modular could mean you could borrow one for VCF instead
         - alternatively, perhaps simpler A/D envelope for VCF?
     6. LFO
@@ -182,17 +193,30 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
 - http://www.ecircuitcenter.com/Circuits/BJT_Diffamp1/BJT_Diffamp1.htm
 
 
+# Patterns
+
+For multiple options (like VCO shape), use a CV that is binned to options. Easiest solution is probably an ATTiny driving a 4066. uC seems like overkill, but it's got an ADC and lots of digital pins. Lots of specialty components would be required for a native IC solution. Firmware code can easily provide hysteresis and arbitrary numbers of divisions, unlike CDXXXX series CMOS chips.
+
 # TODO
 
+- utility module
+  - [x] Verify on breadboard
+  - [x] design PCB
+  - [x] order parts
+  - [ ] come up with a cute name
+  - [ ] design front panel
+  - [ ] manufacture front panel
+  - [ ] assemble module
+  - [ ] test with Neutron
 - VCA
   - [ ] Confirm amp on breadboard, finalize CV levels
   - [ ] build PoC amp and test with real synth
   - [ ] finish PCB schematic for complete amplifier
-  - [ ] Design housing
-    - laser cut acrylic?
-    - spacing?
-    - mounting screws?
   - [ ] Create PCB
+  - [ ] design front panel
+  - [ ] manufacture front panel
+  - [ ] assemble module
+  - [ ] test with Neutron
 - VCO
   - [ ] Confirm amp on breadboard, finalize CV levels
     - core osc (square/ramp or square/triangle)
@@ -208,7 +232,7 @@ Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-
   - TBD
 - Sequencer
   - TBD
-- Utils
+- build tools
   - [x] tiny Breakout pcbs for headphone jacks
   - ~~transistor matcher circuit~~
     - bought 100s of matched pair BJTs instead
@@ -233,3 +257,66 @@ singals are single-digit voltages at 100s of uAs, so power disipation is definte
 ```
 
 Bespoke ASIC design is $$$, but perhaps you cound build a company and raise money around it.
+
+
+```
+Util:
+a in
+b in
+gate
+out
+~out
+atten knob
+
+util=4*(5+4)=36
+
+VCO:
+knob freq
+knob shape
+cv-in
+shape-in
+signal-out
+
+VCO=11*4=44
+
+VCF:
+knob cutoff
+knob res
+sig in
+cv cutoff
+cv res
+sig out
+osc-track switch
+
+VCF=14*4=56
+
+VCA:
+vol knob
+sig in
+cv in
+sig out
+
+[sw]
+[master vol knob]
+
+VCA=4*7+4+2+1=35
+
+MIDI=11
+
+ADSR:
+cv in
+cv out
+4 knobs for every 2 envelopes
+
+ADSR=4*2+4*4*2
+
+LFO:
+freq knob
+shape knob
+sig out
+cv in
+clock out
+clock in
+
+=2*12
+```
