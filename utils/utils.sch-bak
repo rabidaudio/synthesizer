@@ -125,21 +125,10 @@ F 3 "" H 900 1550 50  0001 C CNN
 	1    900  1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	900  1550 900  1500
-Wire Wire Line
-	1200 1500 900  1500
-Connection ~ 900  1500
-Wire Wire Line
-	900  1500 900  1450
-Wire Wire Line
-	1100 1250 1200 1250
-Wire Wire Line
-	1200 1250 1200 1500
 Text GLabel 1450 1150 2    50   Input ~ 0
 AIN
 Wire Wire Line
-	1450 1150 1100 1150
+	1450 1150 1200 1150
 $Comp
 L synth:AudioJack2_Ground_Switch J2
 U 1 1 5EC9F2C7
@@ -1070,25 +1059,25 @@ Wire Wire Line
 Wire Wire Line
 	8300 5350 8400 5350
 $Comp
-L Device:R_POT_Dual_Separate RV?
-U 1 1 5ED32DF1
+L Device:R_POT_Dual_Separate RV1
+U 2 1 5ED32DF1
 P 3750 1950
-F 0 "RV?" V 3543 1950 50  0000 C CNN
+F 0 "RV1" V 3543 1950 50  0000 C CNN
 F 1 "200K" V 3634 1950 50  0000 C CNN
-F 2 "" H 3750 1950 50  0001 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 3750 1950 50  0001 C CNN
 F 3 "~" H 3750 1950 50  0001 C CNN
-	1    3750 1950
+	2    3750 1950
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_POT_Dual_Separate RV?
-U 2 1 5ED34631
+L Device:R_POT_Dual_Separate RV1
+U 1 1 5ED34631
 P 2800 3400
-F 0 "RV?" H 2731 3446 50  0000 R CNN
+F 0 "RV1" H 2731 3446 50  0000 R CNN
 F 1 "200K" H 2731 3355 50  0000 R CNN
-F 2 "" H 2800 3400 50  0001 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 2800 3400 50  0001 C CNN
 F 3 "~" H 2800 3400 50  0001 C CNN
-	2    2800 3400
+	1    2800 3400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1114,10 +1103,10 @@ F 3 "~" H 2950 2100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR0101
 U 1 1 5ED62298
 P 2800 2800
-F 0 "#PWR?" H 2800 2650 50  0001 C CNN
+F 0 "#PWR0101" H 2800 2650 50  0001 C CNN
 F 1 "+10V" H 2815 2973 50  0000 C CNN
 F 2 "" H 2800 2800 50  0001 C CNN
 F 3 "" H 2800 2800 50  0001 C CNN
@@ -1125,10 +1114,10 @@ F 3 "" H 2800 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-10V #PWR?
+L power:-10V #PWR0102
 U 1 1 5EDA3B1B
 P 2800 4000
-F 0 "#PWR?" H 2800 4100 50  0001 C CNN
+F 0 "#PWR0102" H 2800 4100 50  0001 C CNN
 F 1 "-10V" H 2815 4173 50  0000 C CNN
 F 2 "" H 2800 4000 50  0001 C CNN
 F 3 "" H 2800 4000 50  0001 C CNN
@@ -1146,10 +1135,10 @@ Wire Wire Line
 Wire Wire Line
 	2800 3250 2800 3200
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5ED35BE2
 P 2800 3050
-F 0 "R?" V 2593 3050 50  0000 C CNN
+F 0 "R3" V 2593 3050 50  0000 C CNN
 F 1 "10K" V 2684 3050 50  0000 C CNN
 F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2730 3050 50  0001 C CNN
 F 3 "~" H 2800 3050 50  0001 C CNN
@@ -1161,10 +1150,10 @@ Wire Wire Line
 Wire Wire Line
 	2800 3600 2800 3550
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 5ED360F9
 P 2800 3750
-F 0 "R?" V 2593 3750 50  0000 C CNN
+F 0 "R12" V 2593 3750 50  0000 C CNN
 F 1 "10K" V 2684 3750 50  0000 C CNN
 F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2730 3750 50  0001 C CNN
 F 3 "~" H 2800 3750 50  0001 C CNN
@@ -1197,4 +1186,13 @@ Wire Wire Line
 Connection ~ 1200 950 
 Wire Wire Line
 	1200 950  1100 950 
+Wire Wire Line
+	900  1450 900  1550
+Wire Wire Line
+	1100 1250 1200 1250
+Wire Wire Line
+	1200 1250 1200 1150
+Connection ~ 1200 1150
+Wire Wire Line
+	1200 1150 1100 1150
 $EndSCHEMATC

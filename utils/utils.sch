@@ -125,21 +125,10 @@ F 3 "" H 900 1550 50  0001 C CNN
 	1    900  1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	900  1550 900  1500
-Wire Wire Line
-	1200 1500 900  1500
-Connection ~ 900  1500
-Wire Wire Line
-	900  1500 900  1450
-Wire Wire Line
-	1100 1250 1200 1250
-Wire Wire Line
-	1200 1250 1200 1500
 Text GLabel 1450 1150 2    50   Input ~ 0
 AIN
 Wire Wire Line
-	1450 1150 1100 1150
+	1450 1150 1200 1150
 $Comp
 L synth:AudioJack2_Ground_Switch J2
 U 1 1 5EC9F2C7
@@ -1197,4 +1186,15 @@ Wire Wire Line
 Connection ~ 1200 950 
 Wire Wire Line
 	1200 950  1100 950 
+Wire Wire Line
+	900  1450 900  1550
+Wire Wire Line
+	1100 1250 1200 1250
+Wire Wire Line
+	1200 1250 1200 1150
+Connection ~ 1200 1150
+Wire Wire Line
+	1200 1150 1100 1150
+Text Notes 3200 3650 0    50   ~ 0
+NOTE: this will have strange behavior\nif A_IN sleeve isn’t grounded
 $EndSCHEMATC
