@@ -1458,7 +1458,7 @@
   (gr_text B (at 138.25 94.25) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text https://rabid.audio (at 155.75 54.5 90) (layer B.SilkS)
+  (gr_text https://rabid.audio (at 156.25 54.5 90) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.15)) (justify mirror))
   )
   (gr_text "Rev. A | 2020-05-23" (at 156.75 104.25 90) (layer B.SilkS)

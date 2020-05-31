@@ -158,14 +158,10 @@ Wire Wire Line
 Connection ~ 900  2650
 Wire Wire Line
 	900  2650 900  2600
-Wire Wire Line
-	1100 2400 1200 2400
-Wire Wire Line
-	1200 2400 1200 2650
 Text GLabel 1450 2300 2    50   Input ~ 0
 BIN
 Wire Wire Line
-	1450 2300 1100 2300
+	1450 2300 1150 2300
 $Comp
 L synth:AudioJack2_Ground_Switch J3
 U 1 1 5ECA298E
@@ -1166,10 +1162,7 @@ Wire Wire Line
 	1100 2200 1200 2200
 Wire Wire Line
 	1200 2100 1200 2200
-Connection ~ 1200 2400
 Connection ~ 1200 2200
-Wire Wire Line
-	1200 2200 1200 2400
 Text GLabel 1450 950  2    50   Input ~ 0
 A_CONN
 Wire Wire Line
@@ -1197,4 +1190,13 @@ Wire Wire Line
 	1200 1150 1100 1150
 Text Notes 3200 3650 0    50   ~ 0
 NOTE: this will have strange behavior\nif A_IN sleeve isn’t grounded
+Wire Wire Line
+	1200 2200 1200 2650
+Wire Wire Line
+	1100 2400 1150 2400
+Wire Wire Line
+	1150 2400 1150 2300
+Connection ~ 1150 2300
+Wire Wire Line
+	1150 2300 1100 2300
 $EndSCHEMATC

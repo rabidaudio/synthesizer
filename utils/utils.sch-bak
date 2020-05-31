@@ -1195,4 +1195,6 @@ Wire Wire Line
 Connection ~ 1200 1150
 Wire Wire Line
 	1200 1150 1100 1150
+Text Notes 3200 3650 0    50   ~ 0
+NOTE: this will have strange behavior\nif A_IN sleeve isn’t grounded
 $EndSCHEMATC
