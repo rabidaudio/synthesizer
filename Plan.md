@@ -33,17 +33,12 @@ https://en.wikipedia.org/wiki/Eurorack
   - standard graph paper is 5 squares per inch, meaning exactly 1 real world HP per square
 - 84 HPs (426mm) of usable horizontal space in a 19" rack
 - 3U=128.5mm
-  - 116.5mm of useable vertical space after leaving room for mounting screws
+  - 112.5mm of useable vertical space after leaving room for mounting screws
 - Maximum control density:
-  - jacks = 14mm
-  - knobs = 21mm
-- Bounding squares
-  - jacks: x: 15mm, y: 14.5mm
-  - knobs: x: 30mm, y: 29mm
-  - this creates an easy bounding box to work with
-  - each jack is 3HP wide, each knob is 6HP wide
-  - with this almost-square factor, we have 8 jacks of vertical space
-    - 24 "VPs" @ 4.833mm
+  - jacks = 14mm wide, 9mm high (12+ recommended)
+  - knobs = 22mm square (30mm recommended)
+    - note: some knobs have 21mm base and need to be bigger
+- each jack is 3HP wide, each knob is 5 or 6HP wide
 
 Reference for dimensions: http://www.doepfer.de/a100_man/a100m_e.htm
 
@@ -206,8 +201,8 @@ For multiple options (like VCO shape), use a CV that is binned to options. Easie
   - [x] Verify on breadboard
   - [x] design PCB
   - [x] order parts
-  - [ ] come up with a cute name
-  - [ ] design front panel
+  - [x] come up with a cute name
+  - [x] design front panel
   - [ ] manufacture front panel
   - [ ] assemble module
   - [ ] test with Neutron
