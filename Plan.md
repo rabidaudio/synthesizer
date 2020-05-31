@@ -110,6 +110,9 @@ Power supply:
       - mixdown
         - mono - full mix -> left and right
         - stereo split - A+C->left B+D->right
+      - Direct output jack?
+        - mix arbitrary signal with mixdown
+        - e.g. for accepting signals from other synths
     2. Oscillator
       - 0-10V, 1V/octave, A0 to A10
       - Square/Triangle core via LM13700
