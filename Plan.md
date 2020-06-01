@@ -118,8 +118,9 @@ Power supply:
       - Square/Triangle core via LM13700
       - Waveshapper for triangle -> sine
       - PWM control
-        - triangle wave applied to 555 timer trigger outputs a square wave, with CV controlling PWM by changing comparator reference (meaning it's independant of frequency). Triangle wave means CV is linear
+        - triangle wave applied to comparator with CV controlling reference. Triangle wave means CV is linear
       - abs(triangle) can be used for 2x square
+        - adds a lot of parts for little benefit
       - blending shapes isn't useful here, since we could use other oscillators for that
       - Option to sync with another osc?
         - in theory, grounding osc at a regular interval would reset the osc over and over, effectively changing it's frequency
