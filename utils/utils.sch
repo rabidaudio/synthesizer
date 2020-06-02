@@ -383,17 +383,6 @@ F 3 "http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf" H 9100 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LM337L_TO92 U4
-U 1 1 5EE7ED7D
-P 9100 2750
-F 0 "U4" H 9100 2601 50  0000 C CNN
-F 1 "LM337L_TO92" H 9100 2510 50  0000 C CNN
-F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-220-3_Vertical" H 9100 2550 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm337l.pdf" H 9100 2750 50  0001 C CNN
-	1    9100 2750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 5EE7FBA2
 P 9550 1300
@@ -1199,4 +1188,15 @@ Wire Wire Line
 Connection ~ 1150 2300
 Wire Wire Line
 	1150 2300 1100 2300
+$Comp
+L Regulator_Linear:LM337_SOT223 U4
+U 1 1 5ED777C2
+P 9100 2750
+F 0 "U4" H 9100 2601 50  0000 C CNN
+F 1 "LM337_SOT223" H 9100 2510 50  0000 C CNN
+F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-220-3_Vertical" H 9100 2550 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm337-n.pdf" H 9100 2750 50  0001 C CNN
+	1    9100 2750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
