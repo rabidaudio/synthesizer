@@ -40,7 +40,7 @@ L Device:C C?
 U 1 1 5EC5F370
 P 1900 1750
 F 0 "C?" H 2015 1796 50  0000 L CNN
-F 1 "2n2" H 2015 1705 50  0000 L CNN
+F 1 "4.7n" H 2015 1705 50  0000 L CNN
 F 2 "" H 1938 1600 50  0001 C CNN
 F 3 "~" H 1900 1750 50  0001 C CNN
 	1    1900 1750
@@ -741,8 +741,8 @@ $Comp
 L Device:R R?
 U 1 1 5ED74B78
 P 3150 1850
-F 0 "R?" H 2950 1900 50  0000 L CNN
-F 1 "18k" H 3000 1800 50  0000 L CNN
+F 0 "R?" H 3250 1950 50  0000 L CNN
+F 1 "15k" H 3250 1800 50  0000 L CNN
 F 2 "" V 3080 1850 50  0001 C CNN
 F 3 "~" H 3150 1850 50  0001 C CNN
 	1    3150 1850
@@ -752,15 +752,15 @@ $Comp
 L Device:R R?
 U 1 1 5ED74FEC
 P 3150 2300
-F 0 "R?" H 2950 2350 50  0000 L CNN
-F 1 "13k" H 3000 2250 50  0000 L CNN
+F 0 "R?" H 3250 2350 50  0000 L CNN
+F 1 "10k" H 3250 2250 50  0000 L CNN
 F 2 "" V 3080 2300 50  0001 C CNN
 F 3 "~" H 3150 2300 50  0001 C CNN
 	1    3150 2300
 	1    0    0    -1  
 $EndComp
-Text Notes 3250 1950 0    50   ~ 0
-These set the level of the signal to about +/- 5V\nwhich is the absolute max from the LM13700 datasheet
+Text Notes 3400 1950 0    50   ~ 0
+These set the level of the signal to about +/- 5V\nwhich is the absolute max from the LM13700 datasheet\nand also the standard level for signals
 $Comp
 L power:GND #PWR?
 U 1 1 5ED7642B
@@ -804,7 +804,7 @@ Wire Wire Line
 	2250 2100 850  2100
 Connection ~ 2250 2100
 Text Notes 1500 1700 3    50   ~ 0
-IABC calculated to 1.115mA for A10 with 2.2nF
+IABC calculated to 1.191mA for A9 with 4.7nF
 Wire Wire Line
 	2400 1200 2200 1200
 Wire Wire Line
