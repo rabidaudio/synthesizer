@@ -587,8 +587,8 @@ F 3 "" H 7350 6100 50  0001 C CNN
 	1    7350 6100
 	1    0    0    -1  
 $EndComp
-Text Notes 5000 6850 0    50   ~ 0
-waveshapper
+Text Notes 4850 6650 0    50   ~ 0
+sine waveshapper
 Text GLabel 8250 5900 2    50   Input ~ 0
 SINE
 Wire Wire Line
@@ -616,7 +616,7 @@ F 3 "~" H 3150 2300 50  0001 C CNN
 	1    3150 2300
 	1    0    0    -1  
 $EndComp
-Text Notes 3400 1950 0    50   ~ 0
+Text Notes 3700 1300 3    50   ~ 0
 These set the level of the signal to about +/- 5V\nwhich is the absolute max from the LM13700 datasheet\nand also the standard level for signals
 $Comp
 L power:GND #PWR?
@@ -938,12 +938,12 @@ Wire Wire Line
 $Comp
 L MCU_Microchip_ATtiny:ATtiny85V-10PU U?
 U 1 1 5F04221D
-P 7450 2500
-F 0 "U?" H 6920 2546 50  0000 R CNN
-F 1 "ATtiny85V-10PU" H 6920 2455 50  0000 R CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 7450 2500 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 7450 2500 50  0001 C CNN
-	1    7450 2500
+P 5900 2900
+F 0 "U?" H 5370 2946 50  0000 R CNN
+F 1 "ATtiny85V-10PU" H 5370 2855 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5900 2900 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 5900 2900 50  0001 C CNN
+	1    5900 2900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1117,62 +1117,31 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5F1156A6
-P 7450 3250
-F 0 "#PWR?" H 7450 3000 50  0001 C CNN
-F 1 "GND" H 7455 3077 50  0000 C CNN
-F 2 "" H 7450 3250 50  0001 C CNN
-F 3 "" H 7450 3250 50  0001 C CNN
-	1    7450 3250
+P 5900 3650
+F 0 "#PWR?" H 5900 3400 50  0001 C CNN
+F 1 "GND" H 5905 3477 50  0000 C CNN
+F 2 "" H 5900 3650 50  0001 C CNN
+F 3 "" H 5900 3650 50  0001 C CNN
+	1    5900 3650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7450 3100 7450 3250
-Text GLabel 8150 2200 2    50   Input ~ 0
+	5900 3500 5900 3650
+Text GLabel 6600 2600 2    50   Input ~ 0
 SQUARE_EN
-Text GLabel 8150 2300 2    50   Input ~ 0
+Text GLabel 6600 2700 2    50   Input ~ 0
 TRIANGLE_EN
-Text GLabel 8150 2400 2    50   Input ~ 0
+Text GLabel 6600 2800 2    50   Input ~ 0
 SINE_EN
-Text GLabel 8400 2600 2    50   Input ~ 0
+Text GLabel 5600 1250 0    50   Input ~ 0
 SHAPE_CV
-$Comp
-L Device:R R?
-U 1 1 5F11D91C
-P 8300 2850
-F 0 "R?" H 8100 2900 50  0000 L CNN
-F 1 "10K" H 8050 2800 50  0000 L CNN
-F 2 "" V 8230 2850 50  0001 C CNN
-F 3 "~" H 8300 2850 50  0001 C CNN
-	1    8300 2850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F11EAE5
-P 8300 3100
-F 0 "#PWR?" H 8300 2850 50  0001 C CNN
-F 1 "GND" H 8305 2927 50  0000 C CNN
-F 2 "" H 8300 3100 50  0001 C CNN
-F 3 "" H 8300 3100 50  0001 C CNN
-	1    8300 3100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	8300 3100 8300 3000
+	6600 2800 6500 2800
 Wire Wire Line
-	8300 2700 8300 2600
+	6600 2700 6500 2700
 Wire Wire Line
-	8300 2600 8400 2600
-Wire Wire Line
-	8300 2600 8050 2600
-Connection ~ 8300 2600
-Wire Wire Line
-	8150 2400 8050 2400
-Wire Wire Line
-	8150 2300 8050 2300
-Wire Wire Line
-	8050 2200 8150 2200
-Text Notes 6650 3950 0    50   ~ 0
+	6500 2600 6600 2600
+Text Notes 6100 3850 0    50   ~ 0
 Rather than using a bunch of digital chips\nto convert an analog CV into a binned selector,\nprogramming a tiny uC requires only one IC and\nhas easy support for changing the bin size and\nadding hysteresis
 $Comp
 L power:GND #PWR?
@@ -1198,8 +1167,154 @@ F 3 "" H 3150 2550 50  0001 C CNN
 $EndComp
 Text Notes 2450 7500 2    50   ~ 0
 PWM control\nvia adjusting reference voltage of comparator
-Text Notes 9500 6050 0    50   ~ 0
+Text Notes 9350 6100 0    50   ~ 0
 TODO: one more output available if we can find a shape
 Text Notes 8950 2850 1    50   ~ 0
 TODO: protect against over/under voltage of shape cv
+$Comp
+L Amplifier_Operational:TL072 U?
+U 2 1 5F1C6C70
+P 6000 1150
+F 0 "U?" H 6100 1300 50  0000 C CNN
+F 1 "TL072" H 6000 1150 50  0000 C CNN
+F 2 "" H 6000 1150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 1150 50  0001 C CNN
+	2    6000 1150
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1CFF2C
+P 5050 1150
+F 0 "#PWR?" H 5050 900 50  0001 C CNN
+F 1 "GND" H 5055 977 50  0000 C CNN
+F 2 "" H 5050 1150 50  0001 C CNN
+F 3 "" H 5050 1150 50  0001 C CNN
+	1    5050 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1D03C7
+P 6950 2100
+F 0 "#PWR?" H 6950 1850 50  0001 C CNN
+F 1 "GND" H 6955 1927 50  0000 C CNN
+F 2 "" H 6950 2100 50  0001 C CNN
+F 3 "" H 6950 2100 50  0001 C CNN
+	1    6950 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F1D08FB
+P 6950 1850
+F 0 "R?" H 6750 1900 50  0000 L CNN
+F 1 "13K" H 6700 1800 50  0000 L CNN
+F 2 "" V 6880 1850 50  0001 C CNN
+F 3 "~" H 6950 1850 50  0001 C CNN
+	1    6950 1850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F1D0EBF
+P 6950 1400
+F 0 "R?" H 6750 1450 50  0000 L CNN
+F 1 "18K" H 6700 1350 50  0000 L CNN
+F 2 "" V 6880 1400 50  0001 C CNN
+F 3 "~" H 6950 1400 50  0001 C CNN
+	1    6950 1400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1150 5050 1050
+Wire Wire Line
+	5050 1050 5200 1050
+Wire Wire Line
+	5500 1050 5600 1050
+Wire Wire Line
+	5600 1050 5600 750 
+Wire Wire Line
+	5600 750  5950 750 
+Connection ~ 5600 1050
+Wire Wire Line
+	5600 1050 5700 1050
+Wire Wire Line
+	5600 1250 5700 1250
+Wire Wire Line
+	6950 2100 6950 2000
+Wire Wire Line
+	6950 1700 6950 1600
+Wire Wire Line
+	6500 1150 6300 1150
+Wire Wire Line
+	6250 750  6500 750 
+Wire Wire Line
+	6500 750  6500 1150
+$Comp
+L Diode:1N5407 D?
+U 1 1 5F22202A
+P 6500 1400
+F 0 "D?" V 6454 1479 50  0000 L CNN
+F 1 "1N5407" V 6545 1479 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 6500 1225 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88516/1n5400.pdf" H 6500 1400 50  0001 C CNN
+	1    6500 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F22CC2B
+P 6500 1650
+F 0 "#PWR?" H 6500 1400 50  0001 C CNN
+F 1 "GND" H 6505 1477 50  0000 C CNN
+F 2 "" H 6500 1650 50  0001 C CNN
+F 3 "" H 6500 1650 50  0001 C CNN
+	1    6500 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1650 6500 1550
+$Comp
+L Device:R R?
+U 1 1 5F1CEAF3
+P 6100 750
+F 0 "R?" H 5900 800 50  0000 L CNN
+F 1 "47K" H 5900 700 50  0000 L CNN
+F 2 "" V 6030 750 50  0001 C CNN
+F 3 "~" H 6100 750 50  0001 C CNN
+	1    6100 750 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F1CF634
+P 5350 1050
+F 0 "R?" H 5150 1100 50  0000 L CNN
+F 1 "33K" H 5150 1000 50  0000 L CNN
+F 2 "" V 5280 1050 50  0001 C CNN
+F 3 "~" H 5350 1050 50  0001 C CNN
+	1    5350 1050
+	0    1    1    0   
+$EndComp
+Text GLabel 7250 1600 2    50   Input ~ 0
+SHAPE_CV_LIM
+Text GLabel 6600 3000 2    50   Input ~ 0
+SHAPE_CV_LIM
+Wire Wire Line
+	6600 3000 6500 3000
+Text Notes 5250 1500 0    50   ~ 0
+Limit SHAPE_CV to 0-5V
+Wire Wire Line
+	6500 1250 6500 1150
+Connection ~ 6500 1150
+Wire Wire Line
+	6950 1250 6950 1150
+Wire Wire Line
+	6950 1150 6500 1150
+Wire Wire Line
+	7250 1600 6950 1600
+Connection ~ 6950 1600
+Wire Wire Line
+	6950 1600 6950 1550
 $EndSCHEMATC

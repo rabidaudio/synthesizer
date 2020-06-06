@@ -126,12 +126,15 @@ Power supply:
         - in theory, grounding osc at a regular interval would reset the osc over and over, effectively changing it's frequency
       - CV control for shape?
       - Room for one more shape
-        - https://en.wikipedia.org/wiki/Phase_distortion_synthesis
-        - a bit of wild harmonics
-        - multiplication can be done with log/antilog or https://en.wikipedia.org/wiki/Gilbert_cell
-        - the hard part will be the "slightly higher frequency" bit
-          - perhaps instead you have another osc (555?) running at a fixed frequency and clipping the sine
-          - square PWM control could also adjust this clip frequency
+        - PDS
+          - https://en.wikipedia.org/wiki/Phase_distortion_synthesis
+          - a bit of wild harmonics
+          - multiplication can be done with log/antilog or https://en.wikipedia.org/wiki/Gilbert_cell
+          - the hard part will be the "slightly higher frequency" bit
+            - perhaps instead you have another osc (555?) running at a fixed frequency and clipping the sine
+            - square PWM control could also adjust this clip frequency
+        - down ramp wave with just a JFET
+          - up ramp wave probably needs another JFET and an inverter
     3. MIDI-CV converter
       - digital MIDI input to OSC CV
       - up to 4 voices
