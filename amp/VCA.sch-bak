@@ -32,25 +32,21 @@ $EndComp
 Text Notes 4200 3850 2    50   ~ 0
 5V (G=1) to 0V (G=0)\nCan be overdriven slightly to G=1.2
 Wire Wire Line
-	5100 5850 5100 5750
-Wire Wire Line
 	5100 5300 5400 5300
-Wire Wire Line
-	5100 5450 5100 5300
 $Comp
 L power:-12VA #PWR040
 U 1 1 5EBBC28C
-P 5100 5850
+P 5100 6200
 AR Path="/5EBA9693/5EBBC28C" Ref="#PWR040"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC28C" Ref="#PWR?"  Part="1" 
 AR Path="/5EE915A8/5EBBC28C" Ref="#PWR076"  Part="1" 
 AR Path="/5EE915EC/5EBBC28C" Ref="#PWR052"  Part="1" 
 AR Path="/5EE9163B/5EBBC28C" Ref="#PWR064"  Part="1" 
-F 0 "#PWR040" H 5100 5700 50  0001 C CNN
-F 1 "-12VA" H 5100 5990 50  0000 C CNN
-F 2 "" H 5100 5850 50  0001 C CNN
-F 3 "" H 5100 5850 50  0001 C CNN
-	1    5100 5850
+F 0 "#PWR040" H 5100 6050 50  0001 C CNN
+F 1 "-12VA" H 5100 6340 50  0000 C CNN
+F 2 "" H 5100 6200 50  0001 C CNN
+F 3 "" H 5100 6200 50  0001 C CNN
+	1    5100 6200
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -107,17 +103,17 @@ $EndComp
 $Comp
 L Device:R R26
 U 1 1 5EBBC2A7
-P 5100 5600
+P 5100 5550
 AR Path="/5EBA9693/5EBBC2A7" Ref="R26"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC2A7" Ref="R?"  Part="1" 
 AR Path="/5EE915A8/5EBBC2A7" Ref="R56"  Part="1" 
 AR Path="/5EE915EC/5EBBC2A7" Ref="R36"  Part="1" 
 AR Path="/5EE9163B/5EBBC2A7" Ref="R46"  Part="1" 
-F 0 "R26" V 5180 5600 50  0000 C CNN
-F 1 "12K" V 5100 5600 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5030 5600 50  0001 C CNN
-F 3 "" H 5100 5600 50  0001 C CNN
-	1    5100 5600
+F 0 "R26" V 5180 5550 50  0000 C CNN
+F 1 "10K" V 5100 5550 50  0000 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5030 5550 50  0001 C CNN
+F 3 "" H 5100 5550 50  0001 C CNN
+	1    5100 5550
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -294,17 +290,15 @@ Wire Wire Line
 Connection ~ 5400 5300
 Wire Wire Line
 	5400 5300 5500 5300
-Wire Wire Line
-	3550 3950 3850 3950
 Connection ~ 4400 4400
 Wire Wire Line
 	4150 4400 4400 4400
-Text Notes 3500 4700 2    50   ~ 0
+Text Notes 3150 5050 0    50   ~ 0
 Subtract 0-5V from CV, providing offset control.\nThis isn’t perfectly linear but it’s close enough
 Text Notes 4700 4350 0    50   ~ 0
 -18mV/V
-Text Notes 4950 5900 1    50   ~ 0
-IREF=1mA
+Text Notes 4950 5400 3    50   ~ 0
+12K -> IREF=1mA\nTRIM compensates for component tolerance
 $Comp
 L power:GND #PWR044
 U 1 1 5EBBC303
@@ -323,38 +317,6 @@ F 3 "" H 7000 4650 50  0001 C CNN
 $EndComp
 Text Notes 6650 5400 0    50   ~ 0
 Limit IABC\nIABC max for LM13700 is 2mA.\nThis sets IABC max above that,\nbut if we use a higher resistance\nthe exponmential shape falls off\nbefore 1mA
-$Comp
-L Device:R R27
-U 1 1 5EBBC36B
-P 5200 2950
-AR Path="/5EBA9693/5EBBC36B" Ref="R27"  Part="1" 
-AR Path="/5EE5C6CB/5EBBC36B" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC36B" Ref="R57"  Part="1" 
-AR Path="/5EE915EC/5EBBC36B" Ref="R37"  Part="1" 
-AR Path="/5EE9163B/5EBBC36B" Ref="R47"  Part="1" 
-F 0 "R27" V 5280 2950 50  0000 C CNN
-F 1 "3K3" V 5200 2950 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5130 2950 50  0001 C CNN
-F 3 "" H 5200 2950 50  0001 C CNN
-	1    5200 2950
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR041
-U 1 1 5EBBC365
-P 5200 3200
-AR Path="/5EBA9693/5EBBC365" Ref="#PWR041"  Part="1" 
-AR Path="/5EE5C6CB/5EBBC365" Ref="#PWR?"  Part="1" 
-AR Path="/5EE915A8/5EBBC365" Ref="#PWR077"  Part="1" 
-AR Path="/5EE915EC/5EBBC365" Ref="#PWR053"  Part="1" 
-AR Path="/5EE9163B/5EBBC365" Ref="#PWR065"  Part="1" 
-F 0 "#PWR041" H 5200 2950 50  0001 C CNN
-F 1 "GND" H 5200 3050 50  0000 C CNN
-F 2 "" H 5200 3200 50  0001 C CNN
-F 3 "" H 5200 3200 50  0001 C CNN
-	1    5200 3200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR039
 U 1 1 5EBBC35F
@@ -376,8 +338,6 @@ Wire Wire Line
 Connection ~ 5200 2700
 Wire Wire Line
 	5200 2800 5200 2700
-Wire Wire Line
-	5200 3200 5200 3100
 Wire Wire Line
 	4500 2700 4650 2700
 Connection ~ 4650 2700
@@ -485,7 +445,7 @@ AR Path="/5EE915EC/5F14692E" Ref="RV3"  Part="1"
 AR Path="/5EE9163B/5F14692E" Ref="RV4"  Part="1" 
 F 0 "RV2" H 3531 4446 50  0000 R CNN
 F 1 "10K" V 3600 4500 50  0000 R CNN
-F 2 "KiCad/kicad-footprints/Connector_PinHeader_2.54mm.pretty:PinHeader_1x03_P2.54mm_Vertical" H 3600 4400 50  0001 C CNN
+F 2 "synth:slide_potentiometer_35mm" H 3600 4400 50  0001 C CNN
 F 3 "~" H 3600 4400 50  0001 C CNN
 	1    3600 4400
 	1    0    0    -1  
@@ -521,28 +481,11 @@ Wire Wire Line
 	3850 4400 3750 4400
 Wire Wire Line
 	3600 4650 3600 4550
-$Comp
-L Amplifier_Operational:TL074 U5
-U 1 1 5EE5E7F2
-P 4200 2700
-AR Path="/5EBA9693/5EE5E7F2" Ref="U5"  Part="1" 
-AR Path="/5EE915A8/5EE5E7F2" Ref="U6"  Part="1" 
-AR Path="/5EE915EC/5EE5E7F2" Ref="U7"  Part="1" 
-AR Path="/5EE9163B/5EE5E7F2" Ref="U8"  Part="1" 
-F 0 "U5" H 4250 2500 50  0000 C CNN
-F 1 "TL074" H 4150 2700 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 4150 2800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 2900 50  0001 C CNN
-	1    4200 2700
-	1    0    0    1   
-$EndComp
-Text Notes 4600 3800 0    50   ~ 0
-Could use a tempco res here, but\nI don’t think it’s important for vcas
 Wire Wire Line
 	6100 2700 6100 4300
-Text HLabel 3700 2600 0    50   Input ~ 0
+Text HLabel 2900 2600 0    50   Input ~ 0
 IN
-Text HLabel 3550 3950 0    50   Input ~ 0
+Text HLabel 2300 3950 0    50   Input ~ 0
 CV
 Text HLabel 7600 2700 2    50   Input ~ 0
 OUT
@@ -681,8 +624,6 @@ Wire Wire Line
 	10800 1550 10800 1450
 Wire Wire Line
 	10800 850  10800 750 
-Text Notes 6500 3400 0    50   ~ 0
-TODO: I don’t think compensating for the error in these resistors\nis super necessary, but hand-matching resistors or buying 1% or 5%\nmight be a smart move.
 $Comp
 L Amplifier_Operational:LM13700 U2
 U 1 1 5EBBC342
@@ -699,6 +640,98 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 2625 50  0001 C CNN
 	1    5650 2600
 	1    0    0    -1  
 $EndComp
-Text Notes 2400 5750 0    50   ~ 0
-TODO: where do we need to tune the circuit?
+$Comp
+L Device:R R61
+U 1 1 5EE2FBCC
+P 3550 2600
+AR Path="/5EBA9693/5EE2FBCC" Ref="R61"  Part="1" 
+AR Path="/5EE5C6CB/5EE2FBCC" Ref="R?"  Part="1" 
+AR Path="/5EE915A8/5EE2FBCC" Ref="R64"  Part="1" 
+AR Path="/5EE915EC/5EE2FBCC" Ref="R62"  Part="1" 
+AR Path="/5EE9163B/5EE2FBCC" Ref="R63"  Part="1" 
+F 0 "R61" V 3630 2600 50  0000 C CNN
+F 1 "100K" V 3550 2600 50  0000 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3480 2600 50  0001 C CNN
+F 3 "" H 3550 2600 50  0001 C CNN
+	1    3550 2600
+	0    1    1    0   
+$EndComp
+Text Notes 2100 2200 0    50   ~ 0
+TODO: order:\n820Ks\n13Ks (1%)
+$Comp
+L Device:R R27
+U 1 1 5EBBC36B
+P 5200 2950
+AR Path="/5EBA9693/5EBBC36B" Ref="R27"  Part="1" 
+AR Path="/5EE5C6CB/5EBBC36B" Ref="R?"  Part="1" 
+AR Path="/5EE915A8/5EBBC36B" Ref="R57"  Part="1" 
+AR Path="/5EE915EC/5EBBC36B" Ref="R37"  Part="1" 
+AR Path="/5EE9163B/5EBBC36B" Ref="R47"  Part="1" 
+F 0 "R27" V 5280 2950 50  0000 C CNN
+F 1 "33K" V 5200 2950 50  0000 C CNN
+F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5130 2950 50  0001 C CNN
+F 3 "" H 5200 2950 50  0001 C CNN
+	1    5200 2950
+	-1   0    0    1   
+$EndComp
+Text Notes 4600 3800 0    50   ~ 0
+Could use a tempco res here, but\nI don’t think it’s important for vcas
+Wire Wire Line
+	5200 3200 5200 3100
+$Comp
+L power:GND #PWR041
+U 1 1 5EBBC365
+P 5200 3200
+AR Path="/5EBA9693/5EBBC365" Ref="#PWR041"  Part="1" 
+AR Path="/5EE5C6CB/5EBBC365" Ref="#PWR?"  Part="1" 
+AR Path="/5EE915A8/5EBBC365" Ref="#PWR077"  Part="1" 
+AR Path="/5EE915EC/5EBBC365" Ref="#PWR053"  Part="1" 
+AR Path="/5EE9163B/5EBBC365" Ref="#PWR065"  Part="1" 
+F 0 "#PWR041" H 5200 2950 50  0001 C CNN
+F 1 "GND" H 5200 3050 50  0000 C CNN
+F 2 "" H 5200 3200 50  0001 C CNN
+F 3 "" H 5200 3200 50  0001 C CNN
+	1    5200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:RTRIM RT1
+U 1 1 5EE41C5F
+P 5100 5950
+AR Path="/5EBA9693/5EE41C5F" Ref="RT1"  Part="1" 
+AR Path="/5EE915A8/5EE41C5F" Ref="RT4"  Part="1" 
+AR Path="/5EE915EC/5EE41C5F" Ref="RT2"  Part="1" 
+AR Path="/5EE9163B/5EE41C5F" Ref="RT3"  Part="1" 
+F 0 "RT1" H 5200 6000 50  0000 L CNN
+F 1 "5K" H 5200 5900 50  0000 L CNN
+F 2 "" V 5030 5950 50  0001 C CNN
+F 3 "~" H 5100 5950 50  0001 C CNN
+	1    5100 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 6200 5100 6100
+Wire Wire Line
+	5100 5800 5100 5700
+Wire Wire Line
+	5100 5400 5100 5300
+$Comp
+L Amplifier_Operational:TL074 U5
+U 1 1 5EE5E7F2
+P 4200 2700
+AR Path="/5EBA9693/5EE5E7F2" Ref="U5"  Part="1" 
+AR Path="/5EE915A8/5EE5E7F2" Ref="U6"  Part="1" 
+AR Path="/5EE915EC/5EE5E7F2" Ref="U7"  Part="1" 
+AR Path="/5EE9163B/5EE5E7F2" Ref="U8"  Part="1" 
+F 0 "U5" H 4250 2500 50  0000 C CNN
+F 1 "TL074" H 4150 2700 50  0000 C CNN
+F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 4150 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 2900 50  0001 C CNN
+	1    4200 2700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2900 2600 3400 2600
+Wire Wire Line
+	2300 3950 3850 3950
 $EndSCHEMATC

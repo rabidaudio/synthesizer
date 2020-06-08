@@ -217,26 +217,31 @@ For multiple options (like VCO shape), use a CV that is binned to options. Easie
   - [x] order parts
   - [x] come up with a cute name
   - [x] design front panel
+  - [ ] assemble PCB
+  - [ ] test with Neutron
   - [ ] manufacture front panel
   - [ ] assemble module
-  - [ ] test with Neutron
 - VCA
-  - [ ] Confirm amp on breadboard, finalize CV levels
+  - [x] Confirm amp on breadboard, finalize CV levels
   - [ ] build PoC amp and test with real synth
+  - [ ] figure out where tuning trimmers are needed
   - [ ] finish PCB schematic for complete amplifier
   - [ ] Create PCB
   - [ ] design front panel
+  - [ ] test with Neutron
   - [ ] manufacture front panel
   - [ ] assemble module
-  - [ ] test with Neutron
 - VCO
+  - [ ] design core
+    - [x] core osc - square/triangle
+    - [ ] wave shaper (sine)
+    - [ ] shape selection
   - [ ] Confirm amp on breadboard, finalize CV levels
-    - core osc (square/ramp or square/triangle)
-    - wave shaper (sine)
-    - sync? Zero-cross detector shorts fet to ground?
   - [ ] Build PoC osc
   - [ ] PCB for oscilator
-- MIDI/envelopes
+- Envelope
+  - TBD
+- MIDI
   - TBD
 - VCF
   - TBD
