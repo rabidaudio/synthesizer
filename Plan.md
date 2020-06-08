@@ -195,16 +195,6 @@ Power supply:
       - Delay, overdrive, etc. are gimmicky and not useful, can be done via effects pedals
 
 
-# Amplifier
-
-Calculations: https://docs.google.com/spreadsheets/d/1fOI5-cV5lOYskNise5XZh0knm-L3UJJyRrtGQZKEftU/edit#gid=1448634371
-
-- https://www.onsemi.com/pub/Collateral/2N5457-D.PDF
-- http://www.ti.com/lit/ds/symlink/lm386.pdf
-- https://www.schmitzbits.de/vca.html#
-- http://www.ecircuitcenter.com/Circuits/BJT_Diffamp1/BJT_Diffamp1.htm
-
-
 # Patterns
 
 For multiple options (like VCO shape), use a CV that is binned to options. Easiest solution is probably an ATTiny driving a 4066. uC seems like overkill, but it's got an ADC and lots of digital pins. Lots of specialty components would be required for a native IC solution. Firmware code can easily provide hysteresis and arbitrary numbers of divisions, unlike CDXXXX series CMOS chips.
