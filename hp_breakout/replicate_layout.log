@@ -1,0 +1,33 @@
+03-15 16:28:45 replicate_layout.action_replicate_layout 305:Plugin executed on: 'darwin'
+03-15 16:28:45 replicate_layout.action_replicate_layout 306:Plugin executed with python version: '2.7.16 (default, Nov 25 2019, 22:14:07) \n[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.39.2)]'
+03-15 16:28:45 replicate_layout.action_replicate_layout 307:KiCad build version: Unknown
+03-15 16:28:45 replicate_layout.action_replicate_layout 308:Replicate layout plugin version: 60 started
+03-15 16:28:45 replicate_layout.action_replicate_layout 340:Preparing replicator with J1 as a reference
+03-15 16:28:45 replicate_layout.replicatelayout 225:getting project hierarchy from schematics
+03-15 16:28:45 replicate_layout.replicatelayout 227:Project hierarchy looks like:
+{'5E6F46C9': ['sheet5E6F46C9', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F4A68': ['sheet5E6F4A68', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F4A6E': ['sheet5E6F4A6E', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F4684': ['sheet5E6F4684', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F4A70': ['sheet5E6F4A70', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F22FA': ['U?', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F47F3': ['sheet5E6F47F3', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F4A6A': ['sheet5E6F4A6A', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F4A6C': ['sheet5E6F4A6C', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch'], '5E6F46CB': ['sheet5E6F46CB', u'/Users/cjk/projects/synthesizer/hp_breakout/file5E6F22F9.sch']}
+03-15 16:28:45 replicate_layout.replicatelayout 235:getting a list of all footprints on board
+03-15 16:28:45 replicate_layout.action_replicate_layout 367:source anchor footprint is u'J1'
+Located on:[]
+With filenames:[]
+With sheet_id:[]
+03-15 16:28:45 replicate_layout.action_replicate_layout 371:Corresponding footprints are 
+[(u'J1', [])]
+03-15 16:28:45 replicate_layout.action_replicate_layout 384:Showing dialog
+03-15 16:28:45 replicate_layout.action_replicate_layout 388:Pcbnew position: wx.Point(0, 23)
+03-15 16:28:45 replicate_layout.action_replicate_layout 394:Display 0: wx.Rect(0, 0, 1440, 900)
+03-15 16:28:45 replicate_layout.action_replicate_layout 398:Toolbar position: wx.Point(1239, 117)
+03-15 16:28:45 replicate_layout.action_replicate_layout 405:Dialog position: wx.Point(926, 117)
+03-15 16:29:04 STDERR 426:Traceback (most recent call last):
+03-15 16:29:04 STDERR 426:  File "/Users/cjk/Library/Preferences/kicad/scripting/plugins/replicate_layout/action_replicate_layout.py", line 152, in OnOk
+03-15 16:29:04 STDERR 426:sheets_on_a_level = self.replicator.get_sheets_to_replicate(self.src_anchor_module, self.src_anchor_module.sheet_id[level])
+03-15 16:29:04 STDERR 426:IndexError
+03-15 16:29:04 STDERR 426::
+03-15 16:29:04 STDERR 426:list index out of range
+03-15 16:29:11 STDERR 426:Traceback (most recent call last):
+03-15 16:29:11 STDERR 426:  File "/Users/cjk/Library/Preferences/kicad/scripting/plugins/replicate_layout/action_replicate_layout.py", line 152, in OnOk
+03-15 16:29:11 STDERR 426:sheets_on_a_level = self.replicator.get_sheets_to_replicate(self.src_anchor_module, self.src_anchor_module.sheet_id[level])
+03-15 16:29:11 STDERR 426:IndexError
+03-15 16:29:11 STDERR 426::
+03-15 16:29:11 STDERR 426:list index out of range
+03-15 16:29:12 replicate_layout.action_replicate_layout 252:User canceled the dialog

@@ -1,0 +1,76 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 11
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1400 950  2000 1550
+U 5E6F22FA
+F0 "U?" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 3650 950  2000 1550
+U 5E6F4684
+F0 "sheet5E6F4684" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 5900 950  2000 1550
+U 5E6F46C9
+F0 "sheet5E6F46C9" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 8100 1000 2000 1550
+U 5E6F46CB
+F0 "sheet5E6F46CB" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 1000 5500 2000 1550
+U 5E6F47F3
+F0 "sheet5E6F47F3" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 1400 2900 2000 1550
+U 5E6F4A68
+F0 "sheet5E6F4A68" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 3650 2900 2000 1550
+U 5E6F4A6A
+F0 "sheet5E6F4A6A" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 5900 2900 2000 1550
+U 5E6F4A6C
+F0 "sheet5E6F4A6C" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 8100 2950 2000 1550
+U 5E6F4A6E
+F0 "sheet5E6F4A6E" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$Sheet
+S 3800 5550 2000 1550
+U 5E6F4A70
+F0 "sheet5E6F4A70" 50
+F1 "file5E6F22F9.sch" 50
+$EndSheet
+$EndSCHEMATC

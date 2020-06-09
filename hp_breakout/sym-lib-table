@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name hp_breakout-rescue)(type Legacy)(uri ${KIPRJMOD}/hp_breakout-rescue.lib)(options "")(descr ""))
+  (lib (name hp_breakout)(type Legacy)(uri ${KIPRJMOD}/hp_breakout.lib)(options "")(descr ""))
+)

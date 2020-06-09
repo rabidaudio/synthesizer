@@ -1,0 +1,198 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  font-family: 'Droid Sans';
+  font-size: 20px;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+
+.webcam {
+  padding: 0 !important;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 3em;
+}
+li p { line-height: 1.25em; }
+.large { font-size: 2em; }
+a {
+  font-family: 'monospace';
+  font-size: .9em;
+  color: #ffffff;
+}
+/*a, a > code {
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}*/
+.top {
+  position: absolute;
+  top:3em;
+}
+
+code {
+  -moz-border-radius: 5px;
+  -web-border-radius: 5px;
+  background: #e7e8e2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+li {
+  list-style-position: inside;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ p {
+  clear: both;
+}
+#slideshow .slide .content code {
+  font-size: 0.8em;
+}
+#slideshow .slide .content pre code {
+  font-size: 0.9em;
+  padding: 15px;
+}
+.inverse {
+  background: #0D5578;
+  color: #ffffff;
+  text-shadow: 0 0 20px #333;
+}
+.inverse h1, .inverse h2 {
+  color: #ffffff;
+  line-height: 0.8em;
+}
+
+/* Slide-specific styling */
+#slide-inverse .footnote {
+  bottom: 12px;
+  left: 20px;
+}
+#slide-how .slides {
+  font-size: 0.9em;
+  position: absolute;
+  top:  151px;
+  right: 140px;
+}
+#slide-how .slides h3 {
+  margin-top: 0.2em;
+}
+#slide-how .slides .first, #slide-how .slides .second {
+  padding: 1px 20px;
+  height: 90px;
+  width: 120px;
+  -moz-box-shadow: 0 0 10px #777;
+  -webkit-box-shadow: 0 0 10px #777;
+  box-shadow: 0 0 10px #777;
+}
+#slide-how .slides .first {
+  background: #fff;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+}
+#slide-how .slides .second {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+}
+.center-column {
+  width: 100%;
+  padding-top: 2em;
+}
+
+.hide {
+  display: none;
+}
+
+.big-center{
+  font-size: 3em;
+}
+.big-center ol {
+  text-align: left;
+  position: absolute;
+  top:20%;
+  /*margin: 0;*/
+}
+.big-center li {
+  /*margin: 0px;*/
+  margin-bottom: 5%;
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+width: 20%;
+height: 92%;
+  float: left;
+  text-align: left;
+}
+/*  .left-column h2:last-of-type, .left-column h3:last-child {
+    color: #000;
+  }*/
+.right-column {
+  color: #777;
+  /*width: 75%;*/
+  width: 55%;
+  float: right;
+  padding-top: 2em;
+  text-align: left;
+
+}
+.my-left-column {
+  color: #777;
+  width: 20%;
+  height: 0;
+  float: left;
+  text-align: left;
+}
+.my-right-column {
+  color: #777;
+  width: 75%;
+  float: right;
+  text-align: right;
+  /*padding-top: 2em;*/
+
+}
+
+.myarrow {
+  position: absolute;
+  left: 46%;
+  top: 50%;
+}
+
+.list li {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.list ul {
+  margin-top: 10%;
+  text-align: left;
+}
+.list h1, .list h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bgblack {
+  background-color: black;
+}

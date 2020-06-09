@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name transistor_matcher)(type KiCad)(uri /Users/cjk/projects/synthesizer/transistor_matcher/transistor_matcher)(options "")(descr ""))
+)

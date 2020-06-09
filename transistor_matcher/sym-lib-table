@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name transistor_matcher)(type Legacy)(uri ${KIPRJMOD}/transistor_matcher.lib)(options "")(descr ""))
+  (lib (name transistor_matcher-rescue)(type Legacy)(uri ${KIPRJMOD}/transistor_matcher-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,63 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# hp_breakout-rescue_Conn_01x05_Male
+#
+DEF hp_breakout-rescue_Conn_01x05_Male J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "hp_breakout-rescue_Conn_01x05_Male" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+$ENDFPLIST
+DRAW
+S 34 -195 0 -205 1 1 6 F
+S 34 -95 0 -105 1 1 6 F
+S 34 5 0 -5 1 1 6 F
+S 34 105 0 95 1 1 6 F
+S 34 205 0 195 1 1 6 F
+P 2 1 1 6 50 -200 34 -200 N
+P 2 1 1 6 50 -100 34 -100 N
+P 2 1 1 6 50 0 34 0 N
+P 2 1 1 6 50 100 34 100 N
+P 2 1 1 6 50 200 34 200 N
+X Pin_1 1 200 200 150 L 50 50 1 1 P
+X Pin_2 2 200 100 150 L 50 50 1 1 P
+X Pin_3 3 200 0 150 L 50 50 1 1 P
+X Pin_4 4 200 -100 150 L 50 50 1 1 P
+X Pin_5 5 200 -200 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# hp_breakout_AudioJack2_Ground_Switch
+#
+DEF hp_breakout_AudioJack2_Ground_Switch J 0 20 Y Y 1 F N
+F0 "J" 0 450 50 H V C CNN
+F1 "hp_breakout_AudioJack2_Ground_Switch" 0 350 50 H V C CNN
+F2 "" 0 200 50 H I C CNN
+F3 "" 0 200 50 H I C CNN
+$FPLIST
+ Jack*
+$ENDFPLIST
+DRAW
+S -100 -100 -150 0 0 1 10 F
+S 100 250 -100 -200 0 1 10 f
+P 2 1 1 0 25 190 35 170 N
+P 2 1 1 0 70 -10 80 -30 N
+P 4 1 1 10 0 0 25 -25 50 0 100 0 N
+P 4 1 1 0 100 -100 70 -100 70 -10 60 -30 N
+P 4 1 1 0 100 100 25 100 25 190 15 170 N
+P 5 1 1 10 100 200 -25 200 -25 0 -50 -25 -75 0 N
+X ~ R 200 200 100 L 50 50 1 1 P
+X ~ RN 200 100 100 L 50 50 1 1 P
+X ~ S 0 -300 100 U 50 50 1 1 P
+X ~ T 200 0 100 L 50 50 1 1 P
+X ~ TN 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

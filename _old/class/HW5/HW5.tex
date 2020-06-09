@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb, amsthm, graphics, graphicx}
+\usepackage{amsmath}
+
+%these are initial settings. Ron recommended them, so that's just what I use.
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = -.75in
+\parskip = 0.2 in
+\parindent = 15 pt
+\renewcommand{\baselinestretch}{1.25}
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\degree}[0]{\ensuremath{^{\circ}}}
+
+\providecommand{\ah}[1]{\ensuremath{\hat{a}_{#1}}}
+\providecommand{\ahx}[0]{\ensuremath{\ah{x}}}
+\providecommand{\ahy}[0]{\ensuremath{\ah{y}}}
+\providecommand{\ahz}[0]{\ensuremath{\ah{z}}}
+\providecommand{\pfs}[0]{\ensuremath{\epsilon_{0}}} %permittivity of free space => 1/(36\pi) \e{-9}
+%\providecommand{\vec}[1]{\ensuremath{\textbf{#1}}} %vector notation ACTUALLY \vec is _real_ vector notation
+\providecommand{\ohm}[0]{\ensuremath{\Omega}}
+
+
+\newtheorem*{prob}{Problem}
+
+\begin{document}
+\begin{flushright}
+\textbf{Charles Julian Knight}\\
+ECE4893\\
+\today
+\end{flushright}
+
+
+\begin{center}
+\huge HW 5
+\end{center}
+
+\begin{prob}[1.a]{
+Find the $f_n$, the natural frequency of the 2nd-order filter in Hz, for the following four conditions:
+\begin{itemize}
+  \item Caps C5 and C7 switched ``out'' LDRs = infinite ohm
+  \item Caps C5 and C7 switched ``out'' LDRs = 5 kohm
+  \item Caps C5 and C7 switched ``in'' LDRs = infinite ohm
+  \item Caps C5 and C7 switched ``in'' LDRs = 5 kohms
+\end{itemize}
+}\end{prob}
+\begin{itemize}
+  \item Case 1: 
+    \[ \frac{1}{2\pi (R8)(C6)} = \frac{1}{2\pi (220K) (1.8nF)} = 401.9 Hz \]
+  \item Case 2:
+    \[ \frac{1}{2\pi (R8||R_{LDR})(C6)} = \frac{1}{2\pi (220K||5K) (1.8nF)} = 18.09 KHz \]
+  \item Case 3:
+    \[ \frac{1}{2\pi (R8)(C6+C5)} = \frac{1}{2\pi (220K) (1.8nF+2.2nF)} = 180.9 Hz \]
+  \item Case 4:
+    \[ \frac{1}{2\pi (R8||R_{LDR})(C6+C5)} = \frac{1}{2\pi (220K||5K) (1.8nF+2.2nF)} = 8.140 KHz \]
+\end{itemize}
+
+\begin{prob}[1.b]{
+  According to the VTL5C3/2 datasheet, what control current would generate a 5 kohm LDR resistance? Use curve \#4 on the graph.
+}\end{prob}
+From the graph, it looks like the current is $6mA$.
+\begin{prob}[1.c]{
+  Consider the ``Peak'' 150K pot. As the wiper is moved to the left on the schematic, does the Q increase or decrease? Explain your reasoning.
+}\end{prob}
+  The Peak pot controls the amount of feedback from the first stage back to the input. Both the input stage and the first filter stage are inverting, so the feedback is positive. Thus, decreasing the feedback resistance (pot to the left) increases the ammount of positive feedback, which should increase the Q. 
+
+\begin{prob}[2.a]{
+  Are the variable-gain integrators forming this SVF inverting or non-inverting?
+}\end{prob}
+The op-amp configuration is inverting, but since the OTA is inverting, I think the whole filter will actually act as non-inverting.
+
+\begin{prob}[2.b]{
+  Find $f_n$ (the natural frequency in Hertz) as a function of the current fed to the control current inputs of the OTAs. This should be a simple calculation once you find the component values you need.
+}\end{prob}
+  The voltage divider into the OTA is $\frac{R21}{R21+R20}\approx \frac{22}{10k}= .0022$. The OTA is inverting (because the positive input is grounded), so the current output of the OTA is
+    \[19.2 I_{abc}(0-.0022V_{in}) = -(0.042V_{in})I_{abc}\]
+  Thus, the conductance of the OTA is thus $.042I_{abc}$. Then we use the ``RC'' time constant to find the natural frequency.
+  \[f_n = \frac{1}{2\pi RC}=\frac{1}{2\pi (\frac{1}{.042I_{abc}})(330pF)} = (2.02\e{7})I_{abc}\]
+
+\begin{prob}[2.c]{
+  If R16 was increased, would the Q of this filter increase or decrease? Briefly explain your reasoning.
+}\end{prob}
+Increasing R16 decreases the ammount of feedback, causing Q to decrease.
+
+\begin{prob}[3.a]{
+When switched in the lowpass mode, find the OTA control current that would result in a natural frequency (in Hertz), $f_n$, of 2500 Hz. Remember you can fold the $R_{small}/R_{big}$ factor in with the gain of the OTA when using the formula for the critical frequency of a Sallen-Key filter. Because the two capacitor values are the same and the resistor values are the same, this is a relatively simple calculation.
+}\end{prob}
+The output of the OTA is
+\[19.2I_{abc}(0-\frac{220}{10K}V_{in})\]
+Thus the conductance is $0.4224I_{abc}$.
+\[f_n = 2.5KHz = \frac{1}{2\pi (\frac{1}{0.4224I_{abc}})(.002uF)}\]
+\[I_{abc} = 7.5\e{-5}A = 74\mu A \]
+
+\begin{prob}[3.b]{
+  In the original Korg MS-20, resonance is controlled with a pot. Notice how Tom has modified the circuit to make the resonance voltage controllable. In class, we showed that for this ``Bach'' topology, a feedback of K < 2 is needed, or else the filter will go unstable. What value of control current for the resonance-controlling OTA would give a feedback of 2?
+}\end{prob}
+The ammount of feedback is controlled by the ``voltage divider'' $\frac{10K}{10K+R_f}$ where
+\[ R_f = 1/g_m = \frac{1}{19.2I_{abc}(1K/47K)}\]
+Thus we solve for $I_{abc}$:
+\[ 2 = \frac{10K}{10K+\frac{1}{19.2I_{abc}(1K/47K)}} \]
+\[ 2\left(10K+\frac{1}{(.41)I_{abc}}\right) = 10K\]
+\[20K-10K = -\frac{2}{(.41)I_{abc}} \]
+\[I_{abc} = -\frac{2}{(.41)10K} = .49mA\]
+
+
+\begin{prob}[4.a]{
+Find the current through the vactrol diode as a function of the control voltage input at jack 11 in the upper left hand corner of the schematic.
+}\end{prob}
+Let's call the node voltage to the left of the diode $V_D$. First, there is a virtual ground at the non-inverting opamp input. Thus, the current from the input is 
+\[\frac{V_{in}-0}{(470K||100K)}\]
+Thus the current to the left of the $V_D$ node is the same. Therefore
+\[\frac{V_D-0}{33K+(10K||10K)} = -\frac{V_{in}-0}{(470K||100K)} \]
+\[ V_D = \frac{38K}{81K}V_{in} \]
+Let's apply the current law to this node to build an expression for $I_D$.
+\[ \frac{V_D}{38K} + \frac{V_D-0}{4.7K} + I_D = 0 \]
+\[I_D = -\frac{\frac{38K}{81K}V_{in}}{38K} -\frac{\frac{38K}{81K}V_{in}}{4.7K} \]
+\[I_D = -\frac{V_{in}}{112\ohm}\]
+For $V_{in} = -5V$, the current is about $44mA$, which is on the high end of resonable for an LED. 
+
+\begin{prob}[4.b]{
+  Find the voltage at the output terminal of op amp 9 as a function of the control voltage input at jack 11. Assume that the vactrol LED has a ``diode drop'' of 1.65 volts. I found this figure on the VTL5C3 datasheet.
+}\end{prob}
+The voltage at the output of the opamp is the voltage at $V_D$ minus the diode drop and the drop across R11.
+\[V_o = V_D - 1.65 - 470I_D = \frac{38K}{81K}V_{in} + 470\frac{V_{in}}{112\ohm} - 1.65 = 4.67V_{in}-1.65\]
+Thus the CV should be pretty low (like $\approx 1V$).
+
+\end{document}
