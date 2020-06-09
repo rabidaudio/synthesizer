@@ -101,15 +101,15 @@ F 3 "https://www.diodes.com/assets/Datasheets/ds30437.pdf" H 6000 4500 50  0001 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R27
+L Device:R R26
 U 1 1 5EBBC2A7
 P 5100 5550
-AR Path="/5EBA9693/5EBBC2A7" Ref="R27"  Part="1" 
+AR Path="/5EBA9693/5EBBC2A7" Ref="R26"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC2A7" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC2A7" Ref="R60"  Part="1" 
-AR Path="/5EE915EC/5EBBC2A7" Ref="R38"  Part="1" 
-AR Path="/5EE9163B/5EBBC2A7" Ref="R49"  Part="1" 
-F 0 "R27" V 5180 5550 50  0000 C CNN
+AR Path="/5EE915A8/5EBBC2A7" Ref="R53"  Part="1" 
+AR Path="/5EE915EC/5EBBC2A7" Ref="R35"  Part="1" 
+AR Path="/5EE9163B/5EBBC2A7" Ref="R44"  Part="1" 
+F 0 "R26" V 5180 5550 50  0000 C CNN
 F 1 "22K" V 5100 5550 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5030 5550 50  0001 C CNN
 F 3 "" H 5100 5550 50  0001 C CNN
@@ -139,15 +139,15 @@ Wire Wire Line
 Text Notes 5350 5300 2    50   ~ 0
 Linear control here if needed
 $Comp
-L Device:R R29
+L Device:R R28
 U 1 1 5EBBC2B9
 P 6550 5050
-AR Path="/5EBA9693/5EBBC2B9" Ref="R29"  Part="1" 
+AR Path="/5EBA9693/5EBBC2B9" Ref="R28"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC2B9" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC2B9" Ref="R62"  Part="1" 
-AR Path="/5EE915EC/5EBBC2B9" Ref="R40"  Part="1" 
-AR Path="/5EE9163B/5EBBC2B9" Ref="R51"  Part="1" 
-F 0 "R29" V 6630 5050 50  0000 C CNN
+AR Path="/5EE915A8/5EBBC2B9" Ref="R55"  Part="1" 
+AR Path="/5EE915EC/5EBBC2B9" Ref="R37"  Part="1" 
+AR Path="/5EE9163B/5EBBC2B9" Ref="R46"  Part="1" 
+F 0 "R28" V 6630 5050 50  0000 C CNN
 F 1 "5K" V 6550 5050 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6480 5050 50  0001 C CNN
 F 3 "" H 6550 5050 50  0001 C CNN
@@ -187,15 +187,15 @@ F 3 "" H 5400 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R26
+L Device:R R25
 U 1 1 5EBBC2CB
 P 4750 3950
-AR Path="/5EBA9693/5EBBC2CB" Ref="R26"  Part="1" 
+AR Path="/5EBA9693/5EBBC2CB" Ref="R25"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC2CB" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC2CB" Ref="R59"  Part="1" 
-AR Path="/5EE915EC/5EBBC2CB" Ref="R37"  Part="1" 
-AR Path="/5EE9163B/5EBBC2CB" Ref="R48"  Part="1" 
-F 0 "R26" V 4830 3950 50  0000 C CNN
+AR Path="/5EE915A8/5EBBC2CB" Ref="R52"  Part="1" 
+AR Path="/5EE915EC/5EBBC2CB" Ref="R34"  Part="1" 
+AR Path="/5EE9163B/5EBBC2CB" Ref="R43"  Part="1" 
+F 0 "R25" V 4830 3950 50  0000 C CNN
 F 1 "3K3" V 4750 3950 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4680 3950 50  0001 C CNN
 F 3 "" H 4750 3950 50  0001 C CNN
@@ -219,15 +219,15 @@ F 3 "" H 4400 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R23
+L Device:R R22
 U 1 1 5EBBC2D7
 P 4000 3950
-AR Path="/5EBA9693/5EBBC2D7" Ref="R23"  Part="1" 
+AR Path="/5EBA9693/5EBBC2D7" Ref="R22"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC2D7" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC2D7" Ref="R56"  Part="1" 
-AR Path="/5EE915EC/5EBBC2D7" Ref="R34"  Part="1" 
-AR Path="/5EE9163B/5EBBC2D7" Ref="R45"  Part="1" 
-F 0 "R23" V 4080 3950 50  0000 C CNN
+AR Path="/5EE915A8/5EBBC2D7" Ref="R49"  Part="1" 
+AR Path="/5EE915EC/5EBBC2D7" Ref="R31"  Part="1" 
+AR Path="/5EE9163B/5EBBC2D7" Ref="R40"  Part="1" 
+F 0 "R22" V 4080 3950 50  0000 C CNN
 F 1 "120K" V 4000 3950 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 3950 50  0001 C CNN
 F 3 "" H 4000 3950 50  0001 C CNN
@@ -251,15 +251,15 @@ F 3 "" H 3150 4650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R24
+L Device:R R23
 U 1 1 5EBBC2E3
 P 4000 4400
-AR Path="/5EBA9693/5EBBC2E3" Ref="R24"  Part="1" 
+AR Path="/5EBA9693/5EBBC2E3" Ref="R23"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC2E3" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC2E3" Ref="R57"  Part="1" 
-AR Path="/5EE915EC/5EBBC2E3" Ref="R35"  Part="1" 
-AR Path="/5EE9163B/5EBBC2E3" Ref="R46"  Part="1" 
-F 0 "R24" V 4080 4400 50  0000 C CNN
+AR Path="/5EE915A8/5EBBC2E3" Ref="R50"  Part="1" 
+AR Path="/5EE915EC/5EBBC2E3" Ref="R32"  Part="1" 
+AR Path="/5EE9163B/5EBBC2E3" Ref="R41"  Part="1" 
+F 0 "R23" V 4080 4400 50  0000 C CNN
 F 1 "270K" V 4000 4400 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 4400 50  0001 C CNN
 F 3 "" H 4000 4400 50  0001 C CNN
@@ -359,15 +359,15 @@ Wire Wire Line
 Wire Wire Line
 	3750 2800 3900 2800
 $Comp
-L Device:R R25
+L Device:R R24
 U 1 1 5EBBC326
 P 4200 2200
-AR Path="/5EBA9693/5EBBC326" Ref="R25"  Part="1" 
+AR Path="/5EBA9693/5EBBC326" Ref="R24"  Part="1" 
 AR Path="/5EE5C6CB/5EBBC326" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EBBC326" Ref="R58"  Part="1" 
-AR Path="/5EE915EC/5EBBC326" Ref="R36"  Part="1" 
-AR Path="/5EE9163B/5EBBC326" Ref="R47"  Part="1" 
-F 0 "R25" V 4280 2200 50  0000 C CNN
+AR Path="/5EE915A8/5EBBC326" Ref="R51"  Part="1" 
+AR Path="/5EE915EC/5EBBC326" Ref="R33"  Part="1" 
+AR Path="/5EE9163B/5EBBC326" Ref="R42"  Part="1" 
+F 0 "R24" V 4280 2200 50  0000 C CNN
 F 1 "3K3" V 4200 2200 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4130 2200 50  0001 C CNN
 F 3 "" H 4200 2200 50  0001 C CNN
@@ -466,14 +466,14 @@ Text HLabel 7750 2700 2    50   Input ~ 0
 OUT
 NoConn ~ 5350 2600
 $Comp
-L Device:R R28
+L Device:R R27
 U 1 1 5F07C242
 P 6450 2600
-AR Path="/5EBA9693/5F07C242" Ref="R28"  Part="1" 
-AR Path="/5EE915EC/5F07C242" Ref="R39"  Part="1" 
-AR Path="/5EE9163B/5F07C242" Ref="R50"  Part="1" 
-AR Path="/5EE915A8/5F07C242" Ref="R61"  Part="1" 
-F 0 "R28" V 6350 2600 50  0000 C CNN
+AR Path="/5EBA9693/5F07C242" Ref="R27"  Part="1" 
+AR Path="/5EE915EC/5F07C242" Ref="R36"  Part="1" 
+AR Path="/5EE9163B/5F07C242" Ref="R45"  Part="1" 
+AR Path="/5EE915A8/5F07C242" Ref="R54"  Part="1" 
+F 0 "R27" V 6350 2600 50  0000 C CNN
 F 1 "27K" V 6450 2600 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6380 2600 50  0001 C CNN
 F 3 "~" H 6450 2600 50  0001 C CNN
@@ -516,14 +516,14 @@ Wire Wire Line
 Wire Wire Line
 	6750 2800 6850 2800
 $Comp
-L Device:R R30
+L Device:R R29
 U 1 1 5F083AFD
 P 7000 2400
-AR Path="/5EBA9693/5F083AFD" Ref="R30"  Part="1" 
-AR Path="/5EE915EC/5F083AFD" Ref="R41"  Part="1" 
-AR Path="/5EE9163B/5F083AFD" Ref="R52"  Part="1" 
-AR Path="/5EE915A8/5F083AFD" Ref="R63"  Part="1" 
-F 0 "R30" V 6900 2400 50  0000 C CNN
+AR Path="/5EBA9693/5F083AFD" Ref="R29"  Part="1" 
+AR Path="/5EE915EC/5F083AFD" Ref="R38"  Part="1" 
+AR Path="/5EE9163B/5F083AFD" Ref="R47"  Part="1" 
+AR Path="/5EE915A8/5F083AFD" Ref="R56"  Part="1" 
+F 0 "R29" V 6900 2400 50  0000 C CNN
 F 1 "22K" V 7000 2400 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6930 2400 50  0001 C CNN
 F 3 "~" H 7000 2400 50  0001 C CNN
@@ -601,9 +601,9 @@ U 1 1 5EE2FBCC
 P 3550 2600
 AR Path="/5EBA9693/5EE2FBCC" Ref="R21"  Part="1" 
 AR Path="/5EE5C6CB/5EE2FBCC" Ref="R?"  Part="1" 
-AR Path="/5EE915A8/5EE2FBCC" Ref="R54"  Part="1" 
-AR Path="/5EE915EC/5EE2FBCC" Ref="R32"  Part="1" 
-AR Path="/5EE9163B/5EE2FBCC" Ref="R43"  Part="1" 
+AR Path="/5EE915A8/5EE2FBCC" Ref="R48"  Part="1" 
+AR Path="/5EE915EC/5EE2FBCC" Ref="R30"  Part="1" 
+AR Path="/5EE9163B/5EE2FBCC" Ref="R39"  Part="1" 
 F 0 "R21" V 3630 2600 50  0000 C CNN
 F 1 "820K" V 3550 2600 50  0000 C CNN
 F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3480 2600 50  0001 C CNN
@@ -616,14 +616,14 @@ TODO: order:\n820Ks\ntrimmers
 Text Notes 4600 3800 0    50   ~ 0
 Could use a tempco res here, but\nI don’t think temp dependance is\nimportant for vcas
 $Comp
-L Device:RTRIM RT1
+L Device:RTRIM RT2
 U 1 1 5EE41C5F
 P 5100 5950
-AR Path="/5EBA9693/5EE41C5F" Ref="RT1"  Part="1" 
-AR Path="/5EE915A8/5EE41C5F" Ref="RT4"  Part="1" 
-AR Path="/5EE915EC/5EE41C5F" Ref="RT2"  Part="1" 
-AR Path="/5EE9163B/5EE41C5F" Ref="RT3"  Part="1" 
-F 0 "RT1" H 5200 6000 50  0000 L CNN
+AR Path="/5EBA9693/5EE41C5F" Ref="RT2"  Part="1" 
+AR Path="/5EE915A8/5EE41C5F" Ref="RT11"  Part="1" 
+AR Path="/5EE915EC/5EE41C5F" Ref="RT5"  Part="1" 
+AR Path="/5EE9163B/5EE41C5F" Ref="RT8"  Part="1" 
+F 0 "RT2" H 5200 6000 50  0000 L CNN
 F 1 "5K" H 5200 5900 50  0000 L CNN
 F 2 "" V 5030 5950 50  0001 C CNN
 F 3 "~" H 5100 5950 50  0001 C CNN
@@ -660,14 +660,14 @@ TUNE 1: calculated 288K\nadjust so CV=5V sets VB=0V
 Text Notes 7650 2400 0    50   ~ 0
 TUNE 3: calculated 27K\nadjust to 5V at g=1
 $Comp
-L Device:RTRIM R22
+L Device:RTRIM RT1
 U 1 1 5EDE0DC3
 P 3600 4400
-AR Path="/5EBA9693/5EDE0DC3" Ref="R22"  Part="1" 
-AR Path="/5EE915EC/5EDE0DC3" Ref="R33"  Part="1" 
-AR Path="/5EE9163B/5EDE0DC3" Ref="R44"  Part="1" 
-AR Path="/5EE915A8/5EDE0DC3" Ref="R55"  Part="1" 
-F 0 "R22" V 3360 4400 50  0000 C CNN
+AR Path="/5EBA9693/5EDE0DC3" Ref="RT1"  Part="1" 
+AR Path="/5EE915EC/5EDE0DC3" Ref="RT4"  Part="1" 
+AR Path="/5EE9163B/5EDE0DC3" Ref="RT7"  Part="1" 
+AR Path="/5EE915A8/5EDE0DC3" Ref="RT10"  Part="1" 
+F 0 "RT1" V 3360 4400 50  0000 C CNN
 F 1 "50K" V 3451 4400 50  0000 C CNN
 F 2 "" V 3530 4400 50  0001 C CNN
 F 3 "~" H 3600 4400 50  0001 C CNN
@@ -679,14 +679,14 @@ Wire Wire Line
 Wire Wire Line
 	4650 2700 5350 2700
 $Comp
-L Device:RTRIM R31
+L Device:RTRIM RT3
 U 1 1 5EDF3544
 P 7350 2400
-AR Path="/5EBA9693/5EDF3544" Ref="R31"  Part="1" 
-AR Path="/5EE915EC/5EDF3544" Ref="R42"  Part="1" 
-AR Path="/5EE9163B/5EDF3544" Ref="R53"  Part="1" 
-AR Path="/5EE915A8/5EDF3544" Ref="R64"  Part="1" 
-F 0 "R31" V 7615 2400 50  0000 C CNN
+AR Path="/5EBA9693/5EDF3544" Ref="RT3"  Part="1" 
+AR Path="/5EE915EC/5EDF3544" Ref="RT6"  Part="1" 
+AR Path="/5EE9163B/5EDF3544" Ref="RT9"  Part="1" 
+AR Path="/5EE915A8/5EDF3544" Ref="RT12"  Part="1" 
+F 0 "RT3" V 7615 2400 50  0000 C CNN
 F 1 "10K" V 7524 2400 50  0000 C CNN
 F 2 "" V 7280 2400 50  0001 C CNN
 F 3 "~" H 7350 2400 50  0001 C CNN

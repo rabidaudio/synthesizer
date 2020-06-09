@@ -30,7 +30,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4800 4700 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Text Notes 4200 3750 2    50   ~ 0
-5V (G=1) to 0V (G=0)\nCan be overdriven to G=2 @ 6V
+5V (G=1) to 0V (G=about 0)\nCan be overdriven to G=2 @ 6V
 Wire Wire Line
 	5100 5300 5400 5300
 $Comp
