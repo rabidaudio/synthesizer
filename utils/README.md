@@ -26,6 +26,10 @@ When `B_IN` is supplied, it's value is added to `A_IN` before applying scaling.
 
 When `GATE` is supplied with a digital voltage, it allows disabling `OUT` (and `~OUT`) at logic-low (0V). An LED indicates when the gate is open. When `GATE` is not supplied, the outputs are always enabled, and the LED remains off.
 
+### Digital logic
+
+Digital `OR` can be implemented by summing signals on `A_IN` and `B_IN` With the knob at the 1/4 position. Digital `AND` can be implemented by applying one signal to `A_IN` and one to `GATE` with the knob at the 1/2 position.
+
 ## Design
 
 All of these uses are realized with only two opamps and an analog switch (1/4 of a [CD4066](../reference/datasheets/cd4066.pdf)). A summing inverting amplifier with a variable feedback resistor handles the adder, inverter, and scalar. The second gang on the pot adjusts the reference voltage when no input signal is provided, implementing the source. The CD4066 handles the gate, and a final inverting opamp reverses the first inversion, providing the non-inverted output.
