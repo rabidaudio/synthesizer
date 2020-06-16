@@ -616,8 +616,8 @@ F 3 "~" H 3150 2300 50  0001 C CNN
 	1    3150 2300
 	1    0    0    -1  
 $EndComp
-Text Notes 3700 1300 3    50   ~ 0
-These set the level of the signal to about +/- 5V\nwhich is the absolute max from the LM13700 datasheet\nand also the standard level for signals
+Text Notes 3850 1300 3    50   ~ 0
+These set the level of the signal to about +/- 5V\nwhich is the absolute max from the LM13700 datasheet\nand also the standard level for signals\n\nTODO: unbalanced voltage outputs causes error in the frequency.\nNeed to find a way to compensate for this
 $Comp
 L power:GND #PWR?
 U 1 1 5ED7642B
