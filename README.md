@@ -160,8 +160,20 @@
   - [x] order parts
   - [x] come up with a cute name
   - [x] design front panel
-  - [ ] assemble PCB
-  - [ ] test with Neutron
+  - [x] assemble Rev. A PCB
+    - bend the regulators first
+    - plenty of 4066s
+    - flip orientation of power connector
+    - pot orientation - both channels:
+      - right side (facing) to inside of board (from top)
+      - left side (facing) to outside of board (from top)
+  - [x] test with Neutron
+    - constant output is only 9 to -7.8
+    - high noise when used as a buffer
+      - perhaps input signal is clipping?
+      - white noise when the gain is turned down
+  - [ ] adjust design for Rev. B
+  - [ ] assemble Rev. B PCB
   - [ ] manufacture front panel
   - [ ] assemble module
 - VCA
