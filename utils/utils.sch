@@ -357,7 +357,7 @@ F 1 "200K" V 4234 3300 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 4350 3300 50  0001 C CNN
 F 3 "~" H 4350 3300 50  0001 C CNN
 	2    4350 3300
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R_POT_Dual_Separate RV1
