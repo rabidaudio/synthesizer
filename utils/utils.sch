@@ -284,7 +284,7 @@ U 1 1 5ECB7499
 P 7250 5800
 F 0 "R8" H 7320 5846 50  0000 L CNN
 F 1 "1K" H 7320 5755 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7180 5800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 7180 5800 50  0001 C CNN
 F 3 "~" H 7250 5800 50  0001 C CNN
 	1    7250 5800
 	1    0    0    -1  
@@ -357,7 +357,7 @@ F 1 "200K" V 4234 3300 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 4350 3300 50  0001 C CNN
 F 3 "~" H 4350 3300 50  0001 C CNN
 	2    4350 3300
-	0    -1   1    0   
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_POT_Dual_Separate RV1
@@ -387,7 +387,7 @@ U 1 1 5ECB39F0
 P 3550 3450
 F 0 "R3" V 3343 3450 50  0000 C CNN
 F 1 "100K" V 3434 3450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 3480 3450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3480 3450 50  0001 C CNN
 F 3 "~" H 3550 3450 50  0001 C CNN
 	1    3550 3450
 	0    1    1    0   
@@ -603,7 +603,7 @@ U 1 1 5F30ADA8
 P 3000 6550
 F 0 "R1" H 3070 6596 50  0000 L CNN
 F 1 "100K" H 3070 6505 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 2930 6550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2930 6550 50  0001 C CNN
 F 3 "~" H 3000 6550 50  0001 C CNN
 	1    3000 6550
 	1    0    0    -1  
