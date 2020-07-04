@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR09
+L power:GND #PWR025
 U 1 1 5ECA13B1
 P 9950 1800
-F 0 "#PWR09" H 9950 1550 50  0001 C CNN
+F 0 "#PWR025" H 9950 1550 50  0001 C CNN
 F 1 "GND" H 9955 1627 50  0000 C CNN
 F 2 "" H 9950 1800 50  0001 C CNN
 F 3 "" H 9950 1800 50  0001 C CNN
@@ -37,10 +37,10 @@ Connection ~ 3900 3750
 Wire Wire Line
 	3900 3750 3950 3750
 $Comp
-L power:GND #PWR07
+L power:GND #PWR016
 U 1 1 5ECD1341
 P 6800 3550
-F 0 "#PWR07" H 6800 3300 50  0001 C CNN
+F 0 "#PWR016" H 6800 3300 50  0001 C CNN
 F 1 "GND" H 6805 3377 50  0000 C CNN
 F 2 "" H 6800 3550 50  0001 C CNN
 F 3 "" H 6800 3550 50  0001 C CNN
@@ -67,23 +67,23 @@ Connection ~ 6850 3250
 Wire Wire Line
 	6850 3250 6900 3250
 $Comp
-L Device:R R5
+L Device:R R9
 U 1 1 5ECD4025
 P 7300 2900
-F 0 "R5" V 7507 2900 50  0000 C CNN
+F 0 "R9" V 7507 2900 50  0000 C CNN
 F 1 "100K" V 7416 2900 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 7230 2900 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 7230 2900 50  0001 C CNN
 F 3 "~" H 7300 2900 50  0001 C CNN
 	1    7300 2900
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R4
+L Device:R R6
 U 1 1 5ECC6761
 P 6600 3250
-F 0 "R4" V 6807 3250 50  0000 C CNN
+F 0 "R6" V 6807 3250 50  0000 C CNN
 F 1 "100K" V 6716 3250 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 6530 3250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 6530 3250 50  0001 C CNN
 F 3 "~" H 6600 3250 50  0001 C CNN
 	1    6600 3250
 	0    -1   -1   0   
@@ -92,7 +92,7 @@ Text GLabel 3300 3450 0    50   Input ~ 0
 AIN
 Text GLabel 3300 3750 0    50   Input ~ 0
 BIN
-Text GLabel 7550 2200 2    50   Input ~ 0
+Text GLabel 7550 2450 2    50   Input ~ 0
 ~OUT
 Text GLabel 7850 3350 2    50   Input ~ 0
 OUT
@@ -161,67 +161,67 @@ GATE
 Wire Wire Line
 	1750 3450 1400 3450
 $Comp
-L power:GND #PWR017
+L power:GND #PWR04
 U 1 1 5ECA7FBB
-P 1250 5450
-F 0 "#PWR017" H 1250 5200 50  0001 C CNN
-F 1 "GND" H 1255 5277 50  0000 C CNN
-F 2 "" H 1250 5450 50  0001 C CNN
-F 3 "" H 1250 5450 50  0001 C CNN
-	1    1250 5450
+P 1250 5900
+F 0 "#PWR04" H 1250 5650 50  0001 C CNN
+F 1 "GND" H 1255 5727 50  0000 C CNN
+F 2 "" H 1250 5900 50  0001 C CNN
+F 3 "" H 1250 5900 50  0001 C CNN
+	1    1250 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1250 5450 1250 5350
+	1250 5900 1250 5800
 Wire Wire Line
-	1050 4800 950  4800
+	1050 5250 950  5250
 Wire Wire Line
-	950  4800 950  4900
+	950  5250 950  5350
 Wire Wire Line
-	950  5350 1250 5350
-Connection ~ 1250 5350
+	950  5800 1250 5800
+Connection ~ 1250 5800
 Wire Wire Line
-	1250 5350 1250 5300
+	1250 5800 1250 5750
 Wire Wire Line
-	1050 4900 950  4900
-Connection ~ 950  4900
+	1050 5350 950  5350
+Connection ~ 950  5350
 Wire Wire Line
-	950  4900 950  5350
-Text GLabel 850  5000 0    50   Input ~ 0
+	950  5350 950  5800
+Text GLabel 850  5450 0    50   Input ~ 0
 ~OUT
 Wire Wire Line
-	850  5000 1000 5000
+	850  5450 1000 5450
 $Comp
-L power:GND #PWR018
+L power:GND #PWR05
 U 1 1 5ECB6ABD
-P 1250 6550
-F 0 "#PWR018" H 1250 6300 50  0001 C CNN
-F 1 "GND" H 1255 6377 50  0000 C CNN
-F 2 "" H 1250 6550 50  0001 C CNN
-F 3 "" H 1250 6550 50  0001 C CNN
-	1    1250 6550
+P 1200 4900
+F 0 "#PWR05" H 1200 4650 50  0001 C CNN
+F 1 "GND" H 1205 4727 50  0000 C CNN
+F 2 "" H 1200 4900 50  0001 C CNN
+F 3 "" H 1200 4900 50  0001 C CNN
+	1    1200 4900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1250 6550 1250 6450
+	1200 4900 1200 4800
 Wire Wire Line
-	1050 5900 950  5900
+	1000 4250 900  4250
 Wire Wire Line
-	950  5900 950  6000
+	900  4250 900  4350
 Wire Wire Line
-	950  6450 1250 6450
-Connection ~ 1250 6450
+	900  4800 1200 4800
+Connection ~ 1200 4800
 Wire Wire Line
-	1250 6450 1250 6400
+	1200 4800 1200 4750
 Wire Wire Line
-	1050 6000 950  6000
-Connection ~ 950  6000
+	1000 4350 900  4350
+Connection ~ 900  4350
 Wire Wire Line
-	950  6000 950  6450
-Text GLabel 850  6100 0    50   Input ~ 0
+	900  4350 900  4800
+Text GLabel 800  4450 0    50   Input ~ 0
 OUT
 Wire Wire Line
-	850  6100 1000 6100
+	800  4450 950  4450
 Wire Wire Line
 	1650 3550 1400 3550
 Text Notes 4000 4150 0    50   ~ 0
@@ -229,52 +229,19 @@ inverting sum
 Text Notes 7250 3550 0    50   ~ 0
 re-invert
 Wire Wire Line
-	1050 5100 1000 5100
+	1050 5550 1000 5550
 Wire Wire Line
-	1000 5100 1000 5000
-Connection ~ 1000 5000
+	1000 5550 1000 5450
+Connection ~ 1000 5450
 Wire Wire Line
-	1000 5000 1050 5000
+	1000 5450 1050 5450
 Wire Wire Line
-	1050 6200 1000 6200
+	1000 4550 950  4550
 Wire Wire Line
-	1000 6200 1000 6100
-Connection ~ 1000 6100
+	950  4550 950  4450
+Connection ~ 950  4450
 Wire Wire Line
-	1000 6100 1050 6100
-$Comp
-L Amplifier_Operational:TL072 U1
-U 1 1 5ECD72AD
-P 4250 3850
-F 0 "U1" H 4400 3700 50  0000 C CNN
-F 1 "TL072" H 4200 3850 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 4250 3850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 3850 50  0001 C CNN
-	1    4250 3850
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U1
-U 2 1 5ECD970A
-P 7200 3350
-F 0 "U1" H 7250 3200 50  0000 C CNN
-F 1 "TL072" H 7150 3350 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 7200 3350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7200 3350 50  0001 C CNN
-	2    7200 3350
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U1
-U 3 1 5ECDB893
-P 8750 1400
-F 0 "U1" H 8708 1446 50  0000 L CNN
-F 1 "TL072" H 8708 1355 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 8750 1400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8750 1400 50  0001 C CNN
-	3    8750 1400
-	1    0    0    -1  
-$EndComp
+	950  4450 1000 4450
 Text Notes 4550 3000 2    50   ~ 0
 gain 0-2\nideally 1 detent pot so it sits at g=1
 Text Notes 7550 6250 0    50   ~ 0
@@ -312,12 +279,12 @@ F 3 "~" H 7250 4900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R11
+L Device:R R8
 U 1 1 5ECB7499
 P 7250 5800
-F 0 "R11" H 7320 5846 50  0000 L CNN
+F 0 "R8" H 7320 5846 50  0000 L CNN
 F 1 "1K" H 7320 5755 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 7180 5800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 7180 5800 50  0001 C CNN
 F 3 "~" H 7250 5800 50  0001 C CNN
 	1    7250 5800
 	1    0    0    -1  
@@ -325,21 +292,21 @@ $EndComp
 Wire Wire Line
 	1500 3250 1500 3800
 $Comp
-L Transistor_BJT:2N3904 Q1
+L Transistor_BJT:2N3904 Q3
 U 1 1 5ECC1DA3
 P 7150 5350
-F 0 "Q1" H 7340 5396 50  0000 L CNN
+F 0 "Q3" H 7340 5396 50  0000 L CNN
 F 1 "2N3904" H 7340 5305 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 7350 5275 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92" H 7350 5275 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7150 5350 50  0001 L CNN
 	1    7150 5350
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L power:GND #PWR018
 U 1 1 5ECC2E81
 P 7250 6050
-F 0 "#PWR012" H 7250 5800 50  0001 C CNN
+F 0 "#PWR018" H 7250 5800 50  0001 C CNN
 F 1 "GND" H 7255 5877 50  0000 C CNN
 F 2 "" H 7250 6050 50  0001 C CNN
 F 3 "" H 7250 6050 50  0001 C CNN
@@ -359,12 +326,12 @@ Wire Wire Line
 Text GLabel 6700 4800 0    50   Input ~ 0
 GATE
 $Comp
-L Device:R R10
+L Device:R R7
 U 1 1 5ECF0A91
 P 6800 5100
-F 0 "R10" H 6870 5146 50  0000 L CNN
+F 0 "R7" H 6870 5146 50  0000 L CNN
 F 1 "100K" H 6870 5055 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 6730 5100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 6730 5100 50  0001 C CNN
 F 3 "~" H 6800 5100 50  0001 C CNN
 	1    6800 5100
 	1    0    0    -1  
@@ -387,7 +354,7 @@ U 2 1 5ED32DF1
 P 4350 3300
 F 0 "RV1" V 4143 3300 50  0000 C CNN
 F 1 "200K" V 4234 3300 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 4350 3300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 4350 3300 50  0001 C CNN
 F 3 "~" H 4350 3300 50  0001 C CNN
 	2    4350 3300
 	0    1    1    0   
@@ -398,29 +365,29 @@ U 1 1 5ED34631
 P 3600 2400
 F 0 "RV1" H 3531 2446 50  0000 R CNN
 F 1 "200K" H 3531 2355 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 3600 2400 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3600 2400 50  0001 C CNN
 F 3 "~" H 3600 2400 50  0001 C CNN
 	1    3600 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L Device:R R4
 U 1 1 5ECB414F
 P 3550 3750
-F 0 "R2" V 3343 3750 50  0000 C CNN
+F 0 "R4" V 3343 3750 50  0000 C CNN
 F 1 "100K" V 3434 3750 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3480 3750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3480 3750 50  0001 C CNN
 F 3 "~" H 3550 3750 50  0001 C CNN
 	1    3550 3750
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R1
+L Device:R R3
 U 1 1 5ECB39F0
 P 3550 3450
-F 0 "R1" V 3343 3450 50  0000 C CNN
+F 0 "R3" V 3343 3450 50  0000 C CNN
 F 1 "100K" V 3434 3450 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3480 3450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3480 3450 50  0001 C CNN
 F 3 "~" H 3550 3450 50  0001 C CNN
 	1    3550 3450
 	0    1    1    0   
@@ -455,10 +422,10 @@ Connection ~ 1500 2450
 Wire Wire Line
 	1500 2450 1500 2700
 $Comp
-L power:GND #PWR?
+L power:GND #PWR012
 U 1 1 5EF58D03
 P 3850 4050
-F 0 "#PWR?" H 3850 3800 50  0001 C CNN
+F 0 "#PWR012" H 3850 3800 50  0001 C CNN
 F 1 "GND" H 3855 3877 50  0000 C CNN
 F 2 "" H 3850 4050 50  0001 C CNN
 F 3 "" H 3850 4050 50  0001 C CNN
@@ -469,17 +436,6 @@ Wire Wire Line
 	3850 4050 3850 3950
 Wire Wire Line
 	3850 3950 3950 3950
-$Comp
-L Amplifier_Operational:TL072 U?
-U 1 1 5F034CBC
-P 4250 2300
-F 0 "U?" H 4400 2150 50  0000 C CNN
-F 1 "TL072" H 4200 2300 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 4250 2300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 2300 50  0001 C CNN
-	1    4250 2300
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	3950 2400 3750 2400
 Wire Wire Line
@@ -493,10 +449,10 @@ Wire Wire Line
 Wire Wire Line
 	4650 2300 4550 2300
 $Comp
-L synth:DG403 U?
+L synth:DG403 U2
 U 1 1 5F0435F7
 P 5250 2850
-F 0 "U?" H 5250 3075 50  0000 C CNN
+F 0 "U2" H 5250 3075 50  0000 C CNN
 F 1 "DG403" H 5250 2984 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5250 2150 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5250 2850 50  0001 C CNN
@@ -504,47 +460,36 @@ F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5250 2850 5
 	-1   0    0    -1  
 $EndComp
 $Comp
-L synth:DG403 U?
+L synth:DG403 U2
 U 2 1 5F0A3698
 P 6050 3050
-F 0 "U?" H 6050 3275 50  0000 C CNN
+F 0 "U2" H 6050 3275 50  0000 C CNN
 F 1 "DG403" H 6050 3184 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6050 2350 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 6050 3050 50  0001 C CNN
 	2    6050 3050
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Amplifier_Operational:TL072 U?
-U 2 1 5F0EDE60
-P 7150 2200
-F 0 "U?" H 7200 2050 50  0000 C CNN
-F 1 "TL072" H 7100 2200 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 7150 2200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7150 2200 50  0001 C CNN
-	2    7150 2200
-	1    0    0    1   
-$EndComp
 Wire Wire Line
-	7450 2200 7500 2200
+	7450 2450 7500 2450
 Wire Wire Line
-	6850 2100 6800 2100
+	6850 2350 6800 2350
 Wire Wire Line
-	6800 2100 6800 1900
+	6800 2350 6800 2150
 Wire Wire Line
-	6800 1900 7500 1900
+	6800 2150 7500 2150
 Wire Wire Line
-	7500 1900 7500 2200
-Connection ~ 7500 2200
+	7500 2150 7500 2450
+Connection ~ 7500 2450
 Wire Wire Line
-	7500 2200 7550 2200
+	7500 2450 7550 2450
 Wire Wire Line
 	6450 3250 6400 3250
 $Comp
-L power:GND #PWR?
+L power:GND #PWR015
 U 1 1 5F12579B
 P 5700 3350
-F 0 "#PWR?" H 5700 3100 50  0001 C CNN
+F 0 "#PWR015" H 5700 3100 50  0001 C CNN
 F 1 "GND" H 5705 3177 50  0000 C CNN
 F 2 "" H 5700 3350 50  0001 C CNN
 F 3 "" H 5700 3350 50  0001 C CNN
@@ -555,61 +500,6 @@ Wire Wire Line
 	6050 3700 6050 3550
 Wire Wire Line
 	5950 3700 6050 3700
-$Comp
-L synth:AudioJack2_Ground_Switch J?
-U 1 1 5F14C66A
-P 1200 1200
-F 0 "J?" H 1232 1625 50  0000 C CNN
-F 1 "AudioJack2_Ground_Switch" H 1232 1534 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1200 1400 50  0001 C CNN
-F 3 "~" H 1200 1400 50  0001 C CNN
-	1    1200 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L synth:AudioJack2_Ground_Switch J?
-U 1 1 5F170E51
-P 1200 2350
-F 0 "J?" H 1232 2775 50  0000 C CNN
-F 1 "AudioJack2_Ground_Switch" H 1232 2684 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1200 2550 50  0001 C CNN
-F 3 "~" H 1200 2550 50  0001 C CNN
-	1    1200 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L synth:AudioJack2_Ground_Switch J?
-U 1 1 5F1721FE
-P 1200 3450
-F 0 "J?" H 1232 3875 50  0000 C CNN
-F 1 "AudioJack2_Ground_Switch" H 1232 3784 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1200 3650 50  0001 C CNN
-F 3 "~" H 1200 3650 50  0001 C CNN
-	1    1200 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L synth:AudioJack2_Ground_Switch J?
-U 1 1 5F172D3A
-P 1250 5000
-F 0 "J?" H 1070 5018 50  0000 R CNN
-F 1 "AudioJack2_Ground_Switch" H 1070 4927 50  0000 R CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1250 5200 50  0001 C CNN
-F 3 "~" H 1250 5200 50  0001 C CNN
-	1    1250 5000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L synth:AudioJack2_Ground_Switch J?
-U 1 1 5F1745B0
-P 1250 6100
-F 0 "J?" H 1070 6118 50  0000 R CNN
-F 1 "AudioJack2_Ground_Switch" H 1070 6027 50  0000 R CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1250 6300 50  0001 C CNN
-F 3 "~" H 1250 6300 50  0001 C CNN
-	1    1250 6100
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	5550 3050 5650 3050
 Wire Wire Line
@@ -648,21 +538,21 @@ Wire Wire Line
 Wire Wire Line
 	5250 3500 5250 3350
 $Comp
-L Transistor_BJT:2N3904 Q?
+L Transistor_BJT:2N3904 Q1
 U 1 1 5F2E9244
 P 3300 6850
-F 0 "Q?" H 3490 6896 50  0000 L CNN
+F 0 "Q1" H 3490 6896 50  0000 L CNN
 F 1 "2N3904" H 3490 6805 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 3500 6775 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92" H 3500 6775 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3300 6850 50  0001 L CNN
 	1    3300 6850
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR09
 U 1 1 5F2E924E
 P 3400 7150
-F 0 "#PWR?" H 3400 6900 50  0001 C CNN
+F 0 "#PWR09" H 3400 6900 50  0001 C CNN
 F 1 "GND" H 3405 6977 50  0000 C CNN
 F 2 "" H 3400 7150 50  0001 C CNN
 F 3 "" H 3400 7150 50  0001 C CNN
@@ -672,21 +562,21 @@ $EndComp
 Wire Wire Line
 	3400 7150 3400 7050
 $Comp
-L Transistor_BJT:2N3904 Q?
+L Transistor_BJT:2N3904 Q2
 U 1 1 5F2F22C3
 P 4300 6850
-F 0 "Q?" H 4490 6896 50  0000 L CNN
+F 0 "Q2" H 4490 6896 50  0000 L CNN
 F 1 "2N3904" H 4490 6805 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 4500 6775 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92" H 4500 6775 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 4300 6850 50  0001 L CNN
 	1    4300 6850
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR014
 U 1 1 5F2F22CD
 P 4400 7150
-F 0 "#PWR?" H 4400 6900 50  0001 C CNN
+F 0 "#PWR014" H 4400 6900 50  0001 C CNN
 F 1 "GND" H 4405 6977 50  0000 C CNN
 F 2 "" H 4400 7150 50  0001 C CNN
 F 3 "" H 4400 7150 50  0001 C CNN
@@ -708,43 +598,43 @@ Wire Wire Line
 Wire Wire Line
 	4000 6850 4100 6850
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5F30ADA8
 P 3000 6550
-F 0 "R?" H 3070 6596 50  0000 L CNN
+F 0 "R1" H 3070 6596 50  0000 L CNN
 F 1 "100K" H 3070 6505 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2930 6550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2930 6550 50  0001 C CNN
 F 3 "~" H 3000 6550 50  0001 C CNN
 	1    3000 6550
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5F30B3D5
 P 3400 5750
-F 0 "R?" H 3470 5796 50  0000 L CNN
+F 0 "R2" H 3470 5796 50  0000 L CNN
 F 1 "100K" H 3470 5705 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3330 5750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3330 5750 50  0001 C CNN
 F 3 "~" H 3400 5750 50  0001 C CNN
 	1    3400 5750
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5F30B999
 P 4000 6600
-F 0 "R?" H 4070 6646 50  0000 L CNN
+F 0 "R5" H 4070 6646 50  0000 L CNN
 F 1 "100K" H 4070 6555 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3930 6600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3930 6600 50  0001 C CNN
 F 3 "~" H 4000 6600 50  0001 C CNN
 	1    4000 6600
 	1    0    0    -1  
 $EndComp
 $Comp
-L synth:DG403 U?
+L synth:DG403 U2
 U 3 1 5F3217BC
 P 9300 1350
-F 0 "U?" H 9530 1346 50  0000 L CNN
+F 0 "U2" H 9530 1346 50  0000 L CNN
 F 1 "DG403" H 9530 1255 50  0000 L CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 9300 650 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 9300 1350 50  0001 C CNN
@@ -752,10 +642,10 @@ F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 9300 1350 5
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR010
 U 1 1 5F32CDA5
 P 3600 2200
-F 0 "#PWR?" H 3600 2050 50  0001 C CNN
+F 0 "#PWR010" H 3600 2050 50  0001 C CNN
 F 1 "+12V" H 3615 2373 50  0000 C CNN
 F 2 "" H 3600 2200 50  0001 C CNN
 F 3 "" H 3600 2200 50  0001 C CNN
@@ -763,10 +653,10 @@ F 3 "" H 3600 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR011
 U 1 1 5F351606
 P 3600 2600
-F 0 "#PWR?" H 3600 2700 50  0001 C CNN
+F 0 "#PWR011" H 3600 2700 50  0001 C CNN
 F 1 "-12V" H 3615 2773 50  0000 C CNN
 F 2 "" H 3600 2600 50  0001 C CNN
 F 3 "" H 3600 2600 50  0001 C CNN
@@ -774,10 +664,10 @@ F 3 "" H 3600 2600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR06
 U 1 1 5F353500
 P 1650 3000
-F 0 "#PWR?" H 1650 2850 50  0001 C CNN
+F 0 "#PWR06" H 1650 2850 50  0001 C CNN
 F 1 "+5V" H 1665 3173 50  0000 C CNN
 F 2 "" H 1650 3000 50  0001 C CNN
 F 3 "" H 1650 3000 50  0001 C CNN
@@ -787,10 +677,10 @@ $EndComp
 Wire Wire Line
 	1650 3000 1650 3550
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR017
 U 1 1 5F35A407
 P 7250 4650
-F 0 "#PWR?" H 7250 4500 50  0001 C CNN
+F 0 "#PWR017" H 7250 4500 50  0001 C CNN
 F 1 "+5V" H 7265 4823 50  0000 C CNN
 F 2 "" H 7250 4650 50  0001 C CNN
 F 3 "" H 7250 4650 50  0001 C CNN
@@ -804,10 +694,10 @@ Wire Wire Line
 	4000 6750 4000 6850
 Connection ~ 4000 6850
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR07
 U 1 1 5F3963B4
 P 3000 6300
-F 0 "#PWR?" H 3000 6150 50  0001 C CNN
+F 0 "#PWR07" H 3000 6150 50  0001 C CNN
 F 1 "+5V" H 3015 6473 50  0000 C CNN
 F 2 "" H 3000 6300 50  0001 C CNN
 F 3 "" H 3000 6300 50  0001 C CNN
@@ -817,10 +707,10 @@ $EndComp
 Wire Wire Line
 	3000 6300 3000 6400
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR013
 U 1 1 5F39D487
 P 4000 6300
-F 0 "#PWR?" H 4000 6150 50  0001 C CNN
+F 0 "#PWR013" H 4000 6150 50  0001 C CNN
 F 1 "+5V" H 4015 6473 50  0000 C CNN
 F 2 "" H 4000 6300 50  0001 C CNN
 F 3 "" H 4000 6300 50  0001 C CNN
@@ -844,10 +734,10 @@ Wire Wire Line
 	4550 6000 4400 6000
 Connection ~ 4400 6000
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR08
 U 1 1 5F3B7B28
 P 3400 5500
-F 0 "#PWR?" H 3400 5350 50  0001 C CNN
+F 0 "#PWR08" H 3400 5350 50  0001 C CNN
 F 1 "+5V" H 3415 5673 50  0000 C CNN
 F 2 "" H 3400 5500 50  0001 C CNN
 F 3 "" H 3400 5500 50  0001 C CNN
@@ -873,17 +763,12 @@ Connection ~ 6400 3250
 Wire Wire Line
 	6400 3250 6350 3250
 Wire Wire Line
-	6400 2300 6850 2300
-Wire Wire Line
 	6350 3150 6400 3150
-Connection ~ 6400 3150
-Wire Wire Line
-	6400 3150 6400 2300
 $Comp
-L synth:EURORACK_CONN_16 J?
+L synth:EURORACK_CONN_16 J6
 U 1 1 5F4C5E03
 P 10300 1350
-F 0 "J?" H 10380 1346 50  0000 L CNN
+F 0 "J6" H 10380 1346 50  0000 L CNN
 F 1 "EURORACK_CONN_16" H 10380 1255 50  0000 L CNN
 F 2 "synth:EURORACK_16_IDC" H 10750 650 50  0001 C CNN
 F 3 "https://division-6.com/learn/eurorack-power/" V 10350 1400 50  0001 C CNN
@@ -893,10 +778,10 @@ $EndComp
 Wire Wire Line
 	9950 1700 9950 1800
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR026
 U 1 1 5F569A85
 P 10000 1050
-F 0 "#PWR?" H 10000 900 50  0001 C CNN
+F 0 "#PWR026" H 10000 900 50  0001 C CNN
 F 1 "+5V" H 10015 1223 50  0000 C CNN
 F 2 "" H 10000 1050 50  0001 C CNN
 F 3 "" H 10000 1050 50  0001 C CNN
@@ -904,10 +789,10 @@ F 3 "" H 10000 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR027
 U 1 1 5F56A034
 P 10250 1050
-F 0 "#PWR?" H 10250 900 50  0001 C CNN
+F 0 "#PWR027" H 10250 900 50  0001 C CNN
 F 1 "+12V" H 10265 1223 50  0000 C CNN
 F 2 "" H 10250 1050 50  0001 C CNN
 F 3 "" H 10250 1050 50  0001 C CNN
@@ -915,10 +800,10 @@ F 3 "" H 10250 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR028
 U 1 1 5F56A82F
 P 10250 1800
-F 0 "#PWR?" H 10250 1900 50  0001 C CNN
+F 0 "#PWR028" H 10250 1900 50  0001 C CNN
 F 1 "-12V" H 10265 1973 50  0000 C CNN
 F 2 "" H 10250 1800 50  0001 C CNN
 F 3 "" H 10250 1800 50  0001 C CNN
@@ -926,10 +811,10 @@ F 3 "" H 10250 1800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR021
 U 1 1 5F56AD63
 P 9200 800
-F 0 "#PWR?" H 9200 650 50  0001 C CNN
+F 0 "#PWR021" H 9200 650 50  0001 C CNN
 F 1 "+5V" H 9215 973 50  0000 C CNN
 F 2 "" H 9200 800 50  0001 C CNN
 F 3 "" H 9200 800 50  0001 C CNN
@@ -937,10 +822,10 @@ F 3 "" H 9200 800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR023
 U 1 1 5F56B294
 P 9400 800
-F 0 "#PWR?" H 9400 650 50  0001 C CNN
+F 0 "#PWR023" H 9400 650 50  0001 C CNN
 F 1 "+12V" H 9415 973 50  0000 C CNN
 F 2 "" H 9400 800 50  0001 C CNN
 F 3 "" H 9400 800 50  0001 C CNN
@@ -948,10 +833,10 @@ F 3 "" H 9400 800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR022
 U 1 1 5F56B858
 P 9200 2000
-F 0 "#PWR?" H 9200 1750 50  0001 C CNN
+F 0 "#PWR022" H 9200 1750 50  0001 C CNN
 F 1 "GND" H 9205 1827 50  0000 C CNN
 F 2 "" H 9200 2000 50  0001 C CNN
 F 3 "" H 9200 2000 50  0001 C CNN
@@ -959,10 +844,10 @@ F 3 "" H 9200 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR024
 U 1 1 5F56BC7C
 P 9400 2000
-F 0 "#PWR?" H 9400 2100 50  0001 C CNN
+F 0 "#PWR024" H 9400 2100 50  0001 C CNN
 F 1 "-12V" H 9415 2173 50  0000 C CNN
 F 2 "" H 9400 2000 50  0001 C CNN
 F 3 "" H 9400 2000 50  0001 C CNN
@@ -984,10 +869,10 @@ Wire Wire Line
 Wire Wire Line
 	10250 1700 10250 1800
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR020
 U 1 1 5F5C5039
 P 8650 1800
-F 0 "#PWR?" H 8650 1900 50  0001 C CNN
+F 0 "#PWR020" H 8650 1900 50  0001 C CNN
 F 1 "-12V" H 8665 1973 50  0000 C CNN
 F 2 "" H 8650 1800 50  0001 C CNN
 F 3 "" H 8650 1800 50  0001 C CNN
@@ -997,10 +882,10 @@ $EndComp
 Wire Wire Line
 	8650 1800 8650 1700
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR019
 U 1 1 5F5CB1BB
 P 8650 1000
-F 0 "#PWR?" H 8650 850 50  0001 C CNN
+F 0 "#PWR019" H 8650 850 50  0001 C CNN
 F 1 "+12V" H 8665 1173 50  0000 C CNN
 F 2 "" H 8650 1000 50  0001 C CNN
 F 3 "" H 8650 1000 50  0001 C CNN
@@ -1009,4 +894,119 @@ F 3 "" H 8650 1000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8650 1000 8650 1100
+Wire Wire Line
+	6850 2550 6400 2550
+Wire Wire Line
+	6400 2550 6400 3150
+Connection ~ 6400 3150
+$Comp
+L Amplifier_Operational:TL074 U1
+U 1 1 5F655EB5
+P 4250 2300
+F 0 "U1" H 4300 2150 50  0000 C CNN
+F 1 "TL074" H 4200 2300 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4200 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4300 2500 50  0001 C CNN
+	1    4250 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 2 1 5F668025
+P 4250 3850
+F 0 "U1" H 4300 3700 50  0000 C CNN
+F 1 "TL074" H 4200 3850 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4200 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4300 4050 50  0001 C CNN
+	2    4250 3850
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 3 1 5F678C78
+P 7200 3350
+F 0 "U1" H 7250 3200 50  0000 C CNN
+F 1 "TL074" H 7150 3350 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7150 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7250 3550 50  0001 C CNN
+	3    7200 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 4 1 5F68992E
+P 7150 2450
+F 0 "U1" H 7150 2300 50  0000 C CNN
+F 1 "TL074" H 7100 2450 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7100 2550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7200 2650 50  0001 C CNN
+	4    7150 2450
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U1
+U 5 1 5F69F02B
+P 8750 1400
+F 0 "U1" H 8708 1446 50  0000 L CNN
+F 1 "TL074" H 8708 1355 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 8700 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8800 1600 50  0001 C CNN
+	5    8750 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch ~OUT1
+U 1 1 5F172D3A
+P 1250 5450
+F 0 "~OUT1" H 1070 5468 50  0000 R CNN
+F 1 "AudioJack2_Ground_Switch" H 1070 5377 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1250 5650 50  0001 C CNN
+F 3 "~" H 1250 5650 50  0001 C CNN
+	1    1250 5450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch OUT1
+U 1 1 5F1745B0
+P 1200 4450
+F 0 "OUT1" H 1020 4468 50  0000 R CNN
+F 1 "AudioJack2_Ground_Switch" H 1020 4377 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1200 4650 50  0001 C CNN
+F 3 "~" H 1200 4650 50  0001 C CNN
+	1    1200 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch B_IN
+U 1 1 5F170E51
+P 1200 2350
+F 0 "B_IN" H 1232 2775 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1232 2684 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1200 2550 50  0001 C CNN
+F 3 "~" H 1200 2550 50  0001 C CNN
+	1    1200 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch A_IN
+U 1 1 5F14C66A
+P 1200 1200
+F 0 "A_IN" H 1232 1625 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1232 1534 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1200 1400 50  0001 C CNN
+F 3 "~" H 1200 1400 50  0001 C CNN
+	1    1200 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch GATE1
+U 1 1 5F1721FE
+P 1200 3450
+F 0 "GATE1" H 1232 3875 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1232 3784 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1200 3650 50  0001 C CNN
+F 3 "~" H 1200 3650 50  0001 C CNN
+	1    1200 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
