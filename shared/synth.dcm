@@ -12,6 +12,12 @@ K audio jack receptacle mono headphones phone TS connector
 F ~
 $ENDCMP
 #
+$CMP DG403
+D Dual SPDT Monolithic CMOS Analog Switch, 45Ohm Ron, SOIC-16
+K CMOS Analog Switch
+F https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf
+$ENDCMP
+#
 $CMP DMMT5401
 D 150V DUAL PNP SMALL SIGNAL SURFACE MOUNT TRANSISTOR - SOT26
 K PNP Transistor Pair

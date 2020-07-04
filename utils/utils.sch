@@ -16,198 +16,150 @@ $EndDescr
 $Comp
 L power:GND #PWR09
 U 1 1 5ECA13B1
-P 8100 2000
-F 0 "#PWR09" H 8100 1750 50  0001 C CNN
-F 1 "GND" H 8105 1827 50  0000 C CNN
-F 2 "" H 8100 2000 50  0001 C CNN
-F 3 "" H 8100 2000 50  0001 C CNN
-	1    8100 2000
+P 9950 1800
+F 0 "#PWR09" H 9950 1550 50  0001 C CNN
+F 1 "GND" H 9955 1627 50  0000 C CNN
+F 2 "" H 9950 1800 50  0001 C CNN
+F 3 "" H 9950 1800 50  0001 C CNN
+	1    9950 1800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3100 2400 3150 2400
+	3700 3750 3750 3750
 Wire Wire Line
-	3100 2100 3150 2100
+	3700 3450 3750 3450
 Wire Wire Line
-	3150 2100 3150 2400
-Connection ~ 3150 2400
+	3750 3450 3750 3750
+Connection ~ 3750 3750
 Wire Wire Line
-	3150 2400 3300 2400
-Connection ~ 3300 2400
+	3750 3750 3900 3750
+Connection ~ 3900 3750
 Wire Wire Line
-	3300 2400 3350 2400
+	3900 3750 3950 3750
 $Comp
 L power:GND #PWR07
 U 1 1 5ECD1341
-P 5500 3250
-F 0 "#PWR07" H 5500 3000 50  0001 C CNN
-F 1 "GND" H 5505 3077 50  0000 C CNN
-F 2 "" H 5500 3250 50  0001 C CNN
-F 3 "" H 5500 3250 50  0001 C CNN
-	1    5500 3250
+P 6800 3550
+F 0 "#PWR07" H 6800 3300 50  0001 C CNN
+F 1 "GND" H 6805 3377 50  0000 C CNN
+F 2 "" H 6800 3550 50  0001 C CNN
+F 3 "" H 6800 3550 50  0001 C CNN
+	1    6800 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 3250 5500 3150
+	6800 3550 6800 3450
 Wire Wire Line
-	5500 3150 5600 3150
+	6800 3450 6900 3450
 Wire Wire Line
-	6350 2600 6350 3050
+	7650 2900 7650 3350
 Wire Wire Line
-	6350 3050 6200 3050
+	7650 3350 7500 3350
 Wire Wire Line
-	5450 2950 5550 2950
+	6750 3250 6850 3250
 Wire Wire Line
-	6150 2600 6350 2600
+	7450 2900 7650 2900
 Wire Wire Line
-	5850 2600 5550 2600
+	7150 2900 6850 2900
 Wire Wire Line
-	5550 2600 5550 2950
-Connection ~ 5550 2950
+	6850 2900 6850 3250
+Connection ~ 6850 3250
 Wire Wire Line
-	5550 2950 5600 2950
+	6850 3250 6900 3250
 $Comp
 L Device:R R5
 U 1 1 5ECD4025
-P 6000 2600
-F 0 "R5" V 6207 2600 50  0000 C CNN
-F 1 "100K" V 6116 2600 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 5930 2600 50  0001 C CNN
-F 3 "~" H 6000 2600 50  0001 C CNN
-	1    6000 2600
+P 7300 2900
+F 0 "R5" V 7507 2900 50  0000 C CNN
+F 1 "100K" V 7416 2900 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 7230 2900 50  0001 C CNN
+F 3 "~" H 7300 2900 50  0001 C CNN
+	1    7300 2900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5ECC6761
-P 5300 2950
-F 0 "R4" V 5507 2950 50  0000 C CNN
-F 1 "100K" V 5416 2950 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 5230 2950 50  0001 C CNN
-F 3 "~" H 5300 2950 50  0001 C CNN
-	1    5300 2950
+P 6600 3250
+F 0 "R4" V 6807 3250 50  0000 C CNN
+F 1 "100K" V 6716 3250 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 6530 3250 50  0001 C CNN
+F 3 "~" H 6600 3250 50  0001 C CNN
+	1    6600 3250
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2700 2100 0    50   Input ~ 0
+Text GLabel 3300 3450 0    50   Input ~ 0
 AIN
-Text GLabel 2700 2400 0    50   Input ~ 0
+Text GLabel 3300 3750 0    50   Input ~ 0
 BIN
-Text GLabel 5150 2500 2    50   Input ~ 0
+Text GLabel 7550 2200 2    50   Input ~ 0
 ~OUT
-Text GLabel 6550 3050 2    50   Input ~ 0
+Text GLabel 7850 3350 2    50   Input ~ 0
 OUT
 Wire Wire Line
-	6550 3050 6350 3050
-Connection ~ 6350 3050
+	7850 3350 7650 3350
+Connection ~ 7650 3350
 Wire Wire Line
-	2800 2100 2700 2100
+	3400 3450 3300 3450
 Wire Wire Line
-	2800 2400 2700 2400
-$Comp
-L synth:AudioJack2_Ground_Switch J1
-U 1 1 5EC96195
-P 900 1150
-F 0 "J1" H 932 1575 50  0000 C CNN
-F 1 "AIN" H 932 1484 50  0000 C CNN
-F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 900 1350 50  0001 C CNN
-F 3 "~" H 900 1350 50  0001 C CNN
-	1    900  1150
-	1    0    0    -1  
-$EndComp
+	3400 3750 3300 3750
 $Comp
 L power:GND #PWR01
 U 1 1 5EC97FBA
-P 900 1550
-F 0 "#PWR01" H 900 1300 50  0001 C CNN
-F 1 "GND" H 905 1377 50  0000 C CNN
-F 2 "" H 900 1550 50  0001 C CNN
-F 3 "" H 900 1550 50  0001 C CNN
-	1    900  1550
+P 1200 1600
+F 0 "#PWR01" H 1200 1350 50  0001 C CNN
+F 1 "GND" H 1205 1427 50  0000 C CNN
+F 2 "" H 1200 1600 50  0001 C CNN
+F 3 "" H 1200 1600 50  0001 C CNN
+	1    1200 1600
 	1    0    0    -1  
 $EndComp
-Text GLabel 1450 1150 2    50   Input ~ 0
+Text GLabel 1750 1200 2    50   Input ~ 0
 AIN
-Wire Wire Line
-	1450 1150 1200 1150
-$Comp
-L synth:AudioJack2_Ground_Switch J2
-U 1 1 5EC9F2C7
-P 900 2300
-F 0 "J2" H 932 2725 50  0000 C CNN
-F 1 "BIN" H 932 2634 50  0000 C CNN
-F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 900 2500 50  0001 C CNN
-F 3 "~" H 900 2500 50  0001 C CNN
-	1    900  2300
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 5EC9F2D1
-P 900 2700
-F 0 "#PWR02" H 900 2450 50  0001 C CNN
-F 1 "GND" H 905 2527 50  0000 C CNN
-F 2 "" H 900 2700 50  0001 C CNN
-F 3 "" H 900 2700 50  0001 C CNN
-	1    900  2700
+P 1200 2750
+F 0 "#PWR02" H 1200 2500 50  0001 C CNN
+F 1 "GND" H 1205 2577 50  0000 C CNN
+F 2 "" H 1200 2750 50  0001 C CNN
+F 3 "" H 1200 2750 50  0001 C CNN
+	1    1200 2750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	900  2700 900  2650
+	1200 2750 1200 2700
 Wire Wire Line
-	1200 2650 900  2650
-Connection ~ 900  2650
+	1500 2700 1200 2700
+Connection ~ 1200 2700
 Wire Wire Line
-	900  2650 900  2600
-Text GLabel 1450 2300 2    50   Input ~ 0
+	1200 2700 1200 2650
+Text GLabel 1750 2350 2    50   Input ~ 0
 BIN
-Wire Wire Line
-	1450 2300 1150 2300
-$Comp
-L synth:AudioJack2_Ground_Switch J3
-U 1 1 5ECA298E
-P 900 3400
-F 0 "J3" H 932 3825 50  0000 C CNN
-F 1 "GATE" H 932 3734 50  0000 C CNN
-F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 900 3600 50  0001 C CNN
-F 3 "~" H 900 3600 50  0001 C CNN
-	1    900  3400
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5ECA2998
-P 900 3800
-F 0 "#PWR03" H 900 3550 50  0001 C CNN
-F 1 "GND" H 905 3627 50  0000 C CNN
-F 2 "" H 900 3800 50  0001 C CNN
-F 3 "" H 900 3800 50  0001 C CNN
-	1    900  3800
+P 1200 3850
+F 0 "#PWR03" H 1200 3600 50  0001 C CNN
+F 1 "GND" H 1205 3677 50  0000 C CNN
+F 2 "" H 1200 3850 50  0001 C CNN
+F 3 "" H 1200 3850 50  0001 C CNN
+	1    1200 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	900  3800 900  3750
+	1200 3850 1200 3800
 Wire Wire Line
-	1100 3200 1200 3200
+	1400 3250 1500 3250
 Wire Wire Line
-	1200 3750 900  3750
-Connection ~ 900  3750
+	1500 3800 1200 3800
+Connection ~ 1200 3800
 Wire Wire Line
-	900  3750 900  3700
-Text GLabel 1450 3400 2    50   Input ~ 0
+	1200 3800 1200 3750
+Text GLabel 1750 3450 2    50   Input ~ 0
 GATE
 Wire Wire Line
-	1450 3400 1100 3400
-$Comp
-L synth:AudioJack2_Ground_Switch J5
-U 1 1 5ECA5DD5
-P 1250 5000
-F 0 "J5" H 1070 5024 50  0000 R CNN
-F 1 "~OUT" H 1070 4926 50  0000 R CNN
-F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1250 5200 50  0001 C CNN
-F 3 "~" H 1250 5200 50  0001 C CNN
-	1    1250 5000
-	-1   0    0    -1  
-$EndComp
+	1750 3450 1400 3450
 $Comp
 L power:GND #PWR017
 U 1 1 5ECA7FBB
@@ -240,52 +192,41 @@ Text GLabel 850  5000 0    50   Input ~ 0
 Wire Wire Line
 	850  5000 1000 5000
 $Comp
-L synth:AudioJack2_Ground_Switch J6
-U 1 1 5ECB6AB3
-P 1300 6100
-F 0 "J6" H 1120 6118 50  0000 R CNN
-F 1 "OUT" H 1120 6027 50  0000 R CNN
-F 2 "synth:Jack_3.5mm_Ledino_KB3SPRS_Horizontal" H 1300 6300 50  0001 C CNN
-F 3 "~" H 1300 6300 50  0001 C CNN
-	1    1300 6100
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR018
 U 1 1 5ECB6ABD
-P 1300 6550
-F 0 "#PWR018" H 1300 6300 50  0001 C CNN
-F 1 "GND" H 1305 6377 50  0000 C CNN
-F 2 "" H 1300 6550 50  0001 C CNN
-F 3 "" H 1300 6550 50  0001 C CNN
-	1    1300 6550
+P 1250 6550
+F 0 "#PWR018" H 1250 6300 50  0001 C CNN
+F 1 "GND" H 1255 6377 50  0000 C CNN
+F 2 "" H 1250 6550 50  0001 C CNN
+F 3 "" H 1250 6550 50  0001 C CNN
+	1    1250 6550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 6550 1300 6450
+	1250 6550 1250 6450
 Wire Wire Line
-	1100 5900 1000 5900
+	1050 5900 950  5900
 Wire Wire Line
-	1000 5900 1000 6000
+	950  5900 950  6000
 Wire Wire Line
-	1000 6450 1300 6450
-Connection ~ 1300 6450
+	950  6450 1250 6450
+Connection ~ 1250 6450
 Wire Wire Line
-	1300 6450 1300 6400
+	1250 6450 1250 6400
 Wire Wire Line
-	1100 6000 1000 6000
-Connection ~ 1000 6000
+	1050 6000 950  6000
+Connection ~ 950  6000
 Wire Wire Line
-	1000 6000 1000 6450
-Text GLabel 900  6100 0    50   Input ~ 0
+	950  6000 950  6450
+Text GLabel 850  6100 0    50   Input ~ 0
 OUT
 Wire Wire Line
-	900  6100 1050 6100
+	850  6100 1000 6100
 Wire Wire Line
-	1350 3500 1100 3500
-Text Notes 3400 2800 0    50   ~ 0
+	1650 3550 1400 3550
+Text Notes 4000 4150 0    50   ~ 0
 inverting sum
-Text Notes 5950 3250 0    50   ~ 0
+Text Notes 7250 3550 0    50   ~ 0
 re-invert
 Wire Wire Line
 	1050 5100 1000 5100
@@ -295,908 +236,777 @@ Connection ~ 1000 5000
 Wire Wire Line
 	1000 5000 1050 5000
 Wire Wire Line
-	1100 6200 1050 6200
+	1050 6200 1000 6200
 Wire Wire Line
-	1050 6200 1050 6100
-Connection ~ 1050 6100
+	1000 6200 1000 6100
+Connection ~ 1000 6100
 Wire Wire Line
-	1050 6100 1100 6100
+	1000 6100 1050 6100
 $Comp
 L Amplifier_Operational:TL072 U1
 U 1 1 5ECD72AD
-P 3650 2500
-F 0 "U1" H 3800 2350 50  0000 C CNN
-F 1 "TL072" H 3600 2500 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 3650 2500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3650 2500 50  0001 C CNN
-	1    3650 2500
+P 4250 3850
+F 0 "U1" H 4400 3700 50  0000 C CNN
+F 1 "TL072" H 4200 3850 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 4250 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 3850 50  0001 C CNN
+	1    4250 3850
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 2 1 5ECD970A
-P 5900 3050
-F 0 "U1" H 5950 2900 50  0000 C CNN
-F 1 "TL072" H 5850 3050 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 5900 3050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5900 3050 50  0001 C CNN
-	2    5900 3050
+P 7200 3350
+F 0 "U1" H 7250 3200 50  0000 C CNN
+F 1 "TL072" H 7150 3350 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 7200 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7200 3350 50  0001 C CNN
+	2    7200 3350
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U1
 U 3 1 5ECDB893
-P 10700 1850
-F 0 "U1" H 10658 1896 50  0000 L CNN
-F 1 "TL072" H 10658 1805 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 10700 1850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10700 1850 50  0001 C CNN
-	3    10700 1850
+P 8750 1400
+F 0 "U1" H 8708 1446 50  0000 L CNN
+F 1 "TL072" H 8708 1355 50  0000 L CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 8750 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8750 1400 50  0001 C CNN
+	3    8750 1400
 	1    0    0    -1  
 $EndComp
-Text Notes 3950 1650 2    50   ~ 0
+Text Notes 4550 3000 2    50   ~ 0
 gain 0-2\nideally 1 detent pot so it sits at g=1
-Text Notes 3250 7600 0    50   ~ 0
-This is a trick to only use the LED to show gate state\nif the GATE jack is used. When jack is unplugged,\nGATE_CONN is grounded, turning off the transistor.\nWhen jack is plugged, GATE_CONN floats, allowing\nthe gate to control the transistor. R10 gives an input\nimpedance of 100K, since LED is driven by power\nsupply. LED on current depends on GATE but maxes\nabout 4mA
-$Comp
-L 4xxx:4066 U2
-U 1 1 5EE18756
-P 4700 2500
-F 0 "U2" H 4700 2327 50  0000 C CNN
-F 1 "4066" H 4700 2236 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 4700 2500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 4700 2500 50  0001 C CNN
-	1    4700 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5000 2500 5050 2500
-Wire Wire Line
-	5050 2500 5050 2950
-Wire Wire Line
-	5050 2950 5150 2950
-Text GLabel 4600 2050 0    50   Input ~ 0
+Text Notes 7550 6250 0    50   ~ 0
+This is a trick to only use the LED to show gate state\nif the GATE jack is used. When jack is unplugged,\nGATE_CONN is grounded, turning off the transistor.\nWhen jack is plugged, GATE_CONN floats, allowing\nthe gate to control the transistor. R10 gives an input\nimpedance of 100K, since LED is driven by power\nsupply. LED on current depends on GATE
+Text GLabel 5950 3700 0    50   Input ~ 0
 GATE
 Wire Wire Line
-	5150 2500 5050 2500
-Connection ~ 5050 2500
-$Comp
-L 4xxx:4066 U2
-U 5 1 5EE7A259
-P 10100 1900
-F 0 "U2" H 10330 1946 50  0000 L CNN
-F 1 "4066" H 10330 1855 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 10100 1900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 10100 1900 50  0001 C CNN
-	5    10100 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:LM317L_TO92 U3
-U 1 1 5EE7E18F
-P 9100 1050
-F 0 "U3" H 9100 1292 50  0000 C CNN
-F 1 "LM317L_TO92" H 9100 1201 50  0000 C CNN
-F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-220-3_Vertical" H 9100 1275 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf" H 9100 1050 50  0001 C CNN
-	1    9100 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5EE7FBA2
-P 9550 1300
-F 0 "R6" H 9620 1346 50  0000 L CNN
-F 1 "220" H 9620 1255 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 9480 1300 50  0001 C CNN
-F 3 "~" H 9550 1300 50  0001 C CNN
-	1    9550 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5EE7FF26
-P 9550 1700
-F 0 "R7" H 9620 1746 50  0000 L CNN
-F 1 "1K5" H 9620 1655 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 9480 1700 50  0001 C CNN
-F 3 "~" H 9550 1700 50  0001 C CNN
-	1    9550 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5EE80442
-P 9550 2100
-F 0 "R8" H 9620 2146 50  0000 L CNN
-F 1 "1K5" H 9620 2055 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 9480 2100 50  0001 C CNN
-F 3 "~" H 9550 2100 50  0001 C CNN
-	1    9550 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5EE808CB
-P 9550 2500
-F 0 "R9" H 9620 2546 50  0000 L CNN
-F 1 "220" H 9620 2455 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 9480 2500 50  0001 C CNN
-F 3 "~" H 9550 2500 50  0001 C CNN
-	1    9550 2500
-	1    0    0    -1  
-$EndComp
+	3900 3300 3900 3750
 Wire Wire Line
-	9400 2750 9550 2750
+	3900 3300 4100 3300
 Wire Wire Line
-	9550 2750 9550 2650
+	4350 3450 4350 3500
 Wire Wire Line
-	9550 2350 9550 2300
+	4350 3500 4100 3500
 Wire Wire Line
-	9550 1950 9550 1900
+	4100 3500 4100 3300
+Connection ~ 4100 3300
 Wire Wire Line
-	9550 1550 9550 1500
+	4100 3300 4200 3300
 Wire Wire Line
-	9550 1150 9550 1050
+	4550 3850 4650 3850
 Wire Wire Line
-	9550 1050 9400 1050
+	4500 3300 4650 3300
 Wire Wire Line
-	9100 1350 9100 1500
-Wire Wire Line
-	9100 1500 9550 1500
-Connection ~ 9550 1500
-Wire Wire Line
-	9550 1500 9550 1450
-Wire Wire Line
-	9100 2450 9100 2300
-Wire Wire Line
-	9100 2300 9550 2300
-Connection ~ 9550 2300
-Wire Wire Line
-	9550 2300 9550 2250
-$Comp
-L power:GND #PWR016
-U 1 1 5EE97843
-P 9350 2000
-F 0 "#PWR016" H 9350 1750 50  0001 C CNN
-F 1 "GND" H 9355 1827 50  0000 C CNN
-F 2 "" H 9350 2000 50  0001 C CNN
-F 3 "" H 9350 2000 50  0001 C CNN
-	1    9350 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 2000 9350 1900
-Wire Wire Line
-	9350 1900 9550 1900
-Connection ~ 9550 1900
-Wire Wire Line
-	9550 1900 9550 1850
-Wire Wire Line
-	10100 1400 10100 1050
-Connection ~ 9550 1050
-Wire Wire Line
-	10100 2400 10100 2750
-Wire Wire Line
-	10100 2750 9550 2750
-Connection ~ 9550 2750
-Text Notes 8150 3600 0    50   ~ 0
-The CD4066 has a max power supply voltage of 20V,\nso we step the 24V down to about 19.5 via regulators.\nIn theory we could hacky do this with 6 diodes instead.\n\nBy limiting TL072 to the same supply, we don’t risk over-volting\nthe 4066, because even at rail  outputs the 4066 is safe.
-Wire Wire Line
-	3300 1950 3300 2400
-Wire Wire Line
-	3300 1950 3500 1950
-Wire Wire Line
-	3750 2100 3750 2150
-Wire Wire Line
-	3750 2150 3500 2150
-Wire Wire Line
-	3500 2150 3500 1950
-Connection ~ 3500 1950
-Wire Wire Line
-	3500 1950 3600 1950
-Wire Wire Line
-	3950 2500 4050 2500
-Wire Wire Line
-	3900 1950 4050 1950
-Wire Wire Line
-	4050 1950 4050 2500
-Connection ~ 4050 2500
-Wire Wire Line
-	4050 2500 4400 2500
-$Comp
-L synth:EURORACK_CONN_10 J4
-U 1 1 5ED02358
-P 8450 1900
-F 0 "J4" H 8150 2050 50  0000 L CNN
-F 1 "EURORACK_CONN_10" V 8650 1550 50  0000 L CNN
-F 2 "synth:EURORACK_10_IDC" H 7650 1650 50  0001 C CNN
-F 3 "https://division-6.com/learn/eurorack-power/" V 8500 1950 50  0001 C CNN
-	1    8450 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8100 2000 8100 1900
-Wire Wire Line
-	8100 1900 8150 1900
-Wire Wire Line
-	9550 1050 10100 1050
-Connection ~ 10100 1050
-Wire Wire Line
-	1350 3150 1350 3500
-$Comp
-L power:+10V #PWR08
-U 1 1 5ED7D7E1
-P 9550 950
-F 0 "#PWR08" H 9550 800 50  0001 C CNN
-F 1 "+10V" H 9565 1123 50  0000 C CNN
-F 2 "" H 9550 950 50  0001 C CNN
-F 3 "" H 9550 950 50  0001 C CNN
-	1    9550 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-10V #PWR010
-U 1 1 5ED7EA7C
-P 9550 2850
-F 0 "#PWR010" H 9550 2950 50  0001 C CNN
-F 1 "-10V" H 9565 3023 50  0000 C CNN
-F 2 "" H 9550 2850 50  0001 C CNN
-F 3 "" H 9550 2850 50  0001 C CNN
-	1    9550 2850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9550 2850 9550 2750
-Wire Wire Line
-	9550 950  9550 1050
-Wire Wire Line
-	8800 2750 8450 2750
-Wire Wire Line
-	8450 2250 8450 2750
-Wire Wire Line
-	8800 1050 8450 1050
-Wire Wire Line
-	8450 1050 8450 1550
-Wire Wire Line
-	10600 1550 10600 1050
-Wire Wire Line
-	10100 1050 10600 1050
-Wire Wire Line
-	10600 2150 10600 2750
-Wire Wire Line
-	10600 2750 10100 2750
-Connection ~ 10100 2750
-$Comp
-L power:+10V #PWR04
-U 1 1 5EDE8D2E
-P 1350 3150
-F 0 "#PWR04" H 1350 3000 50  0001 C CNN
-F 1 "+10V" H 1365 3323 50  0000 C CNN
-F 2 "" H 1350 3150 50  0001 C CNN
-F 3 "" H 1350 3150 50  0001 C CNN
-	1    1350 3150
-	1    0    0    -1  
-$EndComp
-Text Notes 4600 2950 0    50   ~ 0
-gate
+	4650 3300 4650 3850
 $Comp
 L Device:LED D1
 U 1 1 5ECB63E0
-P 2950 6250
-F 0 "D1" V 2989 6133 50  0000 R CNN
-F 1 "LED" V 2898 6133 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:LED-3MM-SQUARE-ANODE" H 2950 6250 50  0001 C CNN
-F 3 "~" H 2950 6250 50  0001 C CNN
-	1    2950 6250
+P 7250 4900
+F 0 "D1" V 7289 4783 50  0000 R CNN
+F 1 "LED" V 7198 4783 50  0000 R CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:LED-3MM-SQUARE-ANODE" H 7250 4900 50  0001 C CNN
+F 3 "~" H 7250 4900 50  0001 C CNN
+	1    7250 4900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R11
 U 1 1 5ECB7499
-P 2950 7150
-F 0 "R11" H 3020 7196 50  0000 L CNN
-F 1 "1K" H 3020 7105 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2880 7150 50  0001 C CNN
-F 3 "~" H 2950 7150 50  0001 C CNN
-	1    2950 7150
+P 7250 5800
+F 0 "R11" H 7320 5846 50  0000 L CNN
+F 1 "1K" H 7320 5755 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 7180 5800 50  0001 C CNN
+F 3 "~" H 7250 5800 50  0001 C CNN
+	1    7250 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1200 3200 1200 3750
+	1500 3250 1500 3800
 $Comp
 L Transistor_BJT:2N3904 Q1
 U 1 1 5ECC1DA3
-P 2850 6700
-F 0 "Q1" H 3040 6746 50  0000 L CNN
-F 1 "2N3904" H 3040 6655 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 3050 6625 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2850 6700 50  0001 L CNN
-	1    2850 6700
+P 7150 5350
+F 0 "Q1" H 7340 5396 50  0000 L CNN
+F 1 "2N3904" H 7340 5305 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 7350 5275 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7150 5350 50  0001 L CNN
+	1    7150 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5ECC2E81
-P 2950 7400
-F 0 "#PWR012" H 2950 7150 50  0001 C CNN
-F 1 "GND" H 2955 7227 50  0000 C CNN
-F 2 "" H 2950 7400 50  0001 C CNN
-F 3 "" H 2950 7400 50  0001 C CNN
-	1    2950 7400
+P 7250 6050
+F 0 "#PWR012" H 7250 5800 50  0001 C CNN
+F 1 "GND" H 7255 5877 50  0000 C CNN
+F 2 "" H 7250 6050 50  0001 C CNN
+F 3 "" H 7250 6050 50  0001 C CNN
+	1    7250 6050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2950 7400 2950 7300
-Text GLabel 1450 3300 2    50   Input ~ 0
+	7250 6050 7250 5950
+Text GLabel 1750 3350 2    50   Input ~ 0
 GATE_CONN
 Wire Wire Line
-	1450 3300 1100 3300
-Text GLabel 2450 6850 0    50   Input ~ 0
+	1750 3350 1400 3350
+Text GLabel 6800 5550 3    50   Input ~ 0
 GATE_CONN
 Wire Wire Line
-	2950 7000 2950 6900
-Text GLabel 2400 6150 0    50   Input ~ 0
+	7250 5650 7250 5550
+Text GLabel 6700 4800 0    50   Input ~ 0
 GATE
-$Comp
-L power:+10V #PWR011
-U 1 1 5ECF0203
-P 2950 6000
-F 0 "#PWR011" H 2950 5850 50  0001 C CNN
-F 1 "+10V" H 2965 6173 50  0000 C CNN
-F 2 "" H 2950 6000 50  0001 C CNN
-F 3 "" H 2950 6000 50  0001 C CNN
-	1    2950 6000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R10
 U 1 1 5ECF0A91
-P 2500 6450
-F 0 "R10" H 2570 6496 50  0000 L CNN
-F 1 "100K" H 2570 6405 50  0000 L CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2430 6450 50  0001 C CNN
-F 3 "~" H 2500 6450 50  0001 C CNN
-	1    2500 6450
+P 6800 5100
+F 0 "R10" H 6870 5146 50  0000 L CNN
+F 1 "100K" H 6870 5055 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 6730 5100 50  0001 C CNN
+F 3 "~" H 6800 5100 50  0001 C CNN
+	1    6800 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 6850 2500 6850
+	6950 5350 6800 5350
 Wire Wire Line
-	2500 6850 2500 6700
+	6800 5350 6800 5250
 Wire Wire Line
-	2650 6700 2500 6700
-Connection ~ 2500 6700
+	7250 5050 7250 5150
 Wire Wire Line
-	2500 6700 2500 6600
+	7250 4650 7250 4750
 Wire Wire Line
-	2950 6400 2950 6500
+	6700 4800 6800 4800
 Wire Wire Line
-	2950 6000 2950 6100
-Wire Wire Line
-	2400 6150 2500 6150
-Wire Wire Line
-	2500 6150 2500 6300
-Wire Wire Line
-	4600 2050 4700 2050
-Wire Wire Line
-	4700 2050 4700 2200
-Text GLabel 4100 2700 2    50   Input ~ 0
-STAGE1_OUT
-Wire Wire Line
-	4100 2700 4050 2700
-Wire Wire Line
-	4050 2700 4050 2500
-Wire Wire Line
-	7800 4650 7750 4650
-Wire Wire Line
-	8450 4650 8400 4650
-Wire Wire Line
-	8100 4300 8100 4350
-Text GLabel 8100 4300 0    50   Input ~ 0
-4066_12
-Text GLabel 7750 4650 0    50   Input ~ 0
-4066_11
-Text GLabel 8450 4650 2    50   Input ~ 0
-4066_10
-$Comp
-L 4xxx:4066 U2
-U 4 1 5EE2A725
-P 8100 4650
-F 0 "U2" H 8100 4477 50  0000 C CNN
-F 1 "4066" H 8100 4386 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 8100 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 8100 4650 50  0001 C CNN
-	4    8100 4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6550 4350 6550 4300
-Wire Wire Line
-	6900 4650 6850 4650
-Text GLabel 6900 4650 2    50   Input ~ 0
-4066_9
-$Comp
-L 4xxx:4066 U2
-U 3 1 5EE292FA
-P 6550 4650
-F 0 "U2" H 6550 4477 50  0000 C CNN
-F 1 "4066" H 6550 4386 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 6550 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 6550 4650 50  0001 C CNN
-	3    6550 4650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10250 5650 10200 5650
-Wire Wire Line
-	10250 5750 10200 5750
-Wire Wire Line
-	10200 5850 10250 5850
-Wire Wire Line
-	10250 5950 10200 5950
-Wire Wire Line
-	10200 6050 10250 6050
-Wire Wire Line
-	9400 5950 9450 5950
-Wire Wire Line
-	9450 5850 9400 5850
-Wire Wire Line
-	9400 5750 9450 5750
-Wire Wire Line
-	9450 5650 9400 5650
-Text Notes 8750 6300 0    50   ~ 0
-Because we are sharing the 4066 across 4 duplicate PCBs,\nwe have to expose some connectors for the other switches
-Text GLabel 9450 5650 2    50   Input ~ 0
-4066_3
-Text GLabel 9450 5750 2    50   Input ~ 0
-4066_4
-Text GLabel 9450 5850 2    50   Input ~ 0
-4066_5
-Text GLabel 9450 5950 2    50   Input ~ 0
-4066_6
-Text GLabel 10200 5650 0    50   Input ~ 0
-4066_12
-Text GLabel 10200 5750 0    50   Input ~ 0
-4066_11
-Text GLabel 10200 5850 0    50   Input ~ 0
-4066_10
-Text GLabel 10200 5950 0    50   Input ~ 0
-4066_9
-Text GLabel 10200 6050 0    50   Input ~ 0
-4066_8
-$Comp
-L Connector_Generic:Conn_01x04 J7
-U 1 1 5EE2E54C
-P 9200 5750
-F 0 "J7" H 9118 6067 50  0000 C CNN
-F 1 "Conn_01x04" H 9118 5976 50  0000 C CNN
-F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x05" H 9200 5750 50  0001 C CNN
-F 3 "~" H 9200 5750 50  0001 C CNN
-	1    9200 5750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J8
-U 1 1 5EE2F88B
-P 10450 5850
-F 0 "J8" H 10530 5892 50  0000 L CNN
-F 1 "Conn_01x05" H 10530 5801 50  0000 L CNN
-F 2 "imciner2/KiCad-Libraries/modules/Connectors.pretty:CONN_2.54mm_1x05" H 10450 5850 50  0001 C CNN
-F 3 "~" H 10450 5850 50  0001 C CNN
-	1    10450 5850
-	1    0    0    -1  
-$EndComp
-Text GLabel 6550 4300 0    50   Input ~ 0
-4066_6
-Wire Wire Line
-	6250 4650 6200 4650
-Text GLabel 6200 4650 0    50   Input ~ 0
-4066_8
-$Comp
-L Jumper:Jumper_2_Open JP1
-U 1 1 5ECEE0F2
-P 5050 5350
-F 0 "JP1" H 5050 5585 50  0000 C CNN
-F 1 "Jumper_2_Open" H 5050 5494 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 5050 5350 50  0001 C CNN
-F 3 "~" H 5050 5350 50  0001 C CNN
-	1    5050 5350
-	1    0    0    -1  
-$EndComp
-Text GLabel 4750 5350 0    50   Input ~ 0
-STAGE1_OUT
-Wire Wire Line
-	5050 4350 5050 4300
-Wire Wire Line
-	5400 4650 5350 4650
-Text GLabel 5050 4300 0    50   Input ~ 0
-4066_5
-Text GLabel 5350 5350 2    50   Input ~ 0
-4066_4
-Text GLabel 5400 4650 2    50   Input ~ 0
-4066_3
-$Comp
-L 4xxx:4066 U2
-U 2 1 5EE28600
-P 5050 4650
-F 0 "U2" H 5050 4477 50  0000 C CNN
-F 1 "4066" H 5050 4386 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-14_W7.62mm" H 5050 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5050 4650 50  0001 C CNN
-	2    5050 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+10V #PWR06
-U 1 1 5ED02095
-P 7300 950
-F 0 "#PWR06" H 7300 800 50  0001 C CNN
-F 1 "+10V" H 7315 1123 50  0000 C CNN
-F 2 "" H 7300 950 50  0001 C CNN
-F 3 "" H 7300 950 50  0001 C CNN
-	1    7300 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x03_Male J9
-U 1 1 5ED0123A
-P 7000 1150
-F 0 "J9" H 7108 1431 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 7108 1340 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_1x03" H 7000 1150 50  0001 C CNN
-F 3 "~" H 7000 1150 50  0001 C CNN
-	1    7000 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR014
-U 1 1 5ED0287B
-P 7400 1200
-F 0 "#PWR014" H 7400 950 50  0001 C CNN
-F 1 "GND" H 7405 1027 50  0000 C CNN
-F 2 "" H 7400 1200 50  0001 C CNN
-F 3 "" H 7400 1200 50  0001 C CNN
-	1    7400 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-10V #PWR013
-U 1 1 5ED03255
-P 7300 1350
-F 0 "#PWR013" H 7300 1450 50  0001 C CNN
-F 1 "-10V" H 7315 1523 50  0000 C CNN
-F 2 "" H 7300 1350 50  0001 C CNN
-F 3 "" H 7300 1350 50  0001 C CNN
-	1    7300 1350
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7300 1350 7300 1250
-Wire Wire Line
-	7300 1250 7200 1250
-Wire Wire Line
-	7400 1200 7400 1150
-Wire Wire Line
-	7400 1150 7200 1150
-Wire Wire Line
-	7300 950  7300 1050
-Wire Wire Line
-	7300 1050 7200 1050
-Wire Wire Line
-	4650 4650 4750 4650
-Text GLabel 4750 5600 0    50   Input ~ 0
-STAGE1_OUT
-$Comp
-L Jumper:Jumper_2_Open JP2
-U 1 1 5EDBF2F5
-P 5050 5600
-F 0 "JP2" H 5050 5835 50  0000 C CNN
-F 1 "Jumper_2_Open" H 5050 5744 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 5050 5600 50  0001 C CNN
-F 3 "~" H 5050 5600 50  0001 C CNN
-	1    5050 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP3
-U 1 1 5EDBF7BA
-P 5050 5800
-F 0 "JP3" H 5050 6035 50  0000 C CNN
-F 1 "Jumper_2_Open" H 5050 5944 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 5050 5800 50  0001 C CNN
-F 3 "~" H 5050 5800 50  0001 C CNN
-	1    5050 5800
-	1    0    0    -1  
-$EndComp
-Text GLabel 4750 5800 0    50   Input ~ 0
-STAGE1_OUT
-Text GLabel 4650 4650 0    50   Input ~ 0
-4066_4
-Text GLabel 5350 5600 2    50   Input ~ 0
-4066_8
-Text GLabel 5350 5800 2    50   Input ~ 0
-4066_11
-$Comp
-L Jumper:Jumper_2_Open JP4
-U 1 1 5EE1358E
-P 6550 5350
-F 0 "JP4" H 6550 5585 50  0000 C CNN
-F 1 "Jumper_2_Open" H 6550 5494 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 6550 5350 50  0001 C CNN
-F 3 "~" H 6550 5350 50  0001 C CNN
-	1    6550 5350
-	1    0    0    -1  
-$EndComp
-Text GLabel 6250 5350 0    50   Input ~ 0
-GATE
-Text GLabel 6850 5350 2    50   Input ~ 0
-4066_5
-Text GLabel 6250 5600 0    50   Input ~ 0
-GATE
-$Comp
-L Jumper:Jumper_2_Open JP5
-U 1 1 5EE1359B
-P 6550 5600
-F 0 "JP5" H 6550 5835 50  0000 C CNN
-F 1 "Jumper_2_Open" H 6550 5744 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 6550 5600 50  0001 C CNN
-F 3 "~" H 6550 5600 50  0001 C CNN
-	1    6550 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP6
-U 1 1 5EE135A5
-P 6550 5800
-F 0 "JP6" H 6550 6035 50  0000 C CNN
-F 1 "Jumper_2_Open" H 6550 5944 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 6550 5800 50  0001 C CNN
-F 3 "~" H 6550 5800 50  0001 C CNN
-	1    6550 5800
-	1    0    0    -1  
-$EndComp
-Text GLabel 6250 5800 0    50   Input ~ 0
-GATE
-Text GLabel 6850 5600 2    50   Input ~ 0
-4066_6
-Text GLabel 6850 5800 2    50   Input ~ 0
-4066_12
-$Comp
-L Jumper:Jumper_2_Open JP7
-U 1 1 5EE23EF9
-P 8100 5350
-F 0 "JP7" H 8100 5585 50  0000 C CNN
-F 1 "Jumper_2_Open" H 8100 5494 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 8100 5350 50  0001 C CNN
-F 3 "~" H 8100 5350 50  0001 C CNN
-	1    8100 5350
-	1    0    0    -1  
-$EndComp
-Text GLabel 7800 5350 0    50   Input ~ 0
-~OUT
-Text GLabel 8400 5350 2    50   Input ~ 0
-4066_3
-Text GLabel 7800 5600 0    50   Input ~ 0
-~OUT
-$Comp
-L Jumper:Jumper_2_Open JP8
-U 1 1 5EE23F06
-P 8100 5600
-F 0 "JP8" H 8100 5835 50  0000 C CNN
-F 1 "Jumper_2_Open" H 8100 5744 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 8100 5600 50  0001 C CNN
-F 3 "~" H 8100 5600 50  0001 C CNN
-	1    8100 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP9
-U 1 1 5EE23F10
-P 8100 5800
-F 0 "JP9" H 8100 6035 50  0000 C CNN
-F 1 "Jumper_2_Open" H 8100 5944 50  0000 C CNN
-F 2 "fruchti/fruchtilib/mod/rcl.pretty:SOLDER_JUMPER_0603_B" H 8100 5800 50  0001 C CNN
-F 3 "~" H 8100 5800 50  0001 C CNN
-	1    8100 5800
-	1    0    0    -1  
-$EndComp
-Text GLabel 7800 5800 0    50   Input ~ 0
-~OUT
-Text GLabel 8400 5600 2    50   Input ~ 0
-4066_9
-Text GLabel 8400 5800 2    50   Input ~ 0
-4066_10
-Wire Wire Line
-	4750 5350 4850 5350
-Wire Wire Line
-	4750 5600 4850 5600
-Wire Wire Line
-	4850 5800 4750 5800
-Wire Wire Line
-	5250 5800 5350 5800
-Wire Wire Line
-	5350 5600 5250 5600
-Wire Wire Line
-	5250 5350 5350 5350
-Wire Wire Line
-	6250 5350 6350 5350
-Wire Wire Line
-	6350 5600 6250 5600
-Wire Wire Line
-	6250 5800 6350 5800
-Wire Wire Line
-	6750 5350 6850 5350
-Wire Wire Line
-	6850 5600 6750 5600
-Wire Wire Line
-	6750 5800 6850 5800
-Wire Wire Line
-	7900 5350 7800 5350
-Wire Wire Line
-	7800 5600 7900 5600
-Wire Wire Line
-	7900 5800 7800 5800
-Wire Wire Line
-	8300 5800 8400 5800
-Wire Wire Line
-	8400 5600 8300 5600
-Wire Wire Line
-	8300 5350 8400 5350
+	6800 4800 6800 4950
 $Comp
 L Device:R_POT_Dual_Separate RV1
 U 2 1 5ED32DF1
-P 3750 1950
-F 0 "RV1" V 3543 1950 50  0000 C CNN
-F 1 "200K" V 3634 1950 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 3750 1950 50  0001 C CNN
-F 3 "~" H 3750 1950 50  0001 C CNN
-	2    3750 1950
+P 4350 3300
+F 0 "RV1" V 4143 3300 50  0000 C CNN
+F 1 "200K" V 4234 3300 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 4350 3300 50  0001 C CNN
+F 3 "~" H 4350 3300 50  0001 C CNN
+	2    4350 3300
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_POT_Dual_Separate RV1
 U 1 1 5ED34631
-P 2800 3400
-F 0 "RV1" H 2731 3446 50  0000 R CNN
-F 1 "200K" H 2731 3355 50  0000 R CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 2800 3400 50  0001 C CNN
-F 3 "~" H 2800 3400 50  0001 C CNN
-	1    2800 3400
+P 3600 2400
+F 0 "RV1" H 3531 2446 50  0000 R CNN
+F 1 "200K" H 3531 2355 50  0000 R CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Pin_Header_Straight_2x03_Pitch2.54mm" H 3600 2400 50  0001 C CNN
+F 3 "~" H 3600 2400 50  0001 C CNN
+	1    3600 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5ECB414F
-P 2950 2400
-F 0 "R2" V 2743 2400 50  0000 C CNN
-F 1 "100K" V 2834 2400 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2880 2400 50  0001 C CNN
-F 3 "~" H 2950 2400 50  0001 C CNN
-	1    2950 2400
+P 3550 3750
+F 0 "R2" V 3343 3750 50  0000 C CNN
+F 1 "100K" V 3434 3750 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3480 3750 50  0001 C CNN
+F 3 "~" H 3550 3750 50  0001 C CNN
+	1    3550 3750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 5ECB39F0
-P 2950 2100
-F 0 "R1" V 2743 2100 50  0000 C CNN
-F 1 "100K" V 2834 2100 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2880 2100 50  0001 C CNN
-F 3 "~" H 2950 2100 50  0001 C CNN
-	1    2950 2100
+P 3550 3450
+F 0 "R1" V 3343 3450 50  0000 C CNN
+F 1 "100K" V 3434 3450 50  0000 C CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3480 3450 50  0001 C CNN
+F 3 "~" H 3550 3450 50  0001 C CNN
+	1    3550 3450
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	3600 2250 3600 2200
+Wire Wire Line
+	3600 2600 3600 2550
+Wire Wire Line
+	1400 2150 1500 2150
+Wire Wire Line
+	1200 1500 1200 1550
+Wire Wire Line
+	1400 1300 1500 1300
+Wire Wire Line
+	1400 1200 1750 1200
+Wire Wire Line
+	1500 1000 1400 1000
+Wire Wire Line
+	1500 1300 1500 1550
+Wire Wire Line
+	1500 1550 1200 1550
+Connection ~ 1500 1300
+Connection ~ 1200 1550
+Wire Wire Line
+	1200 1550 1200 1600
+Wire Wire Line
+	1400 2350 1750 2350
+Wire Wire Line
+	1400 2450 1500 2450
+Connection ~ 1500 2450
+Wire Wire Line
+	1500 2450 1500 2700
 $Comp
-L power:+10V #PWR0101
-U 1 1 5ED62298
-P 2800 2800
-F 0 "#PWR0101" H 2800 2650 50  0001 C CNN
-F 1 "+10V" H 2815 2973 50  0000 C CNN
-F 2 "" H 2800 2800 50  0001 C CNN
-F 3 "" H 2800 2800 50  0001 C CNN
-	1    2800 2800
+L power:GND #PWR?
+U 1 1 5EF58D03
+P 3850 4050
+F 0 "#PWR?" H 3850 3800 50  0001 C CNN
+F 1 "GND" H 3855 3877 50  0000 C CNN
+F 2 "" H 3850 4050 50  0001 C CNN
+F 3 "" H 3850 4050 50  0001 C CNN
+	1    3850 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4050 3850 3950
+Wire Wire Line
+	3850 3950 3950 3950
+$Comp
+L Amplifier_Operational:TL072 U?
+U 1 1 5F034CBC
+P 4250 2300
+F 0 "U?" H 4400 2150 50  0000 C CNN
+F 1 "TL072" H 4200 2300 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 4250 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 2300 50  0001 C CNN
+	1    4250 2300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3950 2400 3750 2400
+Wire Wire Line
+	3950 2200 3850 2200
+Wire Wire Line
+	3850 2200 3850 1950
+Wire Wire Line
+	3850 1950 4650 1950
+Wire Wire Line
+	4650 1950 4650 2300
+Wire Wire Line
+	4650 2300 4550 2300
+$Comp
+L synth:DG403 U?
+U 1 1 5F0435F7
+P 5250 2850
+F 0 "U?" H 5250 3075 50  0000 C CNN
+F 1 "DG403" H 5250 2984 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5250 2150 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5250 2850 50  0001 C CNN
+	1    5250 2850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:DG403 U?
+U 2 1 5F0A3698
+P 6050 3050
+F 0 "U?" H 6050 3275 50  0000 C CNN
+F 1 "DG403" H 6050 3184 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6050 2350 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 6050 3050 50  0001 C CNN
+	2    6050 3050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 2 1 5F0EDE60
+P 7150 2200
+F 0 "U?" H 7200 2050 50  0000 C CNN
+F 1 "TL072" H 7100 2200 50  0000 C CNN
+F 2 "KiCad/kicad-footprints/Package_DIP.pretty:DIP-8_W7.62mm" H 7150 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7150 2200 50  0001 C CNN
+	2    7150 2200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7450 2200 7500 2200
+Wire Wire Line
+	6850 2100 6800 2100
+Wire Wire Line
+	6800 2100 6800 1900
+Wire Wire Line
+	6800 1900 7500 1900
+Wire Wire Line
+	7500 1900 7500 2200
+Connection ~ 7500 2200
+Wire Wire Line
+	7500 2200 7550 2200
+Wire Wire Line
+	6450 3250 6400 3250
+$Comp
+L power:GND #PWR?
+U 1 1 5F12579B
+P 5700 3350
+F 0 "#PWR?" H 5700 3100 50  0001 C CNN
+F 1 "GND" H 5705 3177 50  0000 C CNN
+F 2 "" H 5700 3350 50  0001 C CNN
+F 3 "" H 5700 3350 50  0001 C CNN
+	1    5700 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3700 6050 3550
+Wire Wire Line
+	5950 3700 6050 3700
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F14C66A
+P 1200 1200
+F 0 "J?" H 1232 1625 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1232 1534 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1200 1400 50  0001 C CNN
+F 3 "~" H 1200 1400 50  0001 C CNN
+	1    1200 1200
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-10V #PWR0102
-U 1 1 5EDA3B1B
-P 2800 4000
-F 0 "#PWR0102" H 2800 4100 50  0001 C CNN
-F 1 "-10V" H 2815 4173 50  0000 C CNN
-F 2 "" H 2800 4000 50  0001 C CNN
-F 3 "" H 2800 4000 50  0001 C CNN
-	1    2800 4000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2950 3400 3100 3400
-Wire Wire Line
-	3100 3400 3100 2600
-Wire Wire Line
-	3100 2600 3350 2600
-Wire Wire Line
-	2800 2800 2800 2900
-Wire Wire Line
-	2800 3250 2800 3200
-$Comp
-L Device:R R3
-U 1 1 5ED35BE2
-P 2800 3050
-F 0 "R3" V 2593 3050 50  0000 C CNN
-F 1 "10K" V 2684 3050 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2730 3050 50  0001 C CNN
-F 3 "~" H 2800 3050 50  0001 C CNN
-	1    2800 3050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2800 4000 2800 3900
-Wire Wire Line
-	2800 3600 2800 3550
-$Comp
-L Device:R R12
-U 1 1 5ED360F9
-P 2800 3750
-F 0 "R12" V 2593 3750 50  0000 C CNN
-F 1 "10K" V 2684 3750 50  0000 C CNN
-F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2730 3750 50  0001 C CNN
-F 3 "~" H 2800 3750 50  0001 C CNN
-	1    2800 3750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1100 2100 1200 2100
-Wire Wire Line
-	1100 2200 1200 2200
-Wire Wire Line
-	1200 2100 1200 2200
-Connection ~ 1200 2200
-Text GLabel 1450 950  2    50   Input ~ 0
-A_CONN
-Wire Wire Line
-	1450 950  1200 950 
-Text GLabel 3250 3400 2    50   Input ~ 0
-A_CONN
-Wire Wire Line
-	3250 3400 3100 3400
-Connection ~ 3100 3400
-Wire Wire Line
-	1100 1050 1200 1050
-Wire Wire Line
-	1200 1050 1200 950 
-Connection ~ 1200 950 
-Wire Wire Line
-	1200 950  1100 950 
-Wire Wire Line
-	900  1450 900  1550
-Wire Wire Line
-	1100 1250 1200 1250
-Wire Wire Line
-	1200 1250 1200 1150
-Connection ~ 1200 1150
-Wire Wire Line
-	1200 1150 1100 1150
-Text Notes 3200 3650 0    50   ~ 0
-NOTE: this will have strange behavior\nif A_IN sleeve isn’t grounded
-Wire Wire Line
-	1200 2200 1200 2650
-Wire Wire Line
-	1100 2400 1150 2400
-Wire Wire Line
-	1150 2400 1150 2300
-Connection ~ 1150 2300
-Wire Wire Line
-	1150 2300 1100 2300
-$Comp
-L Regulator_Linear:LM337_SOT223 U4
-U 1 1 5ED777C2
-P 9100 2750
-F 0 "U4" H 9100 2601 50  0000 C CNN
-F 1 "LM337_SOT223" H 9100 2510 50  0000 C CNN
-F 2 "KiCad/TO_SOT_Packages_THT.pretty:TO-220-3_Vertical" H 9100 2550 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm337-n.pdf" H 9100 2750 50  0001 C CNN
-	1    9100 2750
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F170E51
+P 1200 2350
+F 0 "J?" H 1232 2775 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1232 2684 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1200 2550 50  0001 C CNN
+F 3 "~" H 1200 2550 50  0001 C CNN
+	1    1200 2350
 	1    0    0    -1  
 $EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F1721FE
+P 1200 3450
+F 0 "J?" H 1232 3875 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1232 3784 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1200 3650 50  0001 C CNN
+F 3 "~" H 1200 3650 50  0001 C CNN
+	1    1200 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F172D3A
+P 1250 5000
+F 0 "J?" H 1070 5018 50  0000 R CNN
+F 1 "AudioJack2_Ground_Switch" H 1070 4927 50  0000 R CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1250 5200 50  0001 C CNN
+F 3 "~" H 1250 5200 50  0001 C CNN
+	1    1250 5000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F1745B0
+P 1250 6100
+F 0 "J?" H 1070 6118 50  0000 R CNN
+F 1 "AudioJack2_Ground_Switch" H 1070 6027 50  0000 R CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1250 6300 50  0001 C CNN
+F 3 "~" H 1250 6300 50  0001 C CNN
+	1    1250 6100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3050 5650 3050
+Wire Wire Line
+	5650 2950 5650 3050
+Wire Wire Line
+	5650 2950 5550 2950
+Connection ~ 5650 3050
+Wire Wire Line
+	5650 3050 5750 3050
+Wire Wire Line
+	1500 2150 1500 2450
+Text GLabel 1750 2250 2    50   Input ~ 0
+B_CONN
+Text GLabel 1750 1100 2    50   Input ~ 0
+A_CONN
+Wire Wire Line
+	1500 1000 1500 1300
+Wire Wire Line
+	1750 1100 1400 1100
+Wire Wire Line
+	1750 2250 1400 2250
+Wire Wire Line
+	4650 2300 4650 2850
+Wire Wire Line
+	4650 2850 4950 2850
+Connection ~ 4650 2300
+Wire Wire Line
+	4950 3050 4650 3050
+Wire Wire Line
+	4650 3050 4650 3300
+Connection ~ 4650 3300
+Text GLabel 5150 3500 0    50   Input ~ 0
+CONST
+Wire Wire Line
+	5150 3500 5250 3500
+Wire Wire Line
+	5250 3500 5250 3350
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5F2E9244
+P 3300 6850
+F 0 "Q?" H 3490 6896 50  0000 L CNN
+F 1 "2N3904" H 3490 6805 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 3500 6775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3300 6850 50  0001 L CNN
+	1    3300 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2E924E
+P 3400 7150
+F 0 "#PWR?" H 3400 6900 50  0001 C CNN
+F 1 "GND" H 3405 6977 50  0000 C CNN
+F 2 "" H 3400 7150 50  0001 C CNN
+F 3 "" H 3400 7150 50  0001 C CNN
+	1    3400 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 7150 3400 7050
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5F2F22C3
+P 4300 6850
+F 0 "Q?" H 4490 6896 50  0000 L CNN
+F 1 "2N3904" H 4490 6805 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/lib-footprints/4ms_Package_TO.pretty:TO-92_OffsetPin2" H 4500 6775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 4300 6850 50  0001 L CNN
+	1    4300 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2F22CD
+P 4400 7150
+F 0 "#PWR?" H 4400 6900 50  0001 C CNN
+F 1 "GND" H 4405 6977 50  0000 C CNN
+F 2 "" H 4400 7150 50  0001 C CNN
+F 3 "" H 4400 7150 50  0001 C CNN
+	1    4400 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 7150 4400 7050
+Text GLabel 3000 7150 3    50   Input ~ 0
+A_CONN
+Text GLabel 4000 7150 3    50   Input ~ 0
+B_CONN
+Wire Wire Line
+	3000 7150 3000 6850
+Wire Wire Line
+	3000 6850 3100 6850
+Wire Wire Line
+	4000 7150 4000 6850
+Wire Wire Line
+	4000 6850 4100 6850
+$Comp
+L Device:R R?
+U 1 1 5F30ADA8
+P 3000 6550
+F 0 "R?" H 3070 6596 50  0000 L CNN
+F 1 "100K" H 3070 6505 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 2930 6550 50  0001 C CNN
+F 3 "~" H 3000 6550 50  0001 C CNN
+	1    3000 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F30B3D5
+P 3400 5750
+F 0 "R?" H 3470 5796 50  0000 L CNN
+F 1 "100K" H 3470 5705 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3330 5750 50  0001 C CNN
+F 3 "~" H 3400 5750 50  0001 C CNN
+	1    3400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F30B999
+P 4000 6600
+F 0 "R?" H 4070 6646 50  0000 L CNN
+F 1 "100K" H 4070 6555 50  0000 L CNN
+F 2 "4ms/4ms-kicad-lib/4ms-footprints.pretty:Resistor_TH_300" V 3930 6600 50  0001 C CNN
+F 3 "~" H 4000 6600 50  0001 C CNN
+	1    4000 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L synth:DG403 U?
+U 3 1 5F3217BC
+P 9300 1350
+F 0 "U?" H 9530 1346 50  0000 L CNN
+F 1 "DG403" H 9530 1255 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 9300 650 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 9300 1350 50  0001 C CNN
+	3    9300 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F32CDA5
+P 3600 2200
+F 0 "#PWR?" H 3600 2050 50  0001 C CNN
+F 1 "+12V" H 3615 2373 50  0000 C CNN
+F 2 "" H 3600 2200 50  0001 C CNN
+F 3 "" H 3600 2200 50  0001 C CNN
+	1    3600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F351606
+P 3600 2600
+F 0 "#PWR?" H 3600 2700 50  0001 C CNN
+F 1 "-12V" H 3615 2773 50  0000 C CNN
+F 2 "" H 3600 2600 50  0001 C CNN
+F 3 "" H 3600 2600 50  0001 C CNN
+	1    3600 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F353500
+P 1650 3000
+F 0 "#PWR?" H 1650 2850 50  0001 C CNN
+F 1 "+5V" H 1665 3173 50  0000 C CNN
+F 2 "" H 1650 3000 50  0001 C CNN
+F 3 "" H 1650 3000 50  0001 C CNN
+	1    1650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3000 1650 3550
+$Comp
+L power:+5V #PWR?
+U 1 1 5F35A407
+P 7250 4650
+F 0 "#PWR?" H 7250 4500 50  0001 C CNN
+F 1 "+5V" H 7265 4823 50  0000 C CNN
+F 2 "" H 7250 4650 50  0001 C CNN
+F 3 "" H 7250 4650 50  0001 C CNN
+	1    7250 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 6850 3000 6700
+Connection ~ 3000 6850
+Wire Wire Line
+	4000 6750 4000 6850
+Connection ~ 4000 6850
+$Comp
+L power:+5V #PWR?
+U 1 1 5F3963B4
+P 3000 6300
+F 0 "#PWR?" H 3000 6150 50  0001 C CNN
+F 1 "+5V" H 3015 6473 50  0000 C CNN
+F 2 "" H 3000 6300 50  0001 C CNN
+F 3 "" H 3000 6300 50  0001 C CNN
+	1    3000 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 6300 3000 6400
+$Comp
+L power:+5V #PWR?
+U 1 1 5F39D487
+P 4000 6300
+F 0 "#PWR?" H 4000 6150 50  0001 C CNN
+F 1 "+5V" H 4015 6473 50  0000 C CNN
+F 2 "" H 4000 6300 50  0001 C CNN
+F 3 "" H 4000 6300 50  0001 C CNN
+	1    4000 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6300 4000 6450
+Wire Wire Line
+	3400 6650 3400 6000
+Wire Wire Line
+	4400 6650 4400 6000
+Wire Wire Line
+	4400 6000 3400 6000
+Connection ~ 3400 6000
+Wire Wire Line
+	3400 6000 3400 5900
+Text GLabel 4550 6000 2    50   Input ~ 0
+CONST
+Wire Wire Line
+	4550 6000 4400 6000
+Connection ~ 4400 6000
+$Comp
+L power:+5V #PWR?
+U 1 1 5F3B7B28
+P 3400 5500
+F 0 "#PWR?" H 3400 5350 50  0001 C CNN
+F 1 "+5V" H 3415 5673 50  0000 C CNN
+F 2 "" H 3400 5500 50  0001 C CNN
+F 3 "" H 3400 5500 50  0001 C CNN
+	1    3400 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 5500 3400 5600
+Text Notes 3700 5700 0    50   ~ 0
+When either AIN or BIN is connected, the ground\nat *_CONN is disconnected, turining the transistor\non, shorting control of the first switch low, which\nswitches from the constant voltage source to the\nsumming source
+Wire Wire Line
+	6800 5550 6800 5350
+Connection ~ 6800 5350
+Text Notes 5650 2900 1    50   ~ 0
+TODO: If necessary, could move the buffer of ~OUT~ to here
+Wire Wire Line
+	5700 3350 5700 3250
+Wire Wire Line
+	5700 3250 5750 3250
+Wire Wire Line
+	6400 3250 6400 3150
+Connection ~ 6400 3250
+Wire Wire Line
+	6400 3250 6350 3250
+Wire Wire Line
+	6400 2300 6850 2300
+Wire Wire Line
+	6350 3150 6400 3150
+Connection ~ 6400 3150
+Wire Wire Line
+	6400 3150 6400 2300
+$Comp
+L synth:EURORACK_CONN_16 J?
+U 1 1 5F4C5E03
+P 10300 1350
+F 0 "J?" H 10380 1346 50  0000 L CNN
+F 1 "EURORACK_CONN_16" H 10380 1255 50  0000 L CNN
+F 2 "synth:EURORACK_16_IDC" H 10750 650 50  0001 C CNN
+F 3 "https://division-6.com/learn/eurorack-power/" V 10350 1400 50  0001 C CNN
+	1    10300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 1700 9950 1800
+$Comp
+L power:+5V #PWR?
+U 1 1 5F569A85
+P 10000 1050
+F 0 "#PWR?" H 10000 900 50  0001 C CNN
+F 1 "+5V" H 10015 1223 50  0000 C CNN
+F 2 "" H 10000 1050 50  0001 C CNN
+F 3 "" H 10000 1050 50  0001 C CNN
+	1    10000 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F56A034
+P 10250 1050
+F 0 "#PWR?" H 10250 900 50  0001 C CNN
+F 1 "+12V" H 10265 1223 50  0000 C CNN
+F 2 "" H 10250 1050 50  0001 C CNN
+F 3 "" H 10250 1050 50  0001 C CNN
+	1    10250 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F56A82F
+P 10250 1800
+F 0 "#PWR?" H 10250 1900 50  0001 C CNN
+F 1 "-12V" H 10265 1973 50  0000 C CNN
+F 2 "" H 10250 1800 50  0001 C CNN
+F 3 "" H 10250 1800 50  0001 C CNN
+	1    10250 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F56AD63
+P 9200 800
+F 0 "#PWR?" H 9200 650 50  0001 C CNN
+F 1 "+5V" H 9215 973 50  0000 C CNN
+F 2 "" H 9200 800 50  0001 C CNN
+F 3 "" H 9200 800 50  0001 C CNN
+	1    9200 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F56B294
+P 9400 800
+F 0 "#PWR?" H 9400 650 50  0001 C CNN
+F 1 "+12V" H 9415 973 50  0000 C CNN
+F 2 "" H 9400 800 50  0001 C CNN
+F 3 "" H 9400 800 50  0001 C CNN
+	1    9400 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F56B858
+P 9200 2000
+F 0 "#PWR?" H 9200 1750 50  0001 C CNN
+F 1 "GND" H 9205 1827 50  0000 C CNN
+F 2 "" H 9200 2000 50  0001 C CNN
+F 3 "" H 9200 2000 50  0001 C CNN
+	1    9200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F56BC7C
+P 9400 2000
+F 0 "#PWR?" H 9400 2100 50  0001 C CNN
+F 1 "-12V" H 9415 2173 50  0000 C CNN
+F 2 "" H 9400 2000 50  0001 C CNN
+F 3 "" H 9400 2000 50  0001 C CNN
+	1    9400 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9400 2000 9400 1900
+Wire Wire Line
+	9200 2000 9200 1900
+Wire Wire Line
+	9200 900  9200 800 
+Wire Wire Line
+	9400 900  9400 800 
+Wire Wire Line
+	10000 1100 10000 1050
+Wire Wire Line
+	10250 1100 10250 1050
+Wire Wire Line
+	10250 1700 10250 1800
+$Comp
+L power:-12V #PWR?
+U 1 1 5F5C5039
+P 8650 1800
+F 0 "#PWR?" H 8650 1900 50  0001 C CNN
+F 1 "-12V" H 8665 1973 50  0000 C CNN
+F 2 "" H 8650 1800 50  0001 C CNN
+F 3 "" H 8650 1800 50  0001 C CNN
+	1    8650 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8650 1800 8650 1700
+$Comp
+L power:+12V #PWR?
+U 1 1 5F5CB1BB
+P 8650 1000
+F 0 "#PWR?" H 8650 850 50  0001 C CNN
+F 1 "+12V" H 8665 1173 50  0000 C CNN
+F 2 "" H 8650 1000 50  0001 C CNN
+F 3 "" H 8650 1000 50  0001 C CNN
+	1    8650 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 1000 8650 1100
 $EndSCHEMATC
