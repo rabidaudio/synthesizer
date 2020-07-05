@@ -24,7 +24,7 @@ AR Path="/5EE915EC/5EBBC27A" Ref="U6"  Part="2"
 AR Path="/5EE9163B/5EBBC27A" Ref="U7"  Part="2" 
 F 0 "U5" H 4700 4250 50  0000 C CNN
 F 1 "TL074" H 4700 4500 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 4700 4600 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4700 4600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4800 4700 50  0001 C CNN
 	2    4750 4500
 	1    0    0    1   
@@ -75,7 +75,7 @@ AR Path="/5EE915EC/5EBBC299" Ref="Q2"  Part="2"
 AR Path="/5EE9163B/5EBBC299" Ref="Q3"  Part="2" 
 F 0 "Q1" H 6500 4650 50  0000 L CNN
 F 1 "DMMT5401" V 6850 4300 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Package_TO_SOT_SMD.pretty:SOT-23-6" H 6850 4425 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6850 4425 50  0001 L CIN
 F 3 "https://www.diodes.com/assets/Datasheets/ds30437.pdf" H 6650 4500 50  0001 L CNN
 	2    6650 4500
 	-1   0    0    -1  
@@ -95,7 +95,7 @@ AR Path="/5EE915EC/5EBBC2A1" Ref="Q2"  Part="1"
 AR Path="/5EE9163B/5EBBC2A1" Ref="Q3"  Part="1" 
 F 0 "Q1" H 5850 4650 50  0000 L CNN
 F 1 "DMMT5401" V 6250 4300 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Package_TO_SOT_SMD.pretty:SOT-23-6" H 6200 4425 50  0001 L CIN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6200 4425 50  0001 L CIN
 F 3 "https://www.diodes.com/assets/Datasheets/ds30437.pdf" H 6000 4500 50  0001 L CNN
 	1    6000 4500
 	1    0    0    -1  
@@ -111,7 +111,7 @@ AR Path="/5EE915EC/5EBBC2A7" Ref="R35"  Part="1"
 AR Path="/5EE9163B/5EBBC2A7" Ref="R44"  Part="1" 
 F 0 "R26" V 5180 5550 50  0000 C CNN
 F 1 "22K" V 5100 5550 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5030 5550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5030 5550 50  0001 C CNN
 F 3 "" H 5100 5550 50  0001 C CNN
 	1    5100 5550
 	-1   0    0    1   
@@ -149,7 +149,7 @@ AR Path="/5EE915EC/5EBBC2B9" Ref="R37"  Part="1"
 AR Path="/5EE9163B/5EBBC2B9" Ref="R46"  Part="1" 
 F 0 "R28" V 6630 5050 50  0000 C CNN
 F 1 "5K" V 6550 5050 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6480 5050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6480 5050 50  0001 C CNN
 F 3 "" H 6550 5050 50  0001 C CNN
 	1    6550 5050
 	-1   0    0    1   
@@ -165,7 +165,7 @@ AR Path="/5EE915EC/5EBBC2BF" Ref="C6"  Part="1"
 AR Path="/5EE9163B/5EBBC2BF" Ref="C7"  Part="1" 
 F 0 "C5" H 5875 5100 50  0000 L CNN
 F 1 "30p" H 5875 4900 50  0000 L CNN
-F 2 "KiCad/Capacitors_ThroughHole.pretty:CP_Radial_D4.0mm_P2.00mm" H 5888 4850 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 5888 4850 50  0001 C CNN
 F 3 "" H 5850 5000 50  0001 C CNN
 	1    5850 5000
 	0    1    1    0   
@@ -197,7 +197,7 @@ AR Path="/5EE915EC/5EBBC2CB" Ref="R34"  Part="1"
 AR Path="/5EE9163B/5EBBC2CB" Ref="R43"  Part="1" 
 F 0 "R25" V 4830 3950 50  0000 C CNN
 F 1 "3K3" V 4750 3950 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4680 3950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4680 3950 50  0001 C CNN
 F 3 "" H 4750 3950 50  0001 C CNN
 	1    4750 3950
 	0    -1   -1   0   
@@ -229,7 +229,7 @@ AR Path="/5EE915EC/5EBBC2D7" Ref="R31"  Part="1"
 AR Path="/5EE9163B/5EBBC2D7" Ref="R40"  Part="1" 
 F 0 "R22" V 4080 3950 50  0000 C CNN
 F 1 "120K" V 4000 3950 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 3950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 3950 50  0001 C CNN
 F 3 "" H 4000 3950 50  0001 C CNN
 	1    4000 3950
 	0    1    1    0   
@@ -261,7 +261,7 @@ AR Path="/5EE915EC/5EBBC2E3" Ref="R32"  Part="1"
 AR Path="/5EE9163B/5EBBC2E3" Ref="R41"  Part="1" 
 F 0 "R23" V 4080 4400 50  0000 C CNN
 F 1 "270K" V 4000 4400 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 4400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 4400 50  0001 C CNN
 F 3 "" H 4000 4400 50  0001 C CNN
 	1    4000 4400
 	0    1    1    0   
@@ -369,7 +369,7 @@ AR Path="/5EE915EC/5EBBC326" Ref="R33"  Part="1"
 AR Path="/5EE9163B/5EBBC326" Ref="R42"  Part="1" 
 F 0 "R24" V 4280 2200 50  0000 C CNN
 F 1 "3K3" V 4200 2200 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4130 2200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4130 2200 50  0001 C CNN
 F 3 "" H 4200 2200 50  0001 C CNN
 	1    4200 2200
 	0    1    1    0   
@@ -400,7 +400,7 @@ AR Path="/5EE915EC/5EBBC274" Ref="U6"  Part="3"
 AR Path="/5EE9163B/5EBBC274" Ref="U7"  Part="3" 
 F 0 "U5" H 5900 5550 50  0000 C CNN
 F 1 "TL074" H 5750 5400 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 5750 5500 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5750 5500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5850 5600 50  0001 C CNN
 	3    5800 5400
 	1    0    0    1   
@@ -475,7 +475,7 @@ AR Path="/5EE9163B/5F07C242" Ref="R45"  Part="1"
 AR Path="/5EE915A8/5F07C242" Ref="R54"  Part="1" 
 F 0 "R27" V 6350 2600 50  0000 C CNN
 F 1 "27K" V 6450 2600 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6380 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6380 2600 50  0001 C CNN
 F 3 "~" H 6450 2600 50  0001 C CNN
 	1    6450 2600
 	0    1    1    0   
@@ -506,7 +506,7 @@ AR Path="/5EE915EC/5F081C3D" Ref="U6"  Part="4"
 AR Path="/5EE9163B/5F081C3D" Ref="U7"  Part="4" 
 F 0 "U5" H 7200 2550 50  0000 C CNN
 F 1 "TL074" H 7100 2700 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 7100 2800 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7100 2800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7200 2900 50  0001 C CNN
 	4    7150 2700
 	1    0    0    1   
@@ -525,7 +525,7 @@ AR Path="/5EE9163B/5F083AFD" Ref="R47"  Part="1"
 AR Path="/5EE915A8/5F083AFD" Ref="R56"  Part="1" 
 F 0 "R29" V 6900 2400 50  0000 C CNN
 F 1 "22K" V 7000 2400 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6930 2400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6930 2400 50  0001 C CNN
 F 3 "~" H 7000 2400 50  0001 C CNN
 	1    7000 2400
 	0    1    1    0   
@@ -540,7 +540,7 @@ AR Path="/5EE9163B/5F0C5406" Ref="U7"  Part="5"
 AR Path="/5EE915A8/5F0C5406" Ref="U8"  Part="5" 
 F 0 "U5" H 10858 1196 50  0000 L CNN
 F 1 "TL074" H 10858 1105 50  0000 L CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 10850 1250 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10850 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 10950 1350 50  0001 C CNN
 	5    10900 1150
 	1    0    0    -1  
@@ -590,7 +590,7 @@ AR Path="/5EE915EC/5EBBC342" Ref="U3"  Part="1"
 AR Path="/5EE9163B/5EBBC342" Ref="U3"  Part="3" 
 F 0 "U2" H 5650 2967 50  0000 C CNN
 F 1 "LM13700" H 5650 2876 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-16_W7.62mm" H 5350 2625 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5350 2625 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5350 2625 50  0001 C CNN
 	1    5650 2600
 	1    0    0    -1  
@@ -606,7 +606,7 @@ AR Path="/5EE915EC/5EE2FBCC" Ref="R30"  Part="1"
 AR Path="/5EE9163B/5EE2FBCC" Ref="R39"  Part="1" 
 F 0 "R21" V 3630 2600 50  0000 C CNN
 F 1 "820K" V 3550 2600 50  0000 C CNN
-F 2 "KiCad/Resistors_ThroughHole.pretty:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3480 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3480 2600 50  0001 C CNN
 F 3 "" H 3550 2600 50  0001 C CNN
 	1    3550 2600
 	0    1    1    0   
@@ -625,7 +625,7 @@ AR Path="/5EE915EC/5EE41C5F" Ref="RT5"  Part="1"
 AR Path="/5EE9163B/5EE41C5F" Ref="RT8"  Part="1" 
 F 0 "RT2" H 5200 6000 50  0000 L CNN
 F 1 "5K" H 5200 5900 50  0000 L CNN
-F 2 "" V 5030 5950 50  0001 C CNN
+F 2 "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm" V 5030 5950 50  0001 C CNN
 F 3 "~" H 5100 5950 50  0001 C CNN
 	1    5100 5950
 	1    0    0    -1  
@@ -646,7 +646,7 @@ AR Path="/5EE915EC/5EE5E7F2" Ref="U6"  Part="1"
 AR Path="/5EE9163B/5EE5E7F2" Ref="U7"  Part="1" 
 F 0 "U5" H 4250 2500 50  0000 C CNN
 F 1 "TL074" H 4150 2700 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 4150 2800 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4150 2800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4250 2900 50  0001 C CNN
 	1    4200 2700
 	1    0    0    1   
@@ -669,7 +669,7 @@ AR Path="/5EE9163B/5EDE0DC3" Ref="RT7"  Part="1"
 AR Path="/5EE915A8/5EDE0DC3" Ref="RT10"  Part="1" 
 F 0 "RT1" V 3360 4400 50  0000 C CNN
 F 1 "50K" V 3451 4400 50  0000 C CNN
-F 2 "" V 3530 4400 50  0001 C CNN
+F 2 "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm" V 3530 4400 50  0001 C CNN
 F 3 "~" H 3600 4400 50  0001 C CNN
 	1    3600 4400
 	0    1    1    0   
@@ -688,7 +688,7 @@ AR Path="/5EE9163B/5EDF3544" Ref="RT9"  Part="1"
 AR Path="/5EE915A8/5EDF3544" Ref="RT12"  Part="1" 
 F 0 "RT3" V 7615 2400 50  0000 C CNN
 F 1 "10K" V 7524 2400 50  0000 C CNN
-F 2 "" V 7280 2400 50  0001 C CNN
+F 2 "Resistor_THT:R_Box_L14.0mm_W5.0mm_P9.00mm" V 7280 2400 50  0001 C CNN
 F 3 "~" H 7350 2400 50  0001 C CNN
 	1    7350 2400
 	0    -1   -1   0   

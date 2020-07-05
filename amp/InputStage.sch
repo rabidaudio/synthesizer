@@ -280,7 +280,7 @@ AR Path="/5EBFE07C" Ref="U?"  Part="5"
 AR Path="/5EB23D44/5EBFE07C" Ref="U2"  Part="5" 
 F 0 "U2" H 10308 1196 50  0000 L CNN
 F 1 "LM13700" H 10308 1105 50  0000 L CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-16_W7.62mm" H 10050 1175 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 10050 1175 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 10050 1175 50  0001 C CNN
 	5    10350 1150
 	1    0    0    -1  
@@ -334,7 +334,7 @@ U 1 1 5EF7503E
 P 6500 1300
 F 0 "U1" H 6600 1150 50  0000 C CNN
 F 1 "TL074" H 6450 1300 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 6450 1400 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6450 1400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6550 1500 50  0001 C CNN
 	1    6500 1300
 	1    0    0    1   
@@ -454,7 +454,7 @@ U 5 1 5EFB9B95
 P 9900 1150
 F 0 "U1" H 9858 1196 50  0000 L CNN
 F 1 "TL074" H 9858 1105 50  0000 L CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 9850 1250 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9850 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9950 1350 50  0001 C CNN
 	5    9900 1150
 	1    0    0    -1  
@@ -563,7 +563,7 @@ U 2 1 5F0F5B47
 P 6550 2400
 F 0 "U1" H 6650 2250 50  0000 C CNN
 F 1 "TL074" H 6500 2400 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 6500 2500 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6500 2500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 2600 50  0001 C CNN
 	2    6550 2400
 	1    0    0    1   
@@ -574,7 +574,7 @@ U 3 1 5F0F793C
 P 6550 3050
 F 0 "U1" H 6650 2900 50  0000 C CNN
 F 1 "TL074" H 6500 3050 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 6500 3150 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6500 3150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3250 50  0001 C CNN
 	3    6550 3050
 	1    0    0    1   
@@ -585,7 +585,7 @@ U 4 1 5F0F8F3C
 P 6550 3700
 F 0 "U1" H 6650 3550 50  0000 C CNN
 F 1 "TL074" H 6500 3700 50  0000 C CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-14_W7.62mm" H 6500 3800 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6500 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3900 50  0001 C CNN
 	4    6550 3700
 	1    0    0    1   
@@ -598,7 +598,7 @@ AR Path="/5F12D343" Ref="U?"  Part="5"
 AR Path="/5EB23D44/5F12D343" Ref="U3"  Part="5" 
 F 0 "U3" H 10858 1196 50  0000 L CNN
 F 1 "LM13700" H 10858 1105 50  0000 L CNN
-F 2 "KiCad/Housings_DIP.pretty:DIP-16_W7.62mm" H 10600 1175 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 10600 1175 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 10600 1175 50  0001 C CNN
 	5    10900 1150
 	1    0    0    -1  
@@ -629,7 +629,7 @@ U 1 1 5F189CDE
 P 1750 5350
 F 0 "J5" H 1800 5667 50  0000 C CNN
 F 1 "Conn_02x04_Counter_Clockwise" H 1800 5576 50  0000 C CNN
-F 2 "KiCad/kicad-footprints/Connector_PinHeader_2.54mm.pretty:PinHeader_2x04_P2.54mm_Vertical" H 1750 5350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1750 5350 50  0001 C CNN
 F 3 "~" H 1750 5350 50  0001 C CNN
 	1    1750 5350
 	1    0    0    -1  
@@ -739,4 +739,6 @@ Wire Wire Line
 	9800 1450 9800 1650
 Wire Wire Line
 	9800 700  9800 850 
+Text Notes 5750 1650 1    50   ~ 0
+TODO: set 5V with divider instead of digital supply
 $EndSCHEMATC
