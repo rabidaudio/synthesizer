@@ -283,7 +283,7 @@ L Device:R R8
 U 1 1 5ECB7499
 P 7250 5800
 F 0 "R8" H 7320 5846 50  0000 L CNN
-F 1 "1K" H 7320 5755 50  0000 L CNN
+F 1 "10K" H 7320 5755 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 7180 5800 50  0001 C CNN
 F 3 "~" H 7250 5800 50  0001 C CNN
 	1    7250 5800
@@ -342,8 +342,6 @@ Wire Wire Line
 	6800 5350 6800 5250
 Wire Wire Line
 	7250 5050 7250 5150
-Wire Wire Line
-	7250 4650 7250 4750
 Wire Wire Line
 	6700 4800 6800 4800
 Wire Wire Line
@@ -598,17 +596,6 @@ Wire Wire Line
 Wire Wire Line
 	4000 6850 4100 6850
 $Comp
-L Device:R R1
-U 1 1 5F30ADA8
-P 3000 6550
-F 0 "R1" H 3070 6596 50  0000 L CNN
-F 1 "100K" H 3070 6505 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2930 6550 50  0001 C CNN
-F 3 "~" H 3000 6550 50  0001 C CNN
-	1    3000 6550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R2
 U 1 1 5F30B3D5
 P 3400 5750
@@ -617,17 +604,6 @@ F 1 "100K" H 3470 5705 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3330 5750 50  0001 C CNN
 F 3 "~" H 3400 5750 50  0001 C CNN
 	1    3400 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5F30B999
-P 4000 6600
-F 0 "R5" H 4070 6646 50  0000 L CNN
-F 1 "100K" H 4070 6555 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3930 6600 50  0001 C CNN
-F 3 "~" H 4000 6600 50  0001 C CNN
-	1    4000 6600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -676,47 +652,14 @@ F 3 "" H 1650 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1650 3000 1650 3550
-$Comp
-L power:+5V #PWR017
-U 1 1 5F35A407
-P 7250 4650
-F 0 "#PWR017" H 7250 4500 50  0001 C CNN
-F 1 "+5V" H 7265 4823 50  0000 C CNN
-F 2 "" H 7250 4650 50  0001 C CNN
-F 3 "" H 7250 4650 50  0001 C CNN
-	1    7250 4650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 6850 3000 6700
 Connection ~ 3000 6850
 Wire Wire Line
 	4000 6750 4000 6850
 Connection ~ 4000 6850
-$Comp
-L power:+5V #PWR07
-U 1 1 5F3963B4
-P 3000 6300
-F 0 "#PWR07" H 3000 6150 50  0001 C CNN
-F 1 "+5V" H 3015 6473 50  0000 C CNN
-F 2 "" H 3000 6300 50  0001 C CNN
-F 3 "" H 3000 6300 50  0001 C CNN
-	1    3000 6300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 6300 3000 6400
-$Comp
-L power:+5V #PWR013
-U 1 1 5F39D487
-P 4000 6300
-F 0 "#PWR013" H 4000 6150 50  0001 C CNN
-F 1 "+5V" H 4015 6473 50  0000 C CNN
-F 2 "" H 4000 6300 50  0001 C CNN
-F 3 "" H 4000 6300 50  0001 C CNN
-	1    4000 6300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4000 6300 4000 6450
 Wire Wire Line
@@ -751,8 +694,6 @@ When either AIN or BIN is connected, the ground\nat *_CONN is disconnected, turi
 Wire Wire Line
 	6800 5550 6800 5350
 Connection ~ 6800 5350
-Text Notes 5650 2900 1    50   ~ 0
-TODO: If necessary, could move the buffer of ~OUT~ to here
 Wire Wire Line
 	5700 3350 5700 3250
 Wire Wire Line
@@ -1009,4 +950,65 @@ F 3 "~" H 1200 3650 50  0001 C CNN
 	1    1200 3450
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R1
+U 1 1 5F30ADA8
+P 3000 6550
+F 0 "R1" H 3070 6596 50  0000 L CNN
+F 1 "100K" H 3070 6505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2930 6550 50  0001 C CNN
+F 3 "~" H 3000 6550 50  0001 C CNN
+	1    3000 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F30B999
+P 4000 6600
+F 0 "R5" H 4070 6646 50  0000 L CNN
+F 1 "100K" H 4070 6555 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 3930 6600 50  0001 C CNN
+F 3 "~" H 4000 6600 50  0001 C CNN
+	1    4000 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4650 7250 4750
+$Comp
+L power:+12V #PWR?
+U 1 1 5F168A18
+P 7250 4650
+F 0 "#PWR?" H 7250 4500 50  0001 C CNN
+F 1 "+12V" H 7265 4823 50  0000 C CNN
+F 2 "" H 7250 4650 50  0001 C CNN
+F 3 "" H 7250 4650 50  0001 C CNN
+	1    7250 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F168FE2
+P 4000 6300
+F 0 "#PWR?" H 4000 6150 50  0001 C CNN
+F 1 "+12V" H 4015 6473 50  0000 C CNN
+F 2 "" H 4000 6300 50  0001 C CNN
+F 3 "" H 4000 6300 50  0001 C CNN
+	1    4000 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F16998A
+P 3000 6300
+F 0 "#PWR?" H 3000 6150 50  0001 C CNN
+F 1 "+12V" H 3015 6473 50  0000 C CNN
+F 2 "" H 3000 6300 50  0001 C CNN
+F 3 "" H 3000 6300 50  0001 C CNN
+	1    3000 6300
+	1    0    0    -1  
+$EndComp
+Text Notes 8750 3600 0    50   ~ 0
+TODO from sample:\nsumming pot is backwards\nnoise near center of constant\nhard click on gate
+Text Notes 5650 2900 1    50   ~ 0
+TODO: If necessary, could move the buffer of ~OUT~ to here
 $EndSCHEMATC
