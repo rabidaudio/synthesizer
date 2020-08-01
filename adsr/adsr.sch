@@ -95,11 +95,11 @@ Wire Wire Line
 Wire Wire Line
 	9200 1100 9200 950 
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 5F26047D
 P 7150 4650
-F 0 "C?" H 7265 4696 50  0000 L CNN
-F 1 "100u" H 7265 4605 50  0000 L CNN
+F 0 "C1" H 7265 4696 50  0000 L CNN
+F 1 "22u" H 7265 4605 50  0000 L CNN
 F 2 "" H 7188 4500 50  0001 C CNN
 F 3 "~" H 7150 4650 50  0001 C CNN
 	1    7150 4650
@@ -138,7 +138,7 @@ L Device:R R?
 U 1 1 5F262061
 P 6850 3900
 F 0 "R?" H 6920 3946 50  0000 L CNN
-F 1 "24K" H 6920 3855 50  0000 L CNN
+F 1 "12K" H 6920 3855 50  0000 L CNN
 F 2 "" V 6780 3900 50  0001 C CNN
 F 3 "~" H 6850 3900 50  0001 C CNN
 	1    6850 3900
@@ -209,10 +209,6 @@ Text GLabel 4050 4550 0    50   Input ~ 0
 A_IN
 Wire Wire Line
 	4050 4550 4250 4550
-Text GLabel 4050 4750 0    50   Input ~ 0
-A_S
-Wire Wire Line
-	4050 4750 4250 4750
 $Comp
 L Amplifier_Operational:TL074 U?
 U 5 1 5F2A4C99
@@ -316,7 +312,7 @@ Wire Wire Line
 	7450 4800 7550 4800
 Wire Wire Line
 	7550 4800 7550 4850
-Text Notes 7850 5150 0    50   ~ 0
+Text Notes 7800 4800 0    50   ~ 0
 99% VIN comparator
 Text Notes 7100 4900 2    50   ~ 0
 non-inverting amp sets the output voltage to\nthe reference but rate-limited by IABC
@@ -380,14 +376,14 @@ L Device:R_POT RV?
 U 1 1 5F30836C
 P 6050 2550
 F 0 "RV?" H 5981 2596 50  0000 R CNN
-F 1 "R_POT" H 5981 2505 50  0000 R CNN
+F 1 "R_RELEASE" H 5981 2505 50  0000 R CNN
 F 2 "" H 6050 2550 50  0001 C CNN
 F 3 "~" H 6050 2550 50  0001 C CNN
 	1    6050 2550
 	1    0    0    -1  
 $EndComp
 Text Notes 6750 4100 1    50   ~ 0
-Limit IABC to 1mA
+Limit IABC to 2mA
 $Comp
 L power:+12V #PWR?
 U 1 1 5F30B23E
@@ -419,7 +415,7 @@ L Device:R_POT RV?
 U 1 1 5F312304
 P 5200 2550
 F 0 "RV?" H 5131 2596 50  0000 R CNN
-F 1 "R_POT" H 5131 2505 50  0000 R CNN
+F 1 "R_ATTACK" H 5131 2505 50  0000 R CNN
 F 2 "" H 5200 2550 50  0001 C CNN
 F 3 "~" H 5200 2550 50  0001 C CNN
 	1    5200 2550
@@ -452,7 +448,7 @@ L Device:R_POT RV?
 U 1 1 5F3164E9
 P 4600 2550
 F 0 "RV?" H 4531 2596 50  0000 R CNN
-F 1 "R_POT" H 4531 2505 50  0000 R CNN
+F 1 "R_DECAY" H 4531 2505 50  0000 R CNN
 F 2 "" H 4600 2550 50  0001 C CNN
 F 3 "~" H 4600 2550 50  0001 C CNN
 	1    4600 2550
@@ -787,4 +783,256 @@ Wire Wire Line
 	10800 1850 10800 1950
 Wire Wire Line
 	11000 1850 11000 1950
+$Comp
+L Amplifier_Operational:LM13700 U?
+U 2 1 5F461B3B
+P 8900 4450
+F 0 "U?" H 8800 4798 50  0000 C CNN
+F 1 "LM13700" H 8800 4707 50  0000 C CNN
+F 2 "" H 8600 4475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 8600 4475 50  0001 C CNN
+	2    8900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 4450 8400 4450
+$Comp
+L Device:C C?
+U 1 1 5F469F63
+P 9100 4800
+F 0 "C?" H 9215 4846 50  0000 L CNN
+F 1 "100n" H 9215 4755 50  0000 L CNN
+F 2 "" H 9138 4650 50  0001 C CNN
+F 3 "~" H 9100 4800 50  0001 C CNN
+	1    9100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F46A6B0
+P 9100 5050
+F 0 "#PWR?" H 9100 4800 50  0001 C CNN
+F 1 "GND" H 9105 4877 50  0000 C CNN
+F 2 "" H 9100 5050 50  0001 C CNN
+F 3 "" H 9100 5050 50  0001 C CNN
+	1    9100 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 5050 9100 4950
+Wire Wire Line
+	9100 4650 9100 4550
+Wire Wire Line
+	9100 4550 9000 4550
+$Comp
+L Device:D D?
+U 1 1 5F477867
+P 9550 5050
+F 0 "D?" V 9596 4970 50  0000 R CNN
+F 1 "D" V 9505 4970 50  0000 R CNN
+F 2 "" H 9550 5050 50  0001 C CNN
+F 3 "~" H 9550 5050 50  0001 C CNN
+	1    9550 5050
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9100 4550
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5F47F2A4
+P 9450 5650
+F 0 "Q?" H 9640 5696 50  0000 L CNN
+F 1 "2N3904" H 9640 5605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9650 5575 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 9450 5650 50  0001 L CNN
+	1    9450 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F480065
+P 9000 5650
+F 0 "R?" H 9070 5696 50  0000 L CNN
+F 1 "1K" H 9070 5605 50  0000 L CNN
+F 2 "" V 8930 5650 50  0001 C CNN
+F 3 "~" H 9000 5650 50  0001 C CNN
+	1    9000 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5F484B6C
+P 8650 5950
+F 0 "Q?" H 8840 5996 50  0000 L CNN
+F 1 "2N3904" H 8840 5905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8850 5875 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 8650 5950 50  0001 L CNN
+	1    8650 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F4854E4
+P 8750 5400
+F 0 "R?" H 8820 5446 50  0000 L CNN
+F 1 "100K" H 8820 5355 50  0000 L CNN
+F 2 "" V 8680 5400 50  0001 C CNN
+F 3 "~" H 8750 5400 50  0001 C CNN
+	1    8750 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F485C76
+P 8750 6250
+F 0 "#PWR?" H 8750 6000 50  0001 C CNN
+F 1 "GND" H 8755 6077 50  0000 C CNN
+F 2 "" H 8750 6250 50  0001 C CNN
+F 3 "" H 8750 6250 50  0001 C CNN
+	1    8750 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F486276
+P 9550 5950
+F 0 "#PWR?" H 9550 5700 50  0001 C CNN
+F 1 "GND" H 9555 5777 50  0000 C CNN
+F 2 "" H 9550 5950 50  0001 C CNN
+F 3 "" H 9550 5950 50  0001 C CNN
+	1    9550 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F486656
+P 8350 5700
+F 0 "R?" H 8420 5746 50  0000 L CNN
+F 1 "100K" H 8420 5655 50  0000 L CNN
+F 2 "" V 8280 5700 50  0001 C CNN
+F 3 "~" H 8350 5700 50  0001 C CNN
+	1    8350 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 5950 8350 5950
+Wire Wire Line
+	8350 5950 8350 5850
+Wire Wire Line
+	8750 6250 8750 6150
+Wire Wire Line
+	8750 5750 8750 5650
+Wire Wire Line
+	8850 5650 8750 5650
+Connection ~ 8750 5650
+Wire Wire Line
+	8750 5650 8750 5550
+Wire Wire Line
+	9150 5650 9250 5650
+Wire Wire Line
+	9550 5950 9550 5850
+Text GLabel 8250 5450 0    50   Input ~ 0
+A_GATE
+Wire Wire Line
+	8250 5450 8350 5450
+Wire Wire Line
+	8350 5450 8350 5550
+$Comp
+L power:+5V #PWR?
+U 1 1 5F4B1D9A
+P 8250 900
+F 0 "#PWR?" H 8250 750 50  0001 C CNN
+F 1 "+5V" H 8265 1073 50  0000 C CNN
+F 2 "" H 8250 900 50  0001 C CNN
+F 3 "" H 8250 900 50  0001 C CNN
+	1    8250 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F4B23DC
+P 8750 5150
+F 0 "#PWR?" H 8750 5000 50  0001 C CNN
+F 1 "+12V" H 8765 5323 50  0000 C CNN
+F 2 "" H 8750 5150 50  0001 C CNN
+F 3 "" H 8750 5150 50  0001 C CNN
+	1    8750 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 5150 8750 5250
+Text Notes 8950 6400 0    50   ~ 0
+cheap analog latch\nCapacitor is charged for D and S states,\ndischarged for A and R states
+Wire Wire Line
+	9550 5200 9550 5450
+Wire Wire Line
+	9550 4900 9550 4550
+Wire Wire Line
+	9100 4550 9550 4550
+Text GLabel 9650 4550 2    50   Input ~ 0
+A_STATE
+Wire Wire Line
+	9650 4550 9550 4550
+Connection ~ 9550 4550
+Text GLabel 5150 4900 0    50   Input ~ 0
+A_GATE
+Wire Wire Line
+	5150 4900 5250 4900
+Wire Wire Line
+	5250 4900 5250 4650
+Text GLabel 4450 5200 0    50   Input ~ 0
+A_STATE
+Wire Wire Line
+	4450 5200 4550 5200
+Wire Wire Line
+	4550 5200 4550 5050
+Text GLabel 6250 3700 0    50   Input ~ 0
+A_GATE
+Wire Wire Line
+	5550 3700 5650 3700
+Wire Wire Line
+	5650 3700 5650 3600
+Text GLabel 5550 3700 0    50   Input ~ 0
+A_STATE
+Wire Wire Line
+	6250 3700 6450 3700
+Wire Wire Line
+	6450 3700 6450 3500
+$Comp
+L Device:R_POT RV?
+U 1 1 5F517865
+P 3500 4750
+F 0 "RV?" H 3431 4796 50  0000 R CNN
+F 1 "R_SUSTAIN" H 3431 4705 50  0000 R CNN
+F 2 "" H 3500 4750 50  0001 C CNN
+F 3 "~" H 3500 4750 50  0001 C CNN
+	1    3500 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 4450 0    50   Input ~ 0
+A_IN
+Wire Wire Line
+	3400 4450 3500 4450
+Wire Wire Line
+	3500 4450 3500 4600
+Wire Wire Line
+	3650 4750 4250 4750
+$Comp
+L power:GND #PWR?
+U 1 1 5F52E440
+P 3500 5050
+F 0 "#PWR?" H 3500 4800 50  0001 C CNN
+F 1 "GND" H 3505 4877 50  0000 C CNN
+F 2 "" H 3500 5050 50  0001 C CNN
+F 3 "" H 3500 5050 50  0001 C CNN
+	1    3500 5050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5050 3500 4900
+Text Notes 4200 5800 0    50   ~ 0
+State machine controlled by STATE and GATE:\nAttack - Vgate=5, Vref=Vin, Iabc controlled by Rattack\nDecay - Vgate=5, Vref=Vsustain, Iabc controlled by Rdecay\nRelease - Vgate=0, Vref=0, Iabc controlled by Rrelease\n
+Text Notes 8150 3300 0    50   ~ 0
+output buffer
+Text Notes 4650 1850 0    50   ~ 0
+Choice of C1 and R_POT control the slew rate\nLarge values for both mean a longer charge time,\nbut a large C1 effects the fastest charge time too,\nsince IABC has a max of 2mA\n\nC1=22u, R_POT=500K gives a 0-5V charge time\nrange of 70ms to 2.7s
 $EndSCHEMATC
