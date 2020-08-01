@@ -32,6 +32,6 @@ Digital `OR` can be implemented by summing signals on `A_IN` and `B_IN` With the
 
 ## Design
 
-All of these uses are realized with only two opamps and an analog switch (1/4 of a [CD4066](../reference/datasheets/cd4066.pdf)). A summing inverting amplifier with a variable feedback resistor handles the adder, inverter, and scalar. The second gang on the pot adjusts the reference voltage when no input signal is provided, implementing the source. The CD4066 handles the gate, and a final inverting opamp reverses the first inversion, providing the non-inverted output.
-
-The CD4066 has a max supply of 20V, which is less than the +/- 12V power supply. We use an LM317/LM337 linear regulator pair to create a +/- 10V power supply. We also power the opamps from this supply, to avoid supplying any signals above this limit.
+A summing inverting amplifier with a variable feedback resistor handles the adder, inverter, and scalar. A connection on either A or B toggles an analog switch selecting between a constant voltage source and the summing output. Another
+analog switch controlled by the gate allows that signal to be toggled before it is buffered in both an inverted and
+re-inverted back to positive outputs.

@@ -35,14 +35,14 @@
   - 4-channel polyphonic
     - that means dedicated VCO/VCF/VCA streams
   - "fully-modular with defaults"
-    - simi-modular-style sensible default paths connected under the hood
+    - semi-modular-style sensible default paths connected under the hood
     - all defaults overridden with patch cables
     - "cascading controls"
       - unless overridden, CVs propagate from previous channel, allowing control of
         all oscillators simultaneously, which is desired when using multiple voices
     - specifically targeting support for several modes:
       - 4 totally separate, independent synths, each controlled with constant VCO or sequencer
-      - 1-voice, MIDI-,sequencer-, or constant-controlled synth with 4 oscillators, e.g. harmonizing intervals, mixing shapes/tambres
+      - 1-voice, MIDI-,sequencer-, or constant-controlled synth with 4 oscillators, e.g. harmonizing intervals, mixing shapes/timbres
       - 4-voice MIDI-controlled synth
       - 2-voice MIDI-controlled synth, with a pair of oscillators for each voice
       - sub-combinations of the above, e.g.:
@@ -78,7 +78,8 @@
       - Option to sync with another osc?
         - in theory, grounding osc at a regular interval would reset the osc over and over, effectively changing it's frequency
       - CV control for shape?
-      - Room for one more shape
+      - Room for more shapes
+        - white noise?
         - PDS
           - https://en.wikipedia.org/wiki/Phase_distortion_synthesis
           - a bit of wild harmonics
@@ -90,24 +91,39 @@
           - up ramp wave probably needs another JFET and an inverter
     3. MIDI-CV converter
       - digital MIDI input to OSC CV
+      - DAC resolution:
+        - for 1 step = 1 cent on a 10V space with 1V/octave:
+          - 10V / 2^x = (1V/12/100) => log2(10/(1/12/100)) 13.55 bit minimum
+          - 16-bit DAC would be incredibly accurate, 0.18% resolution
       - up to 4 voices
+      - round-robin outputs on each key press
+        - use open output if available else replace oldest key pressed
+      - Modes:
+        - off
+        - 1-voice: A
+        - 2-voice: A + C
+        - 3-voice: A + B + C
+        - 4-voice: A + B + C +D
+        - 4-voice-split: A + B, C + D
+          - like standard 4-voice mode, but round robin is in 2 pairs of slots instead of 4 slots
+          - allows for 2-voice bass and 2-voice melody
+          - on mode selection, waits for a keypress to set the note to split at
+      - capable to expand to 8 voices?
     4. Filter
       -  4P LP(/HP?)
-      - Moog Ladder?
-      - Alternatively, filter we designed for class
+      - filter we designed for class
         - standard vactrols are available on Thonk
       - CV control of cutoff, resonance
       - Default to track cutoff with VCO-CV
-    5. A/D/S/R envelope
+    5. [A/D/S/R envelope](adsr)
       - 4 envelopes required for 4-voice polyphony
       - wired to VCA by default
       - could save surface area with 1 set of ADSR controls for a pair of envelopes
-      - fully modular could mean you could borrow one for VCF instead
-        - alternatively, perhaps simpler A/D envelope for VCF?
+      - fully modular means you could borrow one for VCF instead, or send to both VCA and VCF
     6. LFO
       - 2x is plenty I think?
-      - 555 or relaxation
-      - CV (+/- 5V) and digital out
+      - OSC circuit, but adjusted to lower frequencies
+      - CV (+/- 5V) and digital out?
       - ideally multi-shape: sine,tri,squ,ramp up,ramp down
       - CV control for shape
       - Trigger input (e.g. envelope or clock)
@@ -118,12 +134,9 @@
         - B input (default ground)
         - level knob attenuator
         - gate digital CV in, default on
-        - (A+B)*level*gate output
-        - -(A+B)*level*gate output
-        - 2 opamps and a FET
-          - one opamp if we scrap the inverter
-          - 4 of these would be cost+space efficent
-        - Constant CV out if A/B disconnected?
+        - `(A+B)*level*gate` output
+        - `-(A+B)*level*gate` output
+        - Constant CV out if A/B disconnected
     8. Future
       - Sequencer
         - clock source for LFO? Or LFO input as clock?
@@ -144,10 +157,11 @@
       - Sample+Hold?
         - combined with white noise creates RNG
         - alternatively sequencer could do RNG digitally
+        - random is a lot more interesting if it can quantize
         - S+H has little use to me outside of random
       - Delay, overdrive, etc. are gimmicky and not useful, can be done via effects pedals
   - For multiple options (like VCO shape), use a CV that is binned to options
-    - Easiest solution is probably an ATTiny driving a 4066
+    - Easiest solution is probably an ATTiny driving an analog switch
     - uC seems like overkill, but it's got an ADC and lots of digital pins
     - Lots of specialty components would be required for a native IC solution
     - Firmware code can easily provide hysteresis and arbitrary numbers of divisions, unlike CDXXXX series CMOS chips
@@ -200,7 +214,7 @@
     - [ ] shape selection
   - [ ] Confirm amp on breadboard, finalize CV levels
   - [ ] Build PoC osc
-  - [ ] PCB for oscilator
+  - [ ] PCB for oscillator
 - Envelope
   - [x] design in SPICE
   - [ ] verify on breadboard
@@ -220,7 +234,7 @@
 - build tools
   - [x] tiny Breakout pcbs for headphone jacks
   - ~~transistor matcher circuit~~
-    - bought 100s of matched pair BJTs instead
+    - bought matched pair BJTs instead
 
 ## License
 
@@ -228,7 +242,7 @@ Schematics, board layouts, documentation, etc. is licensed under [Creative Commo
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
-If you're interested in commerical use, please ask first.
+If you're interested in commercial use, please ask first.
 
 Any source code is licensed under [MIT](SOFTWARE_LICENSE).
 
