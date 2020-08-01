@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -14,482 +14,92 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR09
 U 1 1 5F25A086
-P 8500 900
-F 0 "#PWR?" H 8500 750 50  0001 C CNN
-F 1 "+12V" H 8515 1073 50  0000 C CNN
-F 2 "" H 8500 900 50  0001 C CNN
-F 3 "" H 8500 900 50  0001 C CNN
-	1    8500 900 
+P 9700 800
+F 0 "#PWR09" H 9700 650 50  0001 C CNN
+F 1 "+12V" H 9715 973 50  0000 C CNN
+F 2 "" H 9700 800 50  0001 C CNN
+F 3 "" H 9700 800 50  0001 C CNN
+	1    9700 800 
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR010
 U 1 1 5F25A895
-P 8500 1800
-F 0 "#PWR?" H 8500 1900 50  0001 C CNN
-F 1 "-12V" H 8515 1973 50  0000 C CNN
-F 2 "" H 8500 1800 50  0001 C CNN
-F 3 "" H 8500 1800 50  0001 C CNN
-	1    8500 1800
+P 9700 1700
+F 0 "#PWR010" H 9700 1800 50  0001 C CNN
+F 1 "-12V" H 9715 1873 50  0000 C CNN
+F 2 "" H 9700 1700 50  0001 C CNN
+F 3 "" H 9700 1700 50  0001 C CNN
+	1    9700 1700
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR07
 U 1 1 5F25B20B
-P 8200 1800
-F 0 "#PWR?" H 8200 1550 50  0001 C CNN
-F 1 "GND" H 8205 1627 50  0000 C CNN
-F 2 "" H 8200 1800 50  0001 C CNN
-F 3 "" H 8200 1800 50  0001 C CNN
-	1    8200 1800
+P 9400 1700
+F 0 "#PWR07" H 9400 1450 50  0001 C CNN
+F 1 "GND" H 9405 1527 50  0000 C CNN
+F 2 "" H 9400 1700 50  0001 C CNN
+F 3 "" H 9400 1700 50  0001 C CNN
+	1    9400 1700
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
+L Amplifier_Operational:LM13700 U1
 U 5 1 5F25BADE
-P 9300 1400
-F 0 "U?" H 9258 1446 50  0000 L CNN
-F 1 "LM13700" H 9258 1355 50  0000 L CNN
-F 2 "" H 9000 1425 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 9000 1425 50  0001 C CNN
-	5    9300 1400
+P 10500 1300
+F 0 "U1" H 10458 1346 50  0000 L CNN
+F 1 "LM13700" H 10458 1255 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 10200 1325 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 10200 1325 50  0001 C CNN
+	5    10500 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM13700 U?
-U 1 1 5F25DAA4
-P 6450 4350
-F 0 "U?" H 6450 3983 50  0000 C CNN
-F 1 "LM13700" H 6450 4074 50  0000 C CNN
-F 2 "" H 6150 4375 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 6150 4375 50  0001 C CNN
-	1    6450 4350
-	1    0    0    1   
-$EndComp
-$Comp
-L power:+12V #PWR?
+L power:+12V #PWR011
 U 1 1 5F25EE9C
-P 9200 950
-F 0 "#PWR?" H 9200 800 50  0001 C CNN
-F 1 "+12V" H 9215 1123 50  0000 C CNN
-F 2 "" H 9200 950 50  0001 C CNN
-F 3 "" H 9200 950 50  0001 C CNN
-	1    9200 950 
+P 10400 850
+F 0 "#PWR011" H 10400 700 50  0001 C CNN
+F 1 "+12V" H 10415 1023 50  0000 C CNN
+F 2 "" H 10400 850 50  0001 C CNN
+F 3 "" H 10400 850 50  0001 C CNN
+	1    10400 850 
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:-12V #PWR?
+L power:-12V #PWR012
 U 1 1 5F25F3F7
-P 9200 1850
-F 0 "#PWR?" H 9200 1950 50  0001 C CNN
-F 1 "-12V" H 9215 2023 50  0000 C CNN
-F 2 "" H 9200 1850 50  0001 C CNN
-F 3 "" H 9200 1850 50  0001 C CNN
-	1    9200 1850
+P 10400 1750
+F 0 "#PWR012" H 10400 1850 50  0001 C CNN
+F 1 "-12V" H 10415 1923 50  0000 C CNN
+F 2 "" H 10400 1750 50  0001 C CNN
+F 3 "" H 10400 1750 50  0001 C CNN
+	1    10400 1750
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9200 1850 9200 1700
+	10400 1750 10400 1600
 Wire Wire Line
-	9200 1100 9200 950 
+	10400 1000 10400 850 
 $Comp
-L Device:C C1
-U 1 1 5F26047D
-P 7150 4650
-F 0 "C1" H 7265 4696 50  0000 L CNN
-F 1 "22u" H 7265 4605 50  0000 L CNN
-F 2 "" H 7188 4500 50  0001 C CNN
-F 3 "~" H 7150 4650 50  0001 C CNN
-	1    7150 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F261082
-P 7150 4950
-F 0 "#PWR?" H 7150 4700 50  0001 C CNN
-F 1 "GND" H 7155 4777 50  0000 C CNN
-F 2 "" H 7150 4950 50  0001 C CNN
-F 3 "" H 7150 4950 50  0001 C CNN
-	1    7150 4950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7150 4950 7150 4800
-Wire Wire Line
-	7150 4500 7150 4350
-Wire Wire Line
-	7150 4350 6900 4350
-Wire Wire Line
-	6150 4450 6050 4450
-Wire Wire Line
-	6050 4450 6050 4700
-Wire Wire Line
-	6050 4700 6900 4700
-Wire Wire Line
-	6900 4700 6900 4350
-Connection ~ 6900 4350
-Wire Wire Line
-	6900 4350 6750 4350
-$Comp
-L Device:R R?
-U 1 1 5F262061
-P 6850 3900
-F 0 "R?" H 6920 3946 50  0000 L CNN
-F 1 "12K" H 6920 3855 50  0000 L CNN
-F 2 "" V 6780 3900 50  0001 C CNN
-F 3 "~" H 6850 3900 50  0001 C CNN
-	1    6850 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 4050 6850 4250
-Wire Wire Line
-	6850 4250 6750 4250
-$Comp
-L synth:DG403 U?
-U 1 1 5F262D02
-P 5250 4150
-F 0 "U?" H 5250 4375 50  0000 C CNN
-F 1 "DG403" H 5250 4284 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5250 3450 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5250 4150 50  0001 C CNN
-	1    5250 4150
-	-1   0    0    -1  
-$EndComp
-$Comp
-L synth:DG403 U?
-U 2 1 5F26DB7C
-P 4550 4550
-F 0 "U?" H 4550 4775 50  0000 C CNN
-F 1 "DG403" H 4550 4684 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4550 3850 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 4550 4550 50  0001 C CNN
-	2    4550 4550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6150 4250 5600 4250
-Wire Wire Line
-	5550 4350 5600 4350
-Wire Wire Line
-	5600 4350 5600 4250
-Connection ~ 5600 4250
-Wire Wire Line
-	5600 4250 5550 4250
-$Comp
-L power:GND #PWR?
-U 1 1 5F296A1E
-P 4750 4200
-F 0 "#PWR?" H 4750 3950 50  0001 C CNN
-F 1 "GND" H 4755 4027 50  0000 C CNN
-F 2 "" H 4750 4200 50  0001 C CNN
-F 3 "" H 4750 4200 50  0001 C CNN
-	1    4750 4200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 4200 4750 4150
-Wire Wire Line
-	4750 4150 4950 4150
-Wire Wire Line
-	4850 4750 4900 4750
-Wire Wire Line
-	4900 4750 4900 4650
-Wire Wire Line
-	4900 4350 4950 4350
-Wire Wire Line
-	4850 4650 4900 4650
-Connection ~ 4900 4650
-Wire Wire Line
-	4900 4650 4900 4350
-Text GLabel 4050 4550 0    50   Input ~ 0
-A_IN
-Wire Wire Line
-	4050 4550 4250 4550
-$Comp
-L Amplifier_Operational:TL074 U?
+L Amplifier_Operational:TL074 U2
 U 5 1 5F2A4C99
-P 9750 1400
-F 0 "U?" H 9708 1446 50  0000 L CNN
-F 1 "TL074" H 9708 1355 50  0000 L CNN
-F 2 "" H 9700 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9800 1600 50  0001 C CNN
-	5    9750 1400
+P 10950 1300
+F 0 "U2" H 10908 1346 50  0000 L CNN
+F 1 "TL074" H 10908 1255 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10900 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 11000 1500 50  0001 C CNN
+	5    10950 1300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:TL074 U?
-U 1 1 5F2A7D9B
-P 8100 4450
-F 0 "U?" H 8100 4083 50  0000 C CNN
-F 1 "TL074" H 8100 4174 50  0000 C CNN
-F 2 "" H 8050 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8150 4650 50  0001 C CNN
-	1    8100 4450
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U?
-U 2 1 5F2AA849
-P 8100 3800
-F 0 "U?" H 8100 3433 50  0000 C CNN
-F 1 "TL074" H 8100 3524 50  0000 C CNN
-F 2 "" H 8050 3900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8150 4000 50  0001 C CNN
-	2    8100 3800
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	7800 4350 7150 4350
-Connection ~ 7150 4350
-Wire Wire Line
-	7800 3700 7700 3700
-Wire Wire Line
-	7700 3700 7700 3400
-Wire Wire Line
-	7700 3400 8600 3400
-Wire Wire Line
-	8600 3400 8600 3800
-Text GLabel 8750 3800 2    50   Input ~ 0
-A_OUT
-Wire Wire Line
-	8400 3800 8600 3800
-Connection ~ 8600 3800
-Wire Wire Line
-	8600 3800 8750 3800
-$Comp
-L Device:R R?
-U 1 1 5F2B694B
-P 7550 5000
-F 0 "R?" H 7620 5046 50  0000 L CNN
-F 1 "1K" H 7620 4955 50  0000 L CNN
-F 2 "" V 7480 5000 50  0001 C CNN
-F 3 "~" H 7550 5000 50  0001 C CNN
-	1    7550 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F2B724E
-P 7550 5450
-F 0 "R?" H 7620 5496 50  0000 L CNN
-F 1 "100K" H 7620 5405 50  0000 L CNN
-F 2 "" V 7480 5450 50  0001 C CNN
-F 3 "~" H 7550 5450 50  0001 C CNN
-	1    7550 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7550 5300 7550 5250
-Wire Wire Line
-	7550 5250 7750 5250
-Wire Wire Line
-	7750 5250 7750 4550
-Wire Wire Line
-	7750 4550 7800 4550
-Connection ~ 7550 5250
-Wire Wire Line
-	7550 5250 7550 5150
-$Comp
-L power:GND #PWR?
-U 1 1 5F2B925B
-P 7550 5700
-F 0 "#PWR?" H 7550 5450 50  0001 C CNN
-F 1 "GND" H 7555 5527 50  0000 C CNN
-F 2 "" H 7550 5700 50  0001 C CNN
-F 3 "" H 7550 5700 50  0001 C CNN
-	1    7550 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7550 5700 7550 5600
-Text GLabel 7450 4800 0    50   Input ~ 0
-A_IN
-Wire Wire Line
-	7450 4800 7550 4800
-Wire Wire Line
-	7550 4800 7550 4850
-Text Notes 7800 4800 0    50   ~ 0
-99% VIN comparator
-Text Notes 7100 4900 2    50   ~ 0
-non-inverting amp sets the output voltage to\nthe reference but rate-limited by IABC
-Wire Wire Line
-	7800 3900 7150 3900
-Wire Wire Line
-	7150 3900 7150 4350
-$Comp
-L synth:DG403 U?
-U 1 1 5F2C380E
-P 6450 3000
-F 0 "U?" H 6450 3225 50  0000 C CNN
-F 1 "DG403" H 6450 3134 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6450 2300 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 6450 3000 50  0001 C CNN
-	1    6450 3000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L synth:DG403 U?
-U 2 1 5F2D43FE
-P 5650 3100
-F 0 "U?" H 5650 3325 50  0000 C CNN
-F 1 "DG403" H 5650 3234 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5650 2400 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5650 3100 50  0001 C CNN
-	2    5650 3100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L synth:DG403 U?
-U 3 1 5F2DE506
-P 10300 1300
-F 0 "U?" H 10250 1300 50  0000 L CNN
-F 1 "DG403" H 10200 1150 50  0000 L CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10300 600 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 10300 1300 50  0001 C CNN
-	3    10300 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 3750 6850 3200
-Wire Wire Line
-	6850 3100 6750 3100
-Wire Wire Line
-	6750 3200 6850 3200
-Connection ~ 6850 3200
-Wire Wire Line
-	6850 3200 6850 3100
-Wire Wire Line
-	5950 3200 6050 3200
-Wire Wire Line
-	5950 3300 6050 3300
-Wire Wire Line
-	6050 3300 6050 3200
-Connection ~ 6050 3200
-Wire Wire Line
-	6050 3200 6150 3200
-$Comp
-L Device:R_POT RV?
-U 1 1 5F30836C
-P 6050 2550
-F 0 "RV?" H 5981 2596 50  0000 R CNN
-F 1 "R_RELEASE" H 5981 2505 50  0000 R CNN
-F 2 "" H 6050 2550 50  0001 C CNN
-F 3 "~" H 6050 2550 50  0001 C CNN
-	1    6050 2550
-	1    0    0    -1  
-$EndComp
-Text Notes 6750 4100 1    50   ~ 0
-Limit IABC to 2mA
-$Comp
-L power:+12V #PWR?
-U 1 1 5F30B23E
-P 6050 2200
-F 0 "#PWR?" H 6050 2050 50  0001 C CNN
-F 1 "+12V" H 6065 2373 50  0000 C CNN
-F 2 "" H 6050 2200 50  0001 C CNN
-F 3 "" H 6050 2200 50  0001 C CNN
-	1    6050 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 2550 6300 2550
-Wire Wire Line
-	6300 2550 6300 2300
-Wire Wire Line
-	6300 2300 6050 2300
-Wire Wire Line
-	6050 2300 6050 2400
-Wire Wire Line
-	6050 2300 6050 2200
-Connection ~ 6050 2300
-Wire Wire Line
-	6150 3000 6050 3000
-Wire Wire Line
-	6050 3000 6050 2700
-$Comp
-L Device:R_POT RV?
-U 1 1 5F312304
-P 5200 2550
-F 0 "RV?" H 5131 2596 50  0000 R CNN
-F 1 "R_ATTACK" H 5131 2505 50  0000 R CNN
-F 2 "" H 5200 2550 50  0001 C CNN
-F 3 "~" H 5200 2550 50  0001 C CNN
-	1    5200 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5F31230E
-P 5200 2200
-F 0 "#PWR?" H 5200 2050 50  0001 C CNN
-F 1 "+12V" H 5215 2373 50  0000 C CNN
-F 2 "" H 5200 2200 50  0001 C CNN
-F 3 "" H 5200 2200 50  0001 C CNN
-	1    5200 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 2550 5450 2550
-Wire Wire Line
-	5450 2550 5450 2300
-Wire Wire Line
-	5450 2300 5200 2300
-Wire Wire Line
-	5200 2300 5200 2400
-Wire Wire Line
-	5200 2300 5200 2200
-Connection ~ 5200 2300
-$Comp
-L Device:R_POT RV?
-U 1 1 5F3164E9
-P 4600 2550
-F 0 "RV?" H 4531 2596 50  0000 R CNN
-F 1 "R_DECAY" H 4531 2505 50  0000 R CNN
-F 2 "" H 4600 2550 50  0001 C CNN
-F 3 "~" H 4600 2550 50  0001 C CNN
-	1    4600 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5F3164F3
-P 4600 2200
-F 0 "#PWR?" H 4600 2050 50  0001 C CNN
-F 1 "+12V" H 4615 2373 50  0000 C CNN
-F 2 "" H 4600 2200 50  0001 C CNN
-F 3 "" H 4600 2200 50  0001 C CNN
-	1    4600 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 2550 4850 2550
-Wire Wire Line
-	4850 2550 4850 2300
-Wire Wire Line
-	4850 2300 4600 2300
-Wire Wire Line
-	4600 2300 4600 2400
-Wire Wire Line
-	4600 2300 4600 2200
-Connection ~ 4600 2300
-Wire Wire Line
-	5350 3100 5200 3100
-Wire Wire Line
-	5200 3100 5200 2700
-Wire Wire Line
-	5350 3300 4600 3300
-Wire Wire Line
-	4600 3300 4600 2700
-$Comp
-L synth:AudioJack2_Ground_Switch J?
+L synth:AudioJack2_Ground_Switch J4
 U 1 1 5F32C90A
 P 1000 1100
-F 0 "J?" H 1032 1525 50  0000 C CNN
-F 1 "AudioJack2_Ground_Switch" H 1032 1434 50  0000 C CNN
+F 0 "J4" H 1032 1525 50  0000 C CNN
+F 1 "A_IN" H 1032 1434 50  0000 C CNN
 F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1000 1300 50  0001 C CNN
 F 3 "~" H 1000 1300 50  0001 C CNN
 	1    1000 1100
@@ -500,10 +110,10 @@ A_IN
 Wire Wire Line
 	1600 1100 1200 1100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 5F337BC4
 P 1000 1650
-F 0 "#PWR?" H 1000 1400 50  0001 C CNN
+F 0 "#PWR04" H 1000 1400 50  0001 C CNN
 F 1 "GND" H 1005 1477 50  0000 C CNN
 F 2 "" H 1000 1650 50  0001 C CNN
 F 3 "" H 1000 1650 50  0001 C CNN
@@ -531,11 +141,11 @@ A_IN_DEFAULT
 Wire Wire Line
 	1600 1200 1200 1200
 $Comp
-L synth:AudioJack2_Ground_Switch J?
+L synth:AudioJack2_Ground_Switch J2
 U 1 1 5F3462C6
 P 950 2500
-F 0 "J?" H 982 2925 50  0000 C CNN
-F 1 "AudioJack2_Ground_Switch" H 982 2834 50  0000 C CNN
+F 0 "J2" H 982 2925 50  0000 C CNN
+F 1 "A_GATE" H 982 2834 50  0000 C CNN
 F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 950 2700 50  0001 C CNN
 F 3 "~" H 950 2700 50  0001 C CNN
 	1    950  2500
@@ -544,10 +154,10 @@ $EndComp
 Wire Wire Line
 	1550 2500 1150 2500
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 5F3462D1
 P 950 3050
-F 0 "#PWR?" H 950 2800 50  0001 C CNN
+F 0 "#PWR02" H 950 2800 50  0001 C CNN
 F 1 "GND" H 955 2877 50  0000 C CNN
 F 2 "" H 950 3050 50  0001 C CNN
 F 3 "" H 950 3050 50  0001 C CNN
@@ -578,461 +188,313 @@ Wire Wire Line
 Text GLabel 1550 2500 2    50   Input ~ 0
 A_GATE
 $Comp
-L synth:AudioJack2_Ground_Switch J?
+L synth:AudioJack2_Ground_Switch J6
 U 1 1 5F354B6F
-P 1800 3950
-F 0 "J?" H 1832 4375 50  0000 C CNN
-F 1 "AudioJack2_Ground_Switch" H 1832 4284 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1800 4150 50  0001 C CNN
-F 3 "~" H 1800 4150 50  0001 C CNN
-	1    1800 3950
+P 6600 1950
+F 0 "J6" H 6632 2375 50  0000 C CNN
+F 1 "A_OUT" H 6632 2284 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6600 2150 50  0001 C CNN
+F 3 "~" H 6600 2150 50  0001 C CNN
+	1    6600 1950
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1200 3950 1600 3950
+	6000 1950 6400 1950
 $Comp
-L power:GND #PWR?
+L power:GND #PWR06
 U 1 1 5F354B7A
-P 1800 4500
-F 0 "#PWR?" H 1800 4250 50  0001 C CNN
-F 1 "GND" H 1805 4327 50  0000 C CNN
-F 2 "" H 1800 4500 50  0001 C CNN
-F 3 "" H 1800 4500 50  0001 C CNN
-	1    1800 4500
+P 6600 2500
+F 0 "#PWR06" H 6600 2250 50  0001 C CNN
+F 1 "GND" H 6605 2327 50  0000 C CNN
+F 2 "" H 6600 2500 50  0001 C CNN
+F 3 "" H 6600 2500 50  0001 C CNN
+	1    6600 2500
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1800 4500 1800 4300
+	6600 2500 6600 2300
 Wire Wire Line
-	1600 3750 1500 3750
+	6400 1750 6300 1750
 Wire Wire Line
-	1500 3750 1500 3850
+	6300 1750 6300 1850
 Wire Wire Line
-	1500 4300 1800 4300
-Connection ~ 1800 4300
+	6300 2300 6600 2300
+Connection ~ 6600 2300
 Wire Wire Line
-	1800 4300 1800 4250
+	6600 2300 6600 2250
 Wire Wire Line
-	1600 3850 1500 3850
-Connection ~ 1500 3850
+	6400 1850 6300 1850
+Connection ~ 6300 1850
 Wire Wire Line
-	1500 3850 1500 4300
-Text GLabel 1200 3950 0    50   Input ~ 0
+	6300 1850 6300 2300
+Text GLabel 6000 1950 0    50   Input ~ 0
 A_OUT
-Text GLabel 1200 4050 0    50   Input ~ 0
+Text GLabel 6000 2050 0    50   Input ~ 0
 A_OUT_DEFAULT
 Wire Wire Line
-	1200 4050 1600 4050
+	6000 2050 6400 2050
 $Comp
-L synth:EURORACK_CONN_16 J?
+L synth:EURORACK_CONN_16 J7
 U 1 1 5F388E7E
-P 8550 1300
-F 0 "J?" H 8650 1350 50  0000 L CNN
-F 1 "EURORACK_CONN_16" H 8050 1250 50  0000 L CNN
-F 2 "synth:EURORACK_16_IDC" H 9000 600 50  0001 C CNN
-F 3 "https://division-6.com/learn/eurorack-power/" V 8600 1350 50  0001 C CNN
-	1    8550 1300
+P 9750 1200
+F 0 "J7" H 9850 1250 50  0000 L CNN
+F 1 "EURORACK_CONN_16" H 9250 1150 50  0000 L CNN
+F 2 "synth:EURORACK_16_IDC" H 10200 500 50  0001 C CNN
+F 3 "https://division-6.com/learn/eurorack-power/" V 9800 1250 50  0001 C CNN
+	1    9750 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 1650 8500 1800
+	9700 1550 9700 1700
 Wire Wire Line
-	8500 900  8500 1050
+	9700 800  9700 950 
+Wire Wire Line
+	9450 800  9450 950 
+Wire Wire Line
+	9400 1550 9400 1700
+Wire Wire Line
+	10850 1750 10850 1600
+Wire Wire Line
+	10850 850  10850 1000
 $Comp
-L power:+5V #PWR?
-U 1 1 5F3A44A9
-P 10200 750
-F 0 "#PWR?" H 10200 600 50  0001 C CNN
-F 1 "+5V" H 10215 923 50  0000 C CNN
-F 2 "" H 10200 750 50  0001 C CNN
-F 3 "" H 10200 750 50  0001 C CNN
-	1    10200 750 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8250 900  8250 1050
-Wire Wire Line
-	8200 1650 8200 1800
-$Comp
-L power:-12V #PWR?
-U 1 1 5F3AD746
-P 10400 1950
-F 0 "#PWR?" H 10400 2050 50  0001 C CNN
-F 1 "-12V" H 10415 2123 50  0000 C CNN
-F 2 "" H 10400 1950 50  0001 C CNN
-F 3 "" H 10400 1950 50  0001 C CNN
-	1    10400 1950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9650 1850 9650 1700
-$Comp
-L power:+12V #PWR?
-U 1 1 5F3B2117
-P 10400 750
-F 0 "#PWR?" H 10400 600 50  0001 C CNN
-F 1 "+12V" H 10415 923 50  0000 C CNN
-F 2 "" H 10400 750 50  0001 C CNN
-F 3 "" H 10400 750 50  0001 C CNN
-	1    10400 750 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9650 950  9650 1100
-$Comp
-L power:GND #PWR?
-U 1 1 5F3B6FAB
-P 10200 1950
-F 0 "#PWR?" H 10200 1700 50  0001 C CNN
-F 1 "GND" H 10205 1777 50  0000 C CNN
-F 2 "" H 10200 1950 50  0001 C CNN
-F 3 "" H 10200 1950 50  0001 C CNN
-	1    10200 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10200 750  10200 850 
-Wire Wire Line
-	10400 750  10400 850 
-Wire Wire Line
-	10200 1850 10200 1950
-Wire Wire Line
-	10400 1850 10400 1950
-$Comp
-L power:-12V #PWR?
+L power:-12V #PWR014
 U 1 1 5F3CA891
-P 9650 1850
-F 0 "#PWR?" H 9650 1950 50  0001 C CNN
-F 1 "-12V" H 9665 2023 50  0000 C CNN
-F 2 "" H 9650 1850 50  0001 C CNN
-F 3 "" H 9650 1850 50  0001 C CNN
-	1    9650 1850
+P 10850 1750
+F 0 "#PWR014" H 10850 1850 50  0001 C CNN
+F 1 "-12V" H 10865 1923 50  0000 C CNN
+F 2 "" H 10850 1750 50  0001 C CNN
+F 3 "" H 10850 1750 50  0001 C CNN
+	1    10850 1750
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR013
 U 1 1 5F3CBE19
-P 9650 950
-F 0 "#PWR?" H 9650 800 50  0001 C CNN
-F 1 "+12V" H 9665 1123 50  0000 C CNN
-F 2 "" H 9650 950 50  0001 C CNN
-F 3 "" H 9650 950 50  0001 C CNN
-	1    9650 950 
+P 10850 850
+F 0 "#PWR013" H 10850 700 50  0001 C CNN
+F 1 "+12V" H 10865 1023 50  0000 C CNN
+F 2 "" H 10850 850 50  0001 C CNN
+F 3 "" H 10850 850 50  0001 C CNN
+	1    10850 850 
 	1    0    0    -1  
 $EndComp
 $Comp
-L synth:DG403 U?
-U 3 1 5F3D18FB
-P 10900 1300
-F 0 "U?" H 10850 1300 50  0000 L CNN
-F 1 "DG403" H 10800 1150 50  0000 L CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10900 600 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 10900 1300 50  0001 C CNN
-	3    10900 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5F3D1905
-P 10800 750
-F 0 "#PWR?" H 10800 600 50  0001 C CNN
-F 1 "+5V" H 10815 923 50  0000 C CNN
-F 2 "" H 10800 750 50  0001 C CNN
-F 3 "" H 10800 750 50  0001 C CNN
-	1    10800 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-12V #PWR?
-U 1 1 5F3D190F
-P 11000 1950
-F 0 "#PWR?" H 11000 2050 50  0001 C CNN
-F 1 "-12V" H 11015 2123 50  0000 C CNN
-F 2 "" H 11000 1950 50  0001 C CNN
-F 3 "" H 11000 1950 50  0001 C CNN
-	1    11000 1950
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5F3D1919
-P 11000 750
-F 0 "#PWR?" H 11000 600 50  0001 C CNN
-F 1 "+12V" H 11015 923 50  0000 C CNN
-F 2 "" H 11000 750 50  0001 C CNN
-F 3 "" H 11000 750 50  0001 C CNN
-	1    11000 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F3D1923
-P 10800 1950
-F 0 "#PWR?" H 10800 1700 50  0001 C CNN
-F 1 "GND" H 10805 1777 50  0000 C CNN
-F 2 "" H 10800 1950 50  0001 C CNN
-F 3 "" H 10800 1950 50  0001 C CNN
-	1    10800 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 750  10800 850 
-Wire Wire Line
-	11000 750  11000 850 
-Wire Wire Line
-	10800 1850 10800 1950
-Wire Wire Line
-	11000 1850 11000 1950
-$Comp
-L Amplifier_Operational:LM13700 U?
-U 2 1 5F461B3B
-P 8900 4450
-F 0 "U?" H 8800 4798 50  0000 C CNN
-F 1 "LM13700" H 8800 4707 50  0000 C CNN
-F 2 "" H 8600 4475 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 8600 4475 50  0001 C CNN
-	2    8900 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8600 4450 8400 4450
-$Comp
-L Device:C C?
-U 1 1 5F469F63
-P 9100 4800
-F 0 "C?" H 9215 4846 50  0000 L CNN
-F 1 "100n" H 9215 4755 50  0000 L CNN
-F 2 "" H 9138 4650 50  0001 C CNN
-F 3 "~" H 9100 4800 50  0001 C CNN
-	1    9100 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F46A6B0
-P 9100 5050
-F 0 "#PWR?" H 9100 4800 50  0001 C CNN
-F 1 "GND" H 9105 4877 50  0000 C CNN
-F 2 "" H 9100 5050 50  0001 C CNN
-F 3 "" H 9100 5050 50  0001 C CNN
-	1    9100 5050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 5050 9100 4950
-Wire Wire Line
-	9100 4650 9100 4550
-Wire Wire Line
-	9100 4550 9000 4550
-$Comp
-L Device:D D?
-U 1 1 5F477867
-P 9550 5050
-F 0 "D?" V 9596 4970 50  0000 R CNN
-F 1 "D" V 9505 4970 50  0000 R CNN
-F 2 "" H 9550 5050 50  0001 C CNN
-F 3 "~" H 9550 5050 50  0001 C CNN
-	1    9550 5050
-	0    -1   -1   0   
-$EndComp
-Connection ~ 9100 4550
-$Comp
-L Transistor_BJT:2N3904 Q?
-U 1 1 5F47F2A4
-P 9450 5650
-F 0 "Q?" H 9640 5696 50  0000 L CNN
-F 1 "2N3904" H 9640 5605 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9650 5575 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 9450 5650 50  0001 L CNN
-	1    9450 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F480065
-P 9000 5650
-F 0 "R?" H 9070 5696 50  0000 L CNN
-F 1 "1K" H 9070 5605 50  0000 L CNN
-F 2 "" V 8930 5650 50  0001 C CNN
-F 3 "~" H 9000 5650 50  0001 C CNN
-	1    9000 5650
-	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_BJT:2N3904 Q?
-U 1 1 5F484B6C
-P 8650 5950
-F 0 "Q?" H 8840 5996 50  0000 L CNN
-F 1 "2N3904" H 8840 5905 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8850 5875 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 8650 5950 50  0001 L CNN
-	1    8650 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F4854E4
-P 8750 5400
-F 0 "R?" H 8820 5446 50  0000 L CNN
-F 1 "100K" H 8820 5355 50  0000 L CNN
-F 2 "" V 8680 5400 50  0001 C CNN
-F 3 "~" H 8750 5400 50  0001 C CNN
-	1    8750 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F485C76
-P 8750 6250
-F 0 "#PWR?" H 8750 6000 50  0001 C CNN
-F 1 "GND" H 8755 6077 50  0000 C CNN
-F 2 "" H 8750 6250 50  0001 C CNN
-F 3 "" H 8750 6250 50  0001 C CNN
-	1    8750 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F486276
-P 9550 5950
-F 0 "#PWR?" H 9550 5700 50  0001 C CNN
-F 1 "GND" H 9555 5777 50  0000 C CNN
-F 2 "" H 9550 5950 50  0001 C CNN
-F 3 "" H 9550 5950 50  0001 C CNN
-	1    9550 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F486656
-P 8350 5700
-F 0 "R?" H 8420 5746 50  0000 L CNN
-F 1 "100K" H 8420 5655 50  0000 L CNN
-F 2 "" V 8280 5700 50  0001 C CNN
-F 3 "~" H 8350 5700 50  0001 C CNN
-	1    8350 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8450 5950 8350 5950
-Wire Wire Line
-	8350 5950 8350 5850
-Wire Wire Line
-	8750 6250 8750 6150
-Wire Wire Line
-	8750 5750 8750 5650
-Wire Wire Line
-	8850 5650 8750 5650
-Connection ~ 8750 5650
-Wire Wire Line
-	8750 5650 8750 5550
-Wire Wire Line
-	9150 5650 9250 5650
-Wire Wire Line
-	9550 5950 9550 5850
-Text GLabel 8250 5450 0    50   Input ~ 0
-A_GATE
-Wire Wire Line
-	8250 5450 8350 5450
-Wire Wire Line
-	8350 5450 8350 5550
-$Comp
-L power:+5V #PWR?
+L power:+5V #PWR08
 U 1 1 5F4B1D9A
-P 8250 900
-F 0 "#PWR?" H 8250 750 50  0001 C CNN
-F 1 "+5V" H 8265 1073 50  0000 C CNN
-F 2 "" H 8250 900 50  0001 C CNN
-F 3 "" H 8250 900 50  0001 C CNN
-	1    8250 900 
+P 9450 800
+F 0 "#PWR08" H 9450 650 50  0001 C CNN
+F 1 "+5V" H 9465 973 50  0000 C CNN
+F 2 "" H 9450 800 50  0001 C CNN
+F 3 "" H 9450 800 50  0001 C CNN
+	1    9450 800 
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5F4B23DC
-P 8750 5150
-F 0 "#PWR?" H 8750 5000 50  0001 C CNN
-F 1 "+12V" H 8765 5323 50  0000 C CNN
-F 2 "" H 8750 5150 50  0001 C CNN
-F 3 "" H 8750 5150 50  0001 C CNN
-	1    8750 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8750 5150 8750 5250
-Text Notes 8950 6400 0    50   ~ 0
-cheap analog latch\nCapacitor is charged for D and S states,\ndischarged for A and R states
-Wire Wire Line
-	9550 5200 9550 5450
-Wire Wire Line
-	9550 4900 9550 4550
-Wire Wire Line
-	9100 4550 9550 4550
-Text GLabel 9650 4550 2    50   Input ~ 0
-A_STATE
-Wire Wire Line
-	9650 4550 9550 4550
-Connection ~ 9550 4550
-Text GLabel 5150 4900 0    50   Input ~ 0
+$Sheet
+S 2800 1600 1650 1000
+U 5F5446F0
+F0 "envelope" 50
+F1 "env.sch" 50
+F2 "IN" I L 2800 1800 50 
+F3 "GATE" I L 2800 2000 50 
+F4 "OUT" I R 4450 1850 50 
+$EndSheet
+Text GLabel 2600 2000 0    50   Input ~ 0
 A_GATE
-Wire Wire Line
-	5150 4900 5250 4900
-Wire Wire Line
-	5250 4900 5250 4650
-Text GLabel 4450 5200 0    50   Input ~ 0
-A_STATE
-Wire Wire Line
-	4450 5200 4550 5200
-Wire Wire Line
-	4550 5200 4550 5050
-Text GLabel 6250 3700 0    50   Input ~ 0
-A_GATE
-Wire Wire Line
-	5550 3700 5650 3700
-Wire Wire Line
-	5650 3700 5650 3600
-Text GLabel 5550 3700 0    50   Input ~ 0
-A_STATE
-Wire Wire Line
-	6250 3700 6450 3700
-Wire Wire Line
-	6450 3700 6450 3500
-$Comp
-L Device:R_POT RV?
-U 1 1 5F517865
-P 3500 4750
-F 0 "RV?" H 3431 4796 50  0000 R CNN
-F 1 "R_SUSTAIN" H 3431 4705 50  0000 R CNN
-F 2 "" H 3500 4750 50  0001 C CNN
-F 3 "~" H 3500 4750 50  0001 C CNN
-	1    3500 4750
-	1    0    0    -1  
-$EndComp
-Text GLabel 3400 4450 0    50   Input ~ 0
+Text GLabel 2600 1800 0    50   Input ~ 0
 A_IN
 Wire Wire Line
-	3400 4450 3500 4450
+	2600 1800 2800 1800
 Wire Wire Line
-	3500 4450 3500 4600
+	2800 2000 2600 2000
+Text GLabel 4650 1850 2    50   Input ~ 0
+A_OUT
 Wire Wire Line
-	3650 4750 4250 4750
+	4650 1850 4450 1850
+$Sheet
+S 2700 4400 1650 1000
+U 5F5D80AF
+F0 "sheet5F5D80AF" 50
+F1 "env.sch" 50
+F2 "IN" I L 2700 4600 50 
+F3 "GATE" I L 2700 4800 50 
+F4 "OUT" I R 4350 4650 50 
+$EndSheet
+Text GLabel 2500 4800 0    50   Input ~ 0
+B_GATE
+Text GLabel 2500 4600 0    50   Input ~ 0
+B_IN
+Wire Wire Line
+	2500 4600 2700 4600
+Wire Wire Line
+	2700 4800 2500 4800
+Text GLabel 4550 4650 2    50   Input ~ 0
+B_OUT
+Wire Wire Line
+	4550 4650 4350 4650
 $Comp
-L power:GND #PWR?
-U 1 1 5F52E440
-P 3500 5050
-F 0 "#PWR?" H 3500 4800 50  0001 C CNN
-F 1 "GND" H 3505 4877 50  0000 C CNN
-F 2 "" H 3500 5050 50  0001 C CNN
-F 3 "" H 3500 5050 50  0001 C CNN
-	1    3500 5050
+L synth:AudioJack2_Ground_Switch J3
+U 1 1 5F5DAD28
+P 950 4000
+F 0 "J3" H 982 4425 50  0000 C CNN
+F 1 "B_IN" H 982 4334 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 950 4200 50  0001 C CNN
+F 3 "~" H 950 4200 50  0001 C CNN
+	1    950  4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 1550 4000 2    50   Input ~ 0
+B_IN
+Wire Wire Line
+	1550 4000 1150 4000
+$Comp
+L power:GND #PWR03
+U 1 1 5F5DAD34
+P 950 4550
+F 0 "#PWR03" H 950 4300 50  0001 C CNN
+F 1 "GND" H 955 4377 50  0000 C CNN
+F 2 "" H 950 4550 50  0001 C CNN
+F 3 "" H 950 4550 50  0001 C CNN
+	1    950  4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  4550 950  4350
+Wire Wire Line
+	1150 3800 1250 3800
+Wire Wire Line
+	1250 3800 1250 3900
+Wire Wire Line
+	1250 4350 950  4350
+Connection ~ 950  4350
+Wire Wire Line
+	950  4350 950  4300
+Wire Wire Line
+	1150 3900 1250 3900
+Connection ~ 1250 3900
+Wire Wire Line
+	1250 3900 1250 4350
+Text GLabel 1550 4100 2    50   Input ~ 0
+B_IN_DEFAULT
+Wire Wire Line
+	1550 4100 1150 4100
+$Comp
+L synth:AudioJack2_Ground_Switch J1
+U 1 1 5F5DAD49
+P 900 5400
+F 0 "J1" H 932 5825 50  0000 C CNN
+F 1 "B_GATE" H 932 5734 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 900 5600 50  0001 C CNN
+F 3 "~" H 900 5600 50  0001 C CNN
+	1    900  5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 5400 1100 5400
+$Comp
+L power:GND #PWR01
+U 1 1 5F5DAD54
+P 900 5950
+F 0 "#PWR01" H 900 5700 50  0001 C CNN
+F 1 "GND" H 905 5777 50  0000 C CNN
+F 2 "" H 900 5950 50  0001 C CNN
+F 3 "" H 900 5950 50  0001 C CNN
+	1    900  5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  5950 900  5750
+Wire Wire Line
+	1100 5200 1200 5200
+Wire Wire Line
+	1200 5200 1200 5300
+Wire Wire Line
+	1200 5750 900  5750
+Connection ~ 900  5750
+Wire Wire Line
+	900  5750 900  5700
+Wire Wire Line
+	1100 5300 1200 5300
+Connection ~ 1200 5300
+Wire Wire Line
+	1200 5300 1200 5500
+Wire Wire Line
+	1100 5500 1200 5500
+Connection ~ 1200 5500
+Wire Wire Line
+	1200 5500 1200 5750
+Text GLabel 1500 5400 2    50   Input ~ 0
+B_GATE
+$Comp
+L synth:AudioJack2_Ground_Switch J5
+U 1 1 5F5E00F2
+P 6250 4950
+F 0 "J5" H 6282 5375 50  0000 C CNN
+F 1 "B_OUT" H 6282 5284 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6250 5150 50  0001 C CNN
+F 3 "~" H 6250 5150 50  0001 C CNN
+	1    6250 4950
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 5050 3500 4900
-Text Notes 4200 5800 0    50   ~ 0
-State machine controlled by STATE and GATE:\nAttack - Vgate=5, Vref=Vin, Iabc controlled by Rattack\nDecay - Vgate=5, Vref=Vsustain, Iabc controlled by Rdecay\nRelease - Vgate=0, Vref=0, Iabc controlled by Rrelease\n
-Text Notes 8150 3300 0    50   ~ 0
-output buffer
-Text Notes 4650 1850 0    50   ~ 0
-Choice of C1 and R_POT control the slew rate\nLarge values for both mean a longer charge time,\nbut a large C1 effects the fastest charge time too,\nsince IABC has a max of 2mA\n\nC1=22u, R_POT=500K gives a 0-5V charge time\nrange of 70ms to 2.7s
+	5650 4950 6050 4950
+$Comp
+L power:GND #PWR05
+U 1 1 5F5E00FD
+P 6250 5500
+F 0 "#PWR05" H 6250 5250 50  0001 C CNN
+F 1 "GND" H 6255 5327 50  0000 C CNN
+F 2 "" H 6250 5500 50  0001 C CNN
+F 3 "" H 6250 5500 50  0001 C CNN
+	1    6250 5500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 5500 6250 5300
+Wire Wire Line
+	6050 4750 5950 4750
+Wire Wire Line
+	5950 4750 5950 4850
+Wire Wire Line
+	5950 5300 6250 5300
+Connection ~ 6250 5300
+Wire Wire Line
+	6250 5300 6250 5250
+Wire Wire Line
+	6050 4850 5950 4850
+Connection ~ 5950 4850
+Wire Wire Line
+	5950 4850 5950 5300
+Text GLabel 5650 4950 0    50   Input ~ 0
+B_OUT
+Text GLabel 5650 5050 0    50   Input ~ 0
+B_OUT_DEFAULT
+Wire Wire Line
+	5650 5050 6050 5050
+$Comp
+L Connector:Conn_01x04_Male J8
+U 1 1 5F5E365B
+P 9950 3150
+F 0 "J8" H 9922 3032 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 9922 3123 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 9950 3150 50  0001 C CNN
+F 3 "~" H 9950 3150 50  0001 C CNN
+	1    9950 3150
+	-1   0    0    1   
+$EndComp
+Text GLabel 9550 2950 0    50   Input ~ 0
+A_IN_DEFAULT
+Text GLabel 9550 3050 0    50   Input ~ 0
+A_OUT_DEFAULT
+Text GLabel 9550 3150 0    50   Input ~ 0
+B_IN_DEFAULT
+Text GLabel 9550 3250 0    50   Input ~ 0
+B_OUT_DEFAULT
+Wire Wire Line
+	9550 3250 9750 3250
+Wire Wire Line
+	9750 3150 9550 3150
+Wire Wire Line
+	9550 3050 9750 3050
+Wire Wire Line
+	9750 2950 9550 2950
 $EndSCHEMATC
