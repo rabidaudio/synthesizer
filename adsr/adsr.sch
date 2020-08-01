@@ -1,0 +1,790 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 5F25A086
+P 8500 900
+F 0 "#PWR?" H 8500 750 50  0001 C CNN
+F 1 "+12V" H 8515 1073 50  0000 C CNN
+F 2 "" H 8500 900 50  0001 C CNN
+F 3 "" H 8500 900 50  0001 C CNN
+	1    8500 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F25A895
+P 8500 1800
+F 0 "#PWR?" H 8500 1900 50  0001 C CNN
+F 1 "-12V" H 8515 1973 50  0000 C CNN
+F 2 "" H 8500 1800 50  0001 C CNN
+F 3 "" H 8500 1800 50  0001 C CNN
+	1    8500 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F25B20B
+P 8200 1800
+F 0 "#PWR?" H 8200 1550 50  0001 C CNN
+F 1 "GND" H 8205 1627 50  0000 C CNN
+F 2 "" H 8200 1800 50  0001 C CNN
+F 3 "" H 8200 1800 50  0001 C CNN
+	1    8200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM13700 U?
+U 5 1 5F25BADE
+P 9300 1400
+F 0 "U?" H 9258 1446 50  0000 L CNN
+F 1 "LM13700" H 9258 1355 50  0000 L CNN
+F 2 "" H 9000 1425 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 9000 1425 50  0001 C CNN
+	5    9300 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM13700 U?
+U 1 1 5F25DAA4
+P 6450 4350
+F 0 "U?" H 6450 3983 50  0000 C CNN
+F 1 "LM13700" H 6450 4074 50  0000 C CNN
+F 2 "" H 6150 4375 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 6150 4375 50  0001 C CNN
+	1    6450 4350
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F25EE9C
+P 9200 950
+F 0 "#PWR?" H 9200 800 50  0001 C CNN
+F 1 "+12V" H 9215 1123 50  0000 C CNN
+F 2 "" H 9200 950 50  0001 C CNN
+F 3 "" H 9200 950 50  0001 C CNN
+	1    9200 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F25F3F7
+P 9200 1850
+F 0 "#PWR?" H 9200 1950 50  0001 C CNN
+F 1 "-12V" H 9215 2023 50  0000 C CNN
+F 2 "" H 9200 1850 50  0001 C CNN
+F 3 "" H 9200 1850 50  0001 C CNN
+	1    9200 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9200 1850 9200 1700
+Wire Wire Line
+	9200 1100 9200 950 
+$Comp
+L Device:C C?
+U 1 1 5F26047D
+P 7150 4650
+F 0 "C?" H 7265 4696 50  0000 L CNN
+F 1 "100u" H 7265 4605 50  0000 L CNN
+F 2 "" H 7188 4500 50  0001 C CNN
+F 3 "~" H 7150 4650 50  0001 C CNN
+	1    7150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F261082
+P 7150 4950
+F 0 "#PWR?" H 7150 4700 50  0001 C CNN
+F 1 "GND" H 7155 4777 50  0000 C CNN
+F 2 "" H 7150 4950 50  0001 C CNN
+F 3 "" H 7150 4950 50  0001 C CNN
+	1    7150 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4950 7150 4800
+Wire Wire Line
+	7150 4500 7150 4350
+Wire Wire Line
+	7150 4350 6900 4350
+Wire Wire Line
+	6150 4450 6050 4450
+Wire Wire Line
+	6050 4450 6050 4700
+Wire Wire Line
+	6050 4700 6900 4700
+Wire Wire Line
+	6900 4700 6900 4350
+Connection ~ 6900 4350
+Wire Wire Line
+	6900 4350 6750 4350
+$Comp
+L Device:R R?
+U 1 1 5F262061
+P 6850 3900
+F 0 "R?" H 6920 3946 50  0000 L CNN
+F 1 "24K" H 6920 3855 50  0000 L CNN
+F 2 "" V 6780 3900 50  0001 C CNN
+F 3 "~" H 6850 3900 50  0001 C CNN
+	1    6850 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4050 6850 4250
+Wire Wire Line
+	6850 4250 6750 4250
+$Comp
+L synth:DG403 U?
+U 1 1 5F262D02
+P 5250 4150
+F 0 "U?" H 5250 4375 50  0000 C CNN
+F 1 "DG403" H 5250 4284 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5250 3450 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5250 4150 50  0001 C CNN
+	1    5250 4150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:DG403 U?
+U 2 1 5F26DB7C
+P 4550 4550
+F 0 "U?" H 4550 4775 50  0000 C CNN
+F 1 "DG403" H 4550 4684 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4550 3850 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 4550 4550 50  0001 C CNN
+	2    4550 4550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4250 5600 4250
+Wire Wire Line
+	5550 4350 5600 4350
+Wire Wire Line
+	5600 4350 5600 4250
+Connection ~ 5600 4250
+Wire Wire Line
+	5600 4250 5550 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5F296A1E
+P 4750 4200
+F 0 "#PWR?" H 4750 3950 50  0001 C CNN
+F 1 "GND" H 4755 4027 50  0000 C CNN
+F 2 "" H 4750 4200 50  0001 C CNN
+F 3 "" H 4750 4200 50  0001 C CNN
+	1    4750 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4200 4750 4150
+Wire Wire Line
+	4750 4150 4950 4150
+Wire Wire Line
+	4850 4750 4900 4750
+Wire Wire Line
+	4900 4750 4900 4650
+Wire Wire Line
+	4900 4350 4950 4350
+Wire Wire Line
+	4850 4650 4900 4650
+Connection ~ 4900 4650
+Wire Wire Line
+	4900 4650 4900 4350
+Text GLabel 4050 4550 0    50   Input ~ 0
+A_IN
+Wire Wire Line
+	4050 4550 4250 4550
+Text GLabel 4050 4750 0    50   Input ~ 0
+A_S
+Wire Wire Line
+	4050 4750 4250 4750
+$Comp
+L Amplifier_Operational:TL074 U?
+U 5 1 5F2A4C99
+P 9750 1400
+F 0 "U?" H 9708 1446 50  0000 L CNN
+F 1 "TL074" H 9708 1355 50  0000 L CNN
+F 2 "" H 9700 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9800 1600 50  0001 C CNN
+	5    9750 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U?
+U 1 1 5F2A7D9B
+P 8100 4450
+F 0 "U?" H 8100 4083 50  0000 C CNN
+F 1 "TL074" H 8100 4174 50  0000 C CNN
+F 2 "" H 8050 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8150 4650 50  0001 C CNN
+	1    8100 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U?
+U 2 1 5F2AA849
+P 8100 3800
+F 0 "U?" H 8100 3433 50  0000 C CNN
+F 1 "TL074" H 8100 3524 50  0000 C CNN
+F 2 "" H 8050 3900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8150 4000 50  0001 C CNN
+	2    8100 3800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7800 4350 7150 4350
+Connection ~ 7150 4350
+Wire Wire Line
+	7800 3700 7700 3700
+Wire Wire Line
+	7700 3700 7700 3400
+Wire Wire Line
+	7700 3400 8600 3400
+Wire Wire Line
+	8600 3400 8600 3800
+Text GLabel 8750 3800 2    50   Input ~ 0
+A_OUT
+Wire Wire Line
+	8400 3800 8600 3800
+Connection ~ 8600 3800
+Wire Wire Line
+	8600 3800 8750 3800
+$Comp
+L Device:R R?
+U 1 1 5F2B694B
+P 7550 5000
+F 0 "R?" H 7620 5046 50  0000 L CNN
+F 1 "1K" H 7620 4955 50  0000 L CNN
+F 2 "" V 7480 5000 50  0001 C CNN
+F 3 "~" H 7550 5000 50  0001 C CNN
+	1    7550 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F2B724E
+P 7550 5450
+F 0 "R?" H 7620 5496 50  0000 L CNN
+F 1 "100K" H 7620 5405 50  0000 L CNN
+F 2 "" V 7480 5450 50  0001 C CNN
+F 3 "~" H 7550 5450 50  0001 C CNN
+	1    7550 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5300 7550 5250
+Wire Wire Line
+	7550 5250 7750 5250
+Wire Wire Line
+	7750 5250 7750 4550
+Wire Wire Line
+	7750 4550 7800 4550
+Connection ~ 7550 5250
+Wire Wire Line
+	7550 5250 7550 5150
+$Comp
+L power:GND #PWR?
+U 1 1 5F2B925B
+P 7550 5700
+F 0 "#PWR?" H 7550 5450 50  0001 C CNN
+F 1 "GND" H 7555 5527 50  0000 C CNN
+F 2 "" H 7550 5700 50  0001 C CNN
+F 3 "" H 7550 5700 50  0001 C CNN
+	1    7550 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5700 7550 5600
+Text GLabel 7450 4800 0    50   Input ~ 0
+A_IN
+Wire Wire Line
+	7450 4800 7550 4800
+Wire Wire Line
+	7550 4800 7550 4850
+Text Notes 7850 5150 0    50   ~ 0
+99% VIN comparator
+Text Notes 7100 4900 2    50   ~ 0
+non-inverting amp sets the output voltage to\nthe reference but rate-limited by IABC
+Wire Wire Line
+	7800 3900 7150 3900
+Wire Wire Line
+	7150 3900 7150 4350
+$Comp
+L synth:DG403 U?
+U 1 1 5F2C380E
+P 6450 3000
+F 0 "U?" H 6450 3225 50  0000 C CNN
+F 1 "DG403" H 6450 3134 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 6450 2300 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 6450 3000 50  0001 C CNN
+	1    6450 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:DG403 U?
+U 2 1 5F2D43FE
+P 5650 3100
+F 0 "U?" H 5650 3325 50  0000 C CNN
+F 1 "DG403" H 5650 3234 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5650 2400 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5650 3100 50  0001 C CNN
+	2    5650 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L synth:DG403 U?
+U 3 1 5F2DE506
+P 10300 1300
+F 0 "U?" H 10250 1300 50  0000 L CNN
+F 1 "DG403" H 10200 1150 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10300 600 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 10300 1300 50  0001 C CNN
+	3    10300 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3750 6850 3200
+Wire Wire Line
+	6850 3100 6750 3100
+Wire Wire Line
+	6750 3200 6850 3200
+Connection ~ 6850 3200
+Wire Wire Line
+	6850 3200 6850 3100
+Wire Wire Line
+	5950 3200 6050 3200
+Wire Wire Line
+	5950 3300 6050 3300
+Wire Wire Line
+	6050 3300 6050 3200
+Connection ~ 6050 3200
+Wire Wire Line
+	6050 3200 6150 3200
+$Comp
+L Device:R_POT RV?
+U 1 1 5F30836C
+P 6050 2550
+F 0 "RV?" H 5981 2596 50  0000 R CNN
+F 1 "R_POT" H 5981 2505 50  0000 R CNN
+F 2 "" H 6050 2550 50  0001 C CNN
+F 3 "~" H 6050 2550 50  0001 C CNN
+	1    6050 2550
+	1    0    0    -1  
+$EndComp
+Text Notes 6750 4100 1    50   ~ 0
+Limit IABC to 1mA
+$Comp
+L power:+12V #PWR?
+U 1 1 5F30B23E
+P 6050 2200
+F 0 "#PWR?" H 6050 2050 50  0001 C CNN
+F 1 "+12V" H 6065 2373 50  0000 C CNN
+F 2 "" H 6050 2200 50  0001 C CNN
+F 3 "" H 6050 2200 50  0001 C CNN
+	1    6050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2550 6300 2550
+Wire Wire Line
+	6300 2550 6300 2300
+Wire Wire Line
+	6300 2300 6050 2300
+Wire Wire Line
+	6050 2300 6050 2400
+Wire Wire Line
+	6050 2300 6050 2200
+Connection ~ 6050 2300
+Wire Wire Line
+	6150 3000 6050 3000
+Wire Wire Line
+	6050 3000 6050 2700
+$Comp
+L Device:R_POT RV?
+U 1 1 5F312304
+P 5200 2550
+F 0 "RV?" H 5131 2596 50  0000 R CNN
+F 1 "R_POT" H 5131 2505 50  0000 R CNN
+F 2 "" H 5200 2550 50  0001 C CNN
+F 3 "~" H 5200 2550 50  0001 C CNN
+	1    5200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F31230E
+P 5200 2200
+F 0 "#PWR?" H 5200 2050 50  0001 C CNN
+F 1 "+12V" H 5215 2373 50  0000 C CNN
+F 2 "" H 5200 2200 50  0001 C CNN
+F 3 "" H 5200 2200 50  0001 C CNN
+	1    5200 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2550 5450 2550
+Wire Wire Line
+	5450 2550 5450 2300
+Wire Wire Line
+	5450 2300 5200 2300
+Wire Wire Line
+	5200 2300 5200 2400
+Wire Wire Line
+	5200 2300 5200 2200
+Connection ~ 5200 2300
+$Comp
+L Device:R_POT RV?
+U 1 1 5F3164E9
+P 4600 2550
+F 0 "RV?" H 4531 2596 50  0000 R CNN
+F 1 "R_POT" H 4531 2505 50  0000 R CNN
+F 2 "" H 4600 2550 50  0001 C CNN
+F 3 "~" H 4600 2550 50  0001 C CNN
+	1    4600 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F3164F3
+P 4600 2200
+F 0 "#PWR?" H 4600 2050 50  0001 C CNN
+F 1 "+12V" H 4615 2373 50  0000 C CNN
+F 2 "" H 4600 2200 50  0001 C CNN
+F 3 "" H 4600 2200 50  0001 C CNN
+	1    4600 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2550 4850 2550
+Wire Wire Line
+	4850 2550 4850 2300
+Wire Wire Line
+	4850 2300 4600 2300
+Wire Wire Line
+	4600 2300 4600 2400
+Wire Wire Line
+	4600 2300 4600 2200
+Connection ~ 4600 2300
+Wire Wire Line
+	5350 3100 5200 3100
+Wire Wire Line
+	5200 3100 5200 2700
+Wire Wire Line
+	5350 3300 4600 3300
+Wire Wire Line
+	4600 3300 4600 2700
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F32C90A
+P 1000 1100
+F 0 "J?" H 1032 1525 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1032 1434 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1000 1300 50  0001 C CNN
+F 3 "~" H 1000 1300 50  0001 C CNN
+	1    1000 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 1100 2    50   Input ~ 0
+A_IN
+Wire Wire Line
+	1600 1100 1200 1100
+$Comp
+L power:GND #PWR?
+U 1 1 5F337BC4
+P 1000 1650
+F 0 "#PWR?" H 1000 1400 50  0001 C CNN
+F 1 "GND" H 1005 1477 50  0000 C CNN
+F 2 "" H 1000 1650 50  0001 C CNN
+F 3 "" H 1000 1650 50  0001 C CNN
+	1    1000 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1650 1000 1450
+Wire Wire Line
+	1200 900  1300 900 
+Wire Wire Line
+	1300 900  1300 1000
+Wire Wire Line
+	1300 1450 1000 1450
+Connection ~ 1000 1450
+Wire Wire Line
+	1000 1450 1000 1400
+Wire Wire Line
+	1200 1000 1300 1000
+Connection ~ 1300 1000
+Wire Wire Line
+	1300 1000 1300 1450
+Text GLabel 1600 1200 2    50   Input ~ 0
+A_IN_DEFAULT
+Wire Wire Line
+	1600 1200 1200 1200
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F3462C6
+P 950 2500
+F 0 "J?" H 982 2925 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 982 2834 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 950 2700 50  0001 C CNN
+F 3 "~" H 950 2700 50  0001 C CNN
+	1    950  2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2500 1150 2500
+$Comp
+L power:GND #PWR?
+U 1 1 5F3462D1
+P 950 3050
+F 0 "#PWR?" H 950 2800 50  0001 C CNN
+F 1 "GND" H 955 2877 50  0000 C CNN
+F 2 "" H 950 3050 50  0001 C CNN
+F 3 "" H 950 3050 50  0001 C CNN
+	1    950  3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  3050 950  2850
+Wire Wire Line
+	1150 2300 1250 2300
+Wire Wire Line
+	1250 2300 1250 2400
+Wire Wire Line
+	1250 2850 950  2850
+Connection ~ 950  2850
+Wire Wire Line
+	950  2850 950  2800
+Wire Wire Line
+	1150 2400 1250 2400
+Connection ~ 1250 2400
+Wire Wire Line
+	1250 2400 1250 2600
+Wire Wire Line
+	1150 2600 1250 2600
+Connection ~ 1250 2600
+Wire Wire Line
+	1250 2600 1250 2850
+Text GLabel 1550 2500 2    50   Input ~ 0
+A_GATE
+$Comp
+L synth:AudioJack2_Ground_Switch J?
+U 1 1 5F354B6F
+P 1800 3950
+F 0 "J?" H 1832 4375 50  0000 C CNN
+F 1 "AudioJack2_Ground_Switch" H 1832 4284 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1800 4150 50  0001 C CNN
+F 3 "~" H 1800 4150 50  0001 C CNN
+	1    1800 3950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3950 1600 3950
+$Comp
+L power:GND #PWR?
+U 1 1 5F354B7A
+P 1800 4500
+F 0 "#PWR?" H 1800 4250 50  0001 C CNN
+F 1 "GND" H 1805 4327 50  0000 C CNN
+F 2 "" H 1800 4500 50  0001 C CNN
+F 3 "" H 1800 4500 50  0001 C CNN
+	1    1800 4500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4500 1800 4300
+Wire Wire Line
+	1600 3750 1500 3750
+Wire Wire Line
+	1500 3750 1500 3850
+Wire Wire Line
+	1500 4300 1800 4300
+Connection ~ 1800 4300
+Wire Wire Line
+	1800 4300 1800 4250
+Wire Wire Line
+	1600 3850 1500 3850
+Connection ~ 1500 3850
+Wire Wire Line
+	1500 3850 1500 4300
+Text GLabel 1200 3950 0    50   Input ~ 0
+A_OUT
+Text GLabel 1200 4050 0    50   Input ~ 0
+A_OUT_DEFAULT
+Wire Wire Line
+	1200 4050 1600 4050
+$Comp
+L synth:EURORACK_CONN_16 J?
+U 1 1 5F388E7E
+P 8550 1300
+F 0 "J?" H 8650 1350 50  0000 L CNN
+F 1 "EURORACK_CONN_16" H 8050 1250 50  0000 L CNN
+F 2 "synth:EURORACK_16_IDC" H 9000 600 50  0001 C CNN
+F 3 "https://division-6.com/learn/eurorack-power/" V 8600 1350 50  0001 C CNN
+	1    8550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1650 8500 1800
+Wire Wire Line
+	8500 900  8500 1050
+$Comp
+L power:+5V #PWR?
+U 1 1 5F3A44A9
+P 10200 750
+F 0 "#PWR?" H 10200 600 50  0001 C CNN
+F 1 "+5V" H 10215 923 50  0000 C CNN
+F 2 "" H 10200 750 50  0001 C CNN
+F 3 "" H 10200 750 50  0001 C CNN
+	1    10200 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 900  8250 1050
+Wire Wire Line
+	8200 1650 8200 1800
+$Comp
+L power:-12V #PWR?
+U 1 1 5F3AD746
+P 10400 1950
+F 0 "#PWR?" H 10400 2050 50  0001 C CNN
+F 1 "-12V" H 10415 2123 50  0000 C CNN
+F 2 "" H 10400 1950 50  0001 C CNN
+F 3 "" H 10400 1950 50  0001 C CNN
+	1    10400 1950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9650 1850 9650 1700
+$Comp
+L power:+12V #PWR?
+U 1 1 5F3B2117
+P 10400 750
+F 0 "#PWR?" H 10400 600 50  0001 C CNN
+F 1 "+12V" H 10415 923 50  0000 C CNN
+F 2 "" H 10400 750 50  0001 C CNN
+F 3 "" H 10400 750 50  0001 C CNN
+	1    10400 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 950  9650 1100
+$Comp
+L power:GND #PWR?
+U 1 1 5F3B6FAB
+P 10200 1950
+F 0 "#PWR?" H 10200 1700 50  0001 C CNN
+F 1 "GND" H 10205 1777 50  0000 C CNN
+F 2 "" H 10200 1950 50  0001 C CNN
+F 3 "" H 10200 1950 50  0001 C CNN
+	1    10200 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 750  10200 850 
+Wire Wire Line
+	10400 750  10400 850 
+Wire Wire Line
+	10200 1850 10200 1950
+Wire Wire Line
+	10400 1850 10400 1950
+$Comp
+L power:-12V #PWR?
+U 1 1 5F3CA891
+P 9650 1850
+F 0 "#PWR?" H 9650 1950 50  0001 C CNN
+F 1 "-12V" H 9665 2023 50  0000 C CNN
+F 2 "" H 9650 1850 50  0001 C CNN
+F 3 "" H 9650 1850 50  0001 C CNN
+	1    9650 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F3CBE19
+P 9650 950
+F 0 "#PWR?" H 9650 800 50  0001 C CNN
+F 1 "+12V" H 9665 1123 50  0000 C CNN
+F 2 "" H 9650 950 50  0001 C CNN
+F 3 "" H 9650 950 50  0001 C CNN
+	1    9650 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L synth:DG403 U?
+U 3 1 5F3D18FB
+P 10900 1300
+F 0 "U?" H 10850 1300 50  0000 L CNN
+F 1 "DG403" H 10800 1150 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10900 600 50  0001 C CNN
+F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 10900 1300 50  0001 C CNN
+	3    10900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F3D1905
+P 10800 750
+F 0 "#PWR?" H 10800 600 50  0001 C CNN
+F 1 "+5V" H 10815 923 50  0000 C CNN
+F 2 "" H 10800 750 50  0001 C CNN
+F 3 "" H 10800 750 50  0001 C CNN
+	1    10800 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5F3D190F
+P 11000 1950
+F 0 "#PWR?" H 11000 2050 50  0001 C CNN
+F 1 "-12V" H 11015 2123 50  0000 C CNN
+F 2 "" H 11000 1950 50  0001 C CNN
+F 3 "" H 11000 1950 50  0001 C CNN
+	1    11000 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5F3D1919
+P 11000 750
+F 0 "#PWR?" H 11000 600 50  0001 C CNN
+F 1 "+12V" H 11015 923 50  0000 C CNN
+F 2 "" H 11000 750 50  0001 C CNN
+F 3 "" H 11000 750 50  0001 C CNN
+	1    11000 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F3D1923
+P 10800 1950
+F 0 "#PWR?" H 10800 1700 50  0001 C CNN
+F 1 "GND" H 10805 1777 50  0000 C CNN
+F 2 "" H 10800 1950 50  0001 C CNN
+F 3 "" H 10800 1950 50  0001 C CNN
+	1    10800 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 750  10800 850 
+Wire Wire Line
+	11000 750  11000 850 
+Wire Wire Line
+	10800 1850 10800 1950
+Wire Wire Line
+	11000 1850 11000 1950
+$EndSCHEMATC
