@@ -302,8 +302,8 @@ $Comp
 L Amplifier_Operational:TL072 U4
 U 1 1 5ECA9F1C
 P 4900 3350
-F 0 "U4" H 4900 2983 50  0000 C CNN
-F 1 "TL072" H 4900 3074 50  0000 C CNN
+F 0 "U4" H 4950 3150 50  0000 C CNN
+F 1 "TL072" H 4850 3350 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 4900 3350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 3350 50  0001 C CNN
 	1    4900 3350
@@ -313,12 +313,12 @@ $Comp
 L Amplifier_Operational:TL072 U4
 U 2 1 5ECBB9AE
 P 4900 4750
-F 0 "U4" H 4900 5117 50  0000 C CNN
-F 1 "TL072" H 4900 5026 50  0000 C CNN
+F 0 "U4" H 4950 4500 50  0000 C CNN
+F 1 "TL072" H 4850 4750 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 4900 4750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 4750 50  0001 C CNN
 	2    4900 4750
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U4
