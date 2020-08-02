@@ -23,9 +23,6 @@
 - "fully-modular with defaults"
   - semi-modular-style sensible default paths connected under the hood
   - all defaults overridden with patch cables
-  - "cascading controls"
-    - unless overridden, CVs propagate from previous channel, allowing control of
-      all oscillators simultaneously, which is desired when using multiple voices
   - specifically targeting support for several modes:
     - 4 totally separate, independent synths, each controlled with constant VCO or sequencer
     - 1-voice, MIDI-,sequencer-, or constant-controlled synth with 4 oscillators, e.g. harmonizing intervals, mixing shapes/timbres

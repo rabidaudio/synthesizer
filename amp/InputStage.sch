@@ -38,13 +38,7 @@ F 3 "" H 3900 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3900 900  3850 900 
-Wire Wire Line
 	3850 800  3900 800 
-Wire Wire Line
-	3900 800  3900 900 
-Wire Wire Line
-	3850 1000 4250 1000
 $Comp
 L power:GND #PWR04
 U 1 1 5EB3C19E
@@ -181,39 +175,25 @@ F 3 "" H 3900 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3900 1800 3850 1800
-Wire Wire Line
 	3850 1700 3900 1700
-Wire Wire Line
-	3900 1700 3900 1800
-Wire Wire Line
-	3850 1900 4250 1900
 Text Notes 1850 650  2    50   ~ 0
 0-10Vpp Signal
-Text Notes 6050 800  0    50   ~ 0
-If ACV isn’t supplied,\nDefault CV = 5V
 Wire Wire Line
 	3850 2000 4250 2000
 Wire Wire Line
 	3900 2300 3900 2250
-Connection ~ 3900 1800
 Wire Wire Line
 	3650 2200 3650 2250
 Wire Wire Line
 	3650 2250 3900 2250
 Connection ~ 3900 2250
 Wire Wire Line
-	3900 2250 3900 1800
-Wire Wire Line
 	3900 1400 3900 1350
-Connection ~ 3900 900 
 Wire Wire Line
 	3650 1300 3650 1350
 Wire Wire Line
 	3650 1350 3900 1350
 Connection ~ 3900 1350
-Wire Wire Line
-	3900 1350 3900 900 
 Text GLabel 2000 1850 2    50   Input ~ 0
 B_IN
 Text GLabel 2000 1000 2    50   Input ~ 0
@@ -244,8 +224,6 @@ F 3 "~" H 1400 2850 50  0001 C CNN
 	1    1400 2650
 	1    0    0    -1  
 $EndComp
-Text Notes 6000 1950 0    50   ~ 0
-For each subsequent CV, if not supplied,\nuse previous CV
 $Comp
 L power:+12VA #PWR?
 U 1 1 5EBFE06E
@@ -285,14 +263,10 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 10050 1175 50  0001 C CNN
 	5    10350 1150
 	1    0    0    -1  
 $EndComp
-Text GLabel 4250 2000 2    60   Input ~ 0
-B_CV_DEFAULT
 Text GLabel 4250 1100 2    60   Input ~ 0
 A_CV_DEFAULT
 Wire Wire Line
 	4250 1100 3850 1100
-Text GLabel 6950 1300 2    60   Input ~ 0
-A_CV_DEFAULT
 Wire Wire Line
 	1700 900  1700 1300
 Text GLabel 2000 1100 2    50   Input ~ 0
@@ -318,123 +292,71 @@ Wire Wire Line
 Wire Wire Line
 	2000 1950 1600 1950
 $Comp
-L power:+5V #PWR013
-U 1 1 5EF6DADF
-P 6000 1250
-F 0 "#PWR013" H 6000 1100 50  0001 C CNN
-F 1 "+5V" H 6015 1423 50  0000 C CNN
-F 2 "" H 6000 1250 50  0001 C CNN
-F 3 "" H 6000 1250 50  0001 C CNN
-	1    6000 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 1 1 5EF7503E
-P 6500 1300
-F 0 "U1" H 6600 1150 50  0000 C CNN
-F 1 "TL074" H 6450 1300 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6450 1400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6550 1500 50  0001 C CNN
-	1    6500 1300
-	1    0    0    1   
-$EndComp
-Text Notes 3500 650  0    50   ~ 0
-0-5V CV
-Wire Wire Line
-	6950 1300 6900 1300
-Text GLabel 4250 2800 2    60   Input ~ 0
-C_CV
-$Comp
 L Connector:AudioJack2_Ground_Switch J9
 U 1 1 5EFA08FA
-P 3650 2800
-F 0 "J9" H 3800 2600 50  0000 C CNN
-F 1 "CCV_Jack" V 3400 2750 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 3650 3000 50  0001 C CNN
-F 3 "~" H 3650 3000 50  0001 C CNN
-	1    3650 2800
+P 3700 3150
+F 0 "J9" H 3850 2950 50  0000 C CNN
+F 1 "CCV_Jack" V 3450 3100 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 3700 3350 50  0001 C CNN
+F 3 "~" H 3700 3350 50  0001 C CNN
+	1    3700 3150
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 5EFA0904
-P 3900 3200
-F 0 "#PWR011" H 3900 2950 50  0001 C CNN
-F 1 "GND" H 3900 3050 50  0000 C CNN
-F 2 "" H 3900 3200 50  0001 C CNN
-F 3 "" H 3900 3200 50  0001 C CNN
-	1    3900 3200
+P 3950 3550
+F 0 "#PWR011" H 3950 3300 50  0001 C CNN
+F 1 "GND" H 3950 3400 50  0000 C CNN
+F 2 "" H 3950 3550 50  0001 C CNN
+F 3 "" H 3950 3550 50  0001 C CNN
+	1    3950 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3900 2700 3850 2700
-Wire Wire Line
-	3850 2600 3900 2600
-Wire Wire Line
-	3900 2600 3900 2700
-Wire Wire Line
-	3850 2800 4250 2800
-Text GLabel 4250 3700 2    60   Input ~ 0
-D_CV
+	3900 2950 3950 2950
 $Comp
 L Connector:AudioJack2_Ground_Switch J10
 U 1 1 5EFA0913
-P 3650 3700
-F 0 "J10" H 3800 3450 50  0000 C CNN
-F 1 "DCV_Jack" V 3400 3650 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 3650 3900 50  0001 C CNN
-F 3 "~" H 3650 3900 50  0001 C CNN
-	1    3650 3700
+P 3700 4350
+F 0 "J10" H 3850 4100 50  0000 C CNN
+F 1 "DCV_Jack" V 3450 4300 50  0000 C CNN
+F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 3700 4550 50  0001 C CNN
+F 3 "~" H 3700 4550 50  0001 C CNN
+	1    3700 4350
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5EFA091D
-P 3900 4100
-F 0 "#PWR012" H 3900 3850 50  0001 C CNN
-F 1 "GND" H 3900 3950 50  0000 C CNN
-F 2 "" H 3900 4100 50  0001 C CNN
-F 3 "" H 3900 4100 50  0001 C CNN
-	1    3900 4100
+P 3950 4750
+F 0 "#PWR012" H 3950 4500 50  0001 C CNN
+F 1 "GND" H 3950 4600 50  0000 C CNN
+F 2 "" H 3950 4750 50  0001 C CNN
+F 3 "" H 3950 4750 50  0001 C CNN
+	1    3950 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3900 3600 3850 3600
+	3900 4150 3950 4150
 Wire Wire Line
-	3850 3500 3900 3500
+	3900 4450 4300 4450
 Wire Wire Line
-	3900 3500 3900 3600
+	3950 4750 3950 4700
 Wire Wire Line
-	3850 3700 4250 3700
+	3700 4650 3700 4700
 Wire Wire Line
-	3850 3800 4250 3800
+	3700 4700 3950 4700
+Connection ~ 3950 4700
 Wire Wire Line
-	3900 4100 3900 4050
-Connection ~ 3900 3600
+	3950 3550 3950 3500
 Wire Wire Line
-	3650 4000 3650 4050
+	3700 3450 3700 3500
 Wire Wire Line
-	3650 4050 3900 4050
-Connection ~ 3900 4050
+	3700 3500 3950 3500
+Connection ~ 3950 3500
 Wire Wire Line
-	3900 4050 3900 3600
-Wire Wire Line
-	3900 3200 3900 3150
-Connection ~ 3900 2700
-Wire Wire Line
-	3650 3100 3650 3150
-Wire Wire Line
-	3650 3150 3900 3150
-Connection ~ 3900 3150
-Wire Wire Line
-	3900 3150 3900 2700
-Text GLabel 4250 3800 2    60   Input ~ 0
-D_CV_DEFAULT
-Text GLabel 4250 2900 2    60   Input ~ 0
-C_CV_DEFAULT
-Wire Wire Line
-	4250 2900 3850 2900
+	4300 3250 3900 3250
 $Comp
 L Connector:AudioJack2_Ground_Switch J2
 U 1 1 5EB3C1CC
@@ -446,150 +368,16 @@ F 3 "~" H 1400 2050 50  0001 C CNN
 	1    1400 1850
 	1    0    0    -1  
 $EndComp
-Text GLabel 6050 2500 0    60   Input ~ 0
-A_CV
-$Comp
-L Amplifier_Operational:TL074 U1
-U 5 1 5EFB9B95
-P 9900 1150
-F 0 "U1" H 9858 1196 50  0000 L CNN
-F 1 "TL074" H 9858 1105 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9850 1250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 9950 1350 50  0001 C CNN
-	5    9900 1150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 1200 6150 1200
-Wire Wire Line
-	6150 1200 6150 1000
-Wire Wire Line
-	6150 1000 6900 1000
-Wire Wire Line
-	6900 1000 6900 1300
-Connection ~ 6900 1300
-Wire Wire Line
-	6900 1300 6800 1300
-Wire Wire Line
-	6000 1250 6000 1400
-Wire Wire Line
-	6000 1400 6200 1400
-Wire Wire Line
-	6050 2500 6250 2500
-Wire Wire Line
-	6250 2300 6100 2300
-Wire Wire Line
-	6100 2300 6100 2050
-Wire Wire Line
-	6100 2050 7000 2050
-Wire Wire Line
-	7000 2050 7000 2400
-Wire Wire Line
-	7000 2400 6850 2400
-Text GLabel 7100 2400 2    60   Input ~ 0
-B_CV_DEFAULT
-Wire Wire Line
-	7100 2400 7000 2400
-Connection ~ 7000 2400
-Text GLabel 6050 3150 0    60   Input ~ 0
-B_CV
-Wire Wire Line
-	6050 3150 6250 3150
-Wire Wire Line
-	6250 2950 6100 2950
-Wire Wire Line
-	6100 2950 6100 2700
-Wire Wire Line
-	6100 2700 7000 2700
-Wire Wire Line
-	7000 2700 7000 3050
-Wire Wire Line
-	7000 3050 6850 3050
-Text GLabel 7100 3050 2    60   Input ~ 0
-C_CV_DEFAULT
-Wire Wire Line
-	7100 3050 7000 3050
-Connection ~ 7000 3050
-Text GLabel 6050 3800 0    60   Input ~ 0
+Text GLabel 4300 3150 2    60   Input ~ 0
 C_CV
-Wire Wire Line
-	6050 3800 6250 3800
-Wire Wire Line
-	6250 3600 6100 3600
-Wire Wire Line
-	6100 3600 6100 3350
-Wire Wire Line
-	6100 3350 7000 3350
-Wire Wire Line
-	7000 3350 7000 3700
-Wire Wire Line
-	7000 3700 6850 3700
-Text GLabel 7100 3700 2    60   Input ~ 0
+Text GLabel 4300 3250 2    60   Input ~ 0
+C_CV_DEFAULT
+Text GLabel 4300 4350 2    60   Input ~ 0
+D_CV
+Text GLabel 4300 4450 2    60   Input ~ 0
 D_CV_DEFAULT
 Wire Wire Line
-	7100 3700 7000 3700
-Connection ~ 7000 3700
-$Comp
-L power:+12VA #PWR?
-U 1 1 5F070289
-P 9800 700
-AR Path="/5F070289" Ref="#PWR?"  Part="1" 
-AR Path="/5EB23D44/5F070289" Ref="#PWR014"  Part="1" 
-F 0 "#PWR014" H 9800 550 50  0001 C CNN
-F 1 "+12VA" H 9800 840 50  0000 C CNN
-F 2 "" H 9800 700 50  0001 C CNN
-F 3 "" H 9800 700 50  0001 C CNN
-	1    9800 700 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-12VA #PWR?
-U 1 1 5F070973
-P 9800 1650
-AR Path="/5F070973" Ref="#PWR?"  Part="1" 
-AR Path="/5EB23D44/5F070973" Ref="#PWR015"  Part="1" 
-F 0 "#PWR015" H 9800 1500 50  0001 C CNN
-F 1 "-12VA" H 9800 1790 50  0000 C CNN
-F 2 "" H 9800 1650 50  0001 C CNN
-F 3 "" H 9800 1650 50  0001 C CNN
-	1    9800 1650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
 	10250 650  10250 700 
-$Comp
-L Amplifier_Operational:TL074 U1
-U 2 1 5F0F5B47
-P 6550 2400
-F 0 "U1" H 6650 2250 50  0000 C CNN
-F 1 "TL074" H 6500 2400 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6500 2500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 2600 50  0001 C CNN
-	2    6550 2400
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 3 1 5F0F793C
-P 6550 3050
-F 0 "U1" H 6650 2900 50  0000 C CNN
-F 1 "TL074" H 6500 3050 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6500 3150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3250 50  0001 C CNN
-	3    6550 3050
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL074 U1
-U 4 1 5F0F8F3C
-P 6550 3700
-F 0 "U1" H 6650 3550 50  0000 C CNN
-F 1 "TL074" H 6500 3700 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6500 3800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6600 3900 50  0001 C CNN
-	4    6550 3700
-	1    0    0    1   
-$EndComp
 $Comp
 L Amplifier_Operational:LM13700 U?
 U 5 1 5F12D343
@@ -619,126 +407,147 @@ Wire Wire Line
 Connection ~ 10250 1550
 Wire Wire Line
 	10250 1550 10250 1450
-Text Notes 8900 3900 0    50   ~ 0
+Text Notes 8800 2200 0    50   ~ 0
 Q Current requirements:\n+12V supply: 4*(2) + 2*20 + (4*4+2+2)*2.5/2 = 73mA\n-12V supply: 4*(.05+.12+1) + (4*4+2+2)*2.5/2 = 30mA\n5V supply: 0
-Text Notes 1400 4650 0    50   ~ 0
+Text Notes 7550 2850 0    50   ~ 0
 TODO: should we add amp outputs?\nIf so, we should also have output amplifier inputs for return signal
 $Comp
 L Connector_Generic:Conn_02x04_Counter_Clockwise J5
 U 1 1 5F189CDE
-P 1750 5350
-F 0 "J5" H 1800 5667 50  0000 C CNN
-F 1 "Conn_02x04_Counter_Clockwise" H 1800 5576 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1750 5350 50  0001 C CNN
-F 3 "~" H 1750 5350 50  0001 C CNN
-	1    1750 5350
+P 1900 5700
+F 0 "J5" H 1950 6017 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 1950 5926 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1900 5700 50  0001 C CNN
+F 3 "~" H 1900 5700 50  0001 C CNN
+	1    1900 5700
 	1    0    0    -1  
 $EndComp
-Text GLabel 1400 5250 0    50   Input ~ 0
+Text GLabel 1550 5600 0    50   Input ~ 0
 A_IN_DEFAULT
-Text GLabel 1400 5350 0    50   Input ~ 0
+Text GLabel 1550 5700 0    50   Input ~ 0
 B_IN_DEFAULT
-Text GLabel 1400 5450 0    50   Input ~ 0
+Text GLabel 1550 5800 0    50   Input ~ 0
 C_IN_DEFAULT
-Text GLabel 1400 5550 0    50   Input ~ 0
+Text GLabel 1550 5900 0    50   Input ~ 0
 D_IN_DEFAULT
 $Comp
 L power:+12VA #PWR?
 U 1 1 5F1AC43F
-P 2900 6250
+P 9700 700
 AR Path="/5F1AC43F" Ref="#PWR?"  Part="1" 
 AR Path="/5EB23D44/5F1AC43F" Ref="#PWR07"  Part="1" 
-F 0 "#PWR07" H 2900 6100 50  0001 C CNN
-F 1 "+12VA" H 2900 6390 50  0000 C CNN
-F 2 "" H 2900 6250 50  0001 C CNN
-F 3 "" H 2900 6250 50  0001 C CNN
-	1    2900 6250
+F 0 "#PWR07" H 9700 550 50  0001 C CNN
+F 1 "+12VA" H 9700 840 50  0000 C CNN
+F 2 "" H 9700 700 50  0001 C CNN
+F 3 "" H 9700 700 50  0001 C CNN
+	1    9700 700 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-12VA #PWR?
 U 1 1 5F1AD093
-P 2900 7150
+P 9700 1550
 AR Path="/5F1AD093" Ref="#PWR?"  Part="1" 
 AR Path="/5EB23D44/5F1AD093" Ref="#PWR08"  Part="1" 
-F 0 "#PWR08" H 2900 7000 50  0001 C CNN
-F 1 "-12VA" H 2900 7290 50  0000 C CNN
-F 2 "" H 2900 7150 50  0001 C CNN
-F 3 "" H 2900 7150 50  0001 C CNN
-	1    2900 7150
+F 0 "#PWR08" H 9700 1400 50  0001 C CNN
+F 1 "-12VA" H 9700 1690 50  0000 C CNN
+F 2 "" H 9700 1550 50  0001 C CNN
+F 3 "" H 9700 1550 50  0001 C CNN
+	1    9700 1550
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5F1AD919
-P 2600 7150
-F 0 "#PWR05" H 2600 6900 50  0001 C CNN
-F 1 "GND" H 2600 7000 50  0000 C CNN
-F 2 "" H 2600 7150 50  0001 C CNN
-F 3 "" H 2600 7150 50  0001 C CNN
-	1    2600 7150
+P 9300 1250
+F 0 "#PWR05" H 9300 1000 50  0001 C CNN
+F 1 "GND" H 9300 1100 50  0000 C CNN
+F 2 "" H 9300 1250 50  0001 C CNN
+F 3 "" H 9300 1250 50  0001 C CNN
+	1    9300 1250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1550 5900 1700 5900
+Wire Wire Line
+	1700 5800 1550 5800
+Wire Wire Line
+	1550 5700 1700 5700
+Wire Wire Line
+	1700 5600 1550 5600
+Text GLabel 2400 5600 2    50   Input ~ 0
+A_CV_DEFAULT
+Text GLabel 2400 5700 2    50   Input ~ 0
+B_CV_DEFAULT
+Text GLabel 2400 5800 2    50   Input ~ 0
+C_CV_DEFAULT
+Text GLabel 2400 5900 2    50   Input ~ 0
+D_CV_DEFAULT
+Wire Wire Line
+	2400 5900 2200 5900
+Wire Wire Line
+	2200 5800 2400 5800
+Wire Wire Line
+	2400 5700 2200 5700
+Wire Wire Line
+	2200 5600 2400 5600
+Text Notes 7800 3300 0    50   ~ 0
+TODO: set 0-10V range instead of 0-5V
+Wire Wire Line
+	3900 800  3900 900 
 $Comp
-L power:+5V #PWR06
-U 1 1 5F1B98F3
-P 2650 6250
-F 0 "#PWR06" H 2650 6100 50  0001 C CNN
-F 1 "+5V" H 2665 6423 50  0000 C CNN
-F 2 "" H 2650 6250 50  0001 C CNN
-F 3 "" H 2650 6250 50  0001 C CNN
-	1    2650 6250
+L synth:EURORACK_CONN_10 J?
+U 1 1 5F2B7EEB
+P 9700 1150
+F 0 "J?" H 9880 1196 50  0000 L CNN
+F 1 "EURORACK_CONN_10" H 9350 1100 50  0000 L CNN
+F 2 "synth:EURORACK_10_IDC" V 9900 600 50  0001 C CNN
+F 3 "https://division-6.com/learn/eurorack-power/" H 9600 1450 50  0001 C CNN
+	1    9700 1150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1400 5550 1550 5550
+	9700 1550 9700 1500
 Wire Wire Line
-	1550 5450 1400 5450
+	9300 1250 9300 1150
 Wire Wire Line
-	1400 5350 1550 5350
+	9300 1150 9400 1150
 Wire Wire Line
-	1550 5250 1400 5250
+	9700 700  9700 800 
 Wire Wire Line
-	2900 7150 2900 7000
+	3900 1700 3900 1800
 Wire Wire Line
-	2900 6400 2900 6250
+	3950 2950 3950 3050
 Wire Wire Line
-	2650 6250 2650 6400
+	3950 4150 3950 4250
+Text GLabel 4250 2000 2    60   Input ~ 0
+B_CV_DEFAULT
 Wire Wire Line
-	2600 7150 2600 7000
-$Comp
-L synth:EURORACK_CONN_16 J?
-U 1 1 5ECAD463
-P 2950 6650
-AR Path="/5ECAD463" Ref="J?"  Part="1" 
-AR Path="/5EB23D44/5ECAD463" Ref="J6"  Part="1" 
-F 0 "J6" H 3130 6646 50  0000 L CNN
-F 1 "EURORACK_CONN_16" H 3130 6555 50  0000 L CNN
-F 2 "synth:EURORACK_16_IDC" H 2150 6400 50  0001 C CNN
-F 3 "https://division-6.com/learn/eurorack-power/" V 3000 6700 50  0001 C CNN
-	1    2950 6650
-	1    0    0    -1  
-$EndComp
-Text GLabel 2250 5250 2    50   Input ~ 0
-A_IN_DEFAULT
-Text GLabel 2250 5350 2    50   Input ~ 0
-B_IN_DEFAULT
-Text GLabel 2250 5450 2    50   Input ~ 0
-C_IN_DEFAULT
-Text GLabel 2250 5550 2    50   Input ~ 0
-D_IN_DEFAULT
+	3900 4250 3950 4250
+Connection ~ 3950 4250
 Wire Wire Line
-	2250 5550 2050 5550
+	3950 4250 3950 4700
 Wire Wire Line
-	2050 5450 2250 5450
+	3900 3050 3950 3050
+Connection ~ 3950 3050
 Wire Wire Line
-	2250 5350 2050 5350
+	3950 3050 3950 3500
 Wire Wire Line
-	2050 5250 2250 5250
+	3850 1800 3900 1800
+Connection ~ 3900 1800
 Wire Wire Line
-	9800 1450 9800 1650
+	3900 1800 3900 2250
 Wire Wire Line
-	9800 700  9800 850 
-Text Notes 5750 1650 1    50   ~ 0
-TODO: set 5V with divider instead of digital supply
+	3850 900  3900 900 
+Connection ~ 3900 900 
+Wire Wire Line
+	3900 900  3900 1350
+Wire Wire Line
+	4300 4350 3900 4350
+Wire Wire Line
+	4300 3150 3900 3150
+Wire Wire Line
+	4250 1900 3850 1900
+Wire Wire Line
+	4250 1000 3850 1000
 $EndSCHEMATC

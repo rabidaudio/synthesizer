@@ -6,7 +6,7 @@
 
 Control Voltage 0-5V with `5V -> Gain=1`, `0V -> Gain~=0`. Can be overdriven up to `6V -> Gain=2` (actually slighly less because it will clip). Output is about 9.2 dB/V, with 0V @ -52 dB. (**TODO:** is this low enough to be inaudible? If not, might need to adjust design parameters.)
 
-Control voltage inputss are summed with a control knob, which adjusts CV between 0V and 5V. Control voltage inputs cascade from the previous input if not supplied, with the A-CV defaulting to 0V.
+Control voltage inputss are summed with a control knob, which adjusts CV between 0V and 5V.
 
 ![cv-vs-gain](plot.png)
 
