@@ -38,19 +38,57 @@
   - Lots of specialty components would be required for a native IC solution
   - Firmware code can easily provide hysteresis and arbitrary numbers of divisions, unlike CDXXXX series CMOS chips
 
+## Tools
+
+Based mostly on what I have available and have experience with.
+
+- [TL07x](reference/datasheets/tl071.pdf)
+  - Basic audio-quality op-amp
+  - single, dual, or quad
+  - note: not rail-to-rail, and asymmetrical clipping
+  - slew rate minimum 5 V/us, typical 13 V/us
+  - could be trivially substituted for any other general-purpose op-amp
+- [LM13700](reference/datasheets/lm13700.pdf)
+  - dual operational transconductance amplifier
+    - effectively an op-amp with control of the output current
+    - could also think of it as a current-controlled resistor
+    - makes voltage control easy
+  - [see detailed behavior for equations](reference/lm13700)
+  - sensitive inputs:
+    - `I_abc` is limited to 2mA
+    - differential input voltage is only linear at +/- 20mV
+      - using linearizing diodes, linear region can be extended to +/- 60mV
+    - differential input voltage is limited to 5V
+  - treat amp bias input as `V- + 1.2V` for the purpose of calculating `I_abc`
+  - 50 V/us slew rate
+- [DMMT5401](reference/datasheets/dmmt5401.pdf) (NPN) and [DMMT5551](reference/datasheets/dmmt5551.pdf) (PNP) matched pair transistors
+  - similar characteristics to 2N3904, 2N3906
+  - useful for current mirrors
+  - easier than trying to match transistors by hand
+- [DG403](reference/datasheets/dg403.pdf)
+  - dual SPDT analog switch
+  - very generous on control ranges and input limits
+  - switching time in 100ns range
+  - on resistance in the 45 ohm range
+  - preferred over CD4066
+    - CD4066 has max 20V supply differential, which makes it frustrating to use with +/-12V supply
+    - when off, it connects the pins to the minus supply voltage, which makes it impractical in many situations
+
+Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diodes.
+
 ## Modules
 
 1. [Amplifier](amp)
   - LM13700
   - matched-pair PNP exponential converter
-  - CV of 5V -> Gain=1
+  - CV of 10V -> Gain=1
   - CV of <=0V -> Gain=\~0, 6 decades below Gain=1
-  - allow overdrive to 6V
+  - allow overdrive to Gain=2
     - ideally this would begin to clip
   - mixdown
     - mono - full mix -> left and right
     - stereo split - A+C->left B+D->right
-  - Direct output jack?
+  - Direct stereo input jack
     - mix arbitrary signal with mixdown
     - e.g. for accepting signals from other synths
 2. [Oscillator](vco)
@@ -80,8 +118,8 @@
   - digital MIDI input to OSC CV
   - DAC resolution:
     - for 1 step = 1 cent on a 10V space with 1V/octave:
-      - 10V / 2^x = (1V/12/100) => log2(10/(1/12/100)) 13.55 bit minimum
-      - 16-bit DAC would be incredibly accurate, 0.18% resolution
+      - 10V / 2^x = (1V/12/100) => log2(10/(1/12/100)) = 13.55 bit minimum
+    - 16-bit DAC would be incredibly accurate, 0.18% resolution
   - up to 4 voices
   - round-robin outputs on each key press
     - use open output if available else replace oldest key pressed
@@ -95,25 +133,31 @@
       - like standard 4-voice mode, but round robin is in 2 pairs of slots instead of 4 slots
       - allows for 2-voice bass and 2-voice melody
       - on mode selection, waits for a keypress to set the note to split at
+  - portamento
+    - simpler envelope circuit could be used, but parameters need to be tuned
+    for longer times over short voltage change
   - capable to expand to 8 voices?
 4. Filter
   -  4P LP(/HP?)
+  - Cutoff frequency control has same range as oscillator
+    - 0-10V, 1V/octave, A0 to A10
   - filter we designed for class
     - standard vactrols are available on Thonk
-  - CV control of cutoff, resonance
+  - CV control of cutoff + resonance
   - Default to track cutoff with VCO-CV
+  - individual filter knobs, plus a global knob for filter sweeps
 5. [A/D/S/R envelope](adsr)
   - 4 envelopes required for 4-voice polyphony
   - wired to VCA by default
-  - could save surface area with 1 set of ADSR controls for a pair of envelopes
+  - save surface area with 1 set of ADSR controls for a pair of envelopes
   - fully modular means you could borrow one for VCF instead, or send to both VCA and VCF
 6. LFO
   - 2x is plenty I think?
   - OSC circuit, but adjusted to lower frequencies
-  - CV (+/- 5V) and digital out?
+  - bipolar (+/- 5V) and unipolar (0-10V) outputs
   - ideally multi-shape: sine,tri,squ,ramp up,ramp down
   - CV control for shape
-  - Trigger input (e.g. envelope or clock)
+  - Trigger input (e.g. MIDI gate or clock)?
 7. [Utilities](utils)
   - Buffer, Sum, Attenuate, Invert, Gate
   - Could be all-in one
@@ -123,7 +167,7 @@
     - gate digital CV in, default on
     - `(A+B)*level*gate` output
     - `-(A+B)*level*gate` output
-    - Constant CV out if A/B disconnected
+    - Constant CV out if A and B disconnected
 
 ## Future ideas
 
@@ -142,11 +186,14 @@
   - Could be externally controlled, e.g. iPad
     - save space and iterate on features
     - allow it to be used as a drum machine too
+- Need some good percussive effects
+  - 808 would be a good reference
 - White noise generator?
 - Sample+Hold?
   - combined with white noise creates RNG
   - alternatively sequencer could do RNG digitally
   - random is a lot more interesting if it can quantize
+    - quantization is a lot cheaper in digital
   - S+H has little use to me outside of random
 - Delay, overdrive, etc. are gimmicky and not useful, can be done via effects pedals
 
