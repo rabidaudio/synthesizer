@@ -20,7 +20,8 @@ Peak output in the linear region if `I_abc=2mA` is then
 
     sign(V_in) * .95 * I_abc = I_out
 
-The direction of the differential voltage sets the direction of `I_out`. The magnitude of `I_out` is about 90-95% of `I_abc`, the exact value varies with `I_abc`.
+The direction of the differential voltage sets the direction of `I_out`. The magnitude of `I_out` is about 91-95% of `I_abc`, the exact value varies with `I_abc`. Note that it isn't symmetrical - at 1mA it's typically 94.9% in the negative direction and 92.9% in the positive direction.
 
 ![iout_vs_iabc_1](iout_vs_iabc_1.png)
 ![iout_vs_iabc_2](iout_vs_iabc_2.png)
+![iout_vs_iabc_3](iout_vs_iabc_3.png)
