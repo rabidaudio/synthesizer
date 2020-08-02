@@ -4,9 +4,9 @@
 
 ## Description
 
-Control Voltage 0-5V with `5V -> Gain=1`, `0V -> Gain~=0`. Can be overdriven up to `6V -> Gain=2` (actually slighly less because it will clip). Output is about 9.2 dB/V, with 0V @ -52 dB. (**TODO:** is this low enough to be inaudible? If not, might need to adjust design parameters.)
+Control Voltage 0-10V with `10V -> Gain=1`, `0V -> Gain~=0`. Can be overdriven up to `11V -> Gain=2` (actually slightly less because it will clip). Output is about 9.2 dB/V, with 0V around -98 dB.
 
-Control voltage inputss are summed with a control knob, which adjusts CV between 0V and 5V.
+Control voltage inputs are summed with a control knob, which adjusts CV between 0V and 10V.
 
 ![cv-vs-gain](plot.png)
 
@@ -28,6 +28,6 @@ The LM13700 acts as a linear amplifier when `Vd <= 20mV`. It's output is a curre
 
 ## Tuning
 
-1. Set CV-IN to 5V, and RV2 to completely off. Adjust RT1 until base of Q1A is 0V (or Q1 collectors are the same).
+1. Set CV-IN to 10V, and RV2 to completely off. Adjust RT1 until base of Q1A is 0V (or Q1 collectors are the same).
 2. Set CV-IN to 0V, and RV2 to completely on. Adjust RT2 until the current through it is 0.5mA.
-3. Set CV-IN to 0V, RV2 to completely on, and IN to 5V. Adjust RT3 until OUT is 5V (an overall gain of 1).
+3. Set CV-IN to 0V, RV2 to completely on, and IN to 10V. Adjust RT3 until OUT is 10V (an overall gain of 1).

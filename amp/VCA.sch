@@ -228,7 +228,7 @@ AR Path="/5EE915A8/5EBBC2D7" Ref="R49"  Part="1"
 AR Path="/5EE915EC/5EBBC2D7" Ref="R31"  Part="1" 
 AR Path="/5EE9163B/5EBBC2D7" Ref="R40"  Part="1" 
 F 0 "R22" V 4080 3950 50  0000 C CNN
-F 1 "120K" V 4000 3950 50  0000 C CNN
+F 1 "200K" V 4000 3950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 3950 50  0001 C CNN
 F 3 "" H 4000 3950 50  0001 C CNN
 	1    4000 3950
@@ -260,7 +260,7 @@ AR Path="/5EE915A8/5EBBC2E3" Ref="R50"  Part="1"
 AR Path="/5EE915EC/5EBBC2E3" Ref="R32"  Part="1" 
 AR Path="/5EE9163B/5EBBC2E3" Ref="R41"  Part="1" 
 F 0 "R23" V 4080 4400 50  0000 C CNN
-F 1 "270K" V 4000 4400 50  0000 C CNN
+F 1 "100K" V 4000 4400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 3930 4400 50  0001 C CNN
 F 3 "" H 4000 4400 50  0001 C CNN
 	1    4000 4400
@@ -656,7 +656,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 2600 3400 2600
 Text Notes 3250 4700 0    50   ~ 0
-TUNE 1: calculated 288K\nadjust so CV=5V sets VB=0V
+TUNE 1: calculated 121K\nadjust so CV=5V sets VB=0V
 Text Notes 7650 2400 0    50   ~ 0
 TUNE 3: calculated 27K\nadjust to 5V at g=1
 $Comp
