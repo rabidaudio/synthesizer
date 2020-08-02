@@ -29,9 +29,18 @@ access to `I_abc`, but it doesn't make much sense to me to expose
 those parameters with any control other than a knob - it's not the
 kind of thing you need to modulate automatically.
 
+![range](range.png)
+
 Choice of the capacitor and the knob resistance control the time
 range. Large values for both mean a longer charge time, but a large
 capacitance effects the fastest charge time too, since `I_abc` is
 capped at 2mA.
+
+C=6.8u and a knob range of 1M gives a control range of 35ms to ~2.3s for a
+0-10V change, i.e. a slew rate between 242 V/s and 4.2 V/s.
+
+A current mirror isolates the 3 different reference voltages, without it they
+interfere with each other.
+
 
 **TODO: power usage** 

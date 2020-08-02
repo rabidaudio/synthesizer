@@ -84,17 +84,6 @@ Wire Wire Line
 Wire Wire Line
 	10400 1000 10400 850 
 $Comp
-L Amplifier_Operational:TL074 U2
-U 5 1 5F2A4C99
-P 10950 1300
-F 0 "U2" H 10908 1346 50  0000 L CNN
-F 1 "TL074" H 10908 1255 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10900 1400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 11000 1500 50  0001 C CNN
-	5    10950 1300
-	1    0    0    -1  
-$EndComp
-$Comp
 L synth:AudioJack2_Ground_Switch J4
 U 1 1 5F32C90A
 P 1000 1100
@@ -252,32 +241,6 @@ Wire Wire Line
 	9450 800  9450 950 
 Wire Wire Line
 	9400 1550 9400 1700
-Wire Wire Line
-	10850 1750 10850 1600
-Wire Wire Line
-	10850 850  10850 1000
-$Comp
-L power:-12V #PWR014
-U 1 1 5F3CA891
-P 10850 1750
-F 0 "#PWR014" H 10850 1850 50  0001 C CNN
-F 1 "-12V" H 10865 1923 50  0000 C CNN
-F 2 "" H 10850 1750 50  0001 C CNN
-F 3 "" H 10850 1750 50  0001 C CNN
-	1    10850 1750
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+12V #PWR013
-U 1 1 5F3CBE19
-P 10850 850
-F 0 "#PWR013" H 10850 700 50  0001 C CNN
-F 1 "+12V" H 10865 1023 50  0000 C CNN
-F 2 "" H 10850 850 50  0001 C CNN
-F 3 "" H 10850 850 50  0001 C CNN
-	1    10850 850 
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR08
 U 1 1 5F4B1D9A
