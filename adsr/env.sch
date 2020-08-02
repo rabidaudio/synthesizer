@@ -596,7 +596,7 @@ Text Notes 6700 2650 0    50   ~ 0
 output buffer, gain=2 to make up\nfor the divide down on the input
 Text Notes 1550 2450 0    50   ~ 0
 Choice of C1 and R_POT control the slew rate\nLarge values for both mean a longer charge time,\nbut a large C1 effects the fastest charge time too,\nsince IABC has a max of 2mA
-Text HLabel 4600 5900 0    50   Input ~ 0
+Text HLabel 4150 5900 0    50   Input ~ 0
 IN
 Text HLabel 4250 3200 0    50   Input ~ 0
 GATE
@@ -1139,4 +1139,20 @@ Wire Wire Line
 	9550 800  9550 1100
 Wire Wire Line
 	9550 2000 9550 1700
+$Comp
+L Device:D D?
+U 1 1 5F557E39
+P 4450 5900
+AR Path="/5F557E39" Ref="D?"  Part="1" 
+AR Path="/5F5446F0/5F557E39" Ref="D3"  Part="1" 
+AR Path="/5F5D80AF/5F557E39" Ref="D4"  Part="1" 
+F 0 "D3" V 4496 5820 50  0000 R CNN
+F 1 "D" V 4405 5820 50  0000 R CNN
+F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4450 5900 50  0001 C CNN
+F 3 "~" H 4450 5900 50  0001 C CNN
+	1    4450 5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 5900 4300 5900
 $EndSCHEMATC
