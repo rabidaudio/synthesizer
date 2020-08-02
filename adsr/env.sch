@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -15,7 +15,7 @@ Comment4 ""
 $EndDescr
 $Comp
 L Amplifier_Operational:LM13700 U1
-U 3 1 5F58503C
+U 1 1 5F58503C
 P 5600 3850
 AR Path="/5F5446F0/5F58503C" Ref="U1"  Part="1" 
 AR Path="/5F5D80AF/5F58503C" Ref="U1"  Part="3" 
@@ -23,7 +23,7 @@ F 0 "U1" H 5600 3483 50  0000 C CNN
 F 1 "LM13700" H 5600 3574 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 5300 3875 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 5300 3875 50  0001 C CNN
-	3    5600 3850
+	1    5600 3850
 	1    0    0    1   
 $EndComp
 $Comp
@@ -33,7 +33,7 @@ P 6300 4150
 AR Path="/5F585042" Ref="C?"  Part="1" 
 AR Path="/5F5446F0/5F585042" Ref="C1"  Part="1" 
 AR Path="/5F5D80AF/5F585042" Ref="C3"  Part="1" 
-F 0 "C3" H 6415 4196 50  0000 L CNN
+F 0 "C1" H 6415 4196 50  0000 L CNN
 F 1 "22u" H 6415 4105 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 6338 4000 50  0001 C CNN
 F 3 "~" H 6300 4150 50  0001 C CNN
@@ -78,7 +78,7 @@ P 6000 3400
 AR Path="/5F585057" Ref="R?"  Part="1" 
 AR Path="/5F5446F0/5F585057" Ref="R1"  Part="1" 
 AR Path="/5F5D80AF/5F585057" Ref="R7"  Part="1" 
-F 0 "R7" H 6070 3446 50  0000 L CNN
+F 0 "R1" H 6070 3446 50  0000 L CNN
 F 1 "12K" H 6070 3355 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 5930 3400 50  0001 C CNN
 F 3 "~" H 6000 3400 50  0001 C CNN
@@ -95,7 +95,7 @@ U 1 1 5F58505F
 P 4400 3650
 AR Path="/5F5446F0/5F58505F" Ref="U3"  Part="1" 
 AR Path="/5F5D80AF/5F58505F" Ref="U5"  Part="1" 
-F 0 "U5" H 4400 3875 50  0000 C CNN
+F 0 "U3" H 4400 3875 50  0000 C CNN
 F 1 "DG403" H 4400 3784 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4400 2950 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 4400 3650 50  0001 C CNN
@@ -108,7 +108,7 @@ U 2 1 5F585065
 P 3700 4050
 AR Path="/5F5446F0/5F585065" Ref="U3"  Part="2" 
 AR Path="/5F5D80AF/5F585065" Ref="U5"  Part="2" 
-F 0 "U5" H 3700 4275 50  0000 C CNN
+F 0 "U3" H 3700 4275 50  0000 C CNN
 F 1 "DG403" H 3700 4184 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3700 3350 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 3700 4050 50  0001 C CNN
@@ -152,32 +152,30 @@ Wire Wire Line
 Connection ~ 4050 4150
 Wire Wire Line
 	4050 4150 4050 3850
-Wire Wire Line
-	3200 4050 3400 4050
 $Comp
 L Amplifier_Operational:TL074 U2
-U 3 1 5F585080
+U 1 1 5F585080
 P 7250 3950
 AR Path="/5F5446F0/5F585080" Ref="U2"  Part="1" 
 AR Path="/5F5D80AF/5F585080" Ref="U2"  Part="3" 
-F 0 "U2" H 7250 3583 50  0000 C CNN
-F 1 "TL074" H 7250 3674 50  0000 C CNN
+F 0 "U2" H 7350 3800 50  0000 C CNN
+F 1 "TL074" H 7200 3950 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7200 4050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 4150 50  0001 C CNN
-	3    7250 3950
+	1    7250 3950
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U2
-U 4 1 5F585086
+U 2 1 5F585086
 P 7250 3300
 AR Path="/5F5446F0/5F585086" Ref="U2"  Part="2" 
 AR Path="/5F5D80AF/5F585086" Ref="U2"  Part="4" 
-F 0 "U2" H 7250 2933 50  0000 C CNN
-F 1 "TL074" H 7250 3024 50  0000 C CNN
+F 0 "U2" H 7300 3150 50  0000 C CNN
+F 1 "TL074" H 7200 3300 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7200 3400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 3500 50  0001 C CNN
-	4    7250 3300
+	2    7250 3300
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -187,8 +185,6 @@ Wire Wire Line
 	6950 3200 6850 3200
 Wire Wire Line
 	6850 3200 6850 2900
-Wire Wire Line
-	6850 2900 7750 2900
 Wire Wire Line
 	7750 2900 7750 3300
 Wire Wire Line
@@ -200,7 +196,7 @@ P 6700 4500
 AR Path="/5F585096" Ref="R?"  Part="1" 
 AR Path="/5F5446F0/5F585096" Ref="R2"  Part="1" 
 AR Path="/5F5D80AF/5F585096" Ref="R8"  Part="1" 
-F 0 "R8" H 6770 4546 50  0000 L CNN
+F 0 "R2" H 6770 4546 50  0000 L CNN
 F 1 "1K" H 6770 4455 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6630 4500 50  0001 C CNN
 F 3 "~" H 6700 4500 50  0001 C CNN
@@ -214,7 +210,7 @@ P 6700 4950
 AR Path="/5F58509C" Ref="R?"  Part="1" 
 AR Path="/5F5446F0/5F58509C" Ref="R3"  Part="1" 
 AR Path="/5F5D80AF/5F58509C" Ref="R9"  Part="1" 
-F 0 "R9" H 6770 4996 50  0000 L CNN
+F 0 "R3" H 6770 4996 50  0000 L CNN
 F 1 "100K" H 6770 4905 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6630 4950 50  0001 C CNN
 F 3 "~" H 6700 4950 50  0001 C CNN
@@ -248,11 +244,9 @@ $EndComp
 Wire Wire Line
 	6700 5200 6700 5100
 Wire Wire Line
-	6600 4300 6700 4300
-Wire Wire Line
 	6700 4300 6700 4350
 Text Notes 6950 4300 0    50   ~ 0
-99% VIN comparator
+99% REF comparator
 Text Notes 6250 4400 2    50   ~ 0
 non-inverting amp sets the output voltage to\nthe reference but rate-limited by IABC
 Wire Wire Line
@@ -265,7 +259,7 @@ U 1 1 5F5850B6
 P 5600 2500
 AR Path="/5F5446F0/5F5850B6" Ref="U4"  Part="1" 
 AR Path="/5F5D80AF/5F5850B6" Ref="U6"  Part="1" 
-F 0 "U6" H 5600 2725 50  0000 C CNN
+F 0 "U4" H 5600 2725 50  0000 C CNN
 F 1 "DG403" H 5600 2634 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5600 1800 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 5600 2500 50  0001 C CNN
@@ -278,7 +272,7 @@ U 2 1 5F5850BC
 P 4800 2600
 AR Path="/5F5446F0/5F5850BC" Ref="U4"  Part="2" 
 AR Path="/5F5D80AF/5F5850BC" Ref="U6"  Part="2" 
-F 0 "U6" H 4800 2825 50  0000 C CNN
+F 0 "U4" H 4800 2825 50  0000 C CNN
 F 1 "DG403" H 4800 2734 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4800 1900 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 4800 2600 50  0001 C CNN
@@ -310,7 +304,7 @@ P 5200 2050
 AR Path="/5F5850CC" Ref="RV?"  Part="1" 
 AR Path="/5F5446F0/5F5850CC" Ref="RV4"  Part="1" 
 AR Path="/5F5D80AF/5F5850CC" Ref="RV8"  Part="1" 
-F 0 "RV8" H 5131 2096 50  0000 R CNN
+F 0 "RV4" H 5131 2096 50  0000 R CNN
 F 1 "R_RELEASE" H 5131 2005 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5200 2050 50  0001 C CNN
 F 3 "~" H 5200 2050 50  0001 C CNN
@@ -354,7 +348,7 @@ P 4350 2050
 AR Path="/5F5850E1" Ref="RV?"  Part="1" 
 AR Path="/5F5446F0/5F5850E1" Ref="RV3"  Part="1" 
 AR Path="/5F5D80AF/5F5850E1" Ref="RV7"  Part="1" 
-F 0 "RV7" H 4281 2096 50  0000 R CNN
+F 0 "RV3" H 4281 2096 50  0000 R CNN
 F 1 "R_ATTACK" H 4281 2005 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4350 2050 50  0001 C CNN
 F 3 "~" H 4350 2050 50  0001 C CNN
@@ -392,7 +386,7 @@ P 3750 2050
 AR Path="/5F5850F3" Ref="RV?"  Part="1" 
 AR Path="/5F5446F0/5F5850F3" Ref="RV2"  Part="1" 
 AR Path="/5F5D80AF/5F5850F3" Ref="RV6"  Part="1" 
-F 0 "RV6" H 3681 2096 50  0000 R CNN
+F 0 "RV2" H 3681 2096 50  0000 R CNN
 F 1 "R_DECAY" H 3681 2005 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3750 2050 50  0001 C CNN
 F 3 "~" H 3750 2050 50  0001 C CNN
@@ -433,7 +427,7 @@ Wire Wire Line
 	3750 2800 3750 2200
 $Comp
 L Amplifier_Operational:LM13700 U?
-U 4 1 5F585109
+U 2 1 5F585109
 P 8050 3950
 AR Path="/5F585109" Ref="U?"  Part="2" 
 AR Path="/5F5446F0/5F585109" Ref="U1"  Part="2" 
@@ -442,7 +436,7 @@ F 0 "U1" H 7950 4298 50  0000 C CNN
 F 1 "LM13700" H 7950 4207 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 7750 3975 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm13700.pdf" H 7750 3975 50  0001 C CNN
-	4    8050 3950
+	2    8050 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -454,7 +448,7 @@ P 8250 4300
 AR Path="/5F585110" Ref="C?"  Part="1" 
 AR Path="/5F5446F0/5F585110" Ref="C2"  Part="1" 
 AR Path="/5F5D80AF/5F585110" Ref="C4"  Part="1" 
-F 0 "C4" H 8365 4346 50  0000 L CNN
+F 0 "C2" H 8365 4346 50  0000 L CNN
 F 1 "100n" H 8365 4255 50  0000 L CNN
 F 2 "Capacitor_THT:C_Rect_L10.0mm_W2.5mm_P7.50mm_MKS4" H 8288 4150 50  0001 C CNN
 F 3 "~" H 8250 4300 50  0001 C CNN
@@ -488,7 +482,7 @@ P 8700 4550
 AR Path="/5F58511F" Ref="D?"  Part="1" 
 AR Path="/5F5446F0/5F58511F" Ref="D1"  Part="1" 
 AR Path="/5F5D80AF/5F58511F" Ref="D2"  Part="1" 
-F 0 "D2" V 8746 4470 50  0000 R CNN
+F 0 "D1" V 8746 4470 50  0000 R CNN
 F 1 "D" V 8655 4470 50  0000 R CNN
 F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 8700 4550 50  0001 C CNN
 F 3 "~" H 8700 4550 50  0001 C CNN
@@ -503,7 +497,7 @@ P 8600 5150
 AR Path="/5F585126" Ref="Q?"  Part="1" 
 AR Path="/5F5446F0/5F585126" Ref="Q2"  Part="1" 
 AR Path="/5F5D80AF/5F585126" Ref="Q4"  Part="1" 
-F 0 "Q4" H 8790 5196 50  0000 L CNN
+F 0 "Q2" H 8790 5196 50  0000 L CNN
 F 1 "2N3904" H 8790 5105 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8800 5075 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 8600 5150 50  0001 L CNN
@@ -517,7 +511,7 @@ P 8150 5150
 AR Path="/5F58512C" Ref="R?"  Part="1" 
 AR Path="/5F5446F0/5F58512C" Ref="R6"  Part="1" 
 AR Path="/5F5D80AF/5F58512C" Ref="R12"  Part="1" 
-F 0 "R12" H 8220 5196 50  0000 L CNN
+F 0 "R6" H 8220 5196 50  0000 L CNN
 F 1 "1K" H 8220 5105 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8080 5150 50  0001 C CNN
 F 3 "~" H 8150 5150 50  0001 C CNN
@@ -531,7 +525,7 @@ P 7800 5450
 AR Path="/5F585132" Ref="Q?"  Part="1" 
 AR Path="/5F5446F0/5F585132" Ref="Q1"  Part="1" 
 AR Path="/5F5D80AF/5F585132" Ref="Q3"  Part="1" 
-F 0 "Q3" H 7990 5496 50  0000 L CNN
+F 0 "Q1" H 7990 5496 50  0000 L CNN
 F 1 "2N3904" H 7990 5405 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8000 5375 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 7800 5450 50  0001 L CNN
@@ -545,7 +539,7 @@ P 7900 4900
 AR Path="/5F585138" Ref="R?"  Part="1" 
 AR Path="/5F5446F0/5F585138" Ref="R5"  Part="1" 
 AR Path="/5F5D80AF/5F585138" Ref="R11"  Part="1" 
-F 0 "R11" H 7970 4946 50  0000 L CNN
+F 0 "R5" H 7970 4946 50  0000 L CNN
 F 1 "100K" H 7970 4855 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7830 4900 50  0001 C CNN
 F 3 "~" H 7900 4900 50  0001 C CNN
@@ -587,7 +581,7 @@ P 7500 5200
 AR Path="/5F58514A" Ref="R?"  Part="1" 
 AR Path="/5F5446F0/5F58514A" Ref="R4"  Part="1" 
 AR Path="/5F5D80AF/5F58514A" Ref="R10"  Part="1" 
-F 0 "R10" H 7570 5246 50  0000 L CNN
+F 0 "R4" H 7570 5246 50  0000 L CNN
 F 1 "100K" H 7570 5155 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7430 5200 50  0001 C CNN
 F 3 "~" H 7500 5200 50  0001 C CNN
@@ -660,7 +654,7 @@ P 2650 4250
 AR Path="/5F585176" Ref="RV?"  Part="1" 
 AR Path="/5F5446F0/5F585176" Ref="RV1"  Part="1" 
 AR Path="/5F5D80AF/5F585176" Ref="RV5"  Part="1" 
-F 0 "RV5" H 2581 4296 50  0000 R CNN
+F 0 "RV1" H 2581 4296 50  0000 R CNN
 F 1 "R_SUSTAIN" H 2581 4205 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2650 4250 50  0001 C CNN
 F 3 "~" H 2650 4250 50  0001 C CNN
@@ -668,9 +662,7 @@ F 3 "~" H 2650 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2550 3950 2650 3950
-Wire Wire Line
-	2650 3950 2650 4100
+	2650 3950 2650 4000
 Wire Wire Line
 	2800 4250 3400 4250
 $Comp
@@ -691,15 +683,11 @@ Wire Wire Line
 	2650 4550 2650 4400
 Text Notes 3350 5300 0    50   ~ 0
 State machine controlled by STATE and GATE:\nAttack - Vgate=5, Vref=Vin, Iabc controlled by Rattack\nDecay - Vgate=5, Vref=Vsustain, Iabc controlled by Rdecay\nRelease - Vgate=0, Vref=0, Iabc controlled by Rrelease\n
-Text Notes 7300 2800 0    50   ~ 0
-output buffer
+Text Notes 6700 2650 0    50   ~ 0
+output buffer, gain=2 to make up\nfor the divide down on the input
 Text Notes 3800 1350 0    50   ~ 0
 Choice of C1 and R_POT control the slew rate\nLarge values for both mean a longer charge time,\nbut a large C1 effects the fastest charge time too,\nsince IABC has a max of 2mA\n\nC1=22u, R_POT=500K gives a 0-5V charge time\nrange of 70ms to 2.7s
-Text HLabel 2550 3950 0    50   Input ~ 0
-IN
-Text HLabel 3200 4050 0    50   Input ~ 0
-IN
-Text HLabel 6600 4300 0    50   Input ~ 0
+Text HLabel 2500 3550 0    50   Input ~ 0
 IN
 Text HLabel 5400 3200 0    50   Input ~ 0
 GATE
@@ -721,7 +709,7 @@ P 10150 1350
 AR Path="/5F5CA167" Ref="U?"  Part="3" 
 AR Path="/5F5446F0/5F5CA167" Ref="U3"  Part="3" 
 AR Path="/5F5D80AF/5F5CA167" Ref="U5"  Part="3" 
-F 0 "U5" H 10100 1350 50  0000 L CNN
+F 0 "U3" H 10100 1350 50  0000 L CNN
 F 1 "DG403" H 10050 1200 50  0000 L CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10150 650 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 10150 1350 50  0001 C CNN
@@ -799,7 +787,7 @@ P 10750 1350
 AR Path="/5F5CA189" Ref="U?"  Part="3" 
 AR Path="/5F5446F0/5F5CA189" Ref="U4"  Part="3" 
 AR Path="/5F5D80AF/5F5CA189" Ref="U6"  Part="3" 
-F 0 "U6" H 10700 1350 50  0000 L CNN
+F 0 "U4" H 10700 1350 50  0000 L CNN
 F 1 "DG403" H 10650 1200 50  0000 L CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10750 650 50  0001 C CNN
 F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 10750 1350 50  0001 C CNN
@@ -875,6 +863,97 @@ Text Label 3600 4700 2    50   ~ 0
 STATE
 Text Label 4700 3200 2    50   ~ 0
 STATE
-Text Label 8700 4050 2    50   ~ 0
+Text Label 8900 4050 0    50   ~ 0
 STATE
+$Comp
+L Device:R R?
+U 1 1 5F267E8A
+P 2650 3800
+AR Path="/5F267E8A" Ref="R?"  Part="1" 
+AR Path="/5F5446F0/5F267E8A" Ref="R13"  Part="1" 
+AR Path="/5F5D80AF/5F267E8A" Ref="R14"  Part="1" 
+F 0 "R13" H 2720 3846 50  0000 L CNN
+F 1 "500K" H 2720 3755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2580 3800 50  0001 C CNN
+F 3 "~" H 2650 3800 50  0001 C CNN
+	1    2650 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3550 2650 3550
+Wire Wire Line
+	2650 3550 2650 3650
+Text Label 2950 4000 0    50   ~ 0
+REF
+Text Label 6700 4300 0    50   ~ 0
+REF
+Text Notes 2500 3950 2    50   ~ 0
+Scale VIN down by a factor of 2\nThis keeps the CV in the recommened\nmax operating conditions of the LM13700\nto a 5V differential
+Wire Wire Line
+	2800 4000 2650 4000
+Connection ~ 2650 4000
+Wire Wire Line
+	2650 4000 2650 4100
+Wire Wire Line
+	2800 4050 2800 4000
+Wire Wire Line
+	2800 4050 3400 4050
+Wire Wire Line
+	2950 4000 2800 4000
+Connection ~ 2800 4000
+$Comp
+L Device:R R?
+U 1 1 5F27B506
+P 6550 2900
+AR Path="/5F27B506" Ref="R?"  Part="1" 
+AR Path="/5F5446F0/5F27B506" Ref="R15"  Part="1" 
+AR Path="/5F5D80AF/5F27B506" Ref="R17"  Part="1" 
+F 0 "R15" H 6620 2946 50  0000 L CNN
+F 1 "10K" H 6620 2855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6480 2900 50  0001 C CNN
+F 3 "~" H 6550 2900 50  0001 C CNN
+	1    6550 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR053
+U 1 1 5F283AF6
+P 6300 3000
+AR Path="/5F5446F0/5F283AF6" Ref="#PWR053"  Part="1" 
+AR Path="/5F5D80AF/5F283AF6" Ref="#PWR054"  Part="1" 
+F 0 "#PWR054" H 6300 2750 50  0001 C CNN
+F 1 "GND" H 6305 2827 50  0000 C CNN
+F 2 "" H 6300 3000 50  0001 C CNN
+F 3 "" H 6300 3000 50  0001 C CNN
+	1    6300 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3000 6300 2900
+Wire Wire Line
+	6300 2900 6400 2900
+$Comp
+L Device:R R?
+U 1 1 5F2918D2
+P 7300 2900
+AR Path="/5F2918D2" Ref="R?"  Part="1" 
+AR Path="/5F5446F0/5F2918D2" Ref="R16"  Part="1" 
+AR Path="/5F5D80AF/5F2918D2" Ref="R18"  Part="1" 
+F 0 "R16" H 7370 2946 50  0000 L CNN
+F 1 "10K" H 7370 2855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7230 2900 50  0001 C CNN
+F 3 "~" H 7300 2900 50  0001 C CNN
+	1    7300 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 2900 6850 2900
+Connection ~ 6850 2900
+Wire Wire Line
+	6850 2900 7150 2900
+Wire Wire Line
+	7450 2900 7750 2900
+Wire Wire Line
+	8900 4050 8700 4050
+Connection ~ 8700 4050
 $EndSCHEMATC
