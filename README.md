@@ -20,20 +20,6 @@
 
 ## Design goals
 
-- "Paraphonic" means multiple notes that share a filter stage, "Polyphonic" means a dedicated O->F->A for each note
-- Tracking the filter cutoff to the note is super important, otherwise the tone varies with the pitch
-- Neutron in paraphonic mode maps the note first note to both oscillators if only one is played. This
-  seems like a bad design choice to me
-- In addition to VCF cutoff, LFO can also reset with envelope, which is a very nice feature. Not sure how to make this Polyphonic without 4 LFOs...
-- Neutron has "osc sync" button. I don't have a good mental model of what it does, but it seems to link the oscillator frequencies together for creating harmonies
-- Choosing how you want to split the oscillators between polyphony, independent control, and sync/harmony is going to be a real control challenge, esp if keeping it modular is desired
-- Shared cascading controls with overrides is still a good idea IMO
-- Dedicating 1-2 oscillators to a rhythm with very good shared clocking seems important for making songs as opposed to just keyboard sounds. If not playing with others, need either that or a loop. Unfortunately with a loop you can't adjust the parameters later, you've probably reclaimed your oscillators for something else
-- Neutron sends envelope 1 to VCA and envelope 2 to the filter. You could accomplish a similar thing with the LFO in key sync mode, but you really only get attack
-
-## Overview
-
-- 4-channel polyphonic
 - "fully-modular with defaults"
   - semi-modular-style sensible default paths connected under the hood
   - all defaults overridden with patch cables
@@ -107,7 +93,7 @@
     - 1-voice: A
     - 2-voice: A + C
     - 3-voice: A + B + C
-    - 4-voice: A + B + C +D
+    - 4-voice: A + B + C + D
     - 4-voice-split: A + B, C + D
       - like standard 4-voice mode, but round robin is in 2 pairs of slots instead of 4 slots
       - allows for 2-voice bass and 2-voice melody
