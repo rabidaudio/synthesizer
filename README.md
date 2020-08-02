@@ -5,8 +5,8 @@
 ## Format
 
 - 3.5" mono patch cables
-- 3U, 1HP
-- 10 or 16-pin ribbon power - +/-12V, sometimes 5V digital
+- 3U tall, split into 84 HP horizontal units
+- 10 or 16-pin ribbon power: +/-12V, 5V digital
 - Audio signals are typically a maximum of 10V peak-to-peak (i.e. between -5V and +5V)
 - Control voltages can either be unipolar or bipolar. Bipolar control voltages are typically 5V peak-to-peak (i.e. from -2.5V to +2.5V), unipolar voltages between 0V and 8V. The V/Octave scale is used for pitch information
 - Trigger, Gate or Clock signals are digital 0V-5V pulses typically used for timing and event signaling
@@ -31,12 +31,13 @@
     - sub-combinations of the above, e.g.:
       - 1-Voice MIDI-controlled synth with a pair of oscillators, 1 constant-source independent synth, 1 sequencer-controlled independent synth
       - 1-Voice MIDI-controlled synth, 2-voice sequencer-controlled synths, with two oscillators for the  first voice
-- LED feedback is critical
+- LED feedback is useful
 - For multiple options (like VCO shape), use a CV that is binned to options
   - Easiest solution is probably an ATTiny driving an analog switch
   - uC seems like overkill, but it's got an ADC and lots of digital pins
   - Lots of specialty components would be required for a native IC solution
   - Firmware code can easily provide hysteresis and arbitrary numbers of divisions, unlike CDXXXX series CMOS chips
+- Outputs can use splitters, but inputs cannot
 
 ## Tools
 
@@ -63,16 +64,21 @@ Based mostly on what I have available and have experience with.
   - 50 V/us slew rate
 - [DMMT5401](reference/datasheets/dmmt5401.pdf) (NPN) and [DMMT5551](reference/datasheets/dmmt5551.pdf) (PNP) matched pair transistors
   - similar characteristics to 2N3904, 2N3906
-  - useful for current mirrors
-  - easier than trying to match transistors by hand
+  - useful for current mirrors and [exponential converters](reference/exponential.pdf)
+  - easier than trying to match transistors by hand (but [here's a guide for matching](reference/transistor-matching.pdf))
+  - Unfortunately only come in SOT26 (3mm long)
 - [DG403](reference/datasheets/dg403.pdf)
   - dual SPDT analog switch
   - very generous on control ranges and input limits
   - switching time in 100ns range
   - on resistance in the 45 ohm range
+  - Unfortunately no DIP package - SOIC is largest size (10mm long)
   - preferred over CD4066
     - CD4066 has max 20V supply differential, which makes it frustrating to use with +/-12V supply
-    - when off, it connects the pins to the minus supply voltage, which makes it impractical in many situations
+    - when off, CD4066 connects the pins to the minus supply voltage, which makes it impractical in many situations
+- Tempco resistors
+  - resistance varies with temperature. Useful for canceling out temperature dependance
+  - not strictly required - classic synths would take some time to "heat up"
 
 Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diodes.
 
@@ -276,6 +282,8 @@ Schematics, board layouts, documentation, etc. is licensed under [Creative Commo
 If you're interested in commercial use, please ask first.
 
 Any source code is licensed under [MIT](SOFTWARE_LICENSE).
+
+Many documents in reference are copies of resources from other parts of the internet (datasheets, schematics, etc) which I did not write - those retain their original copyrights.
 
 
 ## Reference
