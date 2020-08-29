@@ -29,5 +29,5 @@ The LM13700 acts as a linear amplifier when `Vd <= 20mV`. It's output is a curre
 ## Tuning
 
 1. Set CV-IN to 10V, and RV2 to completely off. Adjust RT1 until base of Q1A is 0V (or Q1 collectors are the same).
-2. Set CV-IN to 0V, and RV2 to completely on. Adjust RT2 until the current through it is 0.5mA.
+2. Adjust RT2 until the current through it is 0.5mA. One way to do this is to precicely measure the negative supply rail, and then adjust the resistance to match.
 3. Set CV-IN to 0V, RV2 to completely on, and IN to 10V. Adjust RT3 until OUT is 10V (an overall gain of 1).
