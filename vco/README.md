@@ -13,3 +13,10 @@ High-freq error seems to be from comparator slew rate. TL07X slew rate is roughl
 From the simulation, the slew rate at 14.08KHz seems to be 3.8V/us, for an error of 6.2%, which is a bit closer to the measured 14%.
 
 The LM311 datasheet claims a slew rate of up to 50V/us, equating to a \~0.5% error.
+
+## Tuning
+
+1. Set CV to 5V and adjust input network so VB=0V
+2. Adjust square voltage divider network to 5V output and 0 offset
+3. Adjust IREF to get 440Hz frequency
+4. Set CV to 6V and adjust CV scale ratio to get 880Hz frequency

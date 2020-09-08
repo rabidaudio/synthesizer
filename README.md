@@ -120,6 +120,10 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
         - square PWM control could also adjust this clip frequency
     - down ramp wave with just a JFET
       - up ramp wave probably needs another JFET and an inverter
+    - sub octave
+      - theory and example circuit: http://www.valvewizard.co.uk/uboat.html
+    - octave
+      - full wave rectifier
 3. MIDI-CV converter
   - digital MIDI input to OSC CV
   - DAC resolution:
