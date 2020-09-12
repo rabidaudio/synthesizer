@@ -72,17 +72,6 @@ F 3 "" H 10200 1500 50  0001 C CNN
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U?
-U 1 1 5EC71D01
-P 2550 1350
-F 0 "U?" H 2550 1717 50  0000 C CNN
-F 1 "DG403" H 2550 1626 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2550 1350 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 2550 1350 50  0001 C CNN
-	1    2550 1350
-	1    0    0    1   
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U?
 U 3 1 5EC75ED9
 P 10900 1100
 F 0 "U?" H 10858 1146 50  0000 L CNN
@@ -146,17 +135,6 @@ F 2 "KiCad/kicad-footprints/Package_TO_SOT_SMD.pretty:SOT-23-6" H 3800 4325 50  
 F 3 "https://www.diodes.com/assets/Datasheets/ds30437.pdf" H 3600 4400 50  0001 L CNN
 	2    3600 4400
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TL072 U?
-U 1 1 5ECBF24F
-P 2950 5250
-F 0 "U?" H 3100 5400 50  0000 C CNN
-F 1 "DG403" H 2950 5250 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2950 5250 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 2950 5250 50  0001 C CNN
-	1    2950 5250
-	1    0    0    1   
 $EndComp
 $Comp
 L Device:R R?
@@ -358,7 +336,7 @@ L Device:R R?
 U 1 1 5ED0F0FD
 P 6250 7050
 F 0 "R?" H 6350 7100 50  0000 L CNN
-F 1 "12k" H 6350 7000 50  0000 L CNN
+F 1 "10K" H 6350 7000 50  0000 L CNN
 F 2 "" V 6180 7050 50  0001 C CNN
 F 3 "~" H 6250 7050 50  0001 C CNN
 	1    6250 7050
@@ -386,28 +364,6 @@ TRIANGLE
 Text GLabel 2800 6900 2    50   Input ~ 0
 SQUARE
 $Comp
-L Device:R R?
-U 1 1 5ED26FEA
-P 5850 4750
-F 0 "R?" H 5650 4800 50  0000 L CNN
-F 1 "?" H 5700 4700 50  0000 L CNN
-F 2 "" V 5780 4750 50  0001 C CNN
-F 3 "~" H 5850 4750 50  0001 C CNN
-	1    5850 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5ED27954
-P 6650 4750
-F 0 "R?" H 6450 4800 50  0000 L CNN
-F 1 "?" H 6500 4700 50  0000 L CNN
-F 2 "" V 6580 4750 50  0001 C CNN
-F 3 "~" H 6650 4750 50  0001 C CNN
-	1    6650 4750
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+12V #PWR?
 U 1 1 5EC69673
 P 10200 650
@@ -419,33 +375,11 @@ F 3 "" H 10200 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
-U 1 1 5ED4E809
-P 4200 6800
-F 0 "R?" H 4000 6850 50  0000 L CNN
-F 1 "?" H 4050 6750 50  0000 L CNN
-F 2 "" V 4130 6800 50  0001 C CNN
-F 3 "~" H 4200 6800 50  0001 C CNN
-	1    4200 6800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5ED58116
-P 4200 7200
-F 0 "R?" H 4000 7250 50  0000 L CNN
-F 1 "?" H 4050 7150 50  0000 L CNN
-F 2 "" V 4130 7200 50  0001 C CNN
-F 3 "~" H 4200 7200 50  0001 C CNN
-	1    4200 7200
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:-12V #PWR?
 U 1 1 5ECF6305
 P 2300 6000
 F 0 "#PWR?" H 2300 6100 50  0001 C CNN
-F 1 "-12V" H 2315 6173 50  0000 C CNN
+F 1 "-12V" H 2300 6150 50  0000 C CNN
 F 2 "" H 2300 6000 50  0001 C CNN
 F 3 "" H 2300 6000 50  0001 C CNN
 	1    2300 6000
@@ -465,35 +399,13 @@ $EndComp
 $Comp
 L power:+12V #PWR?
 U 1 1 5ED7F3FD
-P 6250 4400
-F 0 "#PWR?" H 6250 4250 50  0001 C CNN
-F 1 "+12V" H 6265 4573 50  0000 C CNN
-F 2 "" H 6250 4400 50  0001 C CNN
-F 3 "" H 6250 4400 50  0001 C CNN
-	1    6250 4400
+P 6250 4700
+F 0 "#PWR?" H 6250 4550 50  0001 C CNN
+F 1 "+12V" H 6265 4873 50  0000 C CNN
+F 2 "" H 6250 4700 50  0001 C CNN
+F 3 "" H 6250 4700 50  0001 C CNN
+	1    6250 4700
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:+12V #PWR?
-U 1 1 5EDA2507
-P 4200 6550
-F 0 "#PWR?" H 4200 6400 50  0001 C CNN
-F 1 "+12V" H 4215 6723 50  0000 C CNN
-F 2 "" H 4200 6550 50  0001 C CNN
-F 3 "" H 4200 6550 50  0001 C CNN
-	1    4200 6550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5EDB1330
-P 4100 6000
-F 0 "R?" H 3900 6050 50  0000 L CNN
-F 1 "?" H 3950 5950 50  0000 L CNN
-F 2 "" V 4030 6000 50  0001 C CNN
-F 3 "~" H 4100 6000 50  0001 C CNN
-	1    4100 6000
-	0    1    -1   0   
 $EndComp
 $Comp
 L Amplifier_Operational:TL072 U?
@@ -506,23 +418,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1900 4400 50  0001 C CNN
 	2    1900 4400
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	4200 6550 4200 6650
-Wire Wire Line
-	4200 7450 4200 7350
-Wire Wire Line
-	4200 6950 4200 7000
-$Comp
-L Device:R R?
-U 1 1 5EEC949A
-P 5850 6550
-F 0 "R?" H 5650 6600 50  0000 L CNN
-F 1 "68" H 5650 6500 50  0000 L CNN
-F 2 "" V 5780 6550 50  0001 C CNN
-F 3 "~" H 5850 6550 50  0001 C CNN
-	1    5850 6550
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 5EEC9A14
@@ -534,9 +429,6 @@ F 3 "~" H 6650 6550 50  0001 C CNN
 	1    6650 6550
 	1    0    0    -1  
 $EndComp
-Connection ~ 4200 7000
-Wire Wire Line
-	4200 7000 4200 7050
 $Comp
 L Amplifier_Operational:TL072 U?
 U 2 1 5EF3BB3D
@@ -547,17 +439,6 @@ F 2 "" H 7750 5900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7750 5900 50  0001 C CNN
 	2    7750 5900
 	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5EF63C48
-P 7800 5500
-F 0 "R?" H 7600 5550 50  0000 L CNN
-F 1 "?" H 7650 5450 50  0000 L CNN
-F 2 "" V 7730 5500 50  0001 C CNN
-F 3 "~" H 7800 5500 50  0001 C CNN
-	1    7800 5500
-	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	7350 6100 7350 6000
@@ -681,17 +562,6 @@ Wire Wire Line
 	1700 700  1750 700 
 Connection ~ 2400 800 
 $Comp
-L Amplifier_Operational:TL072 U?
-U 1 1 5EDF33EF
-P 2250 6450
-F 0 "U?" H 2250 6817 50  0000 C CNN
-F 1 "DG403" H 2250 6726 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2250 6450 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 2250 6450 50  0001 C CNN
-	1    2250 6450
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5EE0590C
 P 2700 6700
@@ -789,27 +659,13 @@ Connection ~ 2700 6900
 Wire Wire Line
 	2700 6900 2700 6850
 Wire Wire Line
-	6250 4400 6250 4500
-Connection ~ 6250 4500
-Wire Wire Line
 	6250 7300 6250 7200
-$Comp
-L power:-12V #PWR?
-U 1 1 5EE46E0E
-P 4200 7450
-F 0 "#PWR?" H 4200 7550 50  0001 C CNN
-F 1 "-12V" H 4215 7623 50  0000 C CNN
-F 2 "" H 4200 7450 50  0001 C CNN
-F 3 "" H 4200 7450 50  0001 C CNN
-	1    4200 7450
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 5EE5FE30
 P 4900 5550
-F 0 "R?" H 4700 5600 50  0000 L CNN
-F 1 "?" H 4750 5500 50  0000 L CNN
+F 0 "R?" V 4800 5500 50  0000 L CNN
+F 1 "22K" V 4900 5500 50  0000 L CNN
 F 2 "" V 4830 5550 50  0001 C CNN
 F 3 "~" H 4900 5550 50  0001 C CNN
 	1    4900 5550
@@ -840,17 +696,7 @@ $EndComp
 Wire Wire Line
 	6650 5900 6650 5800
 Wire Wire Line
-	5850 4500 5850 4600
-Wire Wire Line
-	5850 4500 6250 4500
-Wire Wire Line
-	6650 4500 6650 4600
-Wire Wire Line
-	6250 4500 6650 4500
-Wire Wire Line
-	6650 4900 6650 5150
-Wire Wire Line
-	5850 5150 5850 4900
+	5850 5150 5850 4950
 Wire Wire Line
 	5850 5550 5850 5650
 Wire Wire Line
@@ -887,17 +733,6 @@ Wire Wire Line
 	6650 5800 6650 5550
 Wire Wire Line
 	3850 6000 3950 6000
-$Comp
-L Amplifier_Operational:TL072 U?
-U 1 1 5EFB5E2F
-P 4850 6100
-F 0 "U?" H 4850 5733 50  0000 C CNN
-F 1 "DG403" H 4850 5824 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4850 6100 50  0001 C CNN
-F 3 "https://www.renesas.com/us/en/www/doc/datasheet/dg401-03.pdf" H 4850 6100 50  0001 C CNN
-	1    4850 6100
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	4450 6200 4550 6200
 Wire Wire Line
@@ -912,13 +747,7 @@ Wire Wire Line
 	5300 5550 5300 6100
 Wire Wire Line
 	5300 6100 5150 6100
-Wire Wire Line
-	4250 6000 4400 6000
 Connection ~ 4400 6000
-Wire Wire Line
-	4450 6200 4450 7000
-Wire Wire Line
-	4200 7000 4450 7000
 Wire Wire Line
 	5550 6100 5300 6100
 Connection ~ 5300 6100
@@ -1548,4 +1377,117 @@ Wire Wire Line
 	7450 2850 7450 2750
 Wire Wire Line
 	5900 2300 5900 2250
+$Comp
+L Device:R R?
+U 1 1 5F5E87D1
+P 5850 6550
+F 0 "R?" H 5950 6600 50  0000 L CNN
+F 1 "68" H 5950 6500 50  0000 L CNN
+F 2 "" V 5780 6550 50  0001 C CNN
+F 3 "~" H 5850 6550 50  0001 C CNN
+	1    5850 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U?
+U 1 1 5F5FA713
+P 4850 6100
+F 0 "U?" H 4850 5733 50  0000 C CNN
+F 1 "TL074" H 4850 5824 50  0000 C CNN
+F 2 "" H 4800 6200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4900 6300 50  0001 C CNN
+	1    4850 6100
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U?
+U 1 1 5F62E4F6
+P 2250 6450
+F 0 "U?" H 2400 6350 50  0000 C CNN
+F 1 "TL074" H 2250 6450 50  0000 C CNN
+F 2 "" H 2200 6550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2300 6650 50  0001 C CNN
+	1    2250 6450
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 2 1 5F63B234
+P 2950 5250
+F 0 "U?" H 3050 5400 50  0000 C CNN
+F 1 "TL072" H 2950 5250 50  0000 C CNN
+F 2 "" H 2950 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2950 5250 50  0001 C CNN
+	2    2950 5250
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:TL072 U?
+U 2 1 5F6493F7
+P 2550 1350
+F 0 "U?" H 2650 1500 50  0000 C CNN
+F 1 "TL072" H 2500 1350 50  0000 C CNN
+F 2 "" H 2550 1350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 2550 1350 50  0001 C CNN
+	2    2550 1350
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:RTRIM R?
+U 1 1 5F64E916
+P 7800 5500
+F 0 "R?" V 7900 5400 50  0000 L CNN
+F 1 "10K" V 7650 5400 50  0000 L CNN
+F 2 "" V 7730 5500 50  0001 C CNN
+F 3 "~" H 7800 5500 50  0001 C CNN
+	1    7800 5500
+	0    1    1    0   
+$EndComp
+Text Notes 7950 5400 0    50   ~ 0
+Calc: 5K\n4.8K might work fine
+$Comp
+L Device:R_POT RV?
+U 1 1 5F748C59
+P 6250 4950
+F 0 "RV?" V 6135 4950 50  0000 C CNN
+F 1 "20K" V 6044 4950 50  0000 C CNN
+F 2 "" H 6250 4950 50  0001 C CNN
+F 3 "~" H 6250 4950 50  0001 C CNN
+	1    6250 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F775FBE
+P 4450 6300
+F 0 "#PWR?" H 4450 6050 50  0001 C CNN
+F 1 "GND" H 4455 6127 50  0000 C CNN
+F 2 "" H 4450 6300 50  0001 C CNN
+F 3 "" H 4450 6300 50  0001 C CNN
+	1    4450 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 6300 4450 6200
+$Comp
+L Device:R R?
+U 1 1 5F7D4E50
+P 4100 6000
+F 0 "R?" V 3950 5900 50  0000 L CNN
+F 1 "560K" V 4200 5900 50  0000 L CNN
+F 2 "" V 4030 6000 50  0001 C CNN
+F 3 "~" H 4100 6000 50  0001 C CNN
+	1    4100 6000
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6100 4950 5850 4950
+Wire Wire Line
+	6400 4950 6650 4950
+Wire Wire Line
+	6650 4950 6650 5150
+Wire Wire Line
+	6250 4700 6250 4800
+Wire Wire Line
+	4250 6000 4400 6000
 $EndSCHEMATC

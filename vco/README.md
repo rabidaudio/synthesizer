@@ -14,9 +14,32 @@ From the simulation, the slew rate at 14.08KHz seems to be 3.8V/us, for an error
 
 The LM311 datasheet claims a slew rate of up to 50V/us, equating to a \~0.5% error.
 
+## Shapes
+
+### Triangle
+
+Triangle wave comes from the square/triangle core.
+
+### Square
+
+A base square wave comes from the square/triangle core. We feed that into a comparator which gives control over PWM.
+
+### Sine
+
+Triangle wave is converted to a sine wave using a textbook transistor waveshaper. The THD is on the order of 1-2%.
+
+![waveshaper-performance](waveshaper-realsource.png)
+
+### TODO: shape #4
+
+Sub/super octave???
+
 ## Tuning
 
 1. Set CV to 5V and adjust input network so VB=0V
 2. Adjust square voltage divider network to 5V output and 0 offset
 3. Adjust IREF to get 440Hz frequency
 4. Set CV to 6V and adjust CV scale ratio to get 880Hz frequency
+5. Adjust waveshaper current source pot until symmetric
+6. Adjust waveshaper input voltage divider to minimize THD
+7. Adjust waveshaper output stage to set level

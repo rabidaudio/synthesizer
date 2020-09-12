@@ -229,43 +229,70 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
       - white noise when the gain is turned down
   - [x] adjust design for Rev. B
   - [x] assemble Rev. B proto board
-  - [x] test with Neutron
-    - sum pot is backwards
-    - a bit of noise on the constant output near the center
-    - verify output levels
-    - hard click on gate
+  - fix prototype issues
+    - [ ] sum pot is backwards
+    - [ ] a bit of noise on the constant output near the center
+    - [ ] verify output levels
+    - [ ] hard click on gate
       - needs a LPF?
   - [ ] assemble Rev. B PCB
   - [ ] manufacture front panel
   - [ ] assemble module
 - VCA
   - [x] Confirm amp on breadboard, finalize CV levels
-  - [ ] build PoC amp and test with real synth
-  - [ ] figure out where tuning trimmers are needed
+  - [x] figure out where tuning trimmers are needed
+  - [x] build prototype
+  - fix prototype issues
+    - [ ] output is too quiet for headphones, need about 2x gain
+    - [ ] CV range is too wide, adjust scaling for faster change in db/V
   - [ ] finish PCB schematic for complete amplifier
   - [ ] Create PCB
   - [ ] design front panel
-  - [ ] test with Neutron
   - [ ] manufacture front panel
   - [ ] assemble module
 - VCO
   - [ ] design core
     - [x] core osc - square/triangle
-    - [ ] wave shaper (sine)
+    - [x] wave shaper (sine)
+    - [ ] pwm control
+    - [ ] additional shape(s)
     - [ ] shape selection
-  - [ ] Confirm amp on breadboard, finalize CV levels
-  - [ ] Build PoC osc
-  - [ ] PCB for oscillator
+  - [x] Confirm amp on breadboard, finalize CV levels
+  - fix breadboard test issues
+    - [ ] pitch is very sensitive to power supply noise
+    - [ ] tuning is rather difficult
+  - [ ] Build prototype
+  - fix prototype issues
+    - TBD
+  - [ ] design PCB
+  - [ ] Create PCB
+  - [ ] design front panel
+  - [ ] manufacture front panel
+  - [ ] assemble module
 - Envelope
   - [x] design in SPICE
   - [ ] verify on breadboard
-  - [ ] assemble proto board
-  - [ ] test with neutron
+  - [ ] build prototype
+  - fix prototype issues
+    - TBD
   - [ ] design PCB
+  - [ ] Create PCB
+  - [ ] design front panel
   - [ ] manufacture front panel
   - [ ] assemble module
 - MIDI
-  - TBD
+  - [x] select DAC
+  - [ ] write code to interface with DAC
+  - [ ] write code to interface with MIDI
+  - [ ] verify on breadboard
+  - [ ] build prototype
+  - fix prototype issues
+    - TBD
+  - [ ] design PCB
+  - [ ] Create PCB
+  - [ ] design front panel
+  - [ ] manufacture front panel
+  - [ ] assemble module
 - VCF
   - TBD
 - LFO
