@@ -133,6 +133,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - up to 4 voices
   - round-robin outputs on each key press
     - use open output if available else replace oldest key pressed
+  - use built-in 10-bit DAC for velocity control
   - Modes:
     - off
     - 1-voice: A
@@ -284,6 +285,8 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - [x] select DAC
   - [ ] write code to interface with DAC
   - [ ] write code to interface with MIDI
+  - [ ] get opto-isolator
+    - e.g. [6N138](https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/6N138-39%20Series.pdf)
   - [ ] verify on breadboard
   - [ ] build prototype
   - fix prototype issues
