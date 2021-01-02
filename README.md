@@ -114,16 +114,27 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
     - PDS
       - https://en.wikipedia.org/wiki/Phase_distortion_synthesis
       - a bit of wild harmonics
-      - multiplication can be done with log/antilog or https://en.wikipedia.org/wiki/Gilbert_cell
+      - multiplication techniques
+        - log/antilog
+        - https://en.wikipedia.org/wiki/Gilbert_cell
+        - AD633 ($11-$13 /unit on DigiKey!?)
+        - EL4450C ($4/unit on Digikey but out of stock). It's a little more awkward to use since it's max differerential input voltage for linearity is 2V
       - the hard part will be the "slightly higher frequency" bit
         - perhaps instead you have another osc (555?) running at a fixed frequency and clipping the sine
         - square PWM control could also adjust this clip frequency
+      - In Max you do PDS by `kink~`-ing a `phasor~` and using that to drive the phase of `cycle~`. Kink is somewhat straightforward to do - use a comparator to adjust the charge current after a threshold. But how you drive a sine wave phase with that I'm not sure
     - down ramp wave with just a JFET
       - up ramp wave probably needs another JFET and an inverter
     - sub octave
       - theory and example circuit: http://www.valvewizard.co.uk/uboat.html
     - octave
       - full wave rectifier
+    - multiplying the triangle with a square wave with different phases and pulse-widths gives some neat sounds
+    - polynomial
+      - The EL4450C datasheet describes using a multiplier ic to create a polynomial of the form (k1 v^2 + v) / k2
+      - it sounds like crap on a triangle wave and does nothing for a square wave, but it adds a nice second harmonic to a sine wave
+      - from experiments in Max, good values are k1=1.5-2.5, k2=2
+      - but at that point, should you just use 2 oscillators?
 3. MIDI-CV converter
   - digital MIDI input to OSC CV
   - DAC resolution:
