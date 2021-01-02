@@ -130,6 +130,15 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
     - for 1 step = 1 cent on a 10V space with 1V/octave:
       - 10V / 2^x = (1V/12/100) => log2(10/(1/12/100)) = 13.55 bit minimum
     - 16-bit DAC would be incredibly accurate, 0.18% resolution
+  - DAC also needed for amplifier (velocity)
+    - Velocity is only 7 bits (0-127)
+    - builtin ATMega DAC (PWM) is 8bit, but very much in the audible frequency range (~450Hz)
+    - Even at a higher frequency, an aggressive enough low-pass filter would probably have a miserable response time
+    - instead we need a dedicated 7- or 8-bit DAC
+      - TLV5620 is a cheap 8-bit quad.
+      - Even though the data sheet seems to suggest that messages are 11 bits, this resource seems to use 2 bytes:
+        - http://www.kerrywong.com/2013/10/12/interfacing-tlv5620-with-arduino/
+    - What's a reliable solution for reference voltages?
   - up to 4 voices
   - round-robin outputs on each key press
     - use open output if available else replace oldest key pressed
