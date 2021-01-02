@@ -157,6 +157,8 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
     - simpler envelope circuit could be used, but parameters need to be tuned
     for longer times over short voltage change
   - capable to expand to 8 voices?
+  - Arpeggiator
+    - up, down, play order, random, other patterns?
 4. Filter
   -  4P LP(/HP?)
   - Cutoff frequency control has same range as oscillator
