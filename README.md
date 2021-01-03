@@ -279,7 +279,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
     - [x] wave shaper (sine)
     - [ ] pwm control
     - [ ] additional shape(s)
-    - [ ] shape selection
+    - [x] shape selection
   - [x] Confirm amp on breadboard, finalize CV levels
   - fix breadboard test issues
     - [ ] pitch is very sensitive to power supply noise
@@ -307,7 +307,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - [x] select DAC
   - [ ] write code to interface with DAC
   - [ ] write code to interface with MIDI
-  - [ ] get opto-isolator
+  - [x] get opto-isolator
     - e.g. [6N138](https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/6N138-39%20Series.pdf)
   - [ ] verify on breadboard
   - [ ] build prototype
