@@ -1979,4 +1979,187 @@ Wire Wire Line
 Connection ~ 14450 2200
 Text Notes 1650 4150 0    50   ~ 0
 TODO does this value need to be tunable?
+Text Notes -1200 3650 0    50   ~ 0
+TODO: these can be combined to one
+Text Notes 4000 750  0    50   ~ 0
+TODO If it helps performance, a real comparator can be used here instead:
+$Comp
+L Comparator:LM311 U?
+U 1 1 6043D86B
+P 5050 1450
+F 0 "U?" H 5394 1496 50  0000 L CNN
+F 1 "LM311" H 5394 1405 50  0000 L CNN
+F 2 "" H 5050 1450 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm311.pdf" H 5050 1450 50  0001 C CNN
+	1    5050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6043FDAB
+P 4950 1050
+F 0 "#PWR?" H 4950 900 50  0001 C CNN
+F 1 "+12V" H 4965 1223 50  0000 C CNN
+F 2 "" H 4950 1050 50  0001 C CNN
+F 3 "" H 4950 1050 50  0001 C CNN
+	1    4950 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 6044046B
+P 4950 1850
+F 0 "#PWR?" H 4950 1950 50  0001 C CNN
+F 1 "-12V" H 4965 2023 50  0000 C CNN
+F 2 "" H 4950 1850 50  0001 C CNN
+F 3 "" H 4950 1850 50  0001 C CNN
+	1    4950 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60440D89
+P 5500 1850
+F 0 "R?" H 5600 1950 50  0000 L CNN
+F 1 "150k" H 5600 1800 50  0000 L CNN
+F 2 "" V 5430 1850 50  0001 C CNN
+F 3 "~" H 5500 1850 50  0001 C CNN
+	1    5500 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60440D93
+P 5500 2300
+F 0 "R?" H 5600 2350 50  0000 L CNN
+F 1 "100k" H 5600 2250 50  0000 L CNN
+F 2 "" V 5430 2300 50  0001 C CNN
+F 3 "~" H 5500 2300 50  0001 C CNN
+	1    5500 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2150 5500 2100
+Wire Wire Line
+	5500 2100 4600 2100
+Connection ~ 5500 2100
+Wire Wire Line
+	5500 2100 5500 2000
+Wire Wire Line
+	4750 1350 4600 1350
+Wire Wire Line
+	4600 1350 4600 2100
+Wire Wire Line
+	5500 1700 5500 1450
+Wire Wire Line
+	5500 1450 5350 1450
+$Comp
+L Device:R R?
+U 1 1 6047CFEB
+P 5950 2200
+F 0 "R?" V 6050 2150 50  0000 L CNN
+F 1 "10K" V 5950 2100 50  0000 L CNN
+F 2 "" V 5880 2200 50  0001 C CNN
+F 3 "~" H 5950 2200 50  0001 C CNN
+	1    5950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6047CFF5
+P 5950 2900
+F 0 "R?" V 6050 2850 50  0000 L CNN
+F 1 "10K" V 5950 2800 50  0000 L CNN
+F 2 "" V 5880 2900 50  0001 C CNN
+F 3 "~" H 5950 2900 50  0001 C CNN
+	1    5950 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV?
+U 1 1 6047CFFF
+P 5950 2550
+F 0 "RV?" H 5880 2596 50  0000 R CNN
+F 1 "1K" H 5880 2505 50  0000 R CNN
+F 2 "" H 5950 2550 50  0001 C CNN
+F 3 "~" H 5950 2550 50  0001 C CNN
+	1    5950 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6047D009
+P 5950 2000
+F 0 "#PWR?" H 5950 1850 50  0001 C CNN
+F 1 "+12V" H 5965 2173 50  0000 C CNN
+F 2 "" H 5950 2000 50  0001 C CNN
+F 3 "" H 5950 2000 50  0001 C CNN
+	1    5950 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 6047D013
+P 5950 3100
+F 0 "#PWR?" H 5950 3200 50  0001 C CNN
+F 1 "-12V" H 5965 3273 50  0000 C CNN
+F 2 "" H 5950 3100 50  0001 C CNN
+F 3 "" H 5950 3100 50  0001 C CNN
+	1    5950 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5950 3100 5950 3050
+Wire Wire Line
+	5950 2750 5950 2700
+Wire Wire Line
+	5950 2400 5950 2350
+Wire Wire Line
+	5950 2000 5950 2050
+Wire Wire Line
+	5800 2550 5500 2550
+Wire Wire Line
+	5500 2550 5500 2450
+Text Notes 6300 2900 1    50   ~ 0
+Compensate for VBE
+Wire Wire Line
+	4950 1850 4950 1800
+Wire Wire Line
+	4950 1150 4950 1050
+NoConn ~ 5050 1150
+NoConn ~ 5150 1150
+Wire Wire Line
+	5050 1750 5050 1800
+Wire Wire Line
+	5050 1800 4950 1800
+Connection ~ 4950 1800
+Wire Wire Line
+	4950 1800 4950 1750
+$Comp
+L Device:R R?
+U 1 1 60534A48
+P 5500 1150
+F 0 "R?" H 5600 1250 50  0000 L CNN
+F 1 "10K" H 5600 1100 50  0000 L CNN
+F 2 "" V 5430 1150 50  0001 C CNN
+F 3 "~" H 5500 1150 50  0001 C CNN
+	1    5500 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1300 5500 1450
+Connection ~ 5500 1450
+$Comp
+L power:+12V #PWR?
+U 1 1 6054A16D
+P 5500 900
+F 0 "#PWR?" H 5500 750 50  0001 C CNN
+F 1 "+12V" H 5515 1073 50  0000 C CNN
+F 2 "" H 5500 900 50  0001 C CNN
+F 3 "" H 5500 900 50  0001 C CNN
+	1    5500 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 900  5500 1000
 $EndSCHEMATC

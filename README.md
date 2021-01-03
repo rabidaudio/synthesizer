@@ -277,8 +277,8 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - [ ] design core
     - [x] core osc - square/triangle
     - [x] wave shaper (sine)
-    - [ ] pwm control
-    - [ ] additional shape(s)
+    - [x] pwm control
+    - [ ] additional shape
     - [x] shape selection
   - [x] Confirm amp on breadboard, finalize CV levels
   - fix breadboard test issues
@@ -305,8 +305,8 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - [ ] assemble module
 - MIDI
   - [x] select DAC
-  - [ ] write code to interface with DAC
-  - [ ] write code to interface with MIDI
+  - [x] write code to interface with DAC
+  - [x] write code to interface with MIDI
   - [x] get opto-isolator
     - e.g. [6N138](https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/6N138-39%20Series.pdf)
   - [ ] verify on breadboard
@@ -322,12 +322,11 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - TBD
 - LFO
   - TBD
-- Sequencer
-  - TBD
 - build tools
   - [x] tiny Breakout pcbs for headphone jacks
   - ~~transistor matcher circuit~~
     - bought matched pair BJTs instead
+  - [x] quantized selector with hysteresis
 
 ## License
 
