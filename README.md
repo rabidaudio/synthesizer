@@ -135,6 +135,8 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
       - it sounds like crap on a triangle wave and does nothing for a square wave, but it adds a nice second harmonic to a sine wave
       - from experiments in Max, good values are k1=1.5-2.5, k2=2
       - but at that point, should you just use 2 oscillators?
+  - Thomas Henry's 555 VCO is a clever variation that is more stable
+    - might be able to borrow some ideas
 3. MIDI-CV converter
   - digital MIDI input to OSC CV
   - DAC resolution:
@@ -184,6 +186,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - wired to VCA by default
   - save surface area with 1 set of ADSR controls for a pair of envelopes
   - fully modular means you could borrow one for VCF instead, or send to both VCA and VCF
+  - Can get more mileage out of envelopes with smaller delay-only envelopes, or perhaps attack/decay only
 6. LFO
   - 2x is plenty I think?
   - OSC circuit, but adjusted to lower frequencies
