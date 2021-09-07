@@ -172,6 +172,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - capable to expand to 8 voices?
   - Arpeggiator
     - up, down, play order, random, other patterns?
+  - MIDI thru - output unhandled notes on a midi out
 4. Filter
   -  4P LP(/HP?)
   - Cutoff frequency control has same range as oscillator
@@ -261,6 +262,8 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
     - [ ] verify output levels
     - [ ] hard click on gate
       - needs a LPF?
+    - [ ] chips get very hot after a few minutes
+    - [ ] no need for 5V line, as switches will support 12V switching
   - [ ] assemble Rev. B PCB
   - [ ] manufacture front panel
   - [ ] assemble module
