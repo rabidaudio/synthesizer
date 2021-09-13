@@ -83,17 +83,6 @@ Wire Wire Line
 	10400 1750 10400 1600
 Wire Wire Line
 	10400 1000 10400 850 
-$Comp
-L synth:AudioJack2_Ground_Switch J4
-U 1 1 5F32C90A
-P 1000 1100
-F 0 "J4" H 1032 1525 50  0000 C CNN
-F 1 "A_IN" H 1032 1434 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 1000 1300 50  0001 C CNN
-F 3 "~" H 1000 1300 50  0001 C CNN
-	1    1000 1100
-	1    0    0    -1  
-$EndComp
 Text GLabel 1600 1100 2    50   Input ~ 0
 A_IN
 Wire Wire Line
@@ -101,72 +90,37 @@ Wire Wire Line
 $Comp
 L power:GND #PWR04
 U 1 1 5F337BC4
-P 1000 1650
-F 0 "#PWR04" H 1000 1400 50  0001 C CNN
-F 1 "GND" H 1005 1477 50  0000 C CNN
-F 2 "" H 1000 1650 50  0001 C CNN
-F 3 "" H 1000 1650 50  0001 C CNN
-	1    1000 1650
+P 1300 1450
+F 0 "#PWR04" H 1300 1200 50  0001 C CNN
+F 1 "GND" H 1305 1277 50  0000 C CNN
+F 2 "" H 1300 1450 50  0001 C CNN
+F 3 "" H 1300 1450 50  0001 C CNN
+	1    1300 1450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 1650 1000 1450
-Wire Wire Line
-	1200 900  1300 900 
-Wire Wire Line
-	1300 900  1300 1000
-Wire Wire Line
-	1300 1450 1000 1450
-Connection ~ 1000 1450
-Wire Wire Line
-	1000 1450 1000 1400
-Wire Wire Line
 	1200 1000 1300 1000
-Connection ~ 1300 1000
 Wire Wire Line
 	1300 1000 1300 1450
 Text GLabel 1600 1200 2    50   Input ~ 0
 A_IN_DEFAULT
 Wire Wire Line
 	1600 1200 1200 1200
-$Comp
-L synth:AudioJack2_Ground_Switch J2
-U 1 1 5F3462C6
-P 950 2500
-F 0 "J2" H 982 2925 50  0000 C CNN
-F 1 "A_GATE" H 982 2834 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 950 2700 50  0001 C CNN
-F 3 "~" H 950 2700 50  0001 C CNN
-	1    950  2500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1550 2500 1150 2500
 $Comp
 L power:GND #PWR02
 U 1 1 5F3462D1
-P 950 3050
-F 0 "#PWR02" H 950 2800 50  0001 C CNN
-F 1 "GND" H 955 2877 50  0000 C CNN
-F 2 "" H 950 3050 50  0001 C CNN
-F 3 "" H 950 3050 50  0001 C CNN
-	1    950  3050
+P 1250 2850
+F 0 "#PWR02" H 1250 2600 50  0001 C CNN
+F 1 "GND" H 1255 2677 50  0000 C CNN
+F 2 "" H 1250 2850 50  0001 C CNN
+F 3 "" H 1250 2850 50  0001 C CNN
+	1    1250 2850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  3050 950  2850
-Wire Wire Line
-	1150 2300 1250 2300
-Wire Wire Line
-	1250 2300 1250 2400
-Wire Wire Line
-	1250 2850 950  2850
-Connection ~ 950  2850
-Wire Wire Line
-	950  2850 950  2800
-Wire Wire Line
 	1150 2400 1250 2400
-Connection ~ 1250 2400
 Wire Wire Line
 	1250 2400 1250 2600
 Wire Wire Line
@@ -176,44 +130,21 @@ Wire Wire Line
 	1250 2600 1250 2850
 Text GLabel 1550 2500 2    50   Input ~ 0
 A_GATE
-$Comp
-L synth:AudioJack2_Ground_Switch J6
-U 1 1 5F354B6F
-P 6600 1950
-F 0 "J6" H 6632 2375 50  0000 C CNN
-F 1 "A_OUT" H 6632 2284 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6600 2150 50  0001 C CNN
-F 3 "~" H 6600 2150 50  0001 C CNN
-	1    6600 1950
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	6000 1950 6400 1950
 $Comp
 L power:GND #PWR06
 U 1 1 5F354B7A
-P 6600 2500
-F 0 "#PWR06" H 6600 2250 50  0001 C CNN
-F 1 "GND" H 6605 2327 50  0000 C CNN
-F 2 "" H 6600 2500 50  0001 C CNN
-F 3 "" H 6600 2500 50  0001 C CNN
-	1    6600 2500
+P 6300 2300
+F 0 "#PWR06" H 6300 2050 50  0001 C CNN
+F 1 "GND" H 6305 2127 50  0000 C CNN
+F 2 "" H 6300 2300 50  0001 C CNN
+F 3 "" H 6300 2300 50  0001 C CNN
+	1    6300 2300
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 2500 6600 2300
-Wire Wire Line
-	6400 1750 6300 1750
-Wire Wire Line
-	6300 1750 6300 1850
-Wire Wire Line
-	6300 2300 6600 2300
-Connection ~ 6600 2300
-Wire Wire Line
-	6600 2300 6600 2250
-Wire Wire Line
 	6400 1850 6300 1850
-Connection ~ 6300 1850
 Wire Wire Line
 	6300 1850 6300 2300
 Text GLabel 6000 1950 0    50   Input ~ 0
@@ -294,17 +225,6 @@ Text GLabel 4550 4650 2    50   Input ~ 0
 B_OUT
 Wire Wire Line
 	4550 4650 4350 4650
-$Comp
-L synth:AudioJack2_Ground_Switch J3
-U 1 1 5F5DAD28
-P 950 4000
-F 0 "J3" H 982 4425 50  0000 C CNN
-F 1 "B_IN" H 982 4334 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 950 4200 50  0001 C CNN
-F 3 "~" H 950 4200 50  0001 C CNN
-	1    950  4000
-	1    0    0    -1  
-$EndComp
 Text GLabel 1550 4000 2    50   Input ~ 0
 B_IN
 Wire Wire Line
@@ -312,72 +232,37 @@ Wire Wire Line
 $Comp
 L power:GND #PWR03
 U 1 1 5F5DAD34
-P 950 4550
-F 0 "#PWR03" H 950 4300 50  0001 C CNN
-F 1 "GND" H 955 4377 50  0000 C CNN
-F 2 "" H 950 4550 50  0001 C CNN
-F 3 "" H 950 4550 50  0001 C CNN
-	1    950  4550
+P 1250 4350
+F 0 "#PWR03" H 1250 4100 50  0001 C CNN
+F 1 "GND" H 1255 4177 50  0000 C CNN
+F 2 "" H 1250 4350 50  0001 C CNN
+F 3 "" H 1250 4350 50  0001 C CNN
+	1    1250 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  4550 950  4350
-Wire Wire Line
-	1150 3800 1250 3800
-Wire Wire Line
-	1250 3800 1250 3900
-Wire Wire Line
-	1250 4350 950  4350
-Connection ~ 950  4350
-Wire Wire Line
-	950  4350 950  4300
-Wire Wire Line
 	1150 3900 1250 3900
-Connection ~ 1250 3900
 Wire Wire Line
 	1250 3900 1250 4350
 Text GLabel 1550 4100 2    50   Input ~ 0
 B_IN_DEFAULT
 Wire Wire Line
 	1550 4100 1150 4100
-$Comp
-L synth:AudioJack2_Ground_Switch J1
-U 1 1 5F5DAD49
-P 900 5400
-F 0 "J1" H 932 5825 50  0000 C CNN
-F 1 "B_GATE" H 932 5734 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 900 5600 50  0001 C CNN
-F 3 "~" H 900 5600 50  0001 C CNN
-	1    900  5400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1500 5400 1100 5400
 $Comp
 L power:GND #PWR01
 U 1 1 5F5DAD54
-P 900 5950
-F 0 "#PWR01" H 900 5700 50  0001 C CNN
-F 1 "GND" H 905 5777 50  0000 C CNN
-F 2 "" H 900 5950 50  0001 C CNN
-F 3 "" H 900 5950 50  0001 C CNN
-	1    900  5950
+P 1200 5750
+F 0 "#PWR01" H 1200 5500 50  0001 C CNN
+F 1 "GND" H 1205 5577 50  0000 C CNN
+F 2 "" H 1200 5750 50  0001 C CNN
+F 3 "" H 1200 5750 50  0001 C CNN
+	1    1200 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	900  5950 900  5750
-Wire Wire Line
-	1100 5200 1200 5200
-Wire Wire Line
-	1200 5200 1200 5300
-Wire Wire Line
-	1200 5750 900  5750
-Connection ~ 900  5750
-Wire Wire Line
-	900  5750 900  5700
-Wire Wire Line
 	1100 5300 1200 5300
-Connection ~ 1200 5300
 Wire Wire Line
 	1200 5300 1200 5500
 Wire Wire Line
@@ -387,44 +272,21 @@ Wire Wire Line
 	1200 5500 1200 5750
 Text GLabel 1500 5400 2    50   Input ~ 0
 B_GATE
-$Comp
-L synth:AudioJack2_Ground_Switch J5
-U 1 1 5F5E00F2
-P 6250 4950
-F 0 "J5" H 6282 5375 50  0000 C CNN
-F 1 "B_OUT" H 6282 5284 50  0000 C CNN
-F 2 "synth:3.5MM_Jack_Breakout_Vertical" H 6250 5150 50  0001 C CNN
-F 3 "~" H 6250 5150 50  0001 C CNN
-	1    6250 4950
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	5650 4950 6050 4950
 $Comp
 L power:GND #PWR05
 U 1 1 5F5E00FD
-P 6250 5500
-F 0 "#PWR05" H 6250 5250 50  0001 C CNN
-F 1 "GND" H 6255 5327 50  0000 C CNN
-F 2 "" H 6250 5500 50  0001 C CNN
-F 3 "" H 6250 5500 50  0001 C CNN
-	1    6250 5500
+P 5950 5300
+F 0 "#PWR05" H 5950 5050 50  0001 C CNN
+F 1 "GND" H 5955 5127 50  0000 C CNN
+F 2 "" H 5950 5300 50  0001 C CNN
+F 3 "" H 5950 5300 50  0001 C CNN
+	1    5950 5300
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 5500 6250 5300
-Wire Wire Line
-	6050 4750 5950 4750
-Wire Wire Line
-	5950 4750 5950 4850
-Wire Wire Line
-	5950 5300 6250 5300
-Connection ~ 6250 5300
-Wire Wire Line
-	6250 5300 6250 5250
-Wire Wire Line
 	6050 4850 5950 4850
-Connection ~ 5950 4850
 Wire Wire Line
 	5950 4850 5950 5300
 Text GLabel 5650 4950 0    50   Input ~ 0
@@ -444,13 +306,13 @@ F 3 "~" H 9950 3150 50  0001 C CNN
 	1    9950 3150
 	-1   0    0    1   
 $EndComp
-Text GLabel 9550 2950 0    50   Input ~ 0
+Text GLabel 9550 3250 0    50   Input ~ 0
 A_IN_DEFAULT
 Text GLabel 9550 3050 0    50   Input ~ 0
 A_OUT_DEFAULT
 Text GLabel 9550 3150 0    50   Input ~ 0
 B_IN_DEFAULT
-Text GLabel 9550 3250 0    50   Input ~ 0
+Text GLabel 9550 2950 0    50   Input ~ 0
 B_OUT_DEFAULT
 Wire Wire Line
 	9550 3250 9750 3250
@@ -460,4 +322,162 @@ Wire Wire Line
 	9550 3050 9750 3050
 Wire Wire Line
 	9750 2950 9550 2950
+$Comp
+L Connector:AudioJack2_SwitchT J4
+U 1 1 6146D779
+P 1000 1100
+F 0 "J4" H 1032 1425 50  0000 C CNN
+F 1 "A_IN" H 1032 1334 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 1000 1100 50  0001 C CNN
+F 3 "~" H 1000 1100 50  0001 C CNN
+	1    1000 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J2
+U 1 1 6146FC09
+P 950 2500
+F 0 "J2" H 982 2825 50  0000 C CNN
+F 1 "A_GATE" H 982 2734 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 950 2500 50  0001 C CNN
+F 3 "~" H 950 2500 50  0001 C CNN
+	1    950  2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J3
+U 1 1 61470257
+P 950 4000
+F 0 "J3" H 982 4325 50  0000 C CNN
+F 1 "B_IN" H 982 4234 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 950 4000 50  0001 C CNN
+F 3 "~" H 950 4000 50  0001 C CNN
+	1    950  4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J1
+U 1 1 61470A7A
+P 900 5400
+F 0 "J1" H 932 5725 50  0000 C CNN
+F 1 "B_GATE" H 932 5634 50  0000 C CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 900 5400 50  0001 C CNN
+F 3 "~" H 900 5400 50  0001 C CNN
+	1    900  5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J6
+U 1 1 61470FB6
+P 6600 1950
+F 0 "J6" H 6420 1975 50  0000 R CNN
+F 1 "A_OUT" H 6420 1884 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6600 1950 50  0001 C CNN
+F 3 "~" H 6600 1950 50  0001 C CNN
+	1    6600 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2_SwitchT J5
+U 1 1 61471EE3
+P 6250 4950
+F 0 "J5" H 6070 4975 50  0000 R CNN
+F 1 "B_OUT" H 6070 4884 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6250 4950 50  0001 C CNN
+F 3 "~" H 6250 4950 50  0001 C CNN
+	1    6250 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 616A1881
+P 8300 1250
+AR Path="/5F5446F0/616A1881" Ref="C?"  Part="1" 
+AR Path="/616A1881" Ref="C6"  Part="1" 
+F 0 "C6" H 8415 1296 50  0000 L CNN
+F 1 "0.1u" H 8415 1205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8338 1100 50  0001 C CNN
+F 3 "~" H 8300 1250 50  0001 C CNN
+	1    8300 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0101
+U 1 1 616A1887
+P 8300 1500
+AR Path="/616A1887" Ref="#PWR0101"  Part="1" 
+AR Path="/5F5446F0/616A1887" Ref="#PWR?"  Part="1" 
+AR Path="/5F5D80AF/616A1887" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0101" H 8300 1600 50  0001 C CNN
+F 1 "-12V" H 8315 1673 50  0000 C CNN
+F 2 "" H 8300 1500 50  0001 C CNN
+F 3 "" H 8300 1500 50  0001 C CNN
+	1    8300 1500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 616A188D
+P 8300 950
+AR Path="/616A188D" Ref="#PWR0102"  Part="1" 
+AR Path="/5F5446F0/616A188D" Ref="#PWR?"  Part="1" 
+AR Path="/5F5D80AF/616A188D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0102" H 8300 700 50  0001 C CNN
+F 1 "GND" H 8305 777 50  0000 C CNN
+F 2 "" H 8300 950 50  0001 C CNN
+F 3 "" H 8300 950 50  0001 C CNN
+	1    8300 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0103
+U 1 1 616A1893
+P 7900 950
+AR Path="/616A1893" Ref="#PWR0103"  Part="1" 
+AR Path="/5F5446F0/616A1893" Ref="#PWR?"  Part="1" 
+AR Path="/5F5D80AF/616A1893" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0103" H 7900 800 50  0001 C CNN
+F 1 "+12V" H 7915 1123 50  0000 C CNN
+F 2 "" H 7900 950 50  0001 C CNN
+F 3 "" H 7900 950 50  0001 C CNN
+	1    7900 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 616A1899
+P 7900 1250
+AR Path="/5F5446F0/616A1899" Ref="C?"  Part="1" 
+AR Path="/616A1899" Ref="C5"  Part="1" 
+F 0 "C5" H 8015 1296 50  0000 L CNN
+F 1 "0.1u" H 8015 1205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7938 1100 50  0001 C CNN
+F 3 "~" H 7900 1250 50  0001 C CNN
+	1    7900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 616A189F
+P 7900 1500
+AR Path="/616A189F" Ref="#PWR0104"  Part="1" 
+AR Path="/5F5446F0/616A189F" Ref="#PWR?"  Part="1" 
+AR Path="/5F5D80AF/616A189F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0104" H 7900 1250 50  0001 C CNN
+F 1 "GND" H 7905 1327 50  0000 C CNN
+F 2 "" H 7900 1500 50  0001 C CNN
+F 3 "" H 7900 1500 50  0001 C CNN
+	1    7900 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 1500 7900 1400
+Wire Wire Line
+	8300 1500 8300 1400
+Wire Wire Line
+	8300 1100 8300 950 
+Wire Wire Line
+	7900 1100 7900 950 
+Text Notes 7600 1850 0    50   ~ 0
+Bypass capacitors for LM13700
 $EndSCHEMATC
