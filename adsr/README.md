@@ -34,10 +34,14 @@ kind of thing you need to modulate automatically.
 Choice of the capacitor and the knob resistance control the time
 range. Large values for both mean a longer charge time, but a large
 capacitance effects the fastest charge time too, since `I_abc` is
-capped at 2mA.
+capped at 2mA. Pot size effects dynamic range.
 
-C=6.8u and a knob range of 1M gives a control range of 35ms to ~2.3s for a
-0-10V change, i.e. a slew rate between 242 V/s and 4.2 V/s.
+In practice, charge times less than 15ms are undetectable, and charge times above 2s are largely unnecessary.
+
+C=4.7u and a knob range of 1M gives a control range of 12ms to ~1.8s for a
+0-5V change, i.e. a slew rate between 356 V/s and 2.4 V/s.
+
+Could offer two caps, fast and slow, with a toggle switch. Switching to a 22u capacitor gives 58ms to 8.6s.
 
 A current mirror isolates the 3 different reference voltages, without it they
 interfere with each other.
