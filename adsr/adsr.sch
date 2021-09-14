@@ -480,4 +480,6 @@ Wire Wire Line
 	7900 1100 7900 950 
 Text Notes 7600 1850 0    50   ~ 0
 Bypass capacitors for LM13700
+Text Notes 2050 3100 0    50   ~ 0
+TODO: IN and GATE are the same thing????
 $EndSCHEMATC
