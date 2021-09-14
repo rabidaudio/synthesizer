@@ -152,28 +152,28 @@ Wire Wire Line
 	4050 4150 4050 3850
 $Comp
 L Amplifier_Operational:TL074 U2
-U 1 1 5F585080
+U 3 1 5F585080
 P 7250 3950
-AR Path="/5F5446F0/5F585080" Ref="U2"  Part="1" 
+AR Path="/5F5446F0/5F585080" Ref="U2"  Part="3" 
 AR Path="/5F5D80AF/5F585080" Ref="U7"  Part="1" 
 F 0 "U2" H 7350 3800 50  0000 C CNN
 F 1 "TL074" H 7200 3950 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7200 4050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 4150 50  0001 C CNN
-	1    7250 3950
+	3    7250 3950
 	1    0    0    1   
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 U2
-U 2 1 5F585086
+U 4 1 5F585086
 P 7250 3300
-AR Path="/5F5446F0/5F585086" Ref="U2"  Part="2" 
+AR Path="/5F5446F0/5F585086" Ref="U2"  Part="4" 
 AR Path="/5F5D80AF/5F585086" Ref="U7"  Part="2" 
 F 0 "U2" H 7300 3150 50  0000 C CNN
 F 1 "TL074" H 7200 3300 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7200 3400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7300 3500 50  0001 C CNN
-	2    7250 3300
+	4    7250 3300
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -797,15 +797,15 @@ Wire Wire Line
 Connection ~ 8700 4050
 $Comp
 L Amplifier_Operational:TL074 U2
-U 3 1 5F2911D2
+U 1 1 5F2911D2
 P 5550 6300
-AR Path="/5F5446F0/5F2911D2" Ref="U2"  Part="3" 
+AR Path="/5F5446F0/5F2911D2" Ref="U2"  Part="1" 
 AR Path="/5F5D80AF/5F2911D2" Ref="U7"  Part="3" 
 F 0 "U2" H 5600 6150 50  0000 C CNN
 F 1 "TL074" H 5500 6300 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 6400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5600 6500 50  0001 C CNN
-	3    5550 6300
+	1    5550 6300
 	1    0    0    1   
 $EndComp
 Text Label 3250 4050 2    50   ~ 0
@@ -832,15 +832,15 @@ Wire Wire Line
 Connection ~ 4750 6400
 $Comp
 L Amplifier_Operational:TL074 U2
-U 4 1 5F2C52A2
+U 2 1 5F2C52A2
 P 5550 6800
-AR Path="/5F5446F0/5F2C52A2" Ref="U2"  Part="4" 
+AR Path="/5F5446F0/5F2C52A2" Ref="U2"  Part="2" 
 AR Path="/5F5D80AF/5F2C52A2" Ref="U7"  Part="4" 
 F 0 "U2" H 5600 6650 50  0000 C CNN
 F 1 "TL074" H 5500 6800 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5500 6900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5600 7000 50  0001 C CNN
-	4    5550 6800
+	2    5550 6800
 	1    0    0    1   
 $EndComp
 Wire Wire Line
