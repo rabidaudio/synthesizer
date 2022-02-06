@@ -38,13 +38,20 @@ capped at 2mA. Pot size effects dynamic range.
 
 In practice, charge times less than 15ms are undetectable, and charge times above 2s are largely unnecessary.
 
+A non-linear resistance would allow finer control at larger charge times. However linear seems to have plenty of expressiveness.
+
+
 C=4.7u and a knob range of 1M gives a control range of 12ms to \~1.8s for a
 0-5V change, i.e. a slew rate between 356 V/s and 2.4 V/s.
 
-Could offer two caps, fast and slow, with a toggle switch. Switching to a 22u capacitor gives 58ms to 8.6s.
+Could offer two caps, fast and slow, with a toggle switch. A 22u capacitor gives 58ms to 8.6s. A 1u capacitor gives \~5ms to \~55ms.
 
 A current mirror isolates the 3 different reference voltages, without it they
 interfere with each other.
+
+Rates are dependant on the input level. This means if the input gate level is variable (for example it depends on MIDI note velocity), then the times will be slower for harder hits. We'd probably want constant rates regardless of velocity for example. However this seems difficult to achieve with the current design, as during release the input voltage is off, so without memory you don't have a reference to scale the output by.
+
+![constant current means time depends on level](constant-current.png)
 
 
 **TODO: power usage** 
