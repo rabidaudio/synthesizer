@@ -20,9 +20,10 @@
 
 ## Design goals
 
-- "fully-modular with defaults"
+- "semi-semi-modular"
   - semi-modular-style sensible default paths connected under the hood
   - all defaults overridden with patch cables
+  - separate modules, so can be completely reconfigured
   - specifically targeting support for several modes:
     - 4 totally separate, independent synths, each controlled with constant VCO or sequencer
     - 1-voice, MIDI-,sequencer-, or constant-controlled synth with 4 oscillators, e.g. harmonizing intervals, mixing shapes/timbres
@@ -173,6 +174,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - Arpeggiator
     - up, down, play order, random, other patterns?
   - MIDI thru - output unhandled notes on a midi out
+  - Ability to chose between velocity-leveled gate and constant gate
 4. Filter
   -  4P LP(/HP?)
   - Cutoff frequency control has same range as oscillator
