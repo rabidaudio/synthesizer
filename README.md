@@ -40,6 +40,9 @@
   - Firmware code can easily provide hysteresis and arbitrary numbers of divisions, unlike CDXXXX series CMOS chips
 - Outputs can use splitters, but inputs cannot
 
+Try to keep jack placement consistent, i.e. top with knobs at bottom
+
+
 ## Tools
 
 Based mostly on what I have available and have experience with.
@@ -136,43 +139,11 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
       - it sounds like crap on a triangle wave and does nothing for a square wave, but it adds a nice second harmonic to a sine wave
       - from experiments in Max, good values are k1=1.5-2.5, k2=2
       - but at that point, should you just use 2 oscillators?
-3. MIDI-CV converter
-  - digital MIDI input to OSC CV
-  - DAC resolution:
-    - for 1 step = 1 cent on a 10V space with 1V/octave:
-      - 10V / 2^x = (1V/12/100) => log2(10/(1/12/100)) = 13.55 bit minimum
-    - 16-bit DAC would be incredibly accurate, 0.18% resolution
-  - DAC also needed for amplifier (velocity)
-    - Velocity is only 7 bits (0-127)
-    - builtin ATMega DAC (PWM) is 8bit, but very much in the audible frequency range (~450Hz)
-    - Even at a higher frequency, an aggressive enough low-pass filter would probably have a miserable response time
-    - instead we need a dedicated 7- or 8-bit DAC
-      - TLV5620 is a cheap 8-bit quad.
-      - Even though the data sheet seems to suggest that messages are 11 bits, this resource seems to use 2 bytes:
-        - http://www.kerrywong.com/2013/10/12/interfacing-tlv5620-with-arduino/
-    - What's a reliable solution for reference voltages?
-  - up to 4 voices
-  - round-robin outputs on each key press
-    - use open output if available else replace oldest key pressed
-  - use built-in 10-bit DAC for velocity control
-  - Modes:
-    - off
-    - 1-voice: A
-    - 2-voice: A + C
-    - 3-voice: A + B + C
-    - 4-voice: A + B + C + D
-    - 4-voice-split: A + B, C + D
-      - like standard 4-voice mode, but round robin is in 2 pairs of slots instead of 4 slots
-      - allows for 2-voice bass and 2-voice melody
-      - on mode selection, waits for a keypress to set the note to split at
-  - portamento
-    - simpler envelope circuit could be used, but parameters need to be tuned
-    for longer times over short voltage change
-  - capable to expand to 8 voices?
-  - Arpeggiator
-    - up, down, play order, random, other patterns?
-  - MIDI thru - output unhandled notes on a midi out
-  - Ability to chose between velocity-leveled gate and constant gate
+3. [A/D/S/R envelope](adsr)
+  - 4 envelopes required for 4-voice polyphony
+  - wired to VCA by default
+  - save surface area with 1 set of ADSR controls for a pair of envelopes
+  - fully modular means you could borrow one for VCF instead, or send to both VCA and VCF
 4. Filter
   -  4P LP(/HP?)
   - Cutoff frequency control has same range as oscillator
@@ -182,19 +153,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - CV control of cutoff + resonance
   - Default to track cutoff with VCO-CV
   - individual filter knobs, plus a global knob for filter sweeps
-5. [A/D/S/R envelope](adsr)
-  - 4 envelopes required for 4-voice polyphony
-  - wired to VCA by default
-  - save surface area with 1 set of ADSR controls for a pair of envelopes
-  - fully modular means you could borrow one for VCF instead, or send to both VCA and VCF
-6. LFO
-  - 2x is plenty I think?
-  - OSC circuit, but adjusted to lower frequencies
-  - bipolar (+/- 5V) and unipolar (0-10V) outputs
-  - ideally multi-shape: sine,tri,squ,ramp up,ramp down
-  - CV control for shape
-  - Trigger input (e.g. MIDI gate or clock)?
-7. [Utilities](utils)
+5. [Utilities](utils)
   - Buffer, Sum, Attenuate, Invert, Gate
   - Could be all-in one
     - A input (default ground)
@@ -205,33 +164,14 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
     - `-(A+B)*level*gate` output
     - Constant CV out if A and B disconnected
 
-## Future ideas
+Bitcrusher?
+4 filters or one?
+Noise?
+Clock?
+Headphone output no longer required
+2D mixer?
 
-- Sequencer
-  - clock source for LFO? Or LFO input as clock?
-  - divide down clocks?
-  - likely digital
-    - if MIDI output, can simplify duplicating VC outs for tuning,
-      can leverage MIDI converter for this
-    - however, key-based offsets of patterns wouldn't work
-  - 7-segment display of BPM for source clock?
-  - sweep control option
-    - LFO or voltages to trigger and CV external LFO for 4-bar sweep
-    - e.g. automatic filter sweeps
-  - random note drop feature
-  - Could be externally controlled, e.g. iPad
-    - save space and iterate on features
-    - allow it to be used as a drum machine too
-- Need some good percussive effects
-  - 808 would be a good reference
-- White noise generator?
-- Sample+Hold?
-  - combined with white noise creates RNG
-  - alternatively sequencer could do RNG digitally
-  - random is a lot more interesting if it can quantize
-    - quantization is a lot cheaper in digital
-  - S+H has little use to me outside of random
-- Delay, overdrive, etc. are gimmicky and not useful, can be done via effects pedals
+
 
 ## TODO
 
@@ -306,24 +246,7 @@ Otherwise, typically use 2N3904 / 2N3906 for BJTs and 2N2222 or similar for diod
   - [ ] design front panel
   - [ ] manufacture front panel
   - [ ] assemble module
-- MIDI
-  - [x] select DAC
-  - [x] write code to interface with DAC
-  - [x] write code to interface with MIDI
-  - [x] get opto-isolator
-    - e.g. [6N138](https://media.digikey.com/pdf/Data%20Sheets/Lite-On%20PDFs/6N138-39%20Series.pdf)
-  - [ ] verify on breadboard
-  - [ ] build prototype
-  - fix prototype issues
-    - TBD
-  - [ ] design PCB
-  - [ ] Create PCB
-  - [ ] design front panel
-  - [ ] manufacture front panel
-  - [ ] assemble module
 - VCF
-  - TBD
-- LFO
   - TBD
 - build tools
   - [x] tiny Breakout pcbs for headphone jacks

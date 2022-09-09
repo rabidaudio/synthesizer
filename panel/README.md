@@ -15,6 +15,7 @@
     - note: some knobs have 21mm base and need to be bigger
 - each jack is 3HP wide, each knob is 5 or 6HP wide
 
+
 Reference for dimensions: http://www.doepfer.de/a100_man/a100m_e.htm
 
 # Panels
@@ -35,3 +36,7 @@ Power supply:
 - 170mA at +5V
 
 - https://www.amazon.com/Tiptop-Audio-Happy-Ending-Kit/dp/B074B29GPR
+
+
+NiftyKeyz - 112 HP
+
