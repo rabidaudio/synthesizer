@@ -4,7 +4,9 @@
 
 Adafruit_AlphaNum4 alpha4 = Adafruit_AlphaNum4();
 
-uint8_t bpms = 120;
+
+#define CLOCK_PIN 10
+#define SUBDIV_PIN 13
 
 void setupTimer1() {
   noInterrupts();
@@ -119,7 +121,8 @@ uint16_t measureBPM(uint16_t measurement) {
 }
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(CLOCK_PIN, OUTPUT);
+  pinMode(SUBDIV_PIN, OUTPUT);
   alpha4.begin(0x70);
 
   Serial.begin(9600);
@@ -150,10 +153,19 @@ void loop() {
   delay(100);
 }
 
+uint8_t subdivisions = 3;
+uint8_t subdiv_counter = 0;
+
 ISR(TIMER1_COMPA_vect) {
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(CLOCK_PIN, HIGH);
+  subdiv_counter++;
+  if (subdiv_counter >= subdivisions) {
+    digitalWrite(SUBDIV_PIN, HIGH);
+    subdiv_counter = 0;
+  }
 }
 
 ISR(TIMER1_COMPB_vect) {
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(CLOCK_PIN, LOW);
+  digitalWrite(SUBDIV_PIN, LOW);
 }
