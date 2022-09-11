@@ -1,42 +1,36 @@
 # Clock
 
-- LED BPM display
-- Knob controls BPM
-- MIDI in/out - switch between clock source and sink
+- LED 7-segment display
+- Knob: continuous rotary selector
 - Swing control
 - Out
-- no-swing out
-- subdivision out (1-8)
+- subdivision out
 - LED blink on clock
 - Tap tempo
 
 
 States:
   Main State:
-  - Display: current BPM /[0-9]{3}/
+  - Display: current BPM (35-287)
   - knob: BPM
-  - main button: next state
-  - swing button: swing control state
+  - press button B: tap tempo
 
-  swing control:
-    - Display: swing amount /(+|-)[0-9]{2}/
+  swing control state (hold button A):
+    - Display: swing amount (0-100%)
     - knob: swing amount
-    - main button: nothing
-    - swing button: release returns to main state
 
-  Tap Tempo state:
-    - Display: current BPM /[0-9]{3}/
-    - knob: nothing
-    - main button: next state
-    - swing button: tap tempo
-
-  MIDI setting state:
-    - Display: M for midi and then state /M (I|O|N)/
-    - main button: next state
-    - swing button: press steps through IN/OUT/NONE
-
-  Subdivision state:
-    - Display: D for subdivision and then amount /D[0-9]{2}/
-    - knob: controls subdivision amount 1-16
+  Subdivision state (hold button B):
+    - Display: number of subdivisions 1-16
+    - knob: controls subdivision amount
     - main button: next state
     - swing button: nothing
+
+  Pulse width state (hold both A and B):
+    - Display: number of ms (1-200)
+    - knob: controls width
+
+
+Rate CV?
+
+https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
+https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h
