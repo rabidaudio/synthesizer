@@ -31,6 +31,7 @@ States:
 
 
 Rate CV?
+Faster speeds for sequencers? Negative subdivisions?
 
 https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
 https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h

@@ -25,4 +25,19 @@ class Display {
       _alpha4.writeDigitAscii(3, strval[2]);
       _alpha4.writeDisplay();
     }
+
+    void displaySwing(int8_t swing) {
+      // TODO: make more efficient code than strings
+      String strval = String(swing, DEC);
+      while (strval.length() < 4) {
+        strval = " " + strval;
+      }
+
+      _alpha4.clear();
+      _alpha4.writeDigitAscii(0, strval[0]);
+      _alpha4.writeDigitAscii(1, strval[1]);
+      _alpha4.writeDigitAscii(2, strval[2]);
+      _alpha4.writeDigitAscii(3, strval[3]);
+      _alpha4.writeDisplay();
+    }
 };

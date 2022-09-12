@@ -56,7 +56,8 @@
    1892,  1889,  1885,  1881,  1877,  1874,
 };
 
-uint16_t registerValue(uint16_t bpm) {
+
+uint16_t counterValue(uint16_t bpm) {
   return pgm_read_word_near(BPM_LOOKUP + bpm - 15);
 }
 
@@ -73,7 +74,25 @@ class Timer1 {
     uint8_t _clockPin;
     uint8_t _subdivisionPin;
     uint8_t _subdivisions = 4;
-    uint8_t _subdiv_idx = 0;
+    uint8_t _subdivIdx = 0;
+    int8_t _swing = 0;
+    uint16_t _oddTick;
+    uint16_t _evenTick;
+    bool _isEven = true;
+
+    void updateTimer() {
+      uint16_t baseValue = counterValue(_bpm);
+      
+      // Note: Hopefully doing this math isn't too slow.
+      // It only needs to happen when the swing or bpm changes.
+      float swingScale = ((float) _swing) / 128.0;
+      uint16_t offset = (uint16_t) (((float) baseValue) / 3.0 * swingScale);
+      _oddTick = baseValue + offset;
+      _evenTick = baseValue - offset;
+
+      OCR1A = _isEven ? _evenTick : _oddTick;
+      if (TCNT1 > OCR1A) TCNT1 = 0; // reset timer
+    }
 
   public:
     void begin(uint8_t clockPin, uint8_t subdivisionPin) {
@@ -89,7 +108,7 @@ class Timer1 {
       TCNT1 = 0;
 
       // 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
-      OCR1A = registerValue(_bpm);
+      OCR1A = counterValue(_bpm);
       OCR1B = 313; // ~20ms
       // CTC
       TCCR1B |= (1 << WGM12);
@@ -98,13 +117,25 @@ class Timer1 {
       // Output Compare Match A Interrupt Enable
       TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
       interrupts();
+
+      updateTimer();
+    }
+
+    void setSwing(int8_t swing) {
+      if (swing != _swing) {
+        _swing = swing;
+        updateTimer();
+      }
+    }
+
+    int8_t getSwing() {
+      return _swing;
     }
 
     void setBPM(uint16_t bpm) {
       if (bpm != _bpm) {
         _bpm = bpm;
-        OCR1A = registerValue(bpm);
-        if (TCNT1 > OCR1A) TCNT1 = 0; // reset timer
+        updateTimer();
       }
     }
 
@@ -114,21 +145,24 @@ class Timer1 {
 
     void setSubdivisions(uint8_t subdivisions) {
       _subdivisions = subdivisions;
-      _subdiv_idx = subdivisions;
+      _subdivIdx = subdivisions;
     }
 
     void reset() {
       TCNT1 = 0; // reset timer
-      _subdiv_idx = _subdivisions;
+      _subdivIdx = _subdivisions;
+      _isEven = true;
     }
 
     void tickA() {
       digitalWrite(_clockPin, HIGH);
-      _subdiv_idx--;
-      if (_subdiv_idx == 0) {
+      _subdivIdx--;
+      if (_subdivIdx == 0) {
         digitalWrite(_subdivisionPin, HIGH);
-        _subdiv_idx = _subdivisions;
+        _subdivIdx = _subdivisions;
       }
+      OCR1A = _isEven ? _evenTick : _oddTick;
+      _isEven = !_isEven;
     }
 
     void tickB() {
