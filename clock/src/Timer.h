@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
- // Lookup table for OCR1A register values for BPMs from 15 to 500.
- // This is to avoid floating point math.
- // Calculations:
- // https://docs.google.com/spreadsheets/d/1pTg9IQDEw8LUGN85Lwp80kAzATN1I9yxx0m5xDrEWBg/edit#gid=0
- const PROGMEM uint16_t BPM_LOOKUP[] = {
+// Lookup table for OCR1A register values for BPMs from 15 to 500.
+// This is to avoid floating point math.
+// Calculations:
+// https://docs.google.com/spreadsheets/d/1pTg9IQDEw8LUGN85Lwp80kAzATN1I9yxx0m5xDrEWBg/edit#gid=0
+const PROGMEM uint16_t BPM_LOOKUP[] = {
   62499, 58592, 55146, 52082, 49341, 46874, 44641, 42612, 40759, 39061,
   37499, 36056, 34721, 33481, 32326, 31249, 30240, 29295, 28408, 27572,
   26784, 26040, 25336, 24670, 24037, 23436, 22864, 22320, 21801, 21305,
@@ -53,11 +53,81 @@
    2015,  2010,  2006,  2002,  1997,  1993,  1989,  1985,  1981,  1976,
    1972,  1968,  1964,  1960,  1956,  1952,  1948,  1944,  1939,  1935,
    1931,  1928,  1924,  1920,  1916,  1912,  1908,  1904,  1900,  1896,
-   1892,  1889,  1885,  1881,  1877,  1874,
+   1892,  1889,  1885,  1881,  1877,  1874,  1870,  1866,  1862,  1859,
+  1855,  1851,  1848,  1844,  1840,  1837,  1833,  1830,  1826,  1822,
+  1819,  1815,  1812,  1808,  1805,  1801,  1798,  1794,  1791,  1788,
+  1784,  1781,  1777,  1774,  1771,  1767,  1764,  1761,  1757,  1754,
+  1751,  1748,  1744,  1741,  1738,  1735,  1731,  1728,  1725,  1722,
+  1719,  1716,  1712,  1709,  1706,  1703,  1700,  1697,  1694,  1691,
+  1688,  1685,  1682,  1679,  1676,  1673,  1670,  1667,  1664,  1661,
+  1658,  1655,  1652,  1649,  1646,  1643,  1640,  1637,  1635,  1632,
+  1629,  1626,  1623,  1620,  1618,  1615,  1612,  1609,  1607,  1604,
+  1601,  1598,  1596,  1593,  1590,  1587,  1585,  1582,  1579,  1577,
+  1574,  1571,  1569,  1566,  1564,  1561,  1558,  1556,  1553,  1551,
+  1548,  1546,  1543,  1540,  1538,  1535,  1533,  1530,  1528,  1525,
+  1523,  1520,  1518,  1515,  1513,  1511,  1508,  1506,  1503,  1501,
+  1499,  1496,  1494,  1491,  1489,  1487,  1484,  1482,  1480,  1477,
+  1475,  1473,  1470,  1468,  1466,  1463,  1461,  1459,  1457,  1454,
+  1452,  1450,  1447,  1445,  1443,  1441,  1439,  1436,  1434,  1432,
+  1430,  1428,  1425,  1423,  1421,  1419,  1417,  1415,  1413,  1410,
+  1408,  1406,  1404,  1402,  1400,  1398,  1396,  1394,  1392,  1389,
+  1387,  1385,  1383,  1381,  1379,  1377,  1375,  1373,  1371,  1369,
+  1367,  1365,  1363,  1361,  1359,  1357,  1355,  1353,  1351,  1349,
+  1347,  1345,  1344,  1342,  1340,  1338,  1336,  1334,  1332,  1330,
+  1328,  1326,  1325,  1323,  1321,  1319,  1317,  1315,  1313,  1312,
+  1310,  1308,  1306,  1304,  1302,  1301,  1299,  1297,  1295,  1293,
+  1292,  1290,  1288,  1286,  1285,  1283,  1281,  1279,  1277,  1276,
+  1274,  1272,  1271,  1269,  1267,  1265,  1264,  1262,  1260,  1259,
+  1257,  1255,  1254,  1252,  1250,  1249,  1247,  1245,  1244,  1242,
+  1240,  1239,  1237,  1235,  1234,  1232,  1230,  1229,  1227,  1226,
+  1224,  1222,  1221,  1219,  1218,  1216,  1214,  1213,  1211,  1210,
+  1208,  1207,  1205,  1204,  1202,  1200,  1199,  1197,  1196,  1194,
+  1193,  1191,  1190,  1188,  1187,  1185,  1184,  1182,  1181,  1179,
+  1178,  1176,  1175,  1173,  1172,  1170,  1169,  1167,  1166,  1165,
+  1163,  1162,  1160,  1159,  1157,  1156,  1154,  1153,  1152,  1150,
+  1149,  1147,  1146,  1145,  1143,  1142,  1140,  1139,  1138,  1136,
+  1135,  1133,  1132,  1131,  1129,  1128,  1127,  1125,  1124,  1123,
+  1121,  1120,  1119,  1117,  1116,  1115,  1113,  1112,  1111,  1109,
+  1108,  1107,  1105,  1104,  1103,  1101,  1100,  1099,  1098,  1096,
+  1095,  1094,  1092,  1091,  1090,  1089,  1087,  1086,  1085,  1084,
+  1082,  1081,  1080,  1079,  1077,  1076,  1075,  1074,  1072,  1071,
+  // 1070,  1069,  1067,  1066,  1065,  1064,  1063,  1061,  1060,  1059,
+  // 1058,  1057,  1055,  1054,  1053,  1052,  1051,  1050,  1048,  1047,
+  // 1046,  1045,  1044,  1042,  1041,  1040,  1039,  1038,  1037,  1036,
+  // 1034,  1033,  1032,  1031,  1030,  1029,  1028,  1026,  1025,  1024,
+  // 1023,  1022,  1021,  1020,  1019,  1018,  1016,  1015,  1014,  1013,
+  // 1012,  1011,  1010,  1009,  1008,  1007,  1005,  1004,  1003,  1002,
+  // 1001,  1000,  999,    998,   997,   996,   995,   994,   993,   992,
+  //  991,   990,   988,   987,   986,   985,   984,   983,   982,   981,
+  //  980,   979,   978,   977,   976,   975,   974,   973,   972,   971,
+  //  970,   969,   968,   967,   966,   965,   964,   963,   962,   961,
+  //  960,   959,   958,   957,   956,   955,   954,   953,   952,   951,
+  //  950,   949,   948,   947,   946,   945,   945,   944,   943,   942,
+  //  941,   940,   939,   938,   937,   936,   935,   934,   933,   932,
+  //  931,   930,   929,   929,   928,   927,   926,   925,   924,   923,
+  //  922,   921,   920,   919,   919,   918,   917,   916,   915,   914,
+  //  913,   912,   911,   910,   910,   909,   908,   907,   906,   905,
+  //  904,   903,   903,   902,   901,   900,   899,   898,   897,   896,
+  //  896,   895,   894,   893,   892,   891,   891,   890,   889,   888,
+  //  887,   886,   885,   885,   884,   883,   882,   881,   880,   880,
+  //  879,   878,   877,   876,   875,   875,   874,   873,   872,   871,
+  //  871,   870,   869,   868,   867,   867,   866,   865,   864,   863,
+  //  863,   862,   861,   860,   859,   859,   858,   857,   856,   855,
+  //  855,   854,   853,   852,   852,   851,   850,   849,   848,   848,
+  //  847,   846,   845,   845,   844,   843,   842,   842,   841,   840,
+  //  839,   839,   838,   837,   836,   836,   835,   834,   833,   833,
+  //  832,   831,   830,   830,   829,   828,   827,   827,   826,   825,
+  //  824,   824,   823,   822,   822,   821,   820,   819,   819,   818,
+  //  817,   817,   816,   815,   814,   814,   813,   812,   812,   811,
+  //  810,   809,   809,   808,   807,   807,   806,   805,   805,   804,
+  //  803,   803,   802,   801,   800,   800,   799,   798,   798,   797,
+  //  796,   796,   795,   794,   794,   793,   792,   792,   791,   790,
+  //  790,   789,   788,   788,   787,   786,   786,   785,   784,   784,
+  //  783,   782,   782,   781,   780,   780,
 };
 
-
-uint16_t counterValue(uint16_t bpm) {
+uint16_t counterValue(uint16_t bpm)
+{
   return pgm_read_word_near(BPM_LOOKUP + bpm - 15);
 }
 
@@ -68,125 +138,143 @@ uint16_t counterValue(uint16_t bpm) {
 // When the counter reaches OCR1A the counter resets to zero and the pins
 // are brought high. When the counter reaches 313 (~20ms), the pins are
 // brought low.
-class Timer1 {
-  private:
-    uint16_t _bpm = 120;
-    uint8_t _clockPin;
-    uint8_t _subdivisionPin;
-    uint8_t _subdivisions = 4;
-    uint8_t _subdivIdx = 0;
-    int8_t _swing = 0;
-    uint16_t _oddTick;
-    uint16_t _evenTick;
-    bool _isEven = true;
-    bool _clockHigh = false;
-    bool _subdivHigh = false;
+class Timer1
+{
+private:
+  uint16_t _bpm = 120;
+  uint8_t _clockPin;
+  uint8_t _subdivisionPin;
+  uint8_t _subdivisions = 4;
+  uint8_t _subdivIdx = 0;
+  int8_t _swing = 0;
+  uint16_t _oddTick;
+  uint16_t _evenTick;
+  bool _isEven = true;
+  bool _clockHigh = false;
+  bool _subdivHigh = false;
 
-    void updateTimer() {
-      uint16_t baseValue = counterValue(_bpm);
-      
-      // Note: Hopefully doing this math isn't too slow.
-      // It only needs to happen when the swing or bpm changes.
-      float swingScale = ((float) _swing) / 128.0;
-      uint16_t offset = (uint16_t) (((float) baseValue) / 3.0 * swingScale);
-      _oddTick = baseValue + offset;
-      _evenTick = baseValue - offset;
+  void updateTimer()
+  {
+    uint16_t baseValue = counterValue(_bpm);
 
-      OCR1A = _isEven ? _evenTick : _oddTick;
-      if (TCNT1 > OCR1A) TCNT1 = 0; // reset timer
-    }
+    // Note: Hopefully doing this math isn't too slow.
+    // It only needs to happen when the swing or bpm changes.
+    float swingScale = ((float)_swing) / 128.0;
+    uint16_t offset = (uint16_t)(((float)baseValue) / 3.0 * swingScale);
+    _oddTick = baseValue + offset;
+    _evenTick = baseValue - offset;
 
-  public:
-    void begin(uint8_t clockPin, uint8_t subdivisionPin) {
-      _clockPin = clockPin;
-      _subdivisionPin = subdivisionPin;
-      pinMode(_clockPin, OUTPUT);
-      pinMode(_subdivisionPin, OUTPUT);
+    OCR1A = _isEven ? _evenTick : _oddTick;
+    if (TCNT1 > OCR1A)
+      TCNT1 = 0; // reset timer
+  }
 
-      noInterrupts();
-      // Clear registers
-      TCCR1A = 0;
-      TCCR1B = 0;
-      TCNT1 = 0;
+public:
+  void begin(uint8_t clockPin, uint8_t subdivisionPin)
+  {
+    _clockPin = clockPin;
+    _subdivisionPin = subdivisionPin;
+    pinMode(_clockPin, OUTPUT);
+    pinMode(_subdivisionPin, OUTPUT);
 
-      // 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
-      OCR1A = counterValue(_bpm);
-      OCR1B = 313; // ~20ms
-      // CTC
-      TCCR1B |= (1 << WGM12);
-      // Pre-scaler 1024
-      TCCR1B |= (1 << CS12) | (1 << CS10);
-      // Output Compare Match A Interrupt Enable
-      TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
-      interrupts();
+    noInterrupts();
+    // Clear registers
+    TCCR1A = 0;
+    TCCR1B = 0;
+    TCNT1 = 0;
 
+    // 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
+    OCR1A = counterValue(_bpm);
+    OCR1B = 313; // ~20ms
+    // CTC
+    TCCR1B |= (1 << WGM12);
+    // Pre-scaler 1024
+    TCCR1B |= (1 << CS12) | (1 << CS10);
+    // Output Compare Match A Interrupt Enable
+    TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
+    interrupts();
+
+    updateTimer();
+  }
+
+  void setSwing(int8_t swing)
+  {
+    if (swing != _swing)
+    {
+      _swing = swing;
       updateTimer();
     }
+  }
 
-    void setSwing(int8_t swing) {
-      if (swing != _swing) {
-        _swing = swing;
-        updateTimer();
-      }
+  int8_t getSwing()
+  {
+    return _swing;
+  }
+
+  void setBPM(uint16_t bpm)
+  {
+    if (bpm != _bpm)
+    {
+      _bpm = bpm;
+      updateTimer();
     }
+  }
 
-    int8_t getSwing() {
-      return _swing;
-    }
+  uint16_t getBPM()
+  {
+    return _bpm;
+  }
 
-    void setBPM(uint16_t bpm) {
-      if (bpm != _bpm) {
-        _bpm = bpm;
-        updateTimer();
-      }
-    }
+  void setSubdivisions(uint8_t subdivisions)
+  {
+    _subdivisions = subdivisions;
+    _subdivIdx = subdivisions;
+  }
 
-    uint16_t getBPM() {
-      return _bpm;
-    }
+  uint8_t getSubdivisions()
+  {
+    return _subdivisions;
+  }
 
-    void setSubdivisions(uint8_t subdivisions) {
-      _subdivisions = subdivisions;
-      _subdivIdx = subdivisions;
-    }
+  void reset()
+  {
+    _subdivIdx = _subdivisions;
+    _isEven = true;
+    TCNT1 = 0; // reset timer
+  }
 
-    uint8_t getSubdivisions() {
-      return _subdivisions;
-    }
+  bool clockOn()
+  {
+    return _clockHigh;
+  }
 
-    void reset() {
-      TCNT1 = 0; // reset timer
+  bool subdivisionOn()
+  {
+    return _subdivHigh;
+  }
+
+  void tickA()
+  {
+    digitalWrite(_clockPin, HIGH);
+    _clockHigh = true;
+    _subdivIdx--;
+    if (_subdivIdx == 0)
+    {
+      digitalWrite(_subdivisionPin, HIGH);
+      _subdivHigh = true;
       _subdivIdx = _subdivisions;
-      _isEven = true;
     }
+    OCR1A = _isEven ? _evenTick : _oddTick;
+    _isEven = !_isEven;
+  }
 
-    bool clockOn() {
-      return _clockHigh;
-    }
-
-    bool subdivisionOn() {
-      return _subdivHigh;
-    }
-
-    void tickA() {
-      digitalWrite(_clockPin, HIGH);
-      _clockHigh = true;
-      _subdivIdx--;
-      if (_subdivIdx == 0) {
-        digitalWrite(_subdivisionPin, HIGH);
-        _subdivHigh = true;
-        _subdivIdx = _subdivisions;
-      }
-      OCR1A = _isEven ? _evenTick : _oddTick;
-      _isEven = !_isEven;
-    }
-
-    void tickB() {
-      digitalWrite(_clockPin, LOW);
-      digitalWrite(_subdivisionPin, LOW);
-      _clockHigh = false;
-      _subdivHigh = false;
-    }
+  void tickB()
+  {
+    digitalWrite(_clockPin, LOW);
+    digitalWrite(_subdivisionPin, LOW);
+    _clockHigh = false;
+    _subdivHigh = false;
+  }
 };
 
 // Here we make a global instance so the interrupts
@@ -194,10 +282,12 @@ class Timer1 {
 
 Timer1 Timer;
 
-ISR(TIMER1_COMPA_vect) {
+ISR(TIMER1_COMPA_vect)
+{
   Timer.tickA();
 }
 
-ISR(TIMER1_COMPB_vect) {
+ISR(TIMER1_COMPB_vect)
+{
   Timer.tickB();
 }

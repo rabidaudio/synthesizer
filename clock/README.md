@@ -12,6 +12,7 @@
 States:
   Main State:
   - Display: current BPM (35-287)
+  - Dots: show beats
   - knob: BPM
   - press button B: tap tempo
 
@@ -22,16 +23,17 @@ States:
   Subdivision state (hold button B):
     - Display: number of subdivisions 1-16
     - knob: controls subdivision amount
-    - main button: next state
-    - swing button: nothing
 
-  Pulse width state (hold both A and B):
-    - Display: number of ms (1-200)
-    - knob: controls width
+  Reset (hold both A and B):
+    - Display: 000
 
+- convert knob to rotary switch
+- Rate CV input
+- Less jittery timer
+- Tap tempo
 
-Rate CV?
-Faster speeds for sequencers? Negative subdivisions?
+- Faster speeds for sequencers? Negative subdivisions?
+- Reset option?
 
 https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
 https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h
