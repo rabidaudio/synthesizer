@@ -30,7 +30,6 @@ States:
 - convert knob to rotary switch
 - Rate CV input
 - Less jittery timer
-- Tap tempo
 
 - Faster speeds for sequencers? Negative subdivisions?
 - Reset option?

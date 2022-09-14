@@ -3,6 +3,7 @@
 #include "Knob.h"
 #include "Button.h"
 #include "Timer.h"
+#include "TapTempo.h"
 
 #define CLOCK_PIN 10
 #define SUBDIV_PIN 13
@@ -14,6 +15,7 @@ Display display;
 Knob<8> knob;
 Button aButton;
 Button bButton;
+TapTempo tapTempo;
 
 void setup()
 {
@@ -23,35 +25,46 @@ void setup()
   Timer.setBPM(120);
   display.begin();
   knob.begin(KNOB_PIN, 16, 500);
-  aButton.begin(A_BUTTON_PIN, 25);
-  bButton.begin(B_BUTTON_PIN, 25);
+  aButton.begin(A_BUTTON_PIN, 100);
+  bButton.begin(B_BUTTON_PIN, 100);
 }
 
 void loop()
 {
+  uint16_t tapBpm = tapTempo.tick(aButton.isPressed());
   uint16_t knobValue = knob.read();
+
   if (aButton.isPressed() && bButton.isPressed())
   {
     Timer.reset();
+    tapTempo.cancel();
     display.displayReset();
   }
   else if (aButton.isPressed())
   {
-    int8_t swing = (int8_t)(((int16_t)knobValue / 4) - 128);
-    Timer.setSwing(swing);
-    display.displayNumber(swing, (1 << 3));
+    if (tapTempo.isActive())
+    {
+      Timer.setBPM(tapBpm);
+      display.displayNumber(tapBpm, 0x08 | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00));
+    }
+    else
+    {
+      uint8_t subdivisions = (uint8_t)((knobValue / 64) + 1);
+      Timer.setSubdivisions(subdivisions);
+      display.displayNumber(subdivisions, 0x02);
+    }
   }
   else if (bButton.isPressed())
   {
-    uint8_t subdivisions = (uint8_t)((knobValue / 64) + 1);
-    Timer.setSubdivisions(subdivisions);
-    display.displayNumber(subdivisions, (1 << 0));
+    int8_t swing = (int8_t)(((int16_t)knobValue / 4) - 128);
+    Timer.setSwing(swing);
+    display.displayNumber(swing, 0x04);
   }
   else
   {
     uint16_t bpm = (knobValue / 4) + 32; /* 32 to 287 */
     Timer.setBPM(bpm);
-    display.displayNumber(bpm, (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00));
+    display.displayNumber(bpm, (tapTempo.isActive() ? 0x08 : 0) | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00));
   }
 
   delay(10);

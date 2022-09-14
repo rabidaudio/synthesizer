@@ -1,3 +1,4 @@
+#pragma once
 #include <Arduino.h>
 
 uint16_t delta(uint16_t a, uint16_t b)

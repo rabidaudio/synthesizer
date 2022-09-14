@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Arduino.h>
 
 // Lookup table for OCR1A register values for BPMs from 15 to 500.
