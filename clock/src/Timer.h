@@ -79,6 +79,8 @@ class Timer1 {
     uint16_t _oddTick;
     uint16_t _evenTick;
     bool _isEven = true;
+    bool _clockHigh = false;
+    bool _subdivHigh = false;
 
     void updateTimer() {
       uint16_t baseValue = counterValue(_bpm);
@@ -148,17 +150,31 @@ class Timer1 {
       _subdivIdx = subdivisions;
     }
 
+    uint8_t getSubdivisions() {
+      return _subdivisions;
+    }
+
     void reset() {
       TCNT1 = 0; // reset timer
       _subdivIdx = _subdivisions;
       _isEven = true;
     }
 
+    bool clockOn() {
+      return _clockHigh;
+    }
+
+    bool subdivisionOn() {
+      return _subdivHigh;
+    }
+
     void tickA() {
       digitalWrite(_clockPin, HIGH);
+      _clockHigh = true;
       _subdivIdx--;
       if (_subdivIdx == 0) {
         digitalWrite(_subdivisionPin, HIGH);
+        _subdivHigh = true;
         _subdivIdx = _subdivisions;
       }
       OCR1A = _isEven ? _evenTick : _oddTick;
@@ -168,6 +184,8 @@ class Timer1 {
     void tickB() {
       digitalWrite(_clockPin, LOW);
       digitalWrite(_subdivisionPin, LOW);
+      _clockHigh = false;
+      _subdivHigh = false;
     }
 };
 

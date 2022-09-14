@@ -32,7 +32,7 @@ class Button {
       }
       // switched off: trigger only if sufficient time has passed
       uint32_t now = millis();
-      if (now < _lastPressedAt || now - _lastPressedAt > _debounceTimeMs) {
+      if (now < _lastPressAt || now - _lastPressAt > _debounceTimeMs) {
         _isPressed = false;
         return false;
       }

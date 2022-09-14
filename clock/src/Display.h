@@ -12,7 +12,7 @@ class Display {
       _alpha4.begin(0x70);
     }
 
-    void displayBPM(uint16_t bpm) {
+    void displayBPM(uint16_t bpm, bool dot1, bool dot2) {
       // TODO: make more efficient code than strings
       String strval = String(bpm, DEC);
       while (strval.length() < 3) {
@@ -21,8 +21,8 @@ class Display {
 
       _alpha4.clear();
       _alpha4.writeDigitAscii(1, strval[0]);
-      _alpha4.writeDigitAscii(2, strval[1]);
-      _alpha4.writeDigitAscii(3, strval[2]);
+      _alpha4.writeDigitAscii(2, strval[1], dot2);
+      _alpha4.writeDigitAscii(3, strval[2], dot1);
       _alpha4.writeDisplay();
     }
 
@@ -35,8 +35,23 @@ class Display {
 
       _alpha4.clear();
       _alpha4.writeDigitAscii(0, strval[0]);
-      _alpha4.writeDigitAscii(1, strval[1]);
+      _alpha4.writeDigitAscii(1, strval[1], true);
       _alpha4.writeDigitAscii(2, strval[2]);
+      _alpha4.writeDigitAscii(3, strval[3]);
+      _alpha4.writeDisplay();
+    }
+
+    void displaySubdivisions(uint8_t subdivisions) {
+            // TODO: make more efficient code than strings
+      String strval = String(subdivisions, DEC);
+      while (strval.length() < 4) {
+        strval = " " + strval;
+      }
+
+      _alpha4.clear();
+      _alpha4.writeDigitAscii(0, strval[0]);
+      _alpha4.writeDigitAscii(1, strval[1]);
+      _alpha4.writeDigitAscii(2, strval[2], true);
       _alpha4.writeDigitAscii(3, strval[3]);
       _alpha4.writeDisplay();
     }
