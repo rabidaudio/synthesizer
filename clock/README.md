@@ -27,7 +27,6 @@ States:
   Reset (hold both A and B):
     - Display: 000
 
-- convert knob to rotary switch
 - Rate CV input
 - Less jittery timer
 

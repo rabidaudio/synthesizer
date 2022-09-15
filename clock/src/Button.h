@@ -1,6 +1,7 @@
 #pragma once
 #include <Arduino.h>
 
+// A push-button toggle switch. Supports debouncing.
 class Button
 {
 
@@ -44,5 +45,13 @@ public:
       return false;
     }
     return true;
+  }
+
+  int32_t holdTime()
+  {
+    if (!isPressed())
+      return 0;
+
+    return millis() - _lastPressAt;
   }
 };

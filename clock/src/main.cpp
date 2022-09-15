@@ -10,68 +10,79 @@
 #define KNOB_PIN A0
 #define A_BUTTON_PIN 7
 #define B_BUTTON_PIN 8
+#define FULL_RESET_TIME_MS 2000
+#define DEFAULT_BPM 120
+#define DEFAULT_SUBDIVISIONS 2
+#define DEFAULT_SWING 0
 
-// Display display;
-Knob<12, 8> knob;
-// Button aButton;
-// Button bButton;
-// TapTempo tapTempo;
+Display display;
+Knob<12> knob;
+Button aButton;
+Button bButton;
+TapTempo tapTempo;
 
 void setup()
 {
-  delay(1000);
-  Serial.begin(9600);
-  // Timer.begin(CLOCK_PIN, SUBDIV_PIN);
-  // Timer.setSubdivisions(2);
-  // Timer.setBPM(120);
-  // display.begin();
+  // Serial.begin(9600);
+  display.begin();
+  display.displayReset(); // indicate we're doing setup
+  Timer.begin(CLOCK_PIN, SUBDIV_PIN);
+  Timer.setSubdivisions(DEFAULT_SUBDIVISIONS);
+  Timer.setBPM(DEFAULT_BPM);
+  Timer.setSwing(DEFAULT_SWING);
+
   knob.begin(KNOB_PIN);
-  // aButton.begin(A_BUTTON_PIN, 100);
-  // bButton.begin(B_BUTTON_PIN, 100);
+  aButton.begin(A_BUTTON_PIN, 100);
+  bButton.begin(B_BUTTON_PIN, 100);
 }
 
 void loop()
 {
+  uint16_t tapBpm = tapTempo.tick(aButton.isPressed());
+  int8_t knobMotion = knob.readChanges();
 
-   uint8_t v = knob.readChanges();
-   Serial.println(v);
-   delay(10);
+  if (aButton.isPressed() && bButton.isPressed())
+  {
+    // Base reset, freeze clock and restart subdivisions
+    Timer.reset();
+    tapTempo.cancel();
+    display.displayReset();
+    if (aButton.holdTime() >= FULL_RESET_TIME_MS && bButton.holdTime() >= FULL_RESET_TIME_MS)
+    {
+      // Full reset, restore all defaults
+      Timer.setSubdivisions(DEFAULT_SUBDIVISIONS);
+      Timer.setBPM(DEFAULT_BPM);
+      Timer.setSwing(DEFAULT_SWING);
+      display.blinkReset();
+    }
+  }
+  else if (aButton.isPressed())
+  {
+    if (tapTempo.isActive())
+    {
+      Timer.setBPM(tapBpm);
+      display.displayNumber(tapBpm, 0x08 | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00));
+    }
+    else
+    {
+      uint8_t subdivisions = constrain(Timer.getSubdivisions() + knobMotion, 1, 16);
+      Timer.setSubdivisions(subdivisions);
+      display.displayNumber(subdivisions, 0x02);
+    }
+  }
+  else if (bButton.isPressed())
+  {
+    int8_t swing = Timer.getSwing() + knobMotion;
+    Timer.setSwing(swing);
+    display.displayNumber(swing, 0x04);
+  }
+  else
+  {
+    uint16_t bpm = constrain(Timer.getBPM() + knobMotion, 15, 287); // TODO: increase
+    Timer.setBPM(bpm);
+    uint8_t flags = (tapTempo.isActive() ? 0x08 : 0) | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00);
+    display.displayNumber(bpm, flags);
+  }
 
-  // uint16_t tapBpm = tapTempo.tick(aButton.isPressed());
-  // uint16_t knobValue = knob.read();
-
-  // if (aButton.isPressed() && bButton.isPressed())
-  // {
-  //   Timer.reset();
-  //   tapTempo.cancel();
-  //   display.displayReset();
-  // }
-  // else if (aButton.isPressed())
-  // {
-  //   if (tapTempo.isActive())
-  //   {
-  //     Timer.setBPM(tapBpm);
-  //     display.displayNumber(tapBpm, 0x08 | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00));
-  //   }
-  //   else
-  //   {
-  //     uint8_t subdivisions = (uint8_t)((knobValue / 64) + 1);
-  //     Timer.setSubdivisions(subdivisions);
-  //     display.displayNumber(subdivisions, 0x02);
-  //   }
-  // }
-  // else if (bButton.isPressed())
-  // {
-  //   int8_t swing = (int8_t)(((int16_t)knobValue / 4) - 128);
-  //   Timer.setSwing(swing);
-  //   display.displayNumber(swing, 0x04);
-  // }
-  // else
-  // {
-  //   uint16_t bpm = (knobValue / 4) + 32; /* 32 to 287 */
-  //   Timer.setBPM(bpm);
-  //   display.displayNumber(bpm, (tapTempo.isActive() ? 0x08 : 0) | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00));
-  // }
-
-  // delay(10);
+  delay(10);
 }

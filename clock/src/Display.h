@@ -24,6 +24,7 @@ char getDigit(int16_t value, size_t digit)
   return '0' + value;
 }
 
+// A set of 7-segment displays driven by a HT16K33 I2C driver chip.
 class Display
 {
 private:
@@ -33,6 +34,12 @@ public:
   void begin()
   {
     _alpha4.begin(0x70);
+  }
+
+  void clear()
+  {
+    _alpha4.clear();
+    _alpha4.writeDisplay();
   }
 
   void displayNumber(int16_t number, uint8_t dotFlags = 0)
@@ -53,5 +60,16 @@ public:
     _alpha4.writeDigitAscii(2, '0', true);
     _alpha4.writeDigitAscii(3, '0', true);
     _alpha4.writeDisplay();
+  }
+
+  void blinkReset()
+  {
+    for (size_t i = 0; i < 3; i++)
+    {
+      clear();
+      delay(50);
+      displayReset();
+      delay(50);
+    }
   }
 };
