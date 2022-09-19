@@ -26,12 +26,18 @@ States:
 
   Reset (hold both A and B):
     - Display: 000
+    - Freeze clock
+    - Restart subdivisions
+  
+  Full Reset (hold both A and B for 2 seconds):
+    - Display: blink 000
+    - Restart subdivisions
+    - Restore default settings
 
 - Rate CV input
 - Less jittery timer
 
 - Faster speeds for sequencers? Negative subdivisions?
-- Reset option?
 
 https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
 https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h
