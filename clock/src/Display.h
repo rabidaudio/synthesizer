@@ -1,4 +1,4 @@
-// #pragma once
+#pragma once
 #include "SevenSegment.h"
 
 // given a number, get the character at index `digit`
@@ -57,6 +57,12 @@ public:
     _digits[_index].turnOn();
   }
 
+  void setChar(size_t i, char c) {
+    if (i < DIGITS) {
+      _contents[i] = c;
+    }
+  }
+
   void displayNumber(int16_t number)
   {
     for (size_t i = 0; i < DIGITS; i++) {
@@ -64,24 +70,27 @@ public:
     }
   }
 
-  // void displayReset()
-  // {
-  //   _alpha4.clear();
-  //   _alpha4.writeDigitAscii(0, '0', true);
-  //   _alpha4.writeDigitAscii(1, '0', true);
-  //   _alpha4.writeDigitAscii(2, '0', true);
-  //   _alpha4.writeDigitAscii(3, '0', true);
-  //   _alpha4.writeDisplay();
-  // }
+  void displayReset()
+  {
+    for (size_t i = 0; i < DIGITS; i++) {
+      _contents[i] = '0';
+    }
+  }
 
-  // void blinkReset()
-  // {
-  //   for (size_t i = 0; i < 3; i++)
-  //   {
-  //     clear();
-  //     delay(50);
-  //     displayReset();
-  //     delay(50);
-  //   }
-  // }
+  void blinkReset()
+  {
+    for (size_t i = 0; i < 3; i++)
+    {
+      clear();
+      for (size_t i = 0; i < 50; i++) {
+        tick();
+        delay(1);
+      }
+      displayReset();
+      for (size_t i = 0; i < 50; i++) {
+        tick();
+        delay(1);
+      }
+    }
+  }
 };
