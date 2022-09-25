@@ -1,4 +1,5 @@
 #pragma once
+
 #include "SevenSegment.h"
 
 // given a number, get the character at index `digit`
@@ -23,71 +24,92 @@ char getDigit(int16_t value, size_t digit)
   return '0' + value;
 }
 
-// A set of 7-segment displays.
-// Expects
+// An array of 7-segment displays.
+// Uses the same digit control port but only addresses one at a time,
+// round robbin. This means the more segments there are the worse
+// the brightness will be. Must call `tick` on a tight loop to
+// switch the digit displayed or else the display will clearly flicker.
+// Number of segments must be a compile time constant through `DIGITS`
+// template.
+// Displays signed 16-bit numbers.
 template <size_t DIGITS>
 class Display
 {
 private:
-  SevenSegment _digits[DIGITS];
-  size_t _index = 0;
+  SevenSegment _digits[DIGITS]; // LSB first
+  size_t _index = 0;            // which segment is currently addressed
   char _contents[DIGITS];
 
 public:
-  void begin(volatile uint8_t* segmentPort, uint8_t* ctrlPins)
+  void begin(uint8_t portNumber, uint8_t *ctrlPins)
   {
-    for(size_t i = 0; i < DIGITS; i++) {
-      _digits[i].begin(ctrlPins[i], segmentPort);
-      _contents[i] = ' ';
+    for (size_t i = 0; i < DIGITS; i++)
+    {
+      _digits[i].begin(portNumber, ctrlPins[i]);
+      setChar(i, ' ');
     }
     _index = 0;
   }
 
+  // set all the displays to blank
   void clear()
   {
-    for (size_t i = 0; i < DIGITS; i++) {
-      _contents[i] = ' ';
+    for (size_t i = 0; i < DIGITS; i++)
+    {
+      setChar(i, ' ');
     }
   }
 
-  void tick() {
+  // update which display is showing
+  void tick()
+  {
     _digits[_index].turnOff();
     _index = (_index + 1) % DIGITS;
     _digits[_index].display(_contents[_index]);
     _digits[_index].turnOn();
   }
 
-  void setChar(size_t i, char c) {
-    if (i < DIGITS) {
+  void setChar(size_t i, char c)
+  {
+    if (i < DIGITS)
+    {
       _contents[i] = c;
     }
   }
 
+  // display a signed number on the
   void displayNumber(int16_t number)
   {
-    for (size_t i = 0; i < DIGITS; i++) {
-      _contents[i] = getDigit(number, i);
+    for (size_t i = 0; i < DIGITS; i++)
+    {
+      setChar(i, getDigit(number, i));
     }
   }
 
+  // light up all segments (all 8's)
   void displayReset()
   {
-    for (size_t i = 0; i < DIGITS; i++) {
-      _contents[i] = '0';
+    for (size_t i = 0; i < DIGITS; i++)
+    {
+      setChar(i, '8');
     }
   }
 
-  void blinkReset()
+  // blink the reset a few times.
+  // NOTE: blocking, will return after `blinkCount * 2 * blinkTime` milliseconds.
+  void blinkReset(size_t blinkCount = 3, uint8_t blinkTime = 50)
   {
-    for (size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < blinkCount; i++)
     {
       clear();
-      for (size_t i = 0; i < 50; i++) {
+      for (size_t i = 0; i < blinkTime; i++)
+      {
         tick();
         delay(1);
       }
       displayReset();
-      for (size_t i = 0; i < 50; i++) {
+      for (size_t i = 0; i < blinkTime; i++)
+      {
         tick();
         delay(1);
       }

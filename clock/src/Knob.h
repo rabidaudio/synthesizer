@@ -1,4 +1,5 @@
 #pragma once
+
 #include <Arduino.h>
 
 // A continuous rotary switch with evenly-valued resistors between each

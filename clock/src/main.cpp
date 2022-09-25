@@ -11,9 +11,6 @@
 #define A_BUTTON_PIN 8
 #define B_BUTTON_PIN 9
 #define FULL_RESET_TIME_MS 2000
-#define DEFAULT_BPM 120
-#define DEFAULT_SUBDIVISIONS 2
-#define DEFAULT_SWING 0
 
 Display<3> display;
 Knob<12> knob;
@@ -21,17 +18,18 @@ Button aButton;
 Button bButton;
 TapTempo tapTempo;
 
-uint8_t DISPLAY_CTRL_PINS[] = { 7, 6, 5 };
+uint8_t DISPLAY_CTRL_PINS[] = {7, 6, 5};
 
 void setup()
 {
   // Serial.begin(9600);
-  DDRF = 0x7F; // pinMode OUTPUT for all of PORTF
   display.begin(&PORTF, DISPLAY_CTRL_PINS);
-  // indicate we're doing setup
-  display.setChar(0, '-');
-  display.setChar(1, '-');
-  display.setChar(2, '-');
+  // indicate we're doing setup by writing a dash
+  // to each display and stepping through them
+  // at each step
+  display.setChar(0, '_');
+  display.setChar(1, '_');
+  display.setChar(2, '_');
   display.tick();
   Timer.begin(CLOCK_PIN, SUBDIV_PIN);
   display.tick();
@@ -53,7 +51,7 @@ void setup()
 }
 
 void loop()
-{ 
+{
   uint16_t tapBpm = tapTempo.tick(aButton.isPressed());
   int8_t knobMotion = knob.readChanges();
 
@@ -65,10 +63,8 @@ void loop()
     display.displayReset();
     if (aButton.holdTime() >= FULL_RESET_TIME_MS && bButton.holdTime() >= FULL_RESET_TIME_MS)
     {
-      // Full reset, restore all defaults
-      Timer.setSubdivisions(DEFAULT_SUBDIVISIONS);
-      Timer.setBPM(DEFAULT_BPM);
-      Timer.setSwing(DEFAULT_SWING);
+      // Full reset
+      Timer.restoreDefaults();
       display.blinkReset();
     }
   }
@@ -103,7 +99,8 @@ void loop()
     display.displayNumber(bpm);
   }
 
-  for (size_t t = 0; t < 10; t++) {
+  for (size_t t = 0; t < 10; t++)
+  {
     display.tick();
     delay(1);
   }

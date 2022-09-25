@@ -36,8 +36,8 @@ States:
 
 - Rate CV input
 - Less jittery timer
-
-- Faster speeds for sequencers? Negative subdivisions?
+- Get working on bare ATMega328p
+- Faster speeds with negative subdivisions
 
 https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
 https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h
