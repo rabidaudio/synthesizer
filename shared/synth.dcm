@@ -12,6 +12,12 @@ K audio jack receptacle mono headphones phone TS connector
 F ~
 $ENDCMP
 #
+$CMP AudioJack_SwitchT
+D Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve, Switched T Pole (Normalling)
+K audio jack receptacle mono headphones phone TS connector
+F ~
+$ENDCMP
+#
 $CMP DG403
 D Dual SPDT Monolithic CMOS Analog Switch, 45Ohm Ron, SOIC-16
 K CMOS Analog Switch

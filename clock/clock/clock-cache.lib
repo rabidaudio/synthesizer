@@ -29,26 +29,6 @@ X GND 6 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_AudioJack2
-#
-DEF Connector_AudioJack2 J 0 20 Y Y 1 F N
-F0 "J" 0 350 50 H V C CNN
-F1 "Connector_AudioJack2" 0 250 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Jack*
-$ENDFPLIST
-DRAW
-S -150 0 -100 -100 0 1 10 F
-S -100 150 100 -100 0 1 10 f
-P 4 0 1 10 0 0 25 -25 50 0 100 0 N
-P 5 0 1 10 100 100 -25 100 -25 0 -50 -25 -75 0 N
-X ~ S 200 100 100 L 50 50 1 1 P
-X ~ T 200 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Connector_Conn_01x05_Female
 #
 DEF Connector_Conn_01x05_Female J 0 40 Y N 1 F N
@@ -335,6 +315,29 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# synth_AudioJack_SwitchT
+#
+DEF synth_AudioJack_SwitchT J 0 20 Y Y 1 F N
+F0 "J" 0 350 50 H V C CNN
+F1 "synth_AudioJack_SwitchT" 0 250 50 H V C CNN
+F2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Jack*
+$ENDFPLIST
+DRAW
+S -100 0 -150 -100 0 1 10 F
+S 100 150 -100 -200 0 1 10 f
+P 2 0 1 0 70 -10 80 -30 N
+P 4 0 1 10 0 0 25 -25 50 0 100 0 N
+P 4 0 1 0 100 -100 70 -100 70 -10 60 -30 N
+P 5 0 1 10 100 100 -25 100 -25 0 -50 -25 -75 0 N
+X ~ S 200 100 100 L 50 50 1 1 P
+X ~ T 200 0 100 L 50 50 1 1 P
+X ~ TN 200 -100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

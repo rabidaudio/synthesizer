@@ -239,7 +239,7 @@ F 3 "" H 2500 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack2 J12
+L synth:AudioJack_SwitchT J12
 U 1 1 6321922B
 P 6750 5600
 F 0 "J12" H 6570 5583 50  0000 R CNN
@@ -250,14 +250,14 @@ F 3 "~" H 6750 5600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:AudioJack2 J13
+L synth:AudioJack_SwitchT J13
 U 1 1 6321A6EF
-P 6750 6150
-F 0 "J13" H 6570 6133 50  0000 R CNN
-F 1 "SUBDIV_OUT" H 6570 6224 50  0000 R CNN
-F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6750 6150 50  0001 C CNN
-F 3 "~" H 6750 6150 50  0001 C CNN
-	1    6750 6150
+P 6750 6000
+F 0 "J13" H 6570 5983 50  0000 R CNN
+F 1 "SUBDIV_OUT" H 6570 6074 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6750 6000 50  0001 C CNN
+F 3 "~" H 6750 6000 50  0001 C CNN
+	1    6750 6000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -584,10 +584,10 @@ Wire Wire Line
 	4950 3900 5150 3900
 Text Label 6350 5600 2    50   ~ 0
 CLOCK_OUT
-Text Label 6350 6150 2    50   ~ 0
+Text Label 6350 6000 2    50   ~ 0
 SUBDIV_OUT
 Wire Wire Line
-	6350 6150 6550 6150
+	6350 6000 6550 6000
 Wire Wire Line
 	6350 5600 6550 5600
 $Comp
@@ -673,7 +673,7 @@ B_SW1
 Text Label 2700 2750 0    50   ~ 0
 B_SW2
 $Comp
-L Connector:AudioJack2 J11
+L synth:AudioJack_SwitchT J11
 U 1 1 6328406C
 P 6750 5200
 F 0 "J11" H 6570 5183 50  0000 R CNN
@@ -1149,7 +1149,7 @@ Text Label 10500 4850 0    50   ~ 0
 LED_C3
 Text Label 10500 6250 0    50   ~ 0
 AVCC
-Text Label 6350 5700 2    50   ~ 0
+Text Label 6350 6100 2    50   ~ 0
 AGND
 Wire Wire Line
 	10500 5650 10400 5650
@@ -1202,7 +1202,7 @@ AVCC
 Text Label 4100 5200 1    50   ~ 0
 AVCC
 Wire Wire Line
-	6350 6250 6550 6250
+	6350 6100 6550 6100
 Wire Wire Line
 	6350 5700 6550 5700
 Wire Wire Line
@@ -1347,4 +1347,12 @@ Wire Wire Line
 	9050 6250 9600 6250
 Text Label 4100 6250 3    50   ~ 0
 AGND
+Text Label 6350 5700 2    50   ~ 0
+AGND
+NoConn ~ 6550 5900
+NoConn ~ 6550 5500
+Text Label 7150 5100 0    50   ~ 0
+AGND
+Wire Wire Line
+	7150 5100 6950 5100
 $EndSCHEMATC
