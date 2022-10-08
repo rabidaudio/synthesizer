@@ -34,9 +34,6 @@ States:
     - Restart subdivisions
     - Restore default settings
 
-- Less jittery timer
-- Faster speeds with negative subdivisions
-- Rate CV input
 - New knob system
 - Get working on bare ATMega328p
 
