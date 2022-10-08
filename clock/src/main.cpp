@@ -94,7 +94,7 @@ void loop()
   else
   {
     uint16_t bpm = Timer.getBPM() + knobMotion;
-    bpm = constrain(bpm, (uint16_t) 15, (uint16_t) 287); // TODO: increase
+    bpm = constrain(bpm, (uint16_t) 8, (uint16_t) 1200); // TODO: increase
     Timer.setBPM(bpm);
     // uint8_t flags = (tapTempo.isActive() ? 0x08 : 0) | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00);
     display.displayNumber(bpm);

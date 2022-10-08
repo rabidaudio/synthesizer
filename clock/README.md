@@ -34,10 +34,11 @@ States:
     - Restart subdivisions
     - Restore default settings
 
-- Rate CV input
 - Less jittery timer
-- Get working on bare ATMega328p
 - Faster speeds with negative subdivisions
+- Rate CV input
+- New knob system
+- Get working on bare ATMega328p
 
 https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
 https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h
