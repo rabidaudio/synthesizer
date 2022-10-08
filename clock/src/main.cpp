@@ -23,7 +23,7 @@ uint8_t DISPLAY_CTRL_PINS[] = {7, 6, 5};
 void setup()
 {
   // Serial.begin(9600);
-  display.begin(&PORTF, DISPLAY_CTRL_PINS);
+  display.begin(6 /* PORTF */, DISPLAY_CTRL_PINS);
   // indicate we're doing setup by writing a dash
   // to each display and stepping through them
   // at each step
@@ -93,7 +93,8 @@ void loop()
   }
   else
   {
-    uint16_t bpm = constrain(Timer.getBPM() + knobMotion, 15, 287); // TODO: increase
+    uint16_t bpm = Timer.getBPM() + knobMotion;
+    bpm = constrain(bpm, (uint16_t) 15, (uint16_t) 287); // TODO: increase
     Timer.setBPM(bpm);
     // uint8_t flags = (tapTempo.isActive() ? 0x08 : 0) | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00);
     display.displayNumber(bpm);
