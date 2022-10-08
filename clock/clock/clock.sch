@@ -683,10 +683,8 @@ F 3 "~" H 6750 5200 50  0001 C CNN
 	1    6750 5200
 	1    0    0    1   
 $EndComp
-Text Label 7150 5200 0    50   ~ 0
+Text Label 8150 5700 0    50   ~ 0
 CV_IN
-Wire Wire Line
-	7150 5200 6950 5200
 Text Label 2700 3650 0    50   ~ 0
 B_CV_IN
 Text Label 2700 2950 0    50   ~ 0
@@ -1195,7 +1193,7 @@ Text Label 6250 3400 1    50   ~ 0
 AVCC
 Text Label 5250 6250 3    50   ~ 0
 AGND
-Text Label 7150 5300 0    50   ~ 0
+Text Label 7850 6200 0    50   ~ 0
 AGND
 Text Label 5250 5200 1    50   ~ 0
 AVCC
@@ -1355,4 +1353,56 @@ Text Label 7150 5100 0    50   ~ 0
 AGND
 Wire Wire Line
 	7150 5100 6950 5100
+$Comp
+L Diode:1N4148 D?
+U 1 1 6342DA40
+P 7600 5200
+F 0 "D?" H 7600 4983 50  0000 C CNN
+F 1 "1N4148" H 7600 5074 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7600 5025 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7600 5200 50  0001 C CNN
+	1    7600 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6342F08D
+P 7850 5450
+F 0 "R?" H 7920 5496 50  0000 L CNN
+F 1 "180K" H 7920 5405 50  0000 L CNN
+F 2 "" V 7780 5450 50  0001 C CNN
+F 3 "~" H 7850 5450 50  0001 C CNN
+	1    7850 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6342F86A
+P 7850 5900
+F 0 "R?" H 7920 5946 50  0000 L CNN
+F 1 "100K" H 7920 5855 50  0000 L CNN
+F 2 "" V 7780 5900 50  0001 C CNN
+F 3 "~" H 7850 5900 50  0001 C CNN
+	1    7850 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 6200 7850 6050
+Wire Wire Line
+	7850 5750 7850 5700
+Wire Wire Line
+	7850 5300 7850 5200
+Wire Wire Line
+	7850 5200 7750 5200
+Wire Wire Line
+	6950 5200 7450 5200
+Wire Wire Line
+	8150 5700 7850 5700
+Connection ~ 7850 5700
+Wire Wire Line
+	7850 5700 7850 5600
+Text Label 7150 5300 0    50   ~ 0
+AGND
+Text Notes 7800 5150 0    50   ~ 0
+bound input CV to 0-5V
 $EndSCHEMATC
