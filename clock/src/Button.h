@@ -16,7 +16,7 @@ public:
   void begin(uint8_t pin, uint32_t debounceTimeMs)
   {
     _pin = pin;
-    pinMode(pin, OUTPUT);
+    pinMode(pin, INPUT);
     _debounceTimeMs = debounceTimeMs;
     _isPressed = false;
     _lastPressAt = millis();

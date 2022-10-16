@@ -10,8 +10,7 @@
 
 #define KNOB_STEPS 16
 const uint16_t BOUNDS[KNOB_STEPS] = {
-  33, 97, 155, 211, 261, 300, 336, 361, 384, 412, 438, 464, 488, 507, 526
-};
+    33, 97, 155, 211, 261, 300, 336, 361, 384, 412, 438, 464, 488, 507, 526};
 #define SAMPLE_COUNT 3
 
 class Knob
@@ -32,7 +31,8 @@ public:
     // measurements of the same value in order to change the
     // output. This gives a smooth reading while still providing
     // a clear step when wrap-around occurs.
-    for (_sampleIndex = 0; _sampleIndex < SAMPLE_COUNT; _sampleIndex++) {
+    for (_sampleIndex = 0; _sampleIndex < SAMPLE_COUNT; _sampleIndex++)
+    {
       _newSamples[_sampleIndex] = readState();
     }
     _sampleIndex = 0;
@@ -53,15 +53,17 @@ public:
     }
     return KNOB_STEPS - 1;
   }
-  
+
   // read the state but filter out intermittent fluctuations
   uint8_t readState()
   {
     uint8_t newValue = readRawState();
     _newSamples[_sampleIndex] = newValue;
     _sampleIndex = (_sampleIndex + 1) % SAMPLE_COUNT;
-    for (size_t i = 0; i < SAMPLE_COUNT; i++) {
-      if (_newSamples[i] != newValue) {
+    for (size_t i = 0; i < SAMPLE_COUNT; i++)
+    {
+      if (_newSamples[i] != newValue)
+      {
         // at least one of the samples is different
         return _value;
       }

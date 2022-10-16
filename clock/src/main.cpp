@@ -1,5 +1,4 @@
 #include <Arduino.h>
-#include "Display.h"
 #include "Knob.h"
 #include "BufferedInput.h"
 #include "Button.h"
@@ -12,27 +11,45 @@
 #define CV_IN_PIN A9
 #define A_BUTTON_PIN 8
 #define B_BUTTON_PIN 9
+#define LED_A_PIN 14
+#define LED_B_PIN 15
 #define FULL_RESET_TIME_MS 2000
 
+#define BACKPACK_DISPLAY 1
+
+#ifdef BACKPACK_DISPLAY
+#include "BackpackDisplay.h"
+BackpackDisplay display;
+#else
+#include "Display.h"
 Display<3> display;
+uint8_t DISPLAY_CTRL_PINS[] = {7, 6, 5};
+#endif
 Knob knob;
 Button aButton;
 Button bButton;
 BufferedInput<16> cvInput;
 TapTempo tapTempo;
 
-uint8_t DISPLAY_CTRL_PINS[] = {7, 6, 5};
-
 void setup()
 {
-  // Serial.begin(9600);
+// Serial.begin(9600);
+#ifdef BACKPACK_DISPLAY
+  display.begin();
+#else
   display.begin(6 /* PORTF */, DISPLAY_CTRL_PINS);
+#endif
   // indicate we're doing setup by writing a dash
   // to each display and stepping through them
   // at each step
   display.setChar(0, '_');
   display.setChar(1, '_');
   display.setChar(2, '_');
+  display.tick();
+  pinMode(LED_A_PIN, OUTPUT);
+  digitalWrite(LED_A_PIN, LOW);
+  pinMode(LED_B_PIN, OUTPUT);
+  digitalWrite(LED_B_PIN, LOW);
   display.tick();
   Timer.begin(CLOCK_PIN, SUBDIV_PIN);
   display.tick();
@@ -52,6 +69,8 @@ void setup()
   cvInput.begin(CV_IN_PIN);
   display.tick();
   display.clear();
+  digitalWrite(LED_A_PIN, HIGH);
+  digitalWrite(LED_B_PIN, HIGH);
   display.tick();
 }
 
@@ -79,30 +98,34 @@ void loop()
     if (tapTempo.isActive())
     {
       Timer.setBaseBPM(tapBpm);
-      // , 0x08 | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00)
       display.displayNumber(tapBpm);
+      digitalWrite(LED_A_PIN, Timer.clockOn() ? LOW : HIGH);
+      digitalWrite(LED_B_PIN, Timer.subdivisionOn() ? LOW : HIGH);
     }
     else
     {
       uint8_t subdivisions = constrain(Timer.getSubdivisions() + knobMotion, 1, 16);
       Timer.setSubdivisions(subdivisions);
-      // , 0x02
       display.displayNumber(subdivisions);
+      digitalWrite(LED_A_PIN, LOW);
+      digitalWrite(LED_B_PIN, HIGH);
     }
   }
   else if (bButton.isPressed())
   {
     int8_t swing = Timer.getSwing() + knobMotion;
     Timer.setSwing(swing);
-    // , 0x04
     display.displayNumber(swing);
+    digitalWrite(LED_A_PIN, HIGH);
+    digitalWrite(LED_B_PIN, LOW);
   }
   else
   {
     uint16_t bpm = Timer.getBaseBPM() + knobMotion;
     Timer.setBaseBPM(bpm);
-    // uint8_t flags = (tapTempo.isActive() ? 0x08 : 0) | (Timer.clockOn() ? 0x01 : 0x00) | (Timer.subdivisionOn() ? 0x02 : 0x00);
     display.displayNumber(Timer.getBaseBPM());
+    digitalWrite(LED_A_PIN, Timer.clockOn() ? LOW : HIGH);
+    digitalWrite(LED_B_PIN, Timer.subdivisionOn() ? LOW : HIGH);
   }
 
   for (size_t t = 0; t < 10; t++)
