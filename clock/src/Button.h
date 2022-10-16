@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-// A push-button toggle switch. Supports debouncing.
+// A debounced push-button toggle switch.
 class Button
 {
 

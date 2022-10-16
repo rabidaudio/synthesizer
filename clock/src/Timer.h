@@ -2,8 +2,6 @@
 
 #include <Arduino.h>
 
-#include "CVInput.h"
-
 #define MIN_BPM (uint16_t)8
 #define MAX_BPM (uint16_t)1200
 #define DEFAULT_BPM 120
