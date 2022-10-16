@@ -34,8 +34,5 @@ States:
     - Restart subdivisions
     - Restore default settings
 
-- New knob system
-- Get working on bare ATMega328p
-
 https://en.wikipedia.org/wiki/Swing_(jazz_performance_style)
 https://github.com/adafruit/TinyWireM/blob/master/USI_TWI_Master.h

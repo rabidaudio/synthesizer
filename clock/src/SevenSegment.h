@@ -59,25 +59,34 @@ public:
   {
     if (c >= '0' && c <= '9')
     {
-      *_segmentPort = LETTERS[c - '0'];
+      write(LETTERS[c - '0']);
       return true;
     }
     if (c == ' ')
     {
-      *_segmentPort = CHAR_BLANK;
+      write(CHAR_BLANK);
       return true;
     }
     if (c == '-')
     {
-      *_segmentPort = CHAR_MINUS;
+      write(CHAR_MINUS);
       return true;
     }
     if (c == '_')
     {
-      *_segmentPort = CHAR_UNDERSCORE;
+      write(CHAR_UNDERSCORE);
       return true;
     }
     // unsupported char
     return false;
   }
+
+  private:
+    void write(uint8_t bitmask)
+    {
+      // We're only using 7 LS bits for controlling
+      // the display, the last bit may be used as another
+      // IO, so we don't want to overwrite it.
+      *_segmentPort = (bitmask & 0b01111111) | (*_segmentPort & 0b10000000);
+    }
 };

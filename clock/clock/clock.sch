@@ -619,11 +619,11 @@ Wire Wire Line
 	2450 3250 3500 3250
 Wire Wire Line
 	3500 3250 3500 3050
-Text Label 3150 3750 0    50   ~ 0
+Text Label 3150 4050 0    50   ~ 0
 B_LED_C1
-Text Label 3150 3850 0    50   ~ 0
-B_LED_C2
 Text Label 3150 3950 0    50   ~ 0
+B_LED_C2
+Text Label 3150 3850 0    50   ~ 0
 B_LED_C3
 Wire Wire Line
 	2550 7000 2250 7000
@@ -713,7 +713,7 @@ Wire Wire Line
 	4050 1450 4050 1350
 Wire Wire Line
 	4050 1050 4050 950 
-Text Label 2700 4050 0    50   ~ 0
+Text Label 2700 3750 0    50   ~ 0
 B_LED_A
 Wire Wire Line
 	2700 4050 2450 4050
@@ -1034,19 +1034,8 @@ AVCC
 $Comp
 L Device:R R13
 U 1 1 63915D28
-P 2850 3750
-F 0 "R13" V 2750 3700 50  0000 L CNN
-F 1 "1K" V 2850 3700 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 3750 50  0001 C CNN
-F 3 "~" H 2850 3750 50  0001 C CNN
-	1    2850 3750
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R14
-U 1 1 63916389
 P 2850 3850
-F 0 "R14" V 2950 3800 50  0000 L CNN
+F 0 "R13" V 2800 3600 50  0000 L CNN
 F 1 "1K" V 2850 3800 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 3850 50  0001 C CNN
 F 3 "~" H 2850 3850 50  0001 C CNN
@@ -1054,14 +1043,25 @@ F 3 "~" H 2850 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R15
-U 1 1 639166C2
+L Device:R R14
+U 1 1 63916389
 P 2850 3950
-F 0 "R15" V 2950 3900 50  0000 L CNN
+F 0 "R14" V 2800 3700 50  0000 L CNN
 F 1 "1K" V 2850 3900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 3950 50  0001 C CNN
 F 3 "~" H 2850 3950 50  0001 C CNN
 	1    2850 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 639166C2
+P 2850 4050
+F 0 "R15" V 2800 3800 50  0000 L CNN
+F 1 "1K" V 2850 4000 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 4050 50  0001 C CNN
+F 3 "~" H 2850 4050 50  0001 C CNN
+	1    2850 4050
 	0    1    1    0   
 $EndComp
 Text Label 10500 6350 0    50   ~ 0
@@ -1084,11 +1084,11 @@ Wire Wire Line
 Wire Wire Line
 	6250 2900 11150 2900
 Wire Wire Line
-	3150 3950 3000 3950
+	3150 4050 3000 4050
 Wire Wire Line
-	3000 3850 3150 3850
+	3000 3950 3150 3950
 Wire Wire Line
-	3150 3750 3000 3750
+	3150 3850 3000 3850
 Text Label 10500 4650 0    50   ~ 0
 LED1
 Wire Wire Line

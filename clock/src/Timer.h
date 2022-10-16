@@ -206,7 +206,11 @@ public:
     // Pre-scaler 1024
     TCCR1B |= (1 << CS12) | (0 << CS11) | (1 << CS10);
     // Output Compare Match A Interrupt Enable
+// #ifdef ARDUINO_AVR_ATmega2560
     TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
+// #else
+//     TIMSK |= (1 << OCIE1A) | (1 << OCIE1B);
+// #endif
     interrupts();
 
     updateTimer();

@@ -6,11 +6,12 @@
 #include "TapTempo.h"
 
 // Settings
-#define BACKPACK_DISPLAY 1
+// #define BACKPACK_DISPLAY 1
 #define FULL_RESET_TIME_MS 2000
 
 // Pins
 #ifdef ARDUINO_AVR_ATmega2560
+// Mega
 #define CLOCK_PIN 10
 #define SUBDIV_PIN 13
 #define KNOB_PIN A8
@@ -22,16 +23,17 @@
 #define DISPLAY_PORT 6 /* PORTF */
 #define DISPLAY_CTRL_PINS {7, 6, 5}
 #else
+// Bare ATMega168p
 #define CLOCK_PIN 10
 #define SUBDIV_PIN 11
 #define KNOB_PIN A0
 #define CV_IN_PIN A1
+#define LED_A_PIN A2
+#define LED_B_PIN 7
 #define A_BUTTON_PIN 8
 #define B_BUTTON_PIN 9
-#define LED_A_PIN A5
-#define LED_B_PIN 7
 #define DISPLAY_PORT 4 /* PORTD */
-#define DISPLAY_CTRL_PINS {A2, A3, A4}
+#define DISPLAY_CTRL_PINS {A3, A4, A5}
 #endif
 
 #ifdef BACKPACK_DISPLAY
