@@ -633,8 +633,6 @@ Connection ~ 2600 2950
 Wire Wire Line
 	2600 2950 2700 2950
 Wire Wire Line
-	2700 4150 2450 4150
-Wire Wire Line
 	2450 3050 2700 3050
 Wire Wire Line
 	2450 3150 2700 3150
@@ -773,18 +771,12 @@ Text Label 2700 4850 0    50   ~ 0
 B_LED5
 Text Label 2700 4950 0    50   ~ 0
 B_LED6
-Text Label 2700 4150 0    50   ~ 0
+Text Label 3150 4150 0    50   ~ 0
 ~RESET
 Text Label 9450 5650 2    50   ~ 0
 B_LED_B
 Text Label 9500 4100 2    50   ~ 0
 B_LED0
-Text Label 9500 4650 2    50   ~ 0
-B_LED1
-Text Label 9500 4450 2    50   ~ 0
-B_LED2
-Text Label 9500 4750 2    50   ~ 0
-B_LED3
 Text Label 9500 5250 2    50   ~ 0
 B_LED4
 Text Label 9500 5350 2    50   ~ 0
@@ -817,12 +809,6 @@ Text Label 9500 6050 2    50   ~ 0
 B_KNOB
 Text Label 9500 3700 2    50   ~ 0
 B_CV_IN
-Text Label 9500 4000 2    50   ~ 0
-B_LED_C1
-Text Label 9500 4550 2    50   ~ 0
-B_LED_C2
-Text Label 9500 4850 2    50   ~ 0
-B_LED_C3
 Text Label 9450 5550 2    50   ~ 0
 B_LED_A
 Text Label 2700 2850 0    50   ~ 0
@@ -1017,7 +1003,7 @@ Text Label 5250 6250 3    50   ~ 0
 AGND
 Text Label 7850 6200 0    50   ~ 0
 AGND
-Text Label 5250 5200 1    50   ~ 0
+Text Label 6450 3550 1    50   ~ 0
 AVCC
 Text Label 4100 5200 1    50   ~ 0
 AVCC
@@ -1032,10 +1018,10 @@ AVCC
 Text Label 4050 950  1    50   ~ 0
 AVCC
 $Comp
-L Device:R R13
+L Device:R R6
 U 1 1 63915D28
 P 2850 3850
-F 0 "R13" V 2800 3600 50  0000 L CNN
+F 0 "R6" V 2800 3600 50  0000 L CNN
 F 1 "1K" V 2850 3800 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 3850 50  0001 C CNN
 F 3 "~" H 2850 3850 50  0001 C CNN
@@ -1043,10 +1029,10 @@ F 3 "~" H 2850 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R14
+L Device:R R7
 U 1 1 63916389
 P 2850 3950
-F 0 "R14" V 2800 3700 50  0000 L CNN
+F 0 "R7" V 2800 3700 50  0000 L CNN
 F 1 "1K" V 2850 3900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 3950 50  0001 C CNN
 F 3 "~" H 2850 3950 50  0001 C CNN
@@ -1054,10 +1040,10 @@ F 3 "~" H 2850 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R15
+L Device:R R8
 U 1 1 639166C2
 P 2850 4050
-F 0 "R15" V 2800 3800 50  0000 L CNN
+F 0 "R8" V 2800 3800 50  0000 L CNN
 F 1 "1K" V 2850 4000 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2780 4050 50  0001 C CNN
 F 3 "~" H 2850 4050 50  0001 C CNN
@@ -1172,34 +1158,34 @@ AGND
 Wire Wire Line
 	7150 5100 6950 5100
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D3
 U 1 1 6342DA40
 P 7600 5200
-F 0 "D?" H 7600 4983 50  0000 C CNN
+F 0 "D3" H 7600 4983 50  0000 C CNN
 F 1 "1N4148" H 7600 5074 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7600 5025 50  0001 C CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 7600 5025 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7600 5200 50  0001 C CNN
 	1    7600 5200
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R14
 U 1 1 6342F08D
 P 7850 5450
-F 0 "R?" H 7920 5496 50  0000 L CNN
+F 0 "R14" H 7920 5496 50  0000 L CNN
 F 1 "180K" H 7920 5405 50  0000 L CNN
-F 2 "" V 7780 5450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 5450 50  0001 C CNN
 F 3 "~" H 7850 5450 50  0001 C CNN
 	1    7850 5450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R15
 U 1 1 6342F86A
 P 7850 5900
-F 0 "R?" H 7920 5946 50  0000 L CNN
+F 0 "R15" H 7920 5946 50  0000 L CNN
 F 1 "100K" H 7920 5855 50  0000 L CNN
-F 2 "" V 7780 5900 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 5900 50  0001 C CNN
 F 3 "~" H 7850 5900 50  0001 C CNN
 	1    7850 5900
 	1    0    0    -1  
@@ -1224,59 +1210,37 @@ AGND
 Text Notes 7800 5150 0    50   ~ 0
 bound input CV to 0-5V
 $Comp
-L Switch:SW_Coded_SH-7050 SW?
+L Switch:SW_Coded_SH-7050 SW3
 U 1 1 6348F991
 P 5500 3950
-F 0 "SW?" H 5557 4417 50  0000 C CNN
+F 0 "SW3" H 5557 4417 50  0000 C CNN
 F 1 "SW_Coded_SH-7050" H 5557 4326 50  0000 C CNN
-F 2 "" H 5200 3500 50  0001 L CNN
+F 2 "synth:SD-1110" H 5200 3500 50  0001 L CNN
 F 3 "https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf" H 5500 3950 50  0001 C CNN
 	1    5500 3950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 634912AF
 P 6250 3850
-F 0 "R?" V 6250 4150 50  0000 C CNN
+F 0 "R9" V 6250 4150 50  0000 C CNN
 F 1 "120K" V 6250 3850 50  0000 C CNN
-F 2 "" V 6180 3850 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 3850 50  0001 C CNN
 F 3 "~" H 6250 3850 50  0001 C CNN
 	1    6250 3850
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R13
 U 1 1 63491618
 P 6850 3900
-F 0 "R?" H 6780 3854 50  0000 R CNN
+F 0 "R13" H 6780 3854 50  0000 R CNN
 F 1 "68k" H 6780 3945 50  0000 R CNN
-F 2 "" V 6780 3900 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6780 3900 50  0001 C CNN
 F 3 "~" H 6850 3900 50  0001 C CNN
 	1    6850 3900
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 63492617
-P 6450 3550
-F 0 "#PWR?" H 6450 3400 50  0001 C CNN
-F 1 "+5V" H 6465 3723 50  0000 C CNN
-F 2 "" H 6450 3550 50  0001 C CNN
-F 3 "" H 6450 3550 50  0001 C CNN
-	1    6450 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6349300A
-P 6850 4250
-F 0 "#PWR?" H 6850 4000 50  0001 C CNN
-F 1 "GND" H 6855 4077 50  0000 C CNN
-F 2 "" H 6850 4250 50  0001 C CNN
-F 3 "" H 6850 4250 50  0001 C CNN
-	1    6850 4250
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6850 4250 6850 4050
@@ -1315,36 +1279,54 @@ Wire Wire Line
 	7200 3750 6850 3750
 Connection ~ 6850 3750
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 635B6095
 P 6250 3950
-F 0 "R?" V 6250 4250 50  0000 C CNN
+F 0 "R10" V 6250 4250 50  0000 C CNN
 F 1 "220K" V 6250 3950 50  0000 C CNN
-F 2 "" V 6180 3950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 3950 50  0001 C CNN
 F 3 "~" H 6250 3950 50  0001 C CNN
 	1    6250 3950
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R11
 U 1 1 635B63E3
 P 6250 4050
-F 0 "R?" V 6250 4350 50  0000 C CNN
+F 0 "R11" V 6250 4350 50  0000 C CNN
 F 1 "470K" V 6250 4050 50  0000 C CNN
-F 2 "" V 6180 4050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 4050 50  0001 C CNN
 F 3 "~" H 6250 4050 50  0001 C CNN
 	1    6250 4050
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R12
 U 1 1 635B6785
 P 6250 4150
-F 0 "R?" V 6250 4450 50  0000 C CNN
+F 0 "R12" V 6250 4450 50  0000 C CNN
 F 1 "1M" V 6250 4150 50  0000 C CNN
-F 2 "" V 6180 4150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 4150 50  0001 C CNN
 F 3 "~" H 6250 4150 50  0001 C CNN
 	1    6250 4150
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	2450 4150 3150 4150
+Text Label 6850 4250 0    50   ~ 0
+AGND
+Text Label 5250 5200 1    50   ~ 0
+AVCC
+Text Label 9500 4450 2    50   ~ 0
+B_LED2
+Text Label 9500 4650 2    50   ~ 0
+B_LED1
+Text Label 9500 4750 2    50   ~ 0
+B_LED3
+Text Label 9500 4000 2    50   ~ 0
+B_LED_C1
+Text Label 9500 4550 2    50   ~ 0
+B_LED_C2
+Text Label 9500 4850 2    50   ~ 0
+B_LED_C3
 $EndSCHEMATC
