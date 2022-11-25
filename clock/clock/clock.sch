@@ -97,7 +97,7 @@ U 1 1 631DAA91
 P 2250 6800
 F 0 "R1" H 2320 6846 50  0000 L CNN
 F 1 "10K" H 2320 6755 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2180 6800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 2180 6800 50  0001 C CNN
 F 3 "~" H 2250 6800 50  0001 C CNN
 	1    2250 6800
 	1    0    0    -1  
@@ -241,53 +241,53 @@ $EndComp
 $Comp
 L synth:AudioJack_SwitchT J12
 U 1 1 6321922B
-P 6750 5600
-F 0 "J12" H 6570 5583 50  0000 R CNN
-F 1 "CLOCK_OUT" H 6570 5674 50  0000 R CNN
-F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6750 5600 50  0001 C CNN
-F 3 "~" H 6750 5600 50  0001 C CNN
-	1    6750 5600
+P 6850 5850
+F 0 "J12" H 6670 5833 50  0000 R CNN
+F 1 "CLOCK_OUT" H 6670 5924 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6850 5850 50  0001 C CNN
+F 3 "~" H 6850 5850 50  0001 C CNN
+	1    6850 5850
 	-1   0    0    1   
 $EndComp
 $Comp
 L synth:AudioJack_SwitchT J13
 U 1 1 6321A6EF
-P 6750 6000
-F 0 "J13" H 6570 5983 50  0000 R CNN
-F 1 "SUBDIV_OUT" H 6570 6074 50  0000 R CNN
-F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6750 6000 50  0001 C CNN
-F 3 "~" H 6750 6000 50  0001 C CNN
-	1    6750 6000
+P 6850 6250
+F 0 "J13" H 6670 6233 50  0000 R CNN
+F 1 "SUBDIV_OUT" H 6670 6324 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6850 6250 50  0001 C CNN
+F 3 "~" H 6850 6250 50  0001 C CNN
+	1    6850 6250
 	-1   0    0    1   
 $EndComp
 $Comp
 L Switch:SW_Push SW1
 U 1 1 6322250C
-P 4100 5500
-F 0 "SW1" V 4054 5648 50  0000 L CNN
-F 1 "SW_Push" V 4145 5648 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 4100 5700 50  0001 C CNN
-F 3 "~" H 4100 5700 50  0001 C CNN
-	1    4100 5500
+P 3700 6300
+F 0 "SW1" V 3654 6448 50  0000 L CNN
+F 1 "SW_Push" V 3745 6448 50  0000 L CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3700 6500 50  0001 C CNN
+F 3 "~" H 3700 6500 50  0001 C CNN
+	1    3700 6300
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 63223989
-P 4100 5950
-F 0 "R4" H 4170 5996 50  0000 L CNN
-F 1 "10K" H 4170 5905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4030 5950 50  0001 C CNN
-F 3 "~" H 4100 5950 50  0001 C CNN
-	1    4100 5950
+P 3700 6750
+F 0 "R4" H 3770 6796 50  0000 L CNN
+F 1 "10K" H 3770 6705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3630 6750 50  0001 C CNN
+F 3 "~" H 3700 6750 50  0001 C CNN
+	1    3700 6750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 6250 4100 6100
+	3700 7050 3700 6900
 Wire Wire Line
-	4100 5800 4100 5750
+	3700 6600 3700 6550
 Wire Wire Line
-	4100 5300 4100 5200
+	3700 6100 3700 6000
 Wire Wire Line
 	7200 2400 6950 2400
 Wire Wire Line
@@ -406,56 +406,56 @@ F 3 "" H 2100 1250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2100 1250 2100 1150
-Text Label 6350 5600 2    50   ~ 0
+Text Label 6450 5850 2    50   ~ 0
 CLOCK_OUT
-Text Label 6350 6000 2    50   ~ 0
+Text Label 6450 6250 2    50   ~ 0
 SUBDIV_OUT
 Wire Wire Line
-	6350 6000 6550 6000
+	6450 6250 6650 6250
 Wire Wire Line
-	6350 5600 6550 5600
+	6450 5850 6650 5850
 $Comp
 L Switch:SW_Push SW2
 U 1 1 635529EA
-P 5250 5500
-F 0 "SW2" V 5204 5648 50  0000 L CNN
-F 1 "SW_Push" V 5295 5648 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5250 5700 50  0001 C CNN
-F 3 "~" H 5250 5700 50  0001 C CNN
-	1    5250 5500
+P 4600 6300
+F 0 "SW2" V 4554 6448 50  0000 L CNN
+F 1 "SW_Push" V 4645 6448 50  0000 L CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 4600 6500 50  0001 C CNN
+F 3 "~" H 4600 6500 50  0001 C CNN
+	1    4600 6300
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R5
 U 1 1 635529F4
-P 5250 5950
-F 0 "R5" H 5320 5996 50  0000 L CNN
-F 1 "10K" H 5320 5905 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5180 5950 50  0001 C CNN
-F 3 "~" H 5250 5950 50  0001 C CNN
-	1    5250 5950
+P 4600 6750
+F 0 "R5" H 4670 6796 50  0000 L CNN
+F 1 "10K" H 4670 6705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4530 6750 50  0001 C CNN
+F 3 "~" H 4600 6750 50  0001 C CNN
+	1    4600 6750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 6250 5250 6100
+	4600 7050 4600 6900
 Wire Wire Line
-	5250 5800 5250 5750
+	4600 6600 4600 6550
 Wire Wire Line
-	5250 5300 5250 5200
-Text Label 3850 5750 2    50   ~ 0
+	4600 6100 4600 6000
+Text Label 3450 6550 2    50   ~ 0
 SW1
-Text Label 5050 5750 2    50   ~ 0
+Text Label 4400 6550 2    50   ~ 0
 SW2
 Wire Wire Line
-	5050 5750 5250 5750
-Connection ~ 5250 5750
+	4400 6550 4600 6550
+Connection ~ 4600 6550
 Wire Wire Line
-	5250 5750 5250 5700
+	4600 6550 4600 6500
 Wire Wire Line
-	3850 5750 4100 5750
-Connection ~ 4100 5750
+	3450 6550 3700 6550
+Connection ~ 3700 6550
 Wire Wire Line
-	4100 5750 4100 5700
+	3700 6550 3700 6500
 $Comp
 L power:GND #PWR08
 U 1 1 635867DA
@@ -482,15 +482,15 @@ Wire Wire Line
 	1850 2350 1850 2250
 Wire Wire Line
 	1850 5500 1850 5350
-Text Label 2700 3150 0    50   ~ 0
+Text Label 3250 3200 0    50   ~ 0
 SCK
-Text Label 2700 3550 0    50   ~ 0
-B_KNOB
+Text Label 2700 3750 0    50   ~ 0
+B_KNOBL
 Wire Wire Line
 	2700 3550 2450 3550
 Text Label 3250 3000 0    50   ~ 0
 MOSI
-Text Label 2700 3050 0    50   ~ 0
+Text Label 3250 3100 0    50   ~ 0
 MISO
 Text Label 2700 2650 0    50   ~ 0
 B_SW1
@@ -499,15 +499,15 @@ B_SW2
 $Comp
 L synth:AudioJack_SwitchT J11
 U 1 1 6328406C
-P 6750 5200
-F 0 "J11" H 6570 5183 50  0000 R CNN
-F 1 "CV_IN" H 6570 5274 50  0000 R CNN
-F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6750 5200 50  0001 C CNN
-F 3 "~" H 6750 5200 50  0001 C CNN
-	1    6750 5200
+P 6850 5450
+F 0 "J11" H 6670 5433 50  0000 R CNN
+F 1 "CV_IN" H 6670 5524 50  0000 R CNN
+F 2 "synth:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles" H 6850 5450 50  0001 C CNN
+F 3 "~" H 6850 5450 50  0001 C CNN
+	1    6850 5450
 	1    0    0    1   
 $EndComp
-Text Label 8150 5700 0    50   ~ 0
+Text Label 8250 5950 0    50   ~ 0
 CV_IN
 Text Label 2700 3650 0    50   ~ 0
 B_CV_IN
@@ -582,7 +582,7 @@ L synth:EURORACK_CONN_10 J2
 U 1 1 63734A1D
 P 1600 1250
 F 0 "J2" H 1780 1296 50  0000 L CNN
-F 1 "EURORACK_CONN_10" H 1780 1205 50  0000 L CNN
+F 1 "EURORACK_CONN_10" H 1400 800 50  0000 L CNN
 F 2 "synth:EURORACK_10_IDC" V 1800 700 50  0001 C CNN
 F 3 "https://division-6.com/learn/eurorack-power/" H 1500 1550 50  0001 C CNN
 	1    1600 1250
@@ -633,9 +633,9 @@ Connection ~ 2600 2950
 Wire Wire Line
 	2600 2950 2700 2950
 Wire Wire Line
-	2450 3050 2700 3050
+	2450 3050 2600 3050
 Wire Wire Line
-	2450 3150 2700 3150
+	2450 3150 2600 3150
 Wire Wire Line
 	2600 3000 3250 3000
 Wire Wire Line
@@ -670,7 +670,7 @@ F 3 "~" H 3450 1200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 3300 1850 2    50   ~ 0
-LED_A
+LEDL
 Wire Wire Line
 	3300 1850 3450 1850
 Wire Wire Line
@@ -702,7 +702,7 @@ F 3 "~" H 4050 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3900 1850 2    50   ~ 0
-LED_B
+LEDR
 Wire Wire Line
 	3900 1850 4050 1850
 Wire Wire Line
@@ -711,8 +711,8 @@ Wire Wire Line
 	4050 1450 4050 1350
 Wire Wire Line
 	4050 1050 4050 950 
-Text Label 2700 3750 0    50   ~ 0
-B_LED_A
+Text Label 2700 3050 0    50   ~ 0
+B_LEDL
 Wire Wire Line
 	2700 4050 2450 4050
 Wire Wire Line
@@ -755,8 +755,8 @@ F 3 "~" H 9800 3900 50  0001 C CNN
 	1    9800 3900
 	1    0    0    -1  
 $EndComp
-Text Label 2700 5050 0    50   ~ 0
-B_LED_B
+Text Label 2700 3150 0    50   ~ 0
+B_LEDR
 Text Label 2700 4350 0    50   ~ 0
 B_LED0
 Text Label 2700 4450 0    50   ~ 0
@@ -773,8 +773,8 @@ Text Label 2700 4950 0    50   ~ 0
 B_LED6
 Text Label 3150 4150 0    50   ~ 0
 ~RESET
-Text Label 9450 5650 2    50   ~ 0
-B_LED_B
+Text Label 9500 5550 2    50   ~ 0
+B_LEDR
 Text Label 9500 4100 2    50   ~ 0
 B_LED0
 Text Label 9500 5250 2    50   ~ 0
@@ -805,12 +805,12 @@ F 3 "" H 9050 6450 50  0001 C CNN
 	1    9050 6450
 	1    0    0    -1  
 $EndComp
-Text Label 9500 6050 2    50   ~ 0
-B_KNOB
+Text Label 9500 5950 2    50   ~ 0
+B_KNOBL
 Text Label 9500 3700 2    50   ~ 0
 B_CV_IN
-Text Label 9450 5550 2    50   ~ 0
-B_LED_A
+Text Label 9500 5650 2    50   ~ 0
+B_LEDL
 Text Label 2700 2850 0    50   ~ 0
 B_CLOCK_OUT
 Text Label 9500 6150 2    50   ~ 0
@@ -865,28 +865,6 @@ F 3 "~" H 9800 5450 50  0001 C CNN
 	1    9800 5450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x05_Male J10
-U 1 1 633FDEA6
-P 10200 6250
-F 0 "J10" H 10308 6631 50  0000 C CNN
-F 1 "Conn_01x05_Male" V 10100 6350 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10200 6250 50  0001 C CNN
-F 3 "~" H 10200 6250 50  0001 C CNN
-	1    10200 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x05_Female J9
-U 1 1 633FDEB0
-P 9800 6250
-F 0 "J9" H 9650 6650 50  0000 L CNN
-F 1 "Conn_01x05_Female" V 9850 6050 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 9800 6250 50  0001 C CNN
-F 3 "~" H 9800 6250 50  0001 C CNN
-	1    9800 6250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9500 6450 9600 6450
 Wire Wire Line
@@ -939,12 +917,12 @@ Text Label 10500 3800 0    50   ~ 0
 SUBDIV_OUT
 Text Label 10500 3900 0    50   ~ 0
 CLOCK_OUT
-Text Label 10500 5650 0    50   ~ 0
-LED_B
-Text Label 10500 6050 0    50   ~ 0
-KNOB
 Text Label 10500 5550 0    50   ~ 0
-LED_A
+LEDR
+Text Label 10500 5950 0    50   ~ 0
+KNOBL
+Text Label 10500 5650 0    50   ~ 0
+LEDL
 Text Label 10500 6150 0    50   ~ 0
 SW1
 Text Label 10500 6450 0    50   ~ 0
@@ -957,7 +935,7 @@ Text Label 10500 4850 0    50   ~ 0
 LED_C3
 Text Label 10500 6250 0    50   ~ 0
 AVCC
-Text Label 6350 6100 2    50   ~ 0
+Text Label 6450 6350 2    50   ~ 0
 AGND
 Wire Wire Line
 	10500 5650 10400 5650
@@ -999,20 +977,20 @@ Wire Wire Line
 	10500 3800 10400 3800
 Wire Wire Line
 	10400 3700 10500 3700
-Text Label 5250 6250 3    50   ~ 0
+Text Label 4600 7050 3    50   ~ 0
 AGND
-Text Label 7850 6200 0    50   ~ 0
+Text Label 7950 6450 0    50   ~ 0
 AGND
-Text Label 6450 3550 1    50   ~ 0
+Text Label 5650 3700 1    50   ~ 0
 AVCC
-Text Label 4100 5200 1    50   ~ 0
+Text Label 3700 6000 1    50   ~ 0
 AVCC
 Wire Wire Line
-	6350 6100 6550 6100
+	6450 6350 6650 6350
 Wire Wire Line
-	6350 5700 6550 5700
+	6450 5950 6650 5950
 Wire Wire Line
-	6950 5300 7150 5300
+	7050 5550 7250 5550
 Text Label 3450 950  1    50   ~ 0
 AVCC
 Text Label 4050 950  1    50   ~ 0
@@ -1140,182 +1118,76 @@ NOTE: this weird wiring is\nfor layout optimization
 Wire Wire Line
 	9050 6350 9600 6350
 Wire Wire Line
-	9450 5550 9600 5550
-Wire Wire Line
-	9600 5650 9450 5650
-Wire Wire Line
 	9500 6150 9600 6150
 Wire Wire Line
 	9050 6250 9600 6250
-Text Label 4100 6250 3    50   ~ 0
+Text Label 3700 7050 3    50   ~ 0
 AGND
-Text Label 6350 5700 2    50   ~ 0
+Text Label 6450 5950 2    50   ~ 0
 AGND
-NoConn ~ 6550 5900
-NoConn ~ 6550 5500
-Text Label 7150 5100 0    50   ~ 0
+NoConn ~ 6650 6150
+NoConn ~ 6650 5750
+Text Label 7250 5350 0    50   ~ 0
 AGND
 Wire Wire Line
-	7150 5100 6950 5100
+	7250 5350 7050 5350
 $Comp
 L Diode:1N4148 D3
 U 1 1 6342DA40
-P 7600 5200
-F 0 "D3" H 7600 4983 50  0000 C CNN
-F 1 "1N4148" H 7600 5074 50  0000 C CNN
-F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 7600 5025 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7600 5200 50  0001 C CNN
-	1    7600 5200
+P 7700 5450
+F 0 "D3" H 7700 5233 50  0000 C CNN
+F 1 "1N4148" H 7700 5324 50  0000 C CNN
+F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 7700 5275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7700 5450 50  0001 C CNN
+	1    7700 5450
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R14
 U 1 1 6342F08D
-P 7850 5450
-F 0 "R14" H 7920 5496 50  0000 L CNN
-F 1 "180K" H 7920 5405 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 5450 50  0001 C CNN
-F 3 "~" H 7850 5450 50  0001 C CNN
-	1    7850 5450
+P 7950 5700
+F 0 "R14" H 8020 5746 50  0000 L CNN
+F 1 "180K" H 8020 5655 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7880 5700 50  0001 C CNN
+F 3 "~" H 7950 5700 50  0001 C CNN
+	1    7950 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R15
 U 1 1 6342F86A
-P 7850 5900
-F 0 "R15" H 7920 5946 50  0000 L CNN
-F 1 "100K" H 7920 5855 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7780 5900 50  0001 C CNN
-F 3 "~" H 7850 5900 50  0001 C CNN
-	1    7850 5900
+P 7950 6150
+F 0 "R15" H 8020 6196 50  0000 L CNN
+F 1 "100K" H 8020 6105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7880 6150 50  0001 C CNN
+F 3 "~" H 7950 6150 50  0001 C CNN
+	1    7950 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 6200 7850 6050
+	7950 6450 7950 6300
 Wire Wire Line
-	7850 5750 7850 5700
+	7950 6000 7950 5950
 Wire Wire Line
-	7850 5300 7850 5200
+	7950 5550 7950 5450
 Wire Wire Line
-	7850 5200 7750 5200
+	7950 5450 7850 5450
 Wire Wire Line
-	6950 5200 7450 5200
+	7050 5450 7550 5450
 Wire Wire Line
-	8150 5700 7850 5700
-Connection ~ 7850 5700
+	8250 5950 7950 5950
+Connection ~ 7950 5950
 Wire Wire Line
-	7850 5700 7850 5600
-Text Label 7150 5300 0    50   ~ 0
+	7950 5950 7950 5850
+Text Label 7250 5550 0    50   ~ 0
 AGND
-Text Notes 7800 5150 0    50   ~ 0
+Text Notes 7900 5400 0    50   ~ 0
 bound input CV to 0-5V
-$Comp
-L Switch:SW_Coded_SH-7050 SW3
-U 1 1 6348F991
-P 5500 3950
-F 0 "SW3" H 5557 4417 50  0000 C CNN
-F 1 "SW_Coded_SH-7050" H 5557 4326 50  0000 C CNN
-F 2 "synth:SD-1110" H 5200 3500 50  0001 L CNN
-F 3 "https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf" H 5500 3950 50  0001 C CNN
-	1    5500 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 634912AF
-P 6250 3850
-F 0 "R9" V 6250 4150 50  0000 C CNN
-F 1 "120K" V 6250 3850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 3850 50  0001 C CNN
-F 3 "~" H 6250 3850 50  0001 C CNN
-	1    6250 3850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R13
-U 1 1 63491618
-P 6850 3900
-F 0 "R13" H 6780 3854 50  0000 R CNN
-F 1 "68k" H 6780 3945 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6780 3900 50  0001 C CNN
-F 3 "~" H 6850 3900 50  0001 C CNN
-	1    6850 3900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6850 4250 6850 4050
-Wire Wire Line
-	6850 3750 5900 3750
-Wire Wire Line
-	6450 3550 6450 3850
-Wire Wire Line
-	6450 4150 6400 4150
-Wire Wire Line
-	6400 4050 6450 4050
-Connection ~ 6450 4050
-Wire Wire Line
-	6450 4050 6450 4150
-Wire Wire Line
-	6400 3950 6450 3950
-Connection ~ 6450 3950
-Wire Wire Line
-	6450 3950 6450 4050
-Wire Wire Line
-	6450 3850 6400 3850
-Connection ~ 6450 3850
-Wire Wire Line
-	6450 3850 6450 3950
-Wire Wire Line
-	6100 3850 5900 3850
-Wire Wire Line
-	5900 3950 6100 3950
-Wire Wire Line
-	6100 4050 5900 4050
-Wire Wire Line
-	5900 4150 6100 4150
-Text Label 7200 3750 0    50   ~ 0
-KNOB
-Wire Wire Line
-	7200 3750 6850 3750
-Connection ~ 6850 3750
-$Comp
-L Device:R R10
-U 1 1 635B6095
-P 6250 3950
-F 0 "R10" V 6250 4250 50  0000 C CNN
-F 1 "220K" V 6250 3950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 3950 50  0001 C CNN
-F 3 "~" H 6250 3950 50  0001 C CNN
-	1    6250 3950
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R11
-U 1 1 635B63E3
-P 6250 4050
-F 0 "R11" V 6250 4350 50  0000 C CNN
-F 1 "470K" V 6250 4050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 4050 50  0001 C CNN
-F 3 "~" H 6250 4050 50  0001 C CNN
-	1    6250 4050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 635B6785
-P 6250 4150
-F 0 "R12" V 6250 4450 50  0000 C CNN
-F 1 "1M" V 6250 4150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6180 4150 50  0001 C CNN
-F 3 "~" H 6250 4150 50  0001 C CNN
-	1    6250 4150
-	0    1    1    0   
-$EndComp
+Text Label 5100 4200 2    50   ~ 0
+KNOBL
 Wire Wire Line
 	2450 4150 3150 4150
-Text Label 6850 4250 0    50   ~ 0
-AGND
-Text Label 5250 5200 1    50   ~ 0
+Text Label 4600 6000 1    50   ~ 0
 AVCC
 Text Label 9500 4450 2    50   ~ 0
 B_LED2
@@ -1329,4 +1201,216 @@ Text Label 9500 4550 2    50   ~ 0
 B_LED_C2
 Text Label 9500 4850 2    50   ~ 0
 B_LED_C3
+Text Label 7000 4200 0    50   ~ 0
+KNOBR
+$Comp
+L Device:Rotary_Encoder_Switch SW3
+U 1 1 6385C447
+P 6050 3900
+F 0 "SW3" V 5800 4250 50  0000 R CNN
+F 1 "Rotary_Encoder_Switch" V 4950 4350 50  0000 R CNN
+F 2 "synth:RotaryEncoder_Bourns_PEC11H_Vertical_Switch" H 5900 4060 50  0001 C CNN
+F 3 "~" H 6050 4160 50  0001 C CNN
+	1    6050 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 63860657
+P 5650 3950
+F 0 "R10" H 5500 4000 50  0000 L CNN
+F 1 "10K" V 5650 3900 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5580 3950 50  0001 C CNN
+F 3 "~" H 5650 3950 50  0001 C CNN
+	1    5650 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 6386138C
+P 5400 4200
+F 0 "R9" V 5500 4200 50  0000 C CNN
+F 1 "10K" V 5400 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5330 4200 50  0001 C CNN
+F 3 "~" H 5400 4200 50  0001 C CNN
+	1    5400 4200
+	0    1    1    0   
+$EndComp
+Text Label 6050 4700 3    50   ~ 0
+AGND
+$Comp
+L Device:C C5
+U 1 1 63870FBC
+P 5650 4450
+F 0 "C5" H 5765 4496 50  0000 L CNN
+F 1 "10n" H 5765 4405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5688 4300 50  0001 C CNN
+F 3 "~" H 5650 4450 50  0001 C CNN
+	1    5650 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4200 5650 4300
+Wire Wire Line
+	5650 4100 5650 4200
+Connection ~ 5650 4200
+Wire Wire Line
+	5550 4200 5650 4200
+Wire Wire Line
+	5100 4200 5250 4200
+Wire Wire Line
+	5650 3700 5650 3800
+Wire Wire Line
+	5650 4600 5650 4650
+Wire Wire Line
+	5650 4650 6050 4650
+Wire Wire Line
+	6050 4200 6050 4650
+Wire Wire Line
+	6050 4700 6050 4650
+Connection ~ 6050 4650
+Text Label 6450 3700 1    50   ~ 0
+AVCC
+$Comp
+L Device:R R11
+U 1 1 638F4837
+P 6450 3950
+F 0 "R11" H 6300 4000 50  0000 L CNN
+F 1 "10K" V 6450 3900 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6380 3950 50  0001 C CNN
+F 3 "~" H 6450 3950 50  0001 C CNN
+	1    6450 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 638F4841
+P 6700 4200
+F 0 "R12" V 6800 4200 50  0000 C CNN
+F 1 "10K" V 6700 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6630 4200 50  0001 C CNN
+F 3 "~" H 6700 4200 50  0001 C CNN
+	1    6700 4200
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 638F484B
+P 6450 4450
+F 0 "C6" H 6565 4496 50  0000 L CNN
+F 1 "10n" H 6565 4405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 6488 4300 50  0001 C CNN
+F 3 "~" H 6450 4450 50  0001 C CNN
+	1    6450 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4200 6450 4200
+Wire Wire Line
+	6450 4200 6450 4300
+Wire Wire Line
+	6450 4100 6450 4200
+Connection ~ 6450 4200
+Wire Wire Line
+	6550 4200 6450 4200
+Wire Wire Line
+	7000 4200 6850 4200
+Wire Wire Line
+	6450 3700 6450 3800
+Wire Wire Line
+	6450 4600 6450 4650
+Wire Wire Line
+	6450 4650 6050 4650
+Text Label 10500 6050 0    50   ~ 0
+KNOBR
+Text Label 9500 6050 2    50   ~ 0
+B_KNOBR
+Text Label 2700 5050 0    50   ~ 0
+B_KNOBR
+Wire Wire Line
+	3250 3100 2600 3100
+Wire Wire Line
+	2600 3100 2600 3050
+Connection ~ 2600 3050
+Wire Wire Line
+	2600 3050 2700 3050
+Wire Wire Line
+	3250 3200 2600 3200
+Wire Wire Line
+	2600 3200 2600 3150
+Connection ~ 2600 3150
+Wire Wire Line
+	2600 3150 2700 3150
+Text Label 2700 3550 0    50   ~ 0
+B_SW3
+Text Label 5950 3500 1    50   ~ 0
+AVCC
+$Comp
+L Device:R R13
+U 1 1 6395B494
+P 6800 3550
+F 0 "R13" H 6870 3596 50  0000 L CNN
+F 1 "10K" H 6870 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6730 3550 50  0001 C CNN
+F 3 "~" H 6800 3550 50  0001 C CNN
+	1    6800 3550
+	1    0    0    -1  
+$EndComp
+Text Label 6800 3800 0    50   ~ 0
+AGND
+Wire Wire Line
+	6800 3800 6800 3700
+Wire Wire Line
+	6800 3400 6800 3350
+Wire Wire Line
+	6800 3350 6150 3350
+Wire Wire Line
+	6150 3350 6150 3600
+Wire Wire Line
+	5950 3500 5950 3600
+Text Label 7000 3350 0    50   ~ 0
+SW3
+Wire Wire Line
+	7000 3350 6800 3350
+Connection ~ 6800 3350
+$Comp
+L Connector:Conn_01x07_Male J10
+U 1 1 63A2F8FE
+P 10200 6150
+F 0 "J10" H 10300 6600 50  0000 C CNN
+F 1 "Conn_01x07_Male" V 10150 6150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 10200 6150 50  0001 C CNN
+F 3 "~" H 10200 6150 50  0001 C CNN
+	1    10200 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x07_Female J9
+U 1 1 63A2D909
+P 9800 6150
+F 0 "J9" H 9650 6600 50  0000 L CNN
+F 1 "Conn_01x07_Female" V 9850 5800 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical" H 9800 6150 50  0001 C CNN
+F 3 "~" H 9800 6150 50  0001 C CNN
+	1    9800 6150
+	1    0    0    -1  
+$EndComp
+Text Label 9500 5850 2    50   ~ 0
+B_SW3
+Wire Wire Line
+	9500 5850 9600 5850
+Wire Wire Line
+	9600 5950 9500 5950
+Text Label 10500 5850 0    50   ~ 0
+SW3
+Wire Wire Line
+	10500 5950 10400 5950
+Wire Wire Line
+	10400 5850 10500 5850
+Wire Wire Line
+	5950 4200 5650 4200
+Wire Wire Line
+	9600 5550 9500 5550
+Wire Wire Line
+	9500 5650 9600 5650
 $EndSCHEMATC
