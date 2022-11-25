@@ -1413,4 +1413,5 @@ Wire Wire Line
 	9600 5550 9500 5550
 Wire Wire Line
 	9500 5650 9600 5650
+Connection ~ 2650 -1300
 $EndSCHEMATC
