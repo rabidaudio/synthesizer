@@ -154,13 +154,13 @@ private:
   uint8_t _clockPin;
   uint8_t _subdivisionPin;
   uint8_t _subdivisions = DEFAULT_SUBDIVISIONS;
-  uint8_t _subdivIdx = 0;
+  volatile uint8_t _subdivIdx = 0;
   int8_t _swing = 0;
   uint16_t _oddTick;
   uint16_t _evenTick;
   bool _isEven = true;
-  bool _clockHigh = false;
-  bool _subdivHigh = false;
+  volatile bool _clockHigh = false;
+  volatile bool _subdivHigh = false;
 
   void updateTimer()
   {

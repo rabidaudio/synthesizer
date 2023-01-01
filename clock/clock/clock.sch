@@ -484,8 +484,6 @@ Wire Wire Line
 	1850 5500 1850 5350
 Text Label 3250 3200 0    50   ~ 0
 SCK
-Text Label 2700 3750 0    50   ~ 0
-B_KNOBL
 Wire Wire Line
 	2700 3550 2450 3550
 Text Label 3250 3000 0    50   ~ 0
@@ -759,10 +757,6 @@ Text Label 2700 3150 0    50   ~ 0
 B_LEDR
 Text Label 2700 4350 0    50   ~ 0
 B_LED0
-Text Label 2700 4450 0    50   ~ 0
-B_LED1
-Text Label 2700 4550 0    50   ~ 0
-B_LED2
 Text Label 2700 4650 0    50   ~ 0
 B_LED3
 Text Label 2700 4750 0    50   ~ 0
@@ -1181,8 +1175,6 @@ Wire Wire Line
 	7950 5950 7950 5850
 Text Label 7250 5550 0    50   ~ 0
 AGND
-Text Notes 7900 5400 0    50   ~ 0
-bound input CV to 0-5V
 Text Label 5100 4200 2    50   ~ 0
 KNOBL
 Wire Wire Line
@@ -1218,8 +1210,8 @@ $Comp
 L Device:R R10
 U 1 1 63860657
 P 5650 3950
-F 0 "R10" H 5500 4000 50  0000 L CNN
-F 1 "10K" V 5650 3900 50  0000 L CNN
+F 0 "R10" H 5450 4000 50  0000 L CNN
+F 1 "10K" H 5450 3900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5580 3950 50  0001 C CNN
 F 3 "~" H 5650 3950 50  0001 C CNN
 	1    5650 3950
@@ -1230,7 +1222,7 @@ L Device:R R9
 U 1 1 6386138C
 P 5400 4200
 F 0 "R9" V 5500 4200 50  0000 C CNN
-F 1 "10K" V 5400 4200 50  0000 C CNN
+F 1 "10K" V 5600 4200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5330 4200 50  0001 C CNN
 F 3 "~" H 5400 4200 50  0001 C CNN
 	1    5400 4200
@@ -1275,8 +1267,8 @@ $Comp
 L Device:R R11
 U 1 1 638F4837
 P 6450 3950
-F 0 "R11" H 6300 4000 50  0000 L CNN
-F 1 "10K" V 6450 3900 50  0000 L CNN
+F 0 "R11" H 6250 4000 50  0000 L CNN
+F 1 "10K" H 6250 3900 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6380 3950 50  0001 C CNN
 F 3 "~" H 6450 3950 50  0001 C CNN
 	1    6450 3950
@@ -1287,7 +1279,7 @@ L Device:R R12
 U 1 1 638F4841
 P 6700 4200
 F 0 "R12" V 6800 4200 50  0000 C CNN
-F 1 "10K" V 6700 4200 50  0000 C CNN
+F 1 "10K" V 6900 4200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6630 4200 50  0001 C CNN
 F 3 "~" H 6700 4200 50  0001 C CNN
 	1    6700 4200
@@ -1325,8 +1317,6 @@ Text Label 10500 6050 0    50   ~ 0
 KNOBR
 Text Label 9500 6050 2    50   ~ 0
 B_KNOBR
-Text Label 2700 5050 0    50   ~ 0
-B_KNOBR
 Wire Wire Line
 	3250 3100 2600 3100
 Wire Wire Line
@@ -1341,8 +1331,6 @@ Wire Wire Line
 Connection ~ 2600 3150
 Wire Wire Line
 	2600 3150 2700 3150
-Text Label 2700 3550 0    50   ~ 0
-B_SW3
 Text Label 5950 3500 1    50   ~ 0
 AVCC
 $Comp
@@ -1413,5 +1401,16 @@ Wire Wire Line
 	9600 5550 9500 5550
 Wire Wire Line
 	9500 5650 9600 5650
-Connection ~ 2650 -1300
+Text Label 2700 3750 0    50   ~ 0
+B_KNOBL
+Text Label 2700 4550 0    50   ~ 0
+B_LED2
+Text Label 2700 4450 0    50   ~ 0
+B_LED1
+Text Label 2700 3550 0    50   ~ 0
+B_SW3
+Text Label 2700 5050 0    50   ~ 0
+B_KNOBR
+Text Notes 9550 3300 0    50   ~ 0
+top-bottom board interface
 $EndSCHEMATC
