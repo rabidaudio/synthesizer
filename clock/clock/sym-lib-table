@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name synth)(type Legacy)(uri /Users/cjk/projects/synthesizer/shared/synth.lib)(options "")(descr ""))
+  (lib (name HT16K33)(type Legacy)(uri /Users/cjk/projects/synthesizer/shared/HT16K33/HT16K33.lib)(options "")(descr ""))
+  (lib (name hdsp-a153)(type Legacy)(uri /Users/cjk/Desktop/hdsp-a153.lib)(options "")(descr ""))
+)

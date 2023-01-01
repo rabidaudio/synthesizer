@@ -12,6 +12,12 @@ K audio jack receptacle mono headphones phone TS connector
 F ~
 $ENDCMP
 #
+$CMP AudioJack_SwitchT
+D Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve, Switched T Pole (Normalling)
+K audio jack receptacle mono headphones phone TS connector
+F ~
+$ENDCMP
+#
 $CMP DG403
 D Dual SPDT Monolithic CMOS Analog Switch, 45Ohm Ron, SOIC-16
 K CMOS Analog Switch
@@ -45,10 +51,22 @@ K connector eurorack euro synth
 F https://division-6.com/learn/eurorack-power/
 $ENDCMP
 #
+$CMP HDSP-7503
+D One digit 7 segment high efficiency red, common cathode
+K display LED 7-segment
+F https://docs.broadcom.com/docs/AV02-2553EN
+$ENDCMP
+#
 $CMP J109
 D N-JFET transistor, interchangable drain/source
 K transistor NJFET N-JFET J109 2N5457
 F ~
+$ENDCMP
+#
+$CMP SM460281N
+D mini One digit 7 segment red, common cathode
+K display LED 7-segment
+F https://datasheet.lcsc.com/lcsc/1809052128_ARKLED-Wuxi-ARK-Tech-Elec-SM460281N-7_C252194.pdf
 $ENDCMP
 #
 $CMP SW_4PDT_x4
