@@ -659,56 +659,48 @@ Wire Wire Line
 $Comp
 L Device:LED D1
 U 1 1 63D8017D
-P 3450 1200
-F 0 "D1" V 3489 1082 50  0000 R CNN
-F 1 "LED" V 3398 1082 50  0000 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 3450 1200 50  0001 C CNN
-F 3 "~" H 3450 1200 50  0001 C CNN
-	1    3450 1200
+P 3450 1600
+F 0 "D1" V 3489 1482 50  0000 R CNN
+F 1 "LED" V 3398 1482 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 3450 1600 50  0001 C CNN
+F 3 "~" H 3450 1600 50  0001 C CNN
+	1    3450 1600
 	0    -1   -1   0   
 $EndComp
-Text Label 3300 1850 2    50   ~ 0
+Text Label 3300 950  2    50   ~ 0
 LEDL
-Wire Wire Line
-	3300 1850 3450 1850
 Wire Wire Line
 	3450 1850 3450 1750
 Wire Wire Line
 	3450 1450 3450 1350
-Wire Wire Line
-	3450 1050 3450 950 
 $Comp
 L Device:LED D2
 U 1 1 63DA6C63
-P 4050 1200
-F 0 "D2" V 4089 1082 50  0000 R CNN
-F 1 "LED" V 3998 1082 50  0000 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 4050 1200 50  0001 C CNN
-F 3 "~" H 4050 1200 50  0001 C CNN
-	1    4050 1200
+P 4050 1600
+F 0 "D2" V 4089 1482 50  0000 R CNN
+F 1 "LED" V 3998 1482 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 4050 1600 50  0001 C CNN
+F 3 "~" H 4050 1600 50  0001 C CNN
+	1    4050 1600
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R3
 U 1 1 63DA6C6D
-P 4050 1600
-F 0 "R3" H 4120 1646 50  0000 L CNN
-F 1 "1K" H 4120 1555 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3980 1600 50  0001 C CNN
-F 3 "~" H 4050 1600 50  0001 C CNN
-	1    4050 1600
-	1    0    0    -1  
+P 4050 1200
+F 0 "R3" H 4120 1246 50  0000 L CNN
+F 1 "1K" H 4120 1155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3980 1200 50  0001 C CNN
+F 3 "~" H 4050 1200 50  0001 C CNN
+	1    4050 1200
+	-1   0    0    1   
 $EndComp
-Text Label 3900 1850 2    50   ~ 0
+Text Label 3850 950  2    50   ~ 0
 LEDR
-Wire Wire Line
-	3900 1850 4050 1850
 Wire Wire Line
 	4050 1850 4050 1750
 Wire Wire Line
 	4050 1450 4050 1350
-Wire Wire Line
-	4050 1050 4050 950 
 Text Label 2700 3050 0    50   ~ 0
 B_LEDL
 Wire Wire Line
@@ -985,10 +977,6 @@ Wire Wire Line
 	6450 5950 6650 5950
 Wire Wire Line
 	7050 5550 7250 5550
-Text Label 3450 950  1    50   ~ 0
-AVCC
-Text Label 4050 950  1    50   ~ 0
-AVCC
 $Comp
 L Device:R R6
 U 1 1 63915D28
@@ -1027,13 +1015,13 @@ AGND
 $Comp
 L Device:R R2
 U 1 1 63D809C6
-P 3450 1600
-F 0 "R2" H 3520 1646 50  0000 L CNN
-F 1 "1K" H 3520 1555 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 1600 50  0001 C CNN
-F 3 "~" H 3450 1600 50  0001 C CNN
-	1    3450 1600
-	1    0    0    -1  
+P 3450 1200
+F 0 "R2" H 3520 1246 50  0000 L CNN
+F 1 "1K" H 3520 1155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 1200 50  0001 C CNN
+F 3 "~" H 3450 1200 50  0001 C CNN
+	1    3450 1200
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	6250 2700 7850 2700
@@ -1175,8 +1163,6 @@ Wire Wire Line
 	7950 5950 7950 5850
 Text Label 7250 5550 0    50   ~ 0
 AGND
-Text Label 5100 4200 2    50   ~ 0
-KNOBL
 Wire Wire Line
 	2450 4150 3150 4150
 Text Label 4600 6000 1    50   ~ 0
@@ -1193,15 +1179,13 @@ Text Label 9500 4550 2    50   ~ 0
 B_LED_C2
 Text Label 9500 4850 2    50   ~ 0
 B_LED_C3
-Text Label 7000 4200 0    50   ~ 0
-KNOBR
 $Comp
 L Device:Rotary_Encoder_Switch SW3
 U 1 1 6385C447
 P 6050 3900
 F 0 "SW3" V 5800 4250 50  0000 R CNN
 F 1 "Rotary_Encoder_Switch" V 4950 4350 50  0000 R CNN
-F 2 "synth:RotaryEncoder_Bourns_PEC11H_Vertical_Switch" H 5900 4060 50  0001 C CNN
+F 2 "synth:RotaryEncoder_Bourns_PEC11R_Vertical_Switch" H 5900 4060 50  0001 C CNN
 F 3 "~" H 6050 4160 50  0001 C CNN
 	1    6050 3900
 	0    -1   -1   0   
@@ -1217,30 +1201,8 @@ F 3 "~" H 5650 3950 50  0001 C CNN
 	1    5650 3950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R9
-U 1 1 6386138C
-P 5400 4200
-F 0 "R9" V 5500 4200 50  0000 C CNN
-F 1 "10K" V 5600 4200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5330 4200 50  0001 C CNN
-F 3 "~" H 5400 4200 50  0001 C CNN
-	1    5400 4200
-	0    1    1    0   
-$EndComp
 Text Label 6050 4700 3    50   ~ 0
 AGND
-$Comp
-L Device:C C5
-U 1 1 63870FBC
-P 5650 4450
-F 0 "C5" H 5765 4496 50  0000 L CNN
-F 1 "10n" H 5765 4405 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5688 4300 50  0001 C CNN
-F 3 "~" H 5650 4450 50  0001 C CNN
-	1    5650 4450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5650 4200 5650 4300
 Wire Wire Line
@@ -1249,18 +1211,7 @@ Connection ~ 5650 4200
 Wire Wire Line
 	5550 4200 5650 4200
 Wire Wire Line
-	5100 4200 5250 4200
-Wire Wire Line
 	5650 3700 5650 3800
-Wire Wire Line
-	5650 4600 5650 4650
-Wire Wire Line
-	5650 4650 6050 4650
-Wire Wire Line
-	6050 4200 6050 4650
-Wire Wire Line
-	6050 4700 6050 4650
-Connection ~ 6050 4650
 Text Label 6450 3700 1    50   ~ 0
 AVCC
 $Comp
@@ -1274,28 +1225,6 @@ F 3 "~" H 6450 3950 50  0001 C CNN
 	1    6450 3950
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Device:R R12
-U 1 1 638F4841
-P 6700 4200
-F 0 "R12" V 6800 4200 50  0000 C CNN
-F 1 "10K" V 6900 4200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6630 4200 50  0001 C CNN
-F 3 "~" H 6700 4200 50  0001 C CNN
-	1    6700 4200
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:C C6
-U 1 1 638F484B
-P 6450 4450
-F 0 "C6" H 6565 4496 50  0000 L CNN
-F 1 "10n" H 6565 4405 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 6488 4300 50  0001 C CNN
-F 3 "~" H 6450 4450 50  0001 C CNN
-	1    6450 4450
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	6150 4200 6450 4200
 Wire Wire Line
@@ -1306,16 +1235,10 @@ Connection ~ 6450 4200
 Wire Wire Line
 	6550 4200 6450 4200
 Wire Wire Line
-	7000 4200 6850 4200
-Wire Wire Line
 	6450 3700 6450 3800
-Wire Wire Line
-	6450 4600 6450 4650
-Wire Wire Line
-	6450 4650 6050 4650
-Text Label 10500 6050 0    50   ~ 0
+Text Label 10500 5850 0    50   ~ 0
 KNOBR
-Text Label 9500 6050 2    50   ~ 0
+Text Label 9500 5850 2    50   ~ 0
 B_KNOBR
 Wire Wire Line
 	3250 3100 2600 3100
@@ -1383,13 +1306,13 @@ F 3 "~" H 9800 6150 50  0001 C CNN
 	1    9800 6150
 	1    0    0    -1  
 $EndComp
-Text Label 9500 5850 2    50   ~ 0
+Text Label 9500 6050 2    50   ~ 0
 B_SW3
 Wire Wire Line
 	9500 5850 9600 5850
 Wire Wire Line
 	9600 5950 9500 5950
-Text Label 10500 5850 0    50   ~ 0
+Text Label 10500 6050 0    50   ~ 0
 SW3
 Wire Wire Line
 	10500 5950 10400 5950
@@ -1407,10 +1330,61 @@ Text Label 2700 4550 0    50   ~ 0
 B_LED2
 Text Label 2700 4450 0    50   ~ 0
 B_LED1
-Text Label 2700 3550 0    50   ~ 0
-B_SW3
 Text Label 2700 5050 0    50   ~ 0
+B_SW3
+Text Label 2700 3550 0    50   ~ 0
 B_KNOBR
 Text Notes 9550 3300 0    50   ~ 0
 top-bottom board interface
+Wire Wire Line
+	3300 950  3450 950 
+Wire Wire Line
+	3850 950  4050 950 
+Text Label 3450 1850 3    50   ~ 0
+AGND
+Text Label 4050 1850 3    50   ~ 0
+AGND
+Text Label 5550 4200 2    50   ~ 0
+KNOBL
+Text Label 6550 4200 0    50   ~ 0
+KNOBR
+Wire Wire Line
+	5650 4600 5650 4650
+Wire Wire Line
+	6050 4700 6050 4650
+Wire Wire Line
+	6050 4200 6050 4650
+Connection ~ 6050 4650
+Wire Wire Line
+	5650 4650 6050 4650
+Wire Wire Line
+	6450 4600 6450 4650
+Wire Wire Line
+	6450 4650 6050 4650
+$Comp
+L Device:C C5
+U 1 1 63870FBC
+P 5650 4450
+F 0 "C5" H 5765 4496 50  0000 L CNN
+F 1 "10n" H 5765 4405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 5688 4300 50  0001 C CNN
+F 3 "~" H 5650 4450 50  0001 C CNN
+	1    5650 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 638F484B
+P 6450 4450
+F 0 "C6" H 6565 4496 50  0000 L CNN
+F 1 "10n" H 6565 4405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P5.00mm" H 6488 4300 50  0001 C CNN
+F 3 "~" H 6450 4450 50  0001 C CNN
+	1    6450 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1050 4050 950 
+Wire Wire Line
+	3450 1050 3450 950 
 $EndSCHEMATC

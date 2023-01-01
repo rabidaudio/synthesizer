@@ -36,9 +36,9 @@
 #define CV_IN_PIN A1
 #define LED_A_PIN 12
 #define LED_B_PIN 13
-#define A_BUTTON_PIN 7
-#define B_BUTTON_PIN 8
-#define C_BUTTON_PIN 9
+#define A_BUTTON_PIN 8
+#define B_BUTTON_PIN 9
+#define C_BUTTON_PIN 7
 #define DISPLAY_PORT 4 /* PORTD */
 #define DISPLAY_CTRL_PINS \
   {                       \
