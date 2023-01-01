@@ -9,37 +9,18 @@ void enableInterrupts(uint8_t pin)
   PCICR |= bit(digitalPinToPCICRbit(pin)); // enable interrupt for group
 }
 
-// Source:
-// https://github.com/PaulStoffregen/Encoder/blob/master/Encoder.h#L160
-const int8_t ENCODER_STATE_TABLE[] = {
-      // old B  old A new B new A
-   0, // 0      0     0     0
-   1, // 0      0     0     1
-  -1, // 0      0     1     0
-   2, // 0      0     1     1
-  -1, // 0      1     0     0
-   0, // 0      1     0     1
-  -2, // 0      1     1     0
-   1, // 0      1     1     1
-   1, // 1      0     0     0
-  -2, // 1      0     0     1
-   0, // 1      0     1     0
-  -1, // 1      0     1     1
-   2, // 1      1     0     0
-  -1, // 1      1     0     1
-   0, // 1      1     1     1
-};
-
 // A class for reading incremental rotary encoder rotations
 // and reporting changes using pin change interrupts.
 // Assumes pins are active low.
-class _RotaryEncoder
+class RotaryEncoder
 {
   private:
     uint8_t _aPin;
     uint8_t _bPin;
-    uint8_t _state;
-    bool _changing;
+    uint8_t _state; // bit-encoded:
+                    //          {new B state}, {new A state},
+                    //          {old B state}, {old A state}
+    bool _changed = false;
     volatile int8_t _counter;
   
   public:
@@ -47,8 +28,8 @@ class _RotaryEncoder
     {
       _aPin = aPin;
       _bPin = bPin;
-      _state = 0;
-      _changing = false;
+      _state = 0b00001111;
+      _changed = false;
       _counter = 0;
       pinMode(aPin, INPUT);
       pinMode(bPin, INPUT);
@@ -60,54 +41,46 @@ class _RotaryEncoder
       interrupts();
     }
 
+    // Based on
+    // https://github.com/PaulStoffregen/Encoder/blob/master/Encoder.h#L160
     inline void tick()
     {
-      // Serial.print(_state, BIN); Serial.print("\t");
       _state = _state >> 2;
-      uint8_t aState = (digitalRead(_aPin) == LOW);
-      uint8_t bState = (digitalRead(_bPin) == LOW);
-      _state |= (aState << 2) | (bState << 3);
-      // Serial.print(aState); Serial.print("\t");
-      // Serial.print(bState); Serial.print("\t");
-      // Serial.println(_state, BIN);
-      // uint8_t change = _state & 0b00000101;
-      if (!_changing) {
-        int8_t v = ENCODER_STATE_TABLE[_state];
-        if (v != 0) {
-          _counter += v;
-          _changing = true;
-        }
+      if (digitalRead(_aPin) == LOW) _state |= 0b0000100;
+      if (digitalRead(_bPin) == LOW) _state |= 0b0001000;
+      // The encoder table counts steps, but because
+      // knob detents are at on-on, there's multiple steps
+      // per-detent. We could only count specific transitions
+      // each direction and ignore the others, but since we can miss
+      // some steps due to flakey interrupts, we instead gate changes
+      // so that only transition is counted between each on-on state.
+      switch (_state) {
+        case 0b00000001:
+        case 0b00000111:
+        case 0b00001000:
+        case 0b00001110:
+          if (!_changed) _counter++;
+          break;
+        case 0b00000010:
+        case 0b00000100:
+        case 0b00001011:
+        case 0b00001101:
+          if (!_changed) _counter--;
+          break;
       }
-
-      if (_changing && aState && bState) {
-        _changing = false;
+      switch (_state) {
+        case 0b00001100:
+        case 0b00001101:
+        case 0b00001110:
+        case 0b00001111:
+          _changed = false;
+          break;
+        case 0b00000011:
+        case 0b00000111:
+        case 0b00001011:
+          _changed = true;
+          break;
       }
-
-      // if (change != 0 && change != 0b00000101) {
-        // _counter += ENCODER_STATE_TABLE[_state];
-        // Serial.print(_state, BIN);
-        // Serial.print("\t");
-        // Serial.println(ENCODER_STATE_TABLE[_state]);
-      // }
-      // _aPrevState = _aState;
-      // _aState = digitalRead(_aPin) == LOW;
-      // Serial.print("a\t");
-      // Serial.print(_aPrevState);
-      // Serial.print("\t->\t");
-      // Serial.print(_aState);
-      // if (_aState != _aPrevState) {
-      //   bool _bState = digitalRead(_bPin) == LOW;
-      //   Serial.print("\tb\t");
-      //   Serial.print(_bState);
-      //   if (_bState) {
-      //     _counter++;
-      //     Serial.print("\t+1");
-      //   } else {
-      //     _counter--;
-      //     Serial.print("\t-1");
-      //   }
-      // }
-      // Serial.println();
     }
 
     // Compare the current state to where it was last and return the number
@@ -119,20 +92,3 @@ class _RotaryEncoder
       return v;
     }
 };
-
-// Global instance to assign 
-_RotaryEncoder Knob;
-
-// Tick when PC interrupt is triggered
-
-ISR (PCINT0_vect) {
-  Knob.tick();
-}
-
-ISR (PCINT1_vect) {
-  Knob.tick();
-}
-
-ISR (PCINT2_vect) {
-  Knob.tick();
-}

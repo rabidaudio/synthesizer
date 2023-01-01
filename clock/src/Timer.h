@@ -297,7 +297,7 @@ public:
     return _subdivHigh;
   }
 
-  void tickA()
+  inline void tickA()
   {
     digitalWrite(_clockPin, HIGH);
     _clockHigh = true;
@@ -312,7 +312,7 @@ public:
     _isEven = !_isEven;
   }
 
-  void tickB()
+  inline void tickB()
   {
     digitalWrite(_clockPin, LOW);
     digitalWrite(_subdivisionPin, LOW);
@@ -320,18 +320,3 @@ public:
     _subdivHigh = false;
   }
 };
-
-// Here we make a global instance so the interrupts
-// know what to call.
-
-Timer1 Timer;
-
-ISR(TIMER1_COMPA_vect)
-{
-  Timer.tickA();
-}
-
-ISR(TIMER1_COMPB_vect)
-{
-  Timer.tickB();
-}
