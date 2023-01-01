@@ -14,8 +14,8 @@
 // Mega
 #define CLOCK_PIN 10
 #define SUBDIV_PIN 13
-// #define KNOB_A_PIN A0
-// #define KNOB_B_PIN A0
+#define KNOB_A_PIN A14
+#define KNOB_B_PIN A15
 #define CV_IN_PIN A9
 #define A_BUTTON_PIN 8
 #define B_BUTTON_PIN 9
@@ -53,7 +53,7 @@ TapTempo tapTempo;
 
 void setup()
 {
-// Serial.begin(9600);
+Serial.begin(9600);
 #ifdef BACKPACK_DISPLAY
   display.begin();
 #else
@@ -94,13 +94,15 @@ void setup()
   display.tick();
 }
 
+int8_t v = 0;
+
 void loop()
 {
-
-  int8_t knobMotion = knob.readChanges();
+  int8_t knobMotion = Knob.readChanges();
   if (knobMotion != 0)
   {
-    
+    v += knobMotion;
+    Serial.println(v);
   }
 
   // uint16_t tapBpm = tapTempo.tick(aButton.isPressed());
