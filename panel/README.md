@@ -20,6 +20,8 @@ Reference for dimensions: http://www.doepfer.de/a100_man/a100m_e.htm
 
 # Panels
 
+Material: 0.08" thick 6061 Aluminum
+
 This series of posts is super helpful for aluminum panel cutting and applying graphics with transfer paper:
 
 - https://syntherjack.net/eurorack-module-diy-tutorial-1-drilling/
