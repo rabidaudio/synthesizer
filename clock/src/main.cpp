@@ -31,8 +31,8 @@
 // Bare ATMega168p
 #define CLOCK_PIN 10
 #define SUBDIV_PIN 11
-#define KNOB_A_PIN A2
-#define KNOB_B_PIN A0
+#define KNOB_A_PIN A0
+#define KNOB_B_PIN A2
 #define CV_IN_PIN A1
 #define LED_A_PIN 12
 #define LED_B_PIN 13
@@ -133,24 +133,24 @@ void setup()
 
 void loop()
 {
-  uint16_t tapBpm = tapTempo.tick(aButton.isPressed());
+  uint16_t tapBpm = tapTempo.tick(cButton.isPressed());
   int8_t knobMotion = knob.readChanges();
   timer.setBPMOffset(cvInput.read() / 2); // scale cvInput to 0-512 BPM
 
-  if (bButton.isPressed() && cButton.isPressed())
+  if (aButton.isPressed() && bButton.isPressed())
   {
     // Base reset, freeze clock and restart subdivisions
     timer.reset();
     tapTempo.cancel();
     display.displayReset();
-    if (bButton.holdTime() >= FULL_RESET_TIME_MS && cButton.holdTime() >= FULL_RESET_TIME_MS)
+    if (aButton.holdTime() >= FULL_RESET_TIME_MS && bButton.holdTime() >= FULL_RESET_TIME_MS)
     {
       // Full reset
       timer.restoreDefaults();
       display.blinkReset();
     }
   }
-  else if (aButton.isPressed())
+  else if (cButton.isPressed())
   {
     if (tapTempo.isActive())
     {
@@ -168,7 +168,7 @@ void loop()
     digitalWrite(LED_A_PIN, HIGH);
     digitalWrite(LED_B_PIN, LOW);
   }
-  else if (cButton.isPressed())
+  else if (aButton.isPressed())
   {
     int8_t swing = timer.getSwing() + knobMotion;
     timer.setSwing(swing);
