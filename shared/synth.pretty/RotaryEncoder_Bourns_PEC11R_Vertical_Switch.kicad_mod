@@ -37,8 +37,8 @@
   (pad "" thru_hole rect (at 7.5 3.285) (size 4 3) (drill oval 2.8 2) (layers *.Cu *.Mask) (tstamp 05bb0784-7ee8-411b-9822-79f8a99b1a32))
   (pad "" thru_hole rect (at 7.5 -8.365) (size 4 3) (drill oval 2.8 2) (layers *.Cu *.Mask) (tstamp 0e97fcca-3bc5-4deb-8fc3-c5572dfe62db))
   (pad "1" thru_hole rect (at 0 -4.96) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp af145001-bbcc-4a21-9fae-c37b02a910f6))
-  (pad "2" thru_hole circle (at 0 -2.5) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp fd988de1-2d16-441a-867b-ee3be4c6523d))
-  (pad "3" thru_hole circle (at 0 -0.04) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 40072238-fb84-480f-9c05-9f0e7067261f))
+  (pad "2" thru_hole circle (at 0 -0.04) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 40072238-fb84-480f-9c05-9f0e7067261f))
+  (pad "3" thru_hole circle (at 0 -2.5) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp fd988de1-2d16-441a-867b-ee3be4c6523d))
   (pad "4" thru_hole circle (at 14.5 -4.96) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp 1dcf26e5-624a-46fa-b0d1-6f897714c3bf))
   (pad "5" thru_hole circle (at 14.5 -0.04) (size 1.8 1.8) (drill 1) (layers *.Cu *.Mask) (tstamp eb025d03-30a5-4c4c-9de4-d67fd8cc4b1e))
   (model "${KISYS3DMOD}/Potentiometer_THT.3dshapes/Potentiometer_Bourns_PTV09A-1_Single_Vertical.wrl"

@@ -2882,6 +2882,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 117bff4b-74fa-44b0-85d5-1d2b4995bc24)
   )
+  (text "Direction of knob\nswitch buttons\nget reset working\nnegative subdivisions\nworking swing"
+    (at 368.3 83.185 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 22ffd90d-f4af-4dc4-ac5c-05804a368c3f)
+  )
   (text "top-bottom board interface" (at 255.27 163.83 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 2bb26f57-2c3c-42c9-8bc5-9f6e883add3a)
