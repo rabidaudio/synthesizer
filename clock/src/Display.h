@@ -45,7 +45,7 @@ public:
   {
     for (size_t i = 0; i < DIGITS; i++)
     {
-      _digits[i].begin(portNumber, ctrlPins[i]);
+      _digits[i].begin(portNumber, ctrlPins[i], i==1);
       setChar(i, ' ');
     }
     _index = 0;

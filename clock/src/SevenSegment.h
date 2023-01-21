@@ -2,25 +2,49 @@
 
 #include <Arduino.h>
 
+// REGULAR-WIRING
+
 #define CHAR_BLANK 0b00000000
-#define CHAR_MINUS 0b00000010
-#define CHAR_UNDERSCORE 0b00001000
+#define CHAR_MINUS 0b00000001
+#define CHAR_UNDERSCORE 0b01000000
 
 // TODO: would switch be faster than
 // array index?
 const uint8_t LETTERS[] = {
-    //_ABCDEGF
-    0b01111101,
+    //_DCBAEFG
+    0b01111110,
     0b00110000,
-    0b01101110,
-    0b01111010,
+    0b01011101,
+    0b01111001,
     0b00110011,
-    0b01011011,
-    0b01011111,
-    0b01110000,
+    0b01101011,
+    0b01101111,
+    0b00111000,
     0b01111111,
     0b01111011,
 };
+
+// ALT-WIRING
+// in order to simplify the PCB design to fit within the 3HP
+// constraints, the center 7-segment is wired up differently.
+// Thus we have different tables for that display:
+#define CHAR_MINUS_ALT 0b00000001
+#define CHAR_UNDERSCORE_ALT 0b00001000
+
+const uint8_t LETTERS_ALT[] = {
+    //_ABCDFEG
+    0b01111110,
+    0b00110000,
+    0b01101011,
+    0b01111001,
+    0b00110101,
+    0b01011101,
+    0b01011111,
+    0b01110000,
+    0b01111111,
+    0b01111101,
+};
+
 
 // Addresses a common-cathode 7-segment display without a
 // decimal.
@@ -32,13 +56,15 @@ class SevenSegment
 {
 private:
   uint8_t _controlPin;
+  bool _altWiring;
   volatile uint8_t *_segmentPort;
 
 public:
-  void begin(uint8_t portNumber, uint8_t controlPin)
+  void begin(uint8_t portNumber, uint8_t controlPin, bool altWiring)
   {
     _controlPin = controlPin;
     _segmentPort = portOutputRegister(portNumber);
+    _altWiring = altWiring;
     pinMode(controlPin, OUTPUT);
     volatile uint8_t *portModeRegister = portModeRegister(portNumber);
     *portModeRegister = 0x7F;
@@ -59,7 +85,11 @@ public:
   {
     if (c >= '0' && c <= '9')
     {
-      write(LETTERS[c - '0']);
+      if (_altWiring) {
+        write(LETTERS_ALT[c - '0']);
+      } else {
+        write(LETTERS[c - '0']);
+      }
       return true;
     }
     if (c == ' ')
@@ -69,12 +99,12 @@ public:
     }
     if (c == '-')
     {
-      write(CHAR_MINUS);
+      write(_altWiring ? CHAR_MINUS_ALT : CHAR_MINUS);
       return true;
     }
     if (c == '_')
     {
-      write(CHAR_UNDERSCORE);
+      write(_altWiring ? CHAR_UNDERSCORE_ALT : CHAR_UNDERSCORE);
       return true;
     }
     // unsupported char
