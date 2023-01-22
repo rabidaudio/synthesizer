@@ -4,6 +4,7 @@
 #include "Button.h"
 #include "Timer.h"
 #include "TapTempo.h"
+#include "PauseState.h"
 
 // Settings
 // #define BACKPACK_DISPLAY 1
@@ -61,6 +62,7 @@ BufferedInput<16> cvInput;
 TapTempo tapTempo;
 RotaryEncoder knob;
 Timer1 timer;
+PauseState pauseState;
 
 // Configure interrupts
 
@@ -131,26 +133,47 @@ void setup()
   display.tick();
 }
 
+// On each loop:
+// 1. handle the input state based on the buttons pressed
+// 2. wait 10ms, updating the display the whole time
 void loop()
 {
-  uint16_t tapBpm = tapTempo.tick(cButton.isPressed());
+  bool aPressed = aButton.isPressed();
+  bool bPressed = bButton.isPressed();
+  bool cPressed = cButton.isPressed();
   int8_t knobMotion = knob.readChanges();
   timer.setBPMOffset(cvInput.read() / 2); // scale cvInput to 0-512 BPM
+  uint16_t tapBpm = tapTempo.tick(cPressed);
+  pauseState.setState(aPressed && bPressed);
 
-  if (aButton.isPressed() && bButton.isPressed())
+  if (aPressed && bPressed)
   {
-    // Base reset, freeze clock and restart subdivisions
-    timer.reset();
-    tapTempo.cancel();
     display.displayReset();
     if (aButton.holdTime() >= FULL_RESET_TIME_MS && bButton.holdTime() >= FULL_RESET_TIME_MS)
     {
       // Full reset
       timer.restoreDefaults();
+      pauseState.reset();
       display.blinkReset();
     }
   }
-  else if (cButton.isPressed())
+  else if (aPressed)
+  {
+    uint8_t subdivisions = constrain(timer.getSubdivisions() + knobMotion, 1, 16);
+    timer.setSubdivisions(subdivisions);
+    display.displayNumber(subdivisions);
+    digitalWrite(LED_A_PIN, HIGH);
+    digitalWrite(LED_B_PIN, LOW);
+  }
+  else if (bPressed)
+  {
+    int8_t swing = timer.getSwing() + knobMotion;
+    timer.setSwing(swing);
+    display.displayNumber(swing);
+    digitalWrite(LED_A_PIN, LOW);
+    digitalWrite(LED_B_PIN, HIGH);
+  }
+  else if (cPressed)
   {
     if (tapTempo.isActive())
     {
@@ -160,21 +183,12 @@ void loop()
       digitalWrite(LED_B_PIN, timer.subdivisionOn() ? HIGH : LOW);
     }
   }
-  else if (bButton.isPressed())
+  else if (pauseState.isPaused())
   {
-    uint8_t subdivisions = constrain(timer.getSubdivisions() + knobMotion, 1, 16);
-    timer.setSubdivisions(subdivisions);
-    display.displayNumber(subdivisions);
-    digitalWrite(LED_A_PIN, HIGH);
-    digitalWrite(LED_B_PIN, LOW);
-  }
-  else if (aButton.isPressed())
-  {
-    int8_t swing = timer.getSwing() + knobMotion;
-    timer.setSwing(swing);
-    display.displayNumber(swing);
-    digitalWrite(LED_A_PIN, LOW);
-    digitalWrite(LED_B_PIN, HIGH);
+    // freeze clock and restart subdivisions
+    timer.reset();
+    tapTempo.cancel();
+    display.displayPaused();
   }
   else
   {

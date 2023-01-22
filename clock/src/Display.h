@@ -45,7 +45,7 @@ public:
   {
     for (size_t i = 0; i < DIGITS; i++)
     {
-      _digits[i].begin(portNumber, ctrlPins[i], i==1);
+      _digits[i].begin(portNumber, ctrlPins[i], i == 1);
       setChar(i, ' ');
     }
     _index = 0;
@@ -84,6 +84,12 @@ public:
     {
       setChar(i, getDigit(number, i));
     }
+  }
+
+  void displayPaused()
+  {
+    clear();
+    setChar(1, '-');
   }
 
   // light up all segments (all 8's)

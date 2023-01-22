@@ -2898,6 +2898,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 43521de1-14fe-4507-9119-aadda0623aef)
   )
+  (text "screw with spacer to panel at bottom\nbigger clock footprint\nmove regulator so more space for programmer\n"
+    (at 220.98 175.26 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 654b4b42-ce6d-4fce-86f0-5d93f93ee68d)
+  )
   (text "mcu and programming pins" (at 54.61 194.31 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8afc76ee-c334-4929-b5c2-a72687e79a26)
