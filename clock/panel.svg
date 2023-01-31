@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="15.24mm"
+   width="15.2mm"
    height="128.5mm"
-   viewBox="0 0 15.24 128.5"
+   viewBox="0 0 15.200001 128.5"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
@@ -23,44 +23,45 @@
      inkscape:pagecheckerboard="true"
      inkscape:document-units="mm"
      showgrid="false"
-     width="15.24mm"
-     inkscape:zoom="1.8116734"
-     inkscape:cx="-82.520392"
-     inkscape:cy="311.0384"
-     inkscape:window-width="1520"
-     inkscape:window-height="1065"
-     inkscape:window-x="109"
-     inkscape:window-y="44"
+     width="15.2mm"
+     inkscape:zoom="4.6426027"
+     inkscape:cx="27.570742"
+     inkscape:cy="76.573427"
+     inkscape:window-width="1003"
+     inkscape:window-height="885"
+     inkscape:window-x="508"
+     inkscape:window-y="38"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer5"
+     fit-margin-left="0" />
   <defs
      id="defs2" />
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="usable area"
-     style="display:none;opacity:0.196116"
+     style="display:inline;opacity:0.196116"
      sodipodi:insensitive="true">
     <rect
-       style="fill:#280b0b;stroke-width:2.63995"
+       style="fill:#280b0b;stroke-width:2.63648"
        id="rect407"
-       width="15.24"
+       width="15.2"
        height="115"
-       x="0"
+       x="-0.02"
        y="6.75" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="boardarea"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <rect
        style="fill:#008000;stroke-width:1.49845"
        id="rect284"
        width="15"
        height="110"
-       x="0.12"
+       x="0.1"
        y="9.25" />
   </g>
   <g
@@ -71,7 +72,7 @@
      sodipodi:insensitive="true">
     <g
        id="g15862"
-       transform="matrix(9.9999997e-7,0,0,9.9999997e-7,0,0)">
+       transform="matrix(9.9999997e-7,0,0,9.9999997e-7,-0.02,0)">
       <g
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          id="g15679" />
@@ -182,7 +183,7 @@
     </g>
     <g
        id="g19994"
-       transform="translate(0.12,9.25)">
+       transform="translate(0.1,9.25)">
       <path
          d="M 25000,25000 H 15025000"
          id="path15685"
@@ -1453,23 +1454,23 @@
      inkscape:label="drills"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline;opacity:0.93980583">
+     style="display:inline;opacity:0.939806">
     <circle
        style="fill:#000000;stroke-width:0.276994"
        id="path597"
-       cx="7.2950001"
+       cx="7.2750001"
        cy="14.33"
        r="3" />
     <circle
        style="fill:#000000;stroke-width:0.276994"
        id="circle715"
-       cx="7.2810001"
+       cx="7.2610002"
        cy="24.490002"
        r="3" />
     <circle
        style="fill:#000000;stroke-width:0.276994"
        id="circle729"
-       cx="7.2810001"
+       cx="7.2610002"
        cy="34.649998"
        r="3" />
     <rect
@@ -1477,7 +1478,7 @@
        id="rect950"
        width="4.8000002"
        height="3.2"
-       x="2.6800001"
+       x="2.6599998"
        y="1.4"
        ry="1.6" />
     <rect
@@ -1485,19 +1486,19 @@
        id="rect1291"
        width="4.8000002"
        height="3.2"
-       x="2.5800002"
+       x="2.5599999"
        y="123.9"
        ry="1.6" />
     <circle
        style="fill:#000000;stroke-width:0.192579"
        id="path1328"
-       cx="6.3400002"
+       cx="6.3200002"
        cy="42.389999"
        r="1.5" />
     <circle
        style="fill:#000000;stroke-width:0.192579"
        id="circle20505"
-       cx="10.915"
+       cx="10.895"
        cy="42.389999"
        r="1.5" />
     <rect
@@ -1505,24 +1506,24 @@
        id="rect20529"
        width="8"
        height="32.400002"
-       x="3.895"
+       x="3.8749998"
        y="45.209999" />
     <circle
        style="fill:#000000;stroke-width:0.503456"
        id="path21677"
-       cx="7.6550002"
+       cx="7.6350002"
        cy="91.589996"
        r="3.5" />
     <circle
        style="fill:#000000;stroke-width:0.248451"
        id="path22293"
-       cx="5.585"
+       cx="5.5650001"
        cy="104.341"
        r="2.5999999" />
     <circle
        style="fill:#000000;stroke-width:0.248451"
        id="circle22375"
-       cx="5.585"
+       cx="5.5650001"
        cy="115.136"
        r="2.5999999" />
   </g>
@@ -1530,110 +1531,109 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="decal"
-     sodipodi:insensitive="true"
-     style="display:none">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="10.666933"
+       x="10.647152"
        y="14.9368"
        id="text23973"><tspan
          sodipodi:role="line"
          id="tspan23971"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="10.666933"
+         x="10.647152"
          y="14.9368">OUT</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="0.55943811"
+       x="0.53965688"
        y="10.024428"
        id="text23973-4"><tspan
          sodipodi:role="line"
          id="tspan23971-6"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="0.55943811"
+         x="0.53965688"
          y="10.024428">rabid.audio</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="3.90713"
+       x="3.8873489"
        y="8.0342216"
        id="text23973-4-5"><tspan
          sodipodi:role="line"
          id="tspan23971-6-5"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="3.90713"
+         x="3.8873489"
          y="8.0342216">CLK</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="10.637994"
+       x="10.618213"
        y="25.080614"
        id="text23973-0"><tspan
          sodipodi:role="line"
          id="tspan23971-3"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="10.637994"
+         x="10.618213"
          y="25.080614">DIV</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="1.1958672"
+       x="1.1760859"
        y="35.256802"
        id="text23973-0-8"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="1.1958672"
+         x="1.1760859"
          y="35.256802">CV</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="1.6320139"
+       x="1.6122327"
        y="109.10521"
        id="text23973-0-8-8"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="1.6320139"
+         x="1.6122327"
          y="109.10521">SUBDIV</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="2.2660139"
+       x="2.2462327"
        y="119.8998"
        id="text23973-0-8-8-5"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1-9"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
-         x="2.2660139"
+         x="2.2462327"
          y="119.8998">SWING</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="-109.95567"
-       y="12.229446"
+       y="12.209665"
        id="text23973-0-8-8-5-6"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1-9-4"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
          x="-109.95567"
-         y="12.229446">PAUSE</tspan><tspan
+         y="12.209665">PAUSE</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
          x="-109.95567"
-         y="14.419735"
+         y="14.399954"
          id="tspan26152">HOLD: RESET</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 11.708847,113.5124 v 1.6986 H 9.08"
+       d="m 11.689066,113.5124 v 1.6986 H 9.0602188"
        id="path29309"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 11.708847,106.0396 V 104.341 H 9.08"
+       d="M 11.689066,106.0396 V 104.341 H 9.0602188"
        id="path30989"
        sodipodi:nodetypes="ccc" />
   </g>

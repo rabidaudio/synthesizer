@@ -1,0 +1,18 @@
+(footprint "toggle_sw_hole" (version 20211014) (generator pcbnew)
+  (layer "F.Cu")
+  (tedit 0)
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0 3.81 unlocked) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 73a18a36-fd85-46b2-b7b4-41099a8aeb99)
+  )
+  (fp_text value "toggle_sw_hole" (at 0 1 unlocked) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp c3b0e48d-d5a0-4e79-9e5c-f63eaf084302)
+  )
+  (fp_text user "${REFERENCE}" (at 0 2.5 unlocked) (layer "F.Fab") hide
+    (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 899322fc-c33e-4528-85cf-d95a29f28253)
+  )
+  (pad "" np_thru_hole circle (at 0 0) (size 5.2 5.2) (drill 5.2) (layers F&B.Cu *.Mask) (tstamp b9983bc1-8471-4304-8d3c-c0c22820b71a))
+)
