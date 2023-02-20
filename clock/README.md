@@ -12,3 +12,9 @@
 - CV in
 
 
+# TODO:
+
+- negative subdivisions
+- working swing
+- reduce swing resolution
+- pcb revision B

@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
    sodipodi:docname="panel.svg"
+   inkscape:export-filename="/Users/personal/projects/synthesizer/clock/panel.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -19,20 +22,20 @@
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="true"
      inkscape:document-units="mm"
      showgrid="false"
      width="15.2mm"
-     inkscape:zoom="2.064314"
-     inkscape:cx="26.885445"
-     inkscape:cy="269.33888"
-     inkscape:window-width="1512"
+     inkscape:zoom="1.2822546"
+     inkscape:cx="0"
+     inkscape:cy="236.30253"
+     inkscape:window-width="1369"
      inkscape:window-height="916"
      inkscape:window-x="0"
      inkscape:window-y="38"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer6"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer4"
      fit-margin-left="0" />
   <defs
      id="defs2" />
@@ -1457,25 +1460,25 @@
      style="display:inline;opacity:0.939806"
      sodipodi:insensitive="true">
     <circle
-       style="fill:#000000;stroke-width:0.276994"
+       style="fill:#333333;stroke-width:0.276994"
        id="path597"
        cx="7.2750001"
        cy="14.33"
        r="3" />
     <circle
-       style="fill:#000000;stroke-width:0.276994"
+       style="fill:#333333;stroke-width:0.276994"
        id="circle715"
        cx="7.2610002"
        cy="24.490002"
        r="3" />
     <circle
-       style="fill:#000000;stroke-width:0.276994"
+       style="fill:#333333;stroke-width:0.276994"
        id="circle729"
        cx="7.2610002"
        cy="34.649998"
        r="3" />
     <rect
-       style="fill:#000000;stroke-width:0.130154"
+       style="fill:#333333;stroke-width:0.130154"
        id="rect950"
        width="4.8000002"
        height="3.2"
@@ -1483,7 +1486,7 @@
        y="1.4"
        ry="1.6" />
     <rect
-       style="fill:#000000;stroke-width:0.130154"
+       style="fill:#333333;stroke-width:0.130154"
        id="rect1291"
        width="4.8000002"
        height="3.2"
@@ -1491,38 +1494,38 @@
        y="123.9"
        ry="1.6" />
     <circle
-       style="fill:#000000;stroke-width:0.192579"
+       style="fill:#333333;stroke-width:0.192579"
        id="path1328"
        cx="6.3200002"
        cy="42.389999"
        r="1.5" />
     <circle
-       style="fill:#000000;stroke-width:0.192579"
+       style="fill:#333333;stroke-width:0.192579"
        id="circle20505"
        cx="10.895"
        cy="42.389999"
        r="1.5" />
     <rect
-       style="fill:#000000;stroke-width:0.525559"
+       style="fill:#333333;stroke-width:0.525559"
        id="rect20529"
        width="8"
        height="32.400002"
        x="3.8749998"
        y="45.209999" />
     <circle
-       style="fill:#000000;stroke-width:0.503456"
+       style="fill:#333333;stroke-width:0.503456"
        id="path21677"
        cx="7.6350002"
        cy="91.589996"
        r="3.5" />
     <circle
-       style="fill:#000000;stroke-width:0.248451"
+       style="fill:#333333;stroke-width:0.248451"
        id="path22293"
        cx="5.5650001"
        cy="104.341"
        r="2.5999999" />
     <circle
-       style="fill:#000000;stroke-width:0.248451"
+       style="fill:#333333;stroke-width:0.248451"
        id="circle22375"
        cx="5.5650001"
        cy="115.136"
@@ -1604,6 +1607,28 @@
        cx="5.5650001"
        cy="115.136"
        r="2.5999999" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.17222px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="4.6141233"
+       y="52.93425"
+       id="text2209"><tspan
+         sodipodi:role="line"
+         id="tspan2207"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:'OCR A Std';-inkscape-font-specification:'OCR A Std';writing-mode:lr-tb;fill:#ff0000;stroke-width:0.264583"
+         x="4.6141233"
+         y="52.93425">1</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:'OCR A Std';-inkscape-font-specification:'OCR A Std';writing-mode:lr-tb;fill:#ff0000;stroke-width:0.264583"
+         x="4.6141233"
+         y="64.485107"
+         id="tspan3845">2</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:'OCR A Std';-inkscape-font-specification:'OCR A Std';writing-mode:lr-tb;fill:#ff0000;stroke-width:0.264583"
+         x="4.6141233"
+         y="76.035957"
+         rotate="0 0"
+         id="tspan3847">8</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1618,32 +1643,32 @@
        id="text23973"><tspan
          sodipodi:role="line"
          id="tspan23971"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
          x="10.647152"
          y="11.309811">OUT</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="-66.783463"
        y="2.7140014"
        id="text23973-4"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan23971-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583;fill:#ff0000"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#0000ff;stroke-width:0.264583"
          x="-66.783463"
          y="2.7140014">rabid.audio</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="3.8873489"
-       y="8.0342216"
+       y="9.0925541"
        id="text23973-4-5"><tspan
          sodipodi:role="line"
          id="tspan23971-6-5"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
          x="3.8873489"
-         y="8.0342216">CLK</tspan></text>
+         y="9.0925541">CLK</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -1652,7 +1677,7 @@
        id="text23973-0"><tspan
          sodipodi:role="line"
          id="tspan23971-3"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
          x="10.70646"
          y="21.109484">DIV</tspan></text>
     <text
@@ -1663,7 +1688,7 @@
        id="text23973-0-8"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
          x="0.59633803"
          y="32.937809">CV</tspan></text>
     <text
@@ -1674,29 +1699,29 @@
        id="text23973-0-8-8"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
          x="1.6122327"
          y="109.10521">SUBDIV</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="5.6835413"
        y="79.978729"
        id="text23973-0-8-8-1"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1-7"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#ffffff;stroke-width:0.264583"
          x="5.6835413"
          y="79.978729">BPM</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1.25;font-family:sans-serif;display:inline;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="1.9194241"
        y="82.495171"
        id="text23973-0-8-8-1-5"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1-7-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583;fill:#ff0000"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#0000ff;stroke-width:0.264583"
          x="1.9194241"
          y="82.495171">TAP TEMPO</tspan></text>
     <text
@@ -1707,7 +1732,7 @@
        id="text23973-0-8-8-5"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1-9"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';writing-mode:lr-tb;fill:#000000;stroke-width:0.264583"
          x="2.2462327"
          y="119.8998">SWING</tspan></text>
     <text
@@ -1719,11 +1744,11 @@
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan23971-3-4-1-9-4"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.264583"
          x="-109.95567"
          y="12.209665">PAUSE</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.264583"
          x="-109.95567"
          y="14.399954"
          id="tspan26152" /></text>
@@ -1739,27 +1764,29 @@
        sodipodi:nodetypes="ccc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="18.328323"
        y="108.30374"
        id="text6867"><tspan
          sodipodi:role="line"
          id="tspan6865"
-         style="stroke-width:0.264583"></tspan></text>
+         style="fill:#ffffff;stroke-width:0.264583"
+         x="18.328323"
+         y="108.30374" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       style="font-style:normal;font-weight:normal;font-size:2.11667px;line-height:1;font-family:sans-serif;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.264583"
        x="-109.95567"
        y="14.388557"
        id="text8141"
        transform="rotate(-90)"><tspan
          sodipodi:role="line"
          id="tspan8137"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;fill:#ff0000"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;stroke-width:0.264583"
          x="-109.95567"
          y="14.388557">HOLD: RESET</tspan><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.264583;fill:#ff0000"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'Cutive Mono';-inkscape-font-specification:'Cutive Mono';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;stroke-width:0.264583"
          x="-109.95567"
          y="16.578846"
          id="tspan8139" /></text>
