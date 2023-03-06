@@ -132,11 +132,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "multiple_net_names|825500|762000|95d45980-019e-4033-b983-485bc8ad7f22|c3a4a39f-b912-4d35-94b7-1494bfa298b0",
-      "multiple_net_names|825500|787400|7fe07e96-520e-4e1a-9274-ac15e37372e4|5ca7d772-2459-4de4-99aa-c32fd8ce4142",
-      "multiple_net_names|825500|812800|a48d94ee-5d68-47bb-aa16-2ddd1e27ed60|a9c2a791-8443-41c4-a368-d98d65e990f4"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
