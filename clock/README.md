@@ -17,3 +17,4 @@
 - working swing
 - reduce swing resolution
 - pcb revision B
+- writeup assembly directions

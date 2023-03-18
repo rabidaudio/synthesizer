@@ -334,8 +334,6 @@ public:
           _subdivisions = 4;
         if (_subdivisions == -1 || _subdivisions == 0)
           _subdivisions = 1;
-        // if (_subdivisions == -3)
-        //   _subdivisions = -2;
         amount--;
       }
       else
@@ -343,8 +341,6 @@ public:
         _subdivisions--;
         if (_subdivisions < -8)
           _subdivisions = -8;
-        // if (_subdivisions == -3)
-        //   _subdivisions = -4;
         if (_subdivisions == -1 || _subdivisions == 0)
           _subdivisions = -2;
         amount++;
