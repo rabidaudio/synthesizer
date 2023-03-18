@@ -197,9 +197,9 @@ void loop()
   {
     // Default mode, knob controls base BPM
     uint16_t bpm = timer.incrementBaseBPM(knobMotion);
-    display.displayNumber(bpm);
+    // display.displayNumber(bpm);
     // TODO: show actual bpm instead?
-    // display.displayNumber(timer.getBPM());
+    display.displayNumber(timer.getBPM());
     digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
     digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
   }

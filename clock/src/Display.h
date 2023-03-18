@@ -88,20 +88,16 @@ public:
 
   void displaySubdivisions(int8_t subdiv)
   {
-    if (subdiv <= 1)
-    {
-      displayNumber(abs(subdiv));
-    }
-    else if (subdiv > 1 && subdiv < 9)
+    if (subdiv < 0)
     {
       // display a fraction (e.g. 1/2)
       setChar(2, '1');
       setChar(1, '-');
-      setChar(0, '0' + subdiv);
+      setChar(0, '0' + abs(subdiv));
     }
     else
     {
-      clear(); // invalid
+      displayNumber(subdiv);
     }
   }
 

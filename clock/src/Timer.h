@@ -7,7 +7,7 @@
 #define MIN_BPM (MIN_CLOCK * 4) // 32
 #define MAX_BPM (MAX_CLOCK / 4) // 300
 #define DEFAULT_BPM 120
-#define DEFAULT_SUBDIVISIONS 2
+#define DEFAULT_SUBDIVISIONS 4
 #define DEFAULT_SWING 0
 
 // Lookup table for OCR1A register values for BPMs from 8 to 1200.
@@ -156,9 +156,9 @@ private:
   uint8_t _beatPin;
   uint8_t _subdivPin;
   // Allowed values: {-4, -2, 1, 2, 3, 4, 5, 6, 7, 8}
-  // -4, -2 -> N subdiv ticks per base beat
+  // N < 0 -> one subdiv tick every N beats
   // 1 -> subdiv == base
-  // 2+ -> one subdiv every N beats
+  // N >= 2 -> N subdiv ticks per beat
   int8_t _subdivisions = DEFAULT_SUBDIVISIONS;
   bool _negativeSubdiv = true;
   volatile uint8_t _subdivIdx = 1;
@@ -200,7 +200,7 @@ private:
   // beat is actually an integer multiple of it
   inline bool isSuperdivisionMode()
   {
-    return _subdivisions >= 1;
+    return _subdivisions < 0;
   }
 
   inline size_t highFreqPin()
@@ -312,20 +312,14 @@ public:
   uint16_t getClock()
   {
     uint16_t bpm = getBPM();
-    switch (_subdivisions)
+    if (_subdivisions > 1)
     {
-    case -4:
-      bpm = bpm * 4;
-      break;
-    case -2:
-      bpm = bpm * 2;
-      break;
+      bpm = bpm * _subdivisions;
     }
     return constrain(bpm, MIN_CLOCK, MAX_CLOCK);
   }
 
   uint8_t incrementSubdivisions(int8_t amount)
-  // constrain _subdivisions to {-4, -2, 1-8}
   {
     if (amount == 0)
     {
@@ -336,21 +330,21 @@ public:
       if (amount > 0)
       {
         _subdivisions++;
-        if (_subdivisions > 8)
-          _subdivisions = 8;
+        if (_subdivisions > 4)
+          _subdivisions = 4;
         if (_subdivisions == -1 || _subdivisions == 0)
           _subdivisions = 1;
-        if (_subdivisions == -3)
-          _subdivisions = -2;
+        // if (_subdivisions == -3)
+        //   _subdivisions = -2;
         amount--;
       }
       else
       {
         _subdivisions--;
-        if (_subdivisions < -4)
-          _subdivisions = -4;
-        if (_subdivisions == -3)
-          _subdivisions = -4;
+        if (_subdivisions < -8)
+          _subdivisions = -8;
+        // if (_subdivisions == -3)
+        //   _subdivisions = -4;
         if (_subdivisions == -1 || _subdivisions == 0)
           _subdivisions = -2;
         amount++;
