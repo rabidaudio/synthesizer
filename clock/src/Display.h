@@ -86,6 +86,25 @@ public:
     }
   }
 
+  void displaySubdivisions(int8_t subdiv)
+  {
+    if (subdiv <= 1)
+    {
+      displayNumber(abs(subdiv));
+    }
+    else if (subdiv > 1 && subdiv < 9)
+    {
+      // display a fraction (e.g. 1/2)
+      setChar(2, '1');
+      setChar(1, '-');
+      setChar(0, '0' + subdiv);
+    }
+    else
+    {
+      clear(); // invalid
+    }
+  }
+
   void displayPaused()
   {
     clear();

@@ -90,7 +90,10 @@ ISR(PCINT1_vect) // PORTC PCINT
 
 void setup()
 {
-  // Serial.begin(9600);
+#ifdef ARDUINO_AVR_ATmega2560
+  // Serial pins are used for other things on bare ATMega
+  Serial.begin(9600);
+#endif
 #ifdef BACKPACK_DISPLAY
   display.begin();
 #else
@@ -110,11 +113,7 @@ void setup()
   display.tick();
   timer.begin(CLOCK_PIN, SUBDIV_PIN);
   display.tick();
-  timer.setSubdivisions(DEFAULT_SUBDIVISIONS);
-  display.tick();
-  timer.setBaseBPM(DEFAULT_BPM);
-  display.tick();
-  timer.setSwing(DEFAULT_SWING);
+  timer.restoreDefaults();
   display.tick();
 
   knob.begin(KNOB_A_PIN, KNOB_B_PIN);
@@ -133,6 +132,8 @@ void setup()
   display.tick();
 }
 
+uint16_t bbb = 120;
+
 // On each loop:
 // 1. handle the input state based on the buttons pressed
 // 2. wait 10ms, updating the display the whole time
@@ -142,12 +143,13 @@ void loop()
   bool bPressed = bButton.isPressed();
   bool cPressed = cButton.isPressed();
   int8_t knobMotion = knob.readChanges();
-  timer.setBPMOffset(cvInput.read() / 2); // scale cvInput to 0-512 BPM
-  uint16_t tapBpm = tapTempo.tick(cPressed);
+  timer.setBPMOffset(cvInput.read() / 2);    // scale cvInput to 0-512 BPM
+  uint16_t tapBpm = tapTempo.tick(cPressed); // need to tick tap tempo on every loop
   pauseState.setState(aPressed && bPressed);
 
   if (aPressed && bPressed)
   {
+    // Start reset
     display.displayReset();
     if (aButton.holdTime() >= FULL_RESET_TIME_MS && bButton.holdTime() >= FULL_RESET_TIME_MS)
     {
@@ -159,28 +161,29 @@ void loop()
   }
   else if (aPressed)
   {
-    uint8_t subdivisions = constrain(timer.getSubdivisions() + knobMotion, 1, 16);
-    timer.setSubdivisions(subdivisions);
-    display.displayNumber(subdivisions);
+    // Knob controls subdivision setting
+    int8_t subdiv = timer.incrementSubdivisions(knobMotion);
+    display.displaySubdivisions(subdiv);
     digitalWrite(LED_A_PIN, HIGH);
     digitalWrite(LED_B_PIN, LOW);
   }
   else if (bPressed)
   {
-    int8_t swing = timer.getSwing() + knobMotion;
-    timer.setSwing(swing);
+    // Knob controls swing setting
+    int8_t swing = timer.incrementSwing(knobMotion);
     display.displayNumber(swing);
     digitalWrite(LED_A_PIN, LOW);
     digitalWrite(LED_B_PIN, HIGH);
   }
   else if (cPressed)
   {
+    // if tapping tempo, show the base BPM tapped
     if (tapTempo.isActive())
     {
       timer.setBaseBPM(tapBpm);
       display.displayNumber(tapBpm);
-      digitalWrite(LED_A_PIN, timer.clockOn() ? HIGH : LOW);
-      digitalWrite(LED_B_PIN, timer.subdivisionOn() ? HIGH : LOW);
+      digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
+      digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
     }
   }
   else if (pauseState.isPaused())
@@ -192,13 +195,18 @@ void loop()
   }
   else
   {
-    uint16_t bpm = timer.getBaseBPM() + knobMotion;
-    timer.setBaseBPM(bpm);
-    display.displayNumber(timer.getBaseBPM());
-    digitalWrite(LED_A_PIN, timer.clockOn() ? HIGH : LOW);
-    digitalWrite(LED_B_PIN, timer.subdivisionOn() ? HIGH : LOW);
+    // Default mode, knob controls base BPM
+    uint16_t bpm = timer.incrementBaseBPM(knobMotion);
+    display.displayNumber(bpm);
+    // TODO: show actual bpm instead?
+    // display.displayNumber(timer.getBPM());
+    digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
+    digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
   }
 
+  // Do the main control loop at 10ms, but tick
+  // the display every 1ms in that time
+  // (so the display freq is high)
   for (size_t t = 0; t < 10; t++)
   {
     display.tick();

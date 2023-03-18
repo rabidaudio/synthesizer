@@ -2,8 +2,10 @@
 
 #include <Arduino.h>
 
-#define MIN_BPM (uint16_t)8
-#define MAX_BPM (uint16_t)1200
+#define MIN_CLOCK (uint16_t)8
+#define MAX_CLOCK (uint16_t)1200
+#define MIN_BPM (MIN_CLOCK * 4) // 32
+#define MAX_BPM (MAX_CLOCK / 4) // 300
 #define DEFAULT_BPM 120
 #define DEFAULT_SUBDIVISIONS 2
 #define DEFAULT_SWING 0
@@ -12,7 +14,7 @@
 // This is to avoid floating point math.
 // Calculations:
 // https://docs.google.com/spreadsheets/d/1pTg9IQDEw8LUGN85Lwp80kAzATN1I9yxx0m5xDrEWBg/edit#gid=0
-const PROGMEM uint16_t BPM_LOOKUP[] = {
+const PROGMEM uint16_t CLOCK_LOOKUP[] = {
     /*117187,  93750,  78125,  66964,*/ 58593, 52083, 46875, 42613, 39062, 36057,
     33482, 31250, 29296, 27573, 26041, 24671, 23437, 22321, 21306, 20380,
     19531, 18750, 18028, 17361, 16741, 16163, 15625, 15120, 14648, 14204,
@@ -134,9 +136,9 @@ const PROGMEM uint16_t BPM_LOOKUP[] = {
     395, 395, 395, 394, 394, 394, 393, 393, 393, 392,
     392, 392, 391, 391, 391, 390, 390};
 
-uint16_t counterValue(uint16_t bpm)
+uint16_t counterValue(uint16_t clock)
 {
-  return pgm_read_word_near(BPM_LOOKUP + bpm - MIN_BPM);
+  return pgm_read_word_near(CLOCK_LOOKUP + clock - MIN_CLOCK);
 }
 
 // Core clock source. Async using Timer1.
@@ -144,17 +146,22 @@ uint16_t counterValue(uint16_t bpm)
 // Timer1 is a 16-bit two comparison timer, configured with a pre-scaler of 1024
 // on the 16MHz clock speed. That means the counter ticks every 64us.
 // When the counter reaches OCR1A the counter resets to zero and the pins
-// are brought high. When the counter reaches 313 (~20ms), the pins are
+// are brought high. When the counter reaches 200 (~12ms), the pins are
 // brought low.
 class Timer1
 {
 private:
   uint16_t _baseBpm = DEFAULT_BPM;
   uint16_t _bpmOffset = 0;
-  uint8_t _clockPin;
-  uint8_t _subdivisionPin;
-  uint8_t _subdivisions = DEFAULT_SUBDIVISIONS;
-  volatile uint8_t _subdivIdx = 0;
+  uint8_t _beatPin;
+  uint8_t _subdivPin;
+  // Allowed values: {-4, -2, 1, 2, 3, 4, 5, 6, 7, 8}
+  // -4, -2 -> N subdiv ticks per base beat
+  // 1 -> subdiv == base
+  // 2+ -> one subdiv every N beats
+  int8_t _subdivisions = DEFAULT_SUBDIVISIONS;
+  bool _negativeSubdiv = true;
+  volatile uint8_t _subdivIdx = 1;
   int8_t _swing = 0;
   uint16_t _oddTick;
   uint16_t _evenTick;
@@ -164,14 +171,17 @@ private:
 
   void updateTimer()
   {
-    uint16_t baseValue = counterValue(getBPM());
+    uint16_t baseValue = counterValue(getClock());
 
     // Note: Hopefully doing this math isn't too slow.
     // It only needs to happen when the swing or bpm changes.
-    float swingScale = ((float)_swing) / 128.0;
-    uint16_t offset = (uint16_t)(((float)baseValue) / 3.0 * swingScale);
-    _oddTick = baseValue + offset;
-    _evenTick = baseValue - offset;
+    // float swingScale = ((float)_swing) / 128.0;
+    // uint16_t offset = (uint16_t)(((float)baseValue) / 3.0 * swingScale);
+    // _oddTick = baseValue + offset;
+    // _evenTick = baseValue - offset;
+    // TODO: re-enable swing
+    _oddTick = baseValue;
+    _evenTick = baseValue;
 
     OCR1A = _isEven ? _evenTick : _oddTick;
     // This is not required using phase+frequency correct mode
@@ -180,13 +190,38 @@ private:
     //   TCNT1 = 0; // reset timer
   }
 
-public:
-  void begin(uint8_t clockPin, uint8_t subdivisionPin)
+  void restartSubdiv()
   {
-    _clockPin = clockPin;
-    _subdivisionPin = subdivisionPin;
-    pinMode(_clockPin, OUTPUT);
-    pinMode(_subdivisionPin, OUTPUT);
+    _subdivIdx = abs(_subdivisions);
+  }
+
+  // returns true if subdiv is an integer multiple of beat.
+  // returns false if subdiv is a subdivision and therefore
+  // beat is actually an integer multiple of it
+  inline bool isSuperdivisionMode()
+  {
+    return _subdivisions >= 1;
+  }
+
+  inline size_t highFreqPin()
+  {
+    return isSuperdivisionMode() ? _beatPin : _subdivPin;
+  }
+
+  inline size_t lowFreqPin()
+  {
+    return isSuperdivisionMode() ? _subdivPin : _beatPin;
+  }
+
+public:
+  void begin(uint8_t beatPin, uint8_t subdivPin)
+  {
+    _beatPin = beatPin;
+    _subdivPin = subdivPin;
+    pinMode(_beatPin, OUTPUT);
+    pinMode(_subdivPin, OUTPUT);
+    reset();
+    // restartSubdiv();
 
     noInterrupts();
     // Clear registers
@@ -196,7 +231,7 @@ public:
 
     // 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
     OCR1A = counterValue(getBPM());
-    OCR1B = 156; // ~20ms
+    OCR1B = 200; // ~12ms
 
     // TCCR1B |= (1 << WGM12); // CTC
     //  Phase and frequency correct PWM
@@ -206,11 +241,11 @@ public:
     // Pre-scaler 1024
     TCCR1B |= (1 << CS12) | (0 << CS11) | (1 << CS10);
     // Output Compare Match A Interrupt Enable
-// #ifdef ARDUINO_AVR_ATmega2560
+    // #ifdef ARDUINO_AVR_ATmega2560
     TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
-// #else
-//     TIMSK |= (1 << OCIE1A) | (1 << OCIE1B);
-// #endif
+    // #else
+    //     TIMSK |= (1 << OCIE1A) | (1 << OCIE1B);
+    // #endif
     interrupts();
 
     updateTimer();
@@ -230,13 +265,33 @@ public:
     return _swing;
   }
 
+  int8_t incrementSwing(int8_t swing)
+  {
+    setSwing(_swing + swing);
+    return _swing;
+  }
+
   void setBaseBPM(uint16_t bpm)
   {
     if (bpm != _baseBpm)
     {
-      _baseBpm = bpm;
+      _baseBpm = constrain(bpm, MIN_BPM, MAX_BPM);
       updateTimer();
     }
+  }
+
+  uint16_t getBaseBPM()
+  {
+    return _baseBpm;
+  }
+
+  uint16_t incrementBaseBPM(int16_t amount)
+  {
+    if (amount != 0)
+    {
+      setBaseBPM(_baseBpm + amount);
+    }
+    return _baseBpm;
   }
 
   void setBPMOffset(uint16_t offset)
@@ -246,26 +301,63 @@ public:
 
       _bpmOffset = offset;
       updateTimer();
-      Serial.print(_bpmOffset);
-      Serial.print("\t");
-      Serial.println(getBPM());
     }
-  }
-
-  uint16_t getBaseBPM()
-  {
-    return constrain(_baseBpm, MIN_BPM, MAX_BPM);
   }
 
   uint16_t getBPM()
   {
-    return constrain(getBaseBPM() + _bpmOffset, MIN_BPM, MAX_BPM);
+    return constrain(_baseBpm + _bpmOffset, MIN_BPM, MAX_BPM);
   }
 
-  void setSubdivisions(uint8_t subdivisions)
+  uint16_t getClock()
   {
-    _subdivisions = subdivisions;
-    _subdivIdx = subdivisions;
+    uint16_t bpm = getBPM();
+    switch (_subdivisions)
+    {
+    case -4:
+      bpm = bpm * 4;
+      break;
+    case -2:
+      bpm = bpm * 2;
+      break;
+    }
+    return constrain(bpm, MIN_CLOCK, MAX_CLOCK);
+  }
+
+  uint8_t incrementSubdivisions(int8_t amount)
+  // constrain _subdivisions to {-4, -2, 1-8}
+  {
+    if (amount == 0)
+    {
+      return _subdivisions;
+    }
+    while (amount != 0)
+    {
+      if (amount > 0)
+      {
+        _subdivisions++;
+        if (_subdivisions > 8)
+          _subdivisions = 8;
+        if (_subdivisions == -1 || _subdivisions == 0)
+          _subdivisions = 1;
+        if (_subdivisions == -3)
+          _subdivisions = -2;
+        amount--;
+      }
+      else
+      {
+        _subdivisions--;
+        if (_subdivisions < -4)
+          _subdivisions = -4;
+        if (_subdivisions == -3)
+          _subdivisions = -4;
+        if (_subdivisions == -1 || _subdivisions == 0)
+          _subdivisions = -2;
+        amount++;
+      }
+    }
+    updateTimer();
+    return _subdivisions;
   }
 
   uint8_t getSubdivisions()
@@ -275,38 +367,39 @@ public:
 
   void reset()
   {
-    _subdivIdx = _subdivisions;
+    _subdivIdx = 1; // cause subdiv to tick on next
     _isEven = true;
     TCNT1 = 0; // reset timer
+    updateTimer();
   }
 
   void restoreDefaults()
   {
-    setSubdivisions(DEFAULT_SUBDIVISIONS);
+    _subdivisions = DEFAULT_SUBDIVISIONS;
     setBaseBPM(DEFAULT_BPM);
     setSwing(DEFAULT_SWING);
   }
 
-  bool clockOn()
+  bool beatOn()
   {
-    return _clockHigh;
+    return isSuperdivisionMode() ? _clockHigh : _subdivHigh;
   }
 
-  bool subdivisionOn()
+  bool subdivOn()
   {
-    return _subdivHigh;
+    return isSuperdivisionMode() ? _subdivHigh : _clockHigh;
   }
 
   inline void tickA()
   {
-    digitalWrite(_clockPin, HIGH);
+    digitalWrite(highFreqPin(), HIGH);
     _clockHigh = true;
     _subdivIdx--;
     if (_subdivIdx == 0)
     {
-      digitalWrite(_subdivisionPin, HIGH);
+      digitalWrite(lowFreqPin(), HIGH);
       _subdivHigh = true;
-      _subdivIdx = _subdivisions;
+      restartSubdiv();
     }
     OCR1A = _isEven ? _evenTick : _oddTick;
     _isEven = !_isEven;
@@ -314,8 +407,8 @@ public:
 
   inline void tickB()
   {
-    digitalWrite(_clockPin, LOW);
-    digitalWrite(_subdivisionPin, LOW);
+    digitalWrite(_beatPin, LOW);
+    digitalWrite(_subdivPin, LOW);
     _clockHigh = false;
     _subdivHigh = false;
   }
