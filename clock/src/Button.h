@@ -2,6 +2,8 @@
 
 #include <Arduino.h>
 
+#define LONG_HOLD_TIME_MS 2000
+
 // A debounced push-button toggle switch.
 class Button
 {
@@ -46,6 +48,11 @@ public:
       return false;
     }
     return true;
+  }
+
+  bool isLongHold()
+  {
+    return holdTime() >= LONG_HOLD_TIME_MS;
   }
 
   int32_t holdTime()

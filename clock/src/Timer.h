@@ -1,14 +1,12 @@
 #pragma once
 
 #include <Arduino.h>
+#include "Settings.h"
 
 #define MIN_CLOCK (uint16_t)8
 #define MAX_CLOCK (uint16_t)1200
 #define MIN_BPM (MIN_CLOCK * 4) // 32
 #define MAX_BPM (MAX_CLOCK / 4) // 300
-#define DEFAULT_BPM 120
-#define DEFAULT_SUBDIVISIONS 4
-#define DEFAULT_SWING 0
 
 // Lookup table for OCR1A register values for BPMs from 8 to 1200.
 // This is to avoid floating point math.
@@ -151,18 +149,13 @@ uint16_t counterValue(uint16_t clock)
 class Timer1
 {
 private:
-  uint16_t _baseBpm = DEFAULT_BPM;
+  uint16_t _baseBPM;
   uint16_t _bpmOffset = 0;
   uint8_t _beatPin;
   uint8_t _subdivPin;
-  // Allowed values: {-4, -2, 1, 2, 3, 4, 5, 6, 7, 8}
-  // N < 0 -> one subdiv tick every N beats
-  // 1 -> subdiv == base
-  // N >= 2 -> N subdiv ticks per beat
-  int8_t _subdivisions = DEFAULT_SUBDIVISIONS;
-  bool _negativeSubdiv = true;
-  volatile uint8_t _subdivIdx = 1;
-  int8_t _swing = 0;
+  int8_t _subdivisions;
+  volatile uint8_t _subdivIdx;
+  int8_t _swing;
   uint16_t _oddTick;
   uint16_t _evenTick;
   bool _isEven = true;
@@ -214,14 +207,16 @@ private:
   }
 
 public:
-  void begin(uint8_t beatPin, uint8_t subdivPin)
+  void begin(uint8_t beatPin, uint8_t subdivPin, Settings settings)
   {
     _beatPin = beatPin;
     _subdivPin = subdivPin;
     pinMode(_beatPin, OUTPUT);
     pinMode(_subdivPin, OUTPUT);
+    loadSettings(settings);
+    // By starting at 1, ensures that both outputs tick on first click
+    _subdivIdx = 1;
     reset();
-    // restartSubdiv();
 
     noInterrupts();
     // Clear registers
@@ -231,7 +226,9 @@ public:
 
     // 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
     OCR1A = counterValue(getBPM());
-    OCR1B = 200; // ~12ms
+    // TODO: allow pulse width to be customized, or at least
+    // dynamic to frequency
+    OCR1B = 200; // ~12ms, approx 50% pulse width at max frequency
 
     // TCCR1B |= (1 << WGM12); // CTC
     //  Phase and frequency correct PWM
@@ -241,11 +238,7 @@ public:
     // Pre-scaler 1024
     TCCR1B |= (1 << CS12) | (0 << CS11) | (1 << CS10);
     // Output Compare Match A Interrupt Enable
-    // #ifdef ARDUINO_AVR_ATmega2560
     TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
-    // #else
-    //     TIMSK |= (1 << OCIE1A) | (1 << OCIE1B);
-    // #endif
     interrupts();
 
     updateTimer();
@@ -273,25 +266,25 @@ public:
 
   void setBaseBPM(uint16_t bpm)
   {
-    if (bpm != _baseBpm)
+    if (bpm != _baseBPM)
     {
-      _baseBpm = constrain(bpm, MIN_BPM, MAX_BPM);
+      _baseBPM = constrain(bpm, MIN_BPM, MAX_BPM);
       updateTimer();
     }
   }
 
   uint16_t getBaseBPM()
   {
-    return _baseBpm;
+    return _baseBPM;
   }
 
   uint16_t incrementBaseBPM(int16_t amount)
   {
     if (amount != 0)
     {
-      setBaseBPM(_baseBpm + amount);
+      setBaseBPM(_baseBPM + amount);
     }
-    return _baseBpm;
+    return _baseBPM;
   }
 
   void setBPMOffset(uint16_t offset)
@@ -306,7 +299,7 @@ public:
 
   uint16_t getBPM()
   {
-    return constrain(_baseBpm + _bpmOffset, MIN_BPM, MAX_BPM);
+    return constrain(_baseBPM + _bpmOffset, MIN_BPM, MAX_BPM);
   }
 
   uint16_t getClock()
@@ -350,6 +343,19 @@ public:
     return _subdivisions;
   }
 
+  // Allowed values: {-4, -3, -2, 1, 2, 3, 4, 5, 6, 7, 8}
+  // N < 0 -> one subdiv tick every N beats
+  // 1 -> subdiv == base
+  // N >= 2 -> N subdiv ticks per beat
+  void setSubdivisions(int8_t subdiv)
+  {
+    _subdivisions = constrain(subdiv, -4, 8);
+    if (subdiv == -1 || subdiv == 0)
+    {
+      _subdivisions = 1;
+    }
+  }
+
   uint8_t getSubdivisions()
   {
     return _subdivisions;
@@ -363,11 +369,20 @@ public:
     updateTimer();
   }
 
-  void restoreDefaults()
+  void loadSettings(Settings settings)
   {
-    _subdivisions = DEFAULT_SUBDIVISIONS;
-    setBaseBPM(DEFAULT_BPM);
-    setSwing(DEFAULT_SWING);
+    setSubdivisions(settings.subdivisions);
+    setBaseBPM(settings.baseBPM);
+    setSwing(settings.swing);
+  }
+
+  Settings getCurrentSettings()
+  {
+    Settings s;
+    s.baseBPM = _baseBPM;
+    s.subdivisions = _subdivisions;
+    s.swing = _swing;
+    return s;
   }
 
   bool beatOn()

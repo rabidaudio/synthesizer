@@ -69,6 +69,15 @@ public:
     _digits[_index].turnOn();
   }
 
+  void tickFor(uint16_t ms)
+  {
+    for (uint16_t t = 0; t < ms; t++)
+    {
+      tick();
+      delay(1);
+    }
+  }
+
   void setChar(size_t i, char c)
   {
     if (i < DIGITS)
