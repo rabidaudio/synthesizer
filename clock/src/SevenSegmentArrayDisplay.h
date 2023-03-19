@@ -20,11 +20,11 @@ private:
   char _contents[DIGITS];
 
 public:
-  void begin(uint8_t portNumber, uint8_t *ctrlPins)
+  void begin(uint8_t portNumber, uint8_t *ctrlPins, bool *altWirings)
   {
     for (size_t i = 0; i < DIGITS; i++)
     {
-      _digits[i].begin(portNumber, ctrlPins[i], i == 1);
+      _digits[i].begin(portNumber, ctrlPins[i], altWirings[i]);
       setChar(i, ' ');
     }
     _index = 0;

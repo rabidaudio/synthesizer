@@ -27,6 +27,10 @@
   {                       \
     7, 6, 5               \
   }
+#define DISPLAY_ALT_WIRINGS \
+  {                         \
+    false, false, false     \
+  }
 #else
 // Bare ATMega168p
 #define CLOCK_PIN 10
@@ -45,6 +49,12 @@
     A3, A4, A5            \
   }
 #endif
+// in order to simplify the PCB design to fit within the 3HP
+// constraints, the center 7-segment is wired up differently
+#define DISPLAY_ALT_WIRINGS \
+  {                         \
+    false, true, false      \
+  }
 
 #ifdef BACKPACK_DISPLAY
 #include "BackpackDisplay.h"
@@ -53,6 +63,7 @@ BackpackDisplay display;
 #include "SevenSegmentArrayDisplay.h"
 SevenSegmentArrayDisplay<3> display;
 uint8_t displayPins[] = DISPLAY_CTRL_PINS;
+bool altWirings[] = DISPLAY_ALT_WIRINGS;
 #endif
 Button aButton;
 Button bButton;
@@ -60,22 +71,9 @@ Button cButton;
 BufferedInput<16> cvInput;
 TapTempo tapTempo;
 RotaryEncoder knob;
-Timer1 timer;
 PauseState pauseState;
 SettingsManager settingsManager;
 ChangeTimeout bpmChange;
-
-// Configure interrupts
-
-ISR(TIMER1_COMPA_vect)
-{
-  timer.tickA();
-}
-
-ISR(TIMER1_COMPB_vect)
-{
-  timer.tickB();
-}
 
 #ifdef ARDUINO_AVR_ATmega2560
 ISR(PCINT0_vect) // PORTB PCINT
@@ -98,7 +96,7 @@ void setup()
 #ifdef BACKPACK_DISPLAY
   display.begin();
 #else
-  display.begin(DISPLAY_PORT, displayPins);
+  display.begin(DISPLAY_PORT, displayPins, altWirings);
 #endif
   // indicate we're doing setup by writing a dash
   // to each display and stepping through them
@@ -114,7 +112,7 @@ void setup()
   display.tick();
   settingsManager.begin();
   display.tick();
-  timer.begin(CLOCK_PIN, SUBDIV_PIN, settingsManager.getCurrentSettings());
+  Timer.begin(CLOCK_PIN, SUBDIV_PIN, settingsManager.getCurrentSettings());
   display.tick();
   bpmChange.begin(1500);
 
@@ -143,7 +141,7 @@ void loop()
   bool bPressed = bButton.isPressed();
   bool cPressed = cButton.isPressed();
   int8_t knobMotion = knob.readChanges();
-  timer.setBPMOffset(cvInput.read() / 4);    // scale cvInput to 0-256 BPM
+  Timer.setBPMOffset(cvInput.read() / 4);    // scale cvInput to 0-256 BPM
   uint16_t tapBpm = tapTempo.tick(cPressed); // need to tick tap tempo on every loop
   pauseState.setState(aPressed && bPressed);
 
@@ -155,7 +153,7 @@ void loop()
     {
       // Full reset
       settingsManager.restoreDefaults();
-      timer.loadSettings(settingsManager.getCurrentSettings());
+      Timer.loadSettings(settingsManager.getCurrentSettings());
       pauseState.reset();
       display.blinkReset();
     }
@@ -163,13 +161,13 @@ void loop()
   else if (aPressed)
   {
     // Knob controls subdivision setting
-    int8_t subdiv = timer.incrementSubdivisions(knobMotion);
+    int8_t subdiv = Timer.incrementSubdivisions(knobMotion);
     display.displaySubdivisions(subdiv);
   }
   else if (bPressed)
   {
     // Knob controls swing setting
-    int8_t swing = timer.incrementSwing(knobMotion);
+    int8_t swing = Timer.incrementSwing(knobMotion);
     display.displayNumber(swing);
   }
   else if (cPressed)
@@ -177,13 +175,13 @@ void loop()
     // Long hold of tap button saves current settings
     if (cButton.isLongHold())
     {
-      settingsManager.writeSettings(timer.getCurrentSettings());
+      settingsManager.writeSettings(Timer.getCurrentSettings());
       display.blinkReset(2);
     }
     // if tapping tempo, show the base BPM tapped
     else if (tapTempo.isActive())
     {
-      timer.setBaseBPM(tapBpm);
+      Timer.setBaseBPM(tapBpm);
       bpmChange.noteChanged();
       display.displayNumber(tapBpm);
     }
@@ -191,14 +189,14 @@ void loop()
   else if (pauseState.isPaused())
   {
     // freeze clock and restart subdivisions
-    timer.reset();
+    Timer.reset();
     tapTempo.cancel();
     display.displayPaused();
   }
   else
   {
     // Default mode, knob controls base BPM
-    uint16_t bpm = timer.incrementBaseBPM(knobMotion);
+    uint16_t bpm = Timer.incrementBaseBPM(knobMotion);
     if (knobMotion != 0)
     {
       bpmChange.noteChanged();
@@ -208,14 +206,16 @@ void loop()
     if (bpmChange.isChanging())
     {
       display.displayNumber(bpm);
-    } else {
-      display.displayNumber(timer.getBPM());
+    }
+    else
+    {
+      display.displayNumber(Timer.getBPM());
     }
   }
 
   // Do the main control loop at 10ms, but continue
   // to tick the display in that time
-  digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
-  digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
+  digitalWrite(LED_A_PIN, Timer.beatOn() ? HIGH : LOW);
+  digitalWrite(LED_B_PIN, Timer.subdivOn() ? HIGH : LOW);
   display.tickFor(10);
 }

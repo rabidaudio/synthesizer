@@ -45,7 +45,6 @@ const uint8_t LETTERS_ALT[] = {
     0b01111101,
 };
 
-
 // Addresses a common-cathode 7-segment display without a
 // decimal.
 // Assumes ABCDEGF segments are connected to pins 0-6 of
@@ -85,9 +84,12 @@ public:
   {
     if (c >= '0' && c <= '9')
     {
-      if (_altWiring) {
+      if (_altWiring)
+      {
         write(LETTERS_ALT[c - '0']);
-      } else {
+      }
+      else
+      {
         write(LETTERS[c - '0']);
       }
       return true;
@@ -111,12 +113,12 @@ public:
     return false;
   }
 
-  private:
-    void write(uint8_t bitmask)
-    {
-      // We're only using 7 LS bits for controlling
-      // the display, the last bit may be used as another
-      // IO, so we don't want to overwrite it.
-      *_segmentPort = (bitmask & 0b01111111) | (*_segmentPort & 0b10000000);
-    }
+private:
+  void write(uint8_t bitmask)
+  {
+    // We're only using 7 LS bits for controlling
+    // the display, the last bit may be used as another
+    // IO, so we don't want to overwrite it.
+    *_segmentPort = (bitmask & 0b01111111) | (*_segmentPort & 0b10000000);
+  }
 };

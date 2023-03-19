@@ -19,7 +19,6 @@
 
 - working swing
   - reduce swing resolution
-- show live BPM including CV unless BPM is changing
 - pcb revision B
   - Purchase knob, correct button tops
   - Add board standoff and screws

@@ -418,3 +418,16 @@ public:
     _subdivHigh = false;
   }
 };
+
+// Global instance, since only one Timer1 exists
+Timer1 Timer;
+
+ISR(TIMER1_COMPA_vect)
+{
+  Timer.tickA();
+}
+
+ISR(TIMER1_COMPB_vect)
+{
+  Timer.tickB();
+}

@@ -12,6 +12,7 @@ struct Settings
 
 const Settings DEFAULT_SETTINGS = {120, 4, 0};
 
+// Read and write settings to EEPROM
 class SettingsManager
 {
     Settings _currentSettings;

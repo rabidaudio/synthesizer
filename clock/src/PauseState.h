@@ -2,6 +2,7 @@
 
 #include <Arduino.h>
 
+// Keep track of if output is paused or not
 class PauseState
 {
 private:
