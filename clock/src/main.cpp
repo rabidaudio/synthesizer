@@ -7,7 +7,6 @@
 #include "PauseState.h"
 #include "ChangeTimeout.h"
 
-// Settings
 // #define BACKPACK_DISPLAY 1
 
 // Pins
@@ -51,8 +50,8 @@
 #include "BackpackDisplay.h"
 BackpackDisplay display;
 #else
-#include "Display.h"
-Display<3> display;
+#include "SevenSegmentArrayDisplay.h"
+SevenSegmentArrayDisplay<3> display;
 uint8_t displayPins[] = DISPLAY_CTRL_PINS;
 #endif
 Button aButton;
