@@ -22,7 +22,7 @@ public:
     {
         _baseAddress = baseAddress;
         EEPROM.get(_baseAddress, _currentSettings);
-        if (_currentSettings.baseBPM == 0)
+        if (_currentSettings.baseBPM == 0 || _currentSettings.baseBPM > 300)
         {
             _currentSettings = DEFAULT_SETTINGS;
         }

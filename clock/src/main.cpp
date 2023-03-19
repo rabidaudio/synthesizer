@@ -5,6 +5,7 @@
 #include "Timer.h"
 #include "TapTempo.h"
 #include "PauseState.h"
+#include "ChangeTimeout.h"
 
 // Settings
 // #define BACKPACK_DISPLAY 1
@@ -63,6 +64,7 @@ RotaryEncoder knob;
 Timer1 timer;
 PauseState pauseState;
 SettingsManager settingsManager;
+ChangeTimeout bpmChange;
 
 // Configure interrupts
 
@@ -115,6 +117,7 @@ void setup()
   display.tick();
   timer.begin(CLOCK_PIN, SUBDIV_PIN, settingsManager.getCurrentSettings());
   display.tick();
+  bpmChange.begin(1500);
 
   knob.begin(KNOB_A_PIN, KNOB_B_PIN);
   display.tick();
@@ -163,16 +166,12 @@ void loop()
     // Knob controls subdivision setting
     int8_t subdiv = timer.incrementSubdivisions(knobMotion);
     display.displaySubdivisions(subdiv);
-    digitalWrite(LED_A_PIN, HIGH);
-    digitalWrite(LED_B_PIN, LOW);
   }
   else if (bPressed)
   {
     // Knob controls swing setting
     int8_t swing = timer.incrementSwing(knobMotion);
     display.displayNumber(swing);
-    digitalWrite(LED_A_PIN, LOW);
-    digitalWrite(LED_B_PIN, HIGH);
   }
   else if (cPressed)
   {
@@ -186,9 +185,8 @@ void loop()
     else if (tapTempo.isActive())
     {
       timer.setBaseBPM(tapBpm);
+      bpmChange.noteChanged();
       display.displayNumber(tapBpm);
-      digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
-      digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
     }
   }
   else if (pauseState.isPaused())
@@ -201,15 +199,24 @@ void loop()
   else
   {
     // Default mode, knob controls base BPM
-    /*uint16_t bpm =*/ timer.incrementBaseBPM(knobMotion);
-    // display.displayNumber(bpm);
-    // TODO: show actual bpm instead?
-    display.displayNumber(timer.getBPM());
-    digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
-    digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
+    uint16_t bpm = timer.incrementBaseBPM(knobMotion);
+    if (knobMotion != 0)
+    {
+      bpmChange.noteChanged();
+    }
+    // if the BPM is changing, display the base BPM,
+    // otherwise show the true BPM including CV
+    if (bpmChange.isChanging())
+    {
+      display.displayNumber(bpm);
+    } else {
+      display.displayNumber(timer.getBPM());
+    }
   }
 
   // Do the main control loop at 10ms, but continue
   // to tick the display in that time
+  digitalWrite(LED_A_PIN, timer.beatOn() ? HIGH : LOW);
+  digitalWrite(LED_B_PIN, timer.subdivOn() ? HIGH : LOW);
   display.tickFor(10);
 }
