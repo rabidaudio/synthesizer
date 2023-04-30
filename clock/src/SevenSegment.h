@@ -7,6 +7,9 @@
 #define CHAR_BLANK 0b00000000
 #define CHAR_MINUS 0b00000001
 #define CHAR_UNDERSCORE 0b01000000
+#define CHAR_PAUSE 0b00110110
+#define CHAR_L 0b01000110
+#define CHAR_F 0b00001111
 
 // TODO: would switch be faster than
 // array index?
@@ -30,7 +33,10 @@ const uint8_t LETTERS[] = {
 // Thus we have different tables for that display:
 #define CHAR_MINUS_ALT 0b00000001
 #define CHAR_UNDERSCORE_ALT 0b00001000
+#define CHAR_L_ALT 0b00001110
+#define CHAR_F_ALT 0b01000111
 
+// TODO: define a bitswap function to do this instead.
 const uint8_t LETTERS_ALT[] = {
     //_ABCDFEG
     0b01111110,
@@ -97,6 +103,25 @@ public:
     if (c == ' ')
     {
       write(CHAR_BLANK);
+      return true;
+    }
+    if (c == '=')
+    {
+      write(CHAR_PAUSE);
+      return true;
+    }
+    if (c == 'S')
+    {
+      return display('5');
+    }
+    if (c == 'L')
+    {
+      write(_altWiring ? CHAR_L_ALT : CHAR_L);
+      return true;
+    }
+    if (c == 'F')
+    {
+      write(_altWiring ? CHAR_F_ALT : CHAR_F);
       return true;
     }
     if (c == '-')

@@ -167,6 +167,7 @@ private:
   uint8_t _subdivPin;
   int8_t _subdivisions;
   int8_t _swing;
+  bool _enabled = false;
   volatile uint8_t _subdivIdx;
   volatile uint16_t _clock;
   volatile int16_t _swingOffset = 0;
@@ -184,9 +185,10 @@ private:
     // Here, we want 66% to actually be 66.666%, so rather than
     // 200, we use 66*3 = 198.
     float swingScale = ((float)_swing) / 198.0;
-    float offsetF = ((float) clock) * swingScale;
-    int16_t offset = (int16_t) offsetF;
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+    float offsetF = ((float)clock) * swingScale;
+    int16_t offset = (int16_t)offsetF;
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+    {
       _clock = clock;
       _swingOffset = offset;
     }
@@ -238,11 +240,28 @@ public:
 
     // Pre-scaler 1024
     TCCR1B |= (1 << CS12) | (0 << CS11) | (1 << CS10);
-    // Output Compare Match A Interrupt Enable
-    TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
-
+    
     updateTimer();
+    setEnabled(true);
     interrupts();
+  }
+
+  void setEnabled(bool enabled)
+  {
+    if (_enabled == enabled)
+    {
+      return;
+    }
+    if (enabled)
+    {
+      // Output Compare Match A Interrupt Enable
+      TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
+    }
+    else
+    {
+      TIMSK1 &= ~((1 << OCIE1A) | (1 << OCIE1B));
+    }
+    _enabled = enabled;
   }
 
   void setSwing(int8_t swing)
@@ -362,7 +381,8 @@ public:
 
   void reset()
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+    {
       _subdivIdx = 1; // cause subdiv to tick on next
       _isEven = true;
       OCR1A = _clock - _swingOffset;

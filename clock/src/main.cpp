@@ -144,29 +144,51 @@ void loop()
   Timer.setBPMOffset(cvInput.read() / 4);    // scale cvInput to 0-256 BPM
   uint16_t tapBpm = tapTempo.tick(cPressed); // need to tick tap tempo on every loop
   pauseState.setState(aPressed && bPressed);
+  Timer.setEnabled(!pauseState.isPaused());
 
-  if (aPressed && bPressed)
-  {
-    // Start reset
-    display.displayReset();
-    if (aButton.isLongHold() && bButton.isLongHold())
-    {
-      // Full reset
-      settingsManager.restoreDefaults();
-      Timer.loadSettings(settingsManager.getCurrentSettings());
-      pauseState.reset();
-      display.blinkReset();
-    }
-  }
-  else if (pauseState.isPaused())
+  if (pauseState.isPaused())
   {
     // freeze clock and restart subdivisions
     Timer.reset();
     tapTempo.cancel();
     display.displayPaused();
-    if (pauseState.isTap(aPressed || bPressed))
+    if (pauseState.isTap(cPressed))
     {
       Timer.singleTick();
+    }
+    // Long hold of C button does full reset
+    else if (cPressed)
+    {
+      display.displayReset('F');
+      if (cButton.isLongHold())
+      {
+        // Full reset
+        settingsManager.restoreDefaults();
+        Timer.loadSettings(settingsManager.getCurrentSettings());
+        display.blinkReset('F');
+        Timer.reset();
+      }
+    }
+    // Long hold of A button saves current settings
+    else if (aPressed)
+    {
+      display.displayReset('S');
+      if (aButton.isLongHold())
+      {
+        settingsManager.writeSettings(Timer.getCurrentSettings());
+        display.blinkReset('S');
+      }
+    }
+    // Long hold of B button loads stored settings
+    else if (bPressed)
+    {
+      display.displayReset('L');
+      if (bButton.isLongHold())
+      {
+        Timer.loadSettings(settingsManager.getCurrentSettings());
+        display.blinkReset('L');
+        Timer.reset();
+      }
     }
   }
   else if (aPressed)
@@ -183,14 +205,8 @@ void loop()
   }
   else if (cPressed)
   {
-    // Long hold of tap button saves current settings
-    if (cButton.isLongHold())
-    {
-      settingsManager.writeSettings(Timer.getCurrentSettings());
-      display.blinkReset(2);
-    }
     // if tapping tempo, show the base BPM tapped
-    else if (tapTempo.isActive())
+    if (tapTempo.isActive())
     {
       Timer.setBaseBPM(tapBpm);
       bpmChange.noteChanged();
@@ -219,7 +235,7 @@ void loop()
 
   // Do the main control loop at 10ms, but continue
   // to tick the display in that time
-  digitalWrite(LED_A_PIN, Timer.beatOn() ? HIGH : LOW);
-  digitalWrite(LED_B_PIN, Timer.subdivOn() ? HIGH : LOW);
+  digitalWrite(LED_A_PIN, Timer.beatOn() ? LOW : HIGH);
+  digitalWrite(LED_B_PIN, Timer.subdivOn() ? LOW : HIGH);
   display.tickFor(10);
 }

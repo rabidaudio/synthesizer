@@ -46,10 +46,10 @@ public:
     void displayPaused()
     {
         clear();
-        setChar(DIGITS / 2, '-');
+        setChar(DIGITS / 2, '=');
         if (DIGITS % 2 == 0)
         {
-            setChar(DIGITS / 2 + 1, '-');
+            setChar(DIGITS / 2 + 1, '=');
         }
         writeDisplay();
     }
@@ -72,19 +72,19 @@ public:
         }
     }
 
-    // light up all segments (all 8's)
-    void displayReset()
+    // light up all segments
+    void displayReset(char c)
     {
         for (size_t i = 0; i < DIGITS; i++)
         {
-            setChar(i, '8');
+            setChar(i, c);
         }
         writeDisplay();
     }
 
     // blink the reset a few times.
     // NOTE: blocking, will return after `blinkCount * 2 * blinkTime` milliseconds.
-    void blinkReset(size_t blinkCount = 3, uint8_t blinkTime = 50)
+    void blinkReset(char c, size_t blinkCount = 3, uint8_t blinkTime = 50)
     {
         for (size_t i = 0; i < blinkCount; i++)
         {
@@ -94,7 +94,7 @@ public:
                 tick();
                 delay(1);
             }
-            displayReset();
+            displayReset(c);
             for (size_t i = 0; i < blinkTime; i++)
             {
                 tick();
