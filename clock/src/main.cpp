@@ -235,7 +235,7 @@ void loop()
 
   // Do the main control loop at 10ms, but continue
   // to tick the display in that time
-  digitalWrite(LED_A_PIN, Timer.beatOn() ? LOW : HIGH);
-  digitalWrite(LED_B_PIN, Timer.subdivOn() ? LOW : HIGH);
+  digitalWrite(LED_A_PIN, Timer.beatOn() ? HIGH : LOW);
+  digitalWrite(LED_B_PIN, Timer.subdivOn() ? HIGH : LOW);
   display.tickFor(10);
 }
