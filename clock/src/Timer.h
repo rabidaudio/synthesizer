@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include <util/atomic.h>
 #include "Settings.h"
 
 #define MIN_CLOCK (uint16_t)8
@@ -10,6 +11,7 @@
 
 // Lookup table for OCR1A register values for BPMs from 8 to 1200.
 // This is to avoid floating point math.
+// 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
 // Calculations:
 // https://docs.google.com/spreadsheets/d/1pTg9IQDEw8LUGN85Lwp80kAzATN1I9yxx0m5xDrEWBg/edit#gid=0
 const PROGMEM uint16_t CLOCK_LOOKUP[] = {
@@ -144,8 +146,18 @@ uint16_t counterValue(uint16_t clock)
 // Timer1 is a 16-bit two comparison timer, configured with a pre-scaler of 1024
 // on the 16MHz clock speed. That means the counter ticks every 64us.
 // When the counter reaches OCR1A the counter resets to zero and the pins
-// are brought high. When the counter reaches 200 (~12ms), the pins are
+// are brought high. When the counter reaches OCR1B (~12ms), the pins are
 // brought low.
+// To support the subdivision function, the timer clock is set to the frequency
+// of either beat or subdiv, whichever is higher. The other then is an integer
+// subdivision, counting down _subdivIdx on each of the higher frequency's beats.
+// For the swing function, two different timer values are calculated, one ahead
+// and one behind. The timer switches OCR1A between the two clock values on each
+// beat.
+// TO support the swing function, _swingOffset is calculated as a drift forward
+// or backward from the base clock value. It's up to a third early or late. On
+// each tick, the clock is adjusted by this amount forwards (on even ticks) or
+// backward (on odd ticks).
 class Timer1
 {
 private:
@@ -154,38 +166,25 @@ private:
   uint8_t _beatPin;
   uint8_t _subdivPin;
   int8_t _subdivisions;
-  volatile uint8_t _subdivIdx;
   int8_t _swing;
-  uint16_t _oddTick;
-  uint16_t _evenTick;
-  bool _isEven = true;
+  volatile uint8_t _subdivIdx;
+  volatile uint16_t _clock;
+  volatile uint16_t _swingOffset = 0;
+  volatile bool _isEven = true;
   volatile bool _clockHigh = false;
   volatile bool _subdivHigh = false;
 
   void updateTimer()
   {
-    uint16_t baseValue = counterValue(getClock());
-
+    uint16_t clock = counterValue(getClock());
     // Note: Hopefully doing this math isn't too slow.
     // It only needs to happen when the swing or bpm changes.
-    // float swingScale = ((float)_swing) / 128.0;
-    // uint16_t offset = (uint16_t)(((float)baseValue) / 3.0 * swingScale);
-    // _oddTick = baseValue + offset;
-    // _evenTick = baseValue - offset;
-    // TODO: re-enable swing
-    _oddTick = baseValue;
-    _evenTick = baseValue;
-
-    OCR1A = _isEven ? _evenTick : _oddTick;
-    // This is not required using phase+frequency correct mode
-    // as OCR1A is buffered
-    // if (TCNT1 > OCR1A)
-    //   TCNT1 = 0; // reset timer
-  }
-
-  void restartSubdiv()
-  {
-    _subdivIdx = abs(_subdivisions);
+    float swingScale = ((float)_swing) / 32.0;
+    float offset = ((float) clock) / 3.0 * swingScale;
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+      _clock = clock;
+      _swingOffset = (uint16_t) offset;
+    }
   }
 
   // returns true if subdiv is an integer multiple of beat.
@@ -214,8 +213,6 @@ public:
     pinMode(_beatPin, OUTPUT);
     pinMode(_subdivPin, OUTPUT);
     loadSettings(settings);
-    // By starting at 1, ensures that both outputs tick on first click
-    _subdivIdx = 1;
     reset();
 
     noInterrupts();
@@ -224,8 +221,7 @@ public:
     TCCR1B = 0;
     TCNT1 = 0;
 
-    // 120 BPM = 2 Hz = (16000000/((7811+1)*1024))
-    OCR1A = counterValue(getBPM());
+    OCR1A = 1000;
     // TODO: allow pulse width to be customized, or at least
     // dynamic to frequency
     OCR1B = 200; // ~12ms, approx 50% pulse width at max frequency
@@ -239,16 +235,16 @@ public:
     TCCR1B |= (1 << CS12) | (0 << CS11) | (1 << CS10);
     // Output Compare Match A Interrupt Enable
     TIMSK1 |= (1 << OCIE1A) | (1 << OCIE1B);
-    interrupts();
 
     updateTimer();
+    interrupts();
   }
 
   void setSwing(int8_t swing)
   {
     if (swing != _swing)
     {
-      _swing = swing;
+      _swing = constrain(swing, -32, 32);
       updateTimer();
     }
   }
@@ -258,7 +254,7 @@ public:
     return _swing;
   }
 
-  int8_t incrementSwing(int8_t swing)
+  int16_t incrementSwing(int8_t swing)
   {
     setSwing(_swing + swing);
     return _swing;
@@ -291,7 +287,6 @@ public:
   {
     if (offset != _bpmOffset)
     {
-
       _bpmOffset = offset;
       updateTimer();
     }
@@ -304,12 +299,12 @@ public:
 
   uint16_t getClock()
   {
-    uint16_t bpm = getBPM();
+    uint16_t clock = getBPM();
     if (_subdivisions > 1)
     {
-      bpm = bpm * _subdivisions;
+      clock = clock * _subdivisions;
     }
-    return constrain(bpm, MIN_CLOCK, MAX_CLOCK);
+    return constrain(clock, MIN_CLOCK, MAX_CLOCK);
   }
 
   uint8_t incrementSubdivisions(int8_t amount)
@@ -345,8 +340,7 @@ public:
 
   // Allowed values: {-4, -3, -2, 1, 2, 3, 4, 5, 6, 7, 8}
   // N < 0 -> one subdiv tick every N beats
-  // 1 -> subdiv == base
-  // N >= 2 -> N subdiv ticks per beat
+  // N >= 1 -> N subdiv ticks per beat
   void setSubdivisions(int8_t subdiv)
   {
     _subdivisions = constrain(subdiv, -4, 8);
@@ -363,10 +357,12 @@ public:
 
   void reset()
   {
-    _subdivIdx = 1; // cause subdiv to tick on next
-    _isEven = true;
-    TCNT1 = 0; // reset timer
-    updateTimer();
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+      _subdivIdx = 1; // cause subdiv to tick on next
+      _isEven = true;
+      OCR1A = _clock - _swingOffset;
+      TCNT1 = 0; // reset timer
+    }
   }
 
   void loadSettings(Settings settings)
@@ -385,6 +381,15 @@ public:
     return s;
   }
 
+  // trigger a single step of the beat. Blocking.
+  // useful for stepping a sequencer back to the beginning.
+  void singleTick()
+  {
+    tickA();
+    delay(12);
+    tickB();
+  }
+
   bool beatOn()
   {
     return isSuperdivisionMode() ? _clockHigh : _subdivHigh;
@@ -397,25 +402,30 @@ public:
 
   inline void tickA()
   {
-    digitalWrite(highFreqPin(), HIGH);
-    _clockHigh = true;
+    // If the clock has changed tempo has changed, update it
+    OCR1A = _isEven ? (_clock - _swingOffset) : (_clock + _swingOffset);
+    _isEven = !_isEven;
+    // This is not required using phase+frequency correct mode
+    // as OCR1A is buffered
+    // if (TCNT1 > OCR1A)
+    //   TCNT1 = 0; // reset timer
+    digitalWrite(highFreqPin(), LOW);
+    _clockHigh = false;
     _subdivIdx--;
     if (_subdivIdx == 0)
     {
-      digitalWrite(lowFreqPin(), HIGH);
-      _subdivHigh = true;
-      restartSubdiv();
+      digitalWrite(lowFreqPin(), LOW);
+      _subdivHigh = false;
+      _subdivIdx = abs(_subdivisions);
     }
-    OCR1A = _isEven ? _evenTick : _oddTick;
-    _isEven = !_isEven;
   }
 
   inline void tickB()
   {
-    digitalWrite(_beatPin, LOW);
-    digitalWrite(_subdivPin, LOW);
-    _clockHigh = false;
-    _subdivHigh = false;
+    digitalWrite(_beatPin, HIGH);
+    digitalWrite(_subdivPin, HIGH);
+    _clockHigh = true;
+    _subdivHigh = true;
   }
 };
 

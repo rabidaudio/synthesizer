@@ -17,8 +17,6 @@
 
 # TODO:
 
-- working swing
-  - reduce swing resolution
 - pcb revision B
   - Purchase knob, correct button tops
   - Add board standoff and screws

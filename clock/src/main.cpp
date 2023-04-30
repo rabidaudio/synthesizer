@@ -158,6 +158,17 @@ void loop()
       display.blinkReset();
     }
   }
+  else if (pauseState.isPaused())
+  {
+    // freeze clock and restart subdivisions
+    Timer.reset();
+    tapTempo.cancel();
+    display.displayPaused();
+    if (pauseState.isTap(aPressed || bPressed))
+    {
+      Timer.singleTick();
+    }
+  }
   else if (aPressed)
   {
     // Knob controls subdivision setting
@@ -185,13 +196,6 @@ void loop()
       bpmChange.noteChanged();
       display.displayNumber(tapBpm);
     }
-  }
-  else if (pauseState.isPaused())
-  {
-    // freeze clock and restart subdivisions
-    Timer.reset();
-    tapTempo.cancel();
-    display.displayPaused();
   }
   else
   {
