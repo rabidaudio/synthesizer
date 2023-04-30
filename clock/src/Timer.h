@@ -169,7 +169,7 @@ private:
   int8_t _swing;
   volatile uint8_t _subdivIdx;
   volatile uint16_t _clock;
-  volatile uint16_t _swingOffset = 0;
+  volatile int16_t _swingOffset = 0;
   volatile bool _isEven = true;
   volatile bool _clockHigh = false;
   volatile bool _subdivHigh = false;
@@ -179,11 +179,16 @@ private:
     uint16_t clock = counterValue(getClock());
     // Note: Hopefully doing this math isn't too slow.
     // It only needs to happen when the swing or bpm changes.
-    float swingScale = ((float)_swing) / 32.0;
-    float offset = ((float) clock) / 3.0 * swingScale;
+    // Convert a percentage value into a scale value, where
+    // 0% => straight, 66% => triplets, 50% => quarters, etc.
+    // Here, we want 66% to actually be 66.666%, so rather than
+    // 200, we use 66*3 = 198.
+    float swingScale = ((float)_swing) / 198.0;
+    float offsetF = ((float) clock) * swingScale;
+    int16_t offset = (int16_t) offsetF;
     ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
       _clock = clock;
-      _swingOffset = (uint16_t) offset;
+      _swingOffset = offset;
     }
   }
 
@@ -244,7 +249,7 @@ public:
   {
     if (swing != _swing)
     {
-      _swing = constrain(swing, -32, 32);
+      _swing = constrain(swing, -75, 75);
       updateTimer();
     }
   }
@@ -416,6 +421,7 @@ public:
     {
       digitalWrite(lowFreqPin(), LOW);
       _subdivHigh = false;
+      // restart subdivisions
       _subdivIdx = abs(_subdivisions);
     }
   }

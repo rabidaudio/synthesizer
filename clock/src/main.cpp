@@ -178,7 +178,7 @@ void loop()
   else if (bPressed)
   {
     // Knob controls swing setting
-    int8_t swing = Timer.incrementSwing(knobMotion);
+    int8_t swing = Timer.incrementSwing(3 * knobMotion);
     display.displayNumber(swing);
   }
   else if (cPressed)
