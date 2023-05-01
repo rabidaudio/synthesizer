@@ -1,4 +1,4 @@
-# Clock
+# The Count
 
 ## [Writeup and documentation](https://rabid.audio/projects/synth/clk/)
 
