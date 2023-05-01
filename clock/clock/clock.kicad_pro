@@ -49,16 +49,7 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        "silk_over_copper|101620000|139020000|d17367cc-de90-48db-99eb-9de13c7954fa|eb10a1cd-0643-4002-80cc-d3416701a32b",
-        "silk_over_copper|101620000|139020000|d17367cc-de90-48db-99eb-9de13c7954fa|f07272da-eee4-49bc-bcc0-58e475f687ab",
-        "silk_over_copper|101620000|141520000|d17367cc-de90-48db-99eb-9de13c7954fa|282db721-54b5-4406-8c47-d46cac6154cc",
-        "silk_over_copper|101620000|141520000|d17367cc-de90-48db-99eb-9de13c7954fa|7f886584-120d-4e76-aa9d-0ab6573b3212",
-        "silk_over_copper|101825000|141520000|c3cce8bc-336d-4fe9-b0cc-e514c8223b3e|282db721-54b5-4406-8c47-d46cac6154cc",
-        "silk_over_copper|101825000|141520000|c3cce8bc-336d-4fe9-b0cc-e514c8223b3e|7f886584-120d-4e76-aa9d-0ab6573b3212",
-        "silk_over_copper|104040000|141520000|c3cce8bc-336d-4fe9-b0cc-e514c8223b3e|fba1558a-ab50-4a85-baed-04af6a029d26",
-        "silk_over_copper|105771000|141520000|2a146c45-d127-4e46-9c1c-37d6321a52cb|fba1558a-ab50-4a85-baed-04af6a029d26"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -89,7 +80,7 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_over_copper": "warning",
+        "silk_over_copper": "ignore",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",

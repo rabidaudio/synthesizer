@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "CLK")
-    (date "2023-01-01")
-    (rev "A")
+    (title "The Count")
+    (date "2023-04-30")
+    (rev "B")
     (company "rabid.audio")
   )
 
@@ -1820,7 +1820,6 @@
     )
   )
 
-
   (junction (at 212.09 34.29) (diameter 0) (color 0 0 0 0)
     (uuid 0f265645-f2e0-44fc-b11f-ab1c20d45fe9)
   )
@@ -3057,11 +3056,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 43521de1-14fe-4507-9119-aadda0623aef)
   )
-  (text "screw with spacer to panel at bottom\nbigger clock footprint\nmove regulator so more space for programmer\n"
-    (at 220.98 175.26 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 654b4b42-ce6d-4fce-86f0-5d93f93ee68d)
-  )
   (text "mcu and programming pins" (at 54.61 194.31 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 8afc76ee-c334-4929-b5c2-a72687e79a26)
@@ -3461,7 +3455,7 @@
     (property "Value" "16MHz" (id 1) (at 86.36 92.71 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Crystal:Crystal_HC52-8mm_Vertical" (id 2) (at 96.52 92.71 0)
+    (property "Footprint" "kicad-official/Crystal.pretty:Crystal_HC50_Vertical" (id 2) (at 96.52 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 96.52 92.71 0)
@@ -5340,7 +5334,7 @@
       (reference "U5") (unit 1) (value "SM460281N") (footprint "synth:SM460281N_ARKLED_0.28mm_CC_7-segment_LED")
     )
     (path "/00000000-0000-0000-0000-0000631d1d82"
-      (reference "Y1") (unit 1) (value "16MHz") (footprint "Crystal:Crystal_HC52-8mm_Vertical")
+      (reference "Y1") (unit 1) (value "16MHz") (footprint "kicad-official/Crystal.pretty:Crystal_HC50_Vertical")
     )
   )
 )
