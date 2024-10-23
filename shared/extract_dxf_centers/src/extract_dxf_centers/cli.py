@@ -18,9 +18,21 @@ def main():
     )
     parser.add_argument("file", type=pathlib.Path, help="path to dxf file")
     parser.add_argument(
-        "-w", "--write", help="update the file by writing layer information"
+        "-w",
+        "--write",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="update the file by writing layer information",
+    )
+    parser.add_argument(
+        "-r",
+        "--reverse-y",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="flip the orientation of the Y axis so that positive Y is top-to-bottom",
     )
     args = parser.parse_args()
+    print(args)
     if args.file == None:
         parser.print_help()
         sys.exit(1)
@@ -37,6 +49,8 @@ def main():
             el.layer = f"layer{i}"
         # compute the center points for each cluster
         c = center_of(cluster)
+        if args.reverse_y:
+            c = [c[0], 128.5 - c[1]]
         print(f"{i}\t{round(c[0], 2)}\t{round(c[1], 2)}")
     if args.write:
         doc.save()
