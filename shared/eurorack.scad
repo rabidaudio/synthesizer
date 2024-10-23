@@ -1,5 +1,3 @@
-// NOTE: uses KiCAD coordinate systems (positive x => left to right, positive y => top to bottom, z out of page)
-
 function hp(count = 1) = count * 5.08 /*mm*/;
 function u3() = 128.5;    // mm
 function panel_lip() = 8; // mm
@@ -52,7 +50,7 @@ module place_grid(count, row_size, offset, skips = [])
         y = floor(i / row_size);
         if (len(search(i, skips)) == 0)
         {
-            translate([ x * offset.x, y * offset.y ]) children();
+            translate([ x * offset.x, -1 * y * offset.y ]) children();
         }
     }
 }
@@ -91,17 +89,20 @@ module screws(width_hp, count_per_side = -1)
     if (count == 1)
     {
         // only draw one in the center
-
-        screw([ hp(width_hp) / 2, panel_lip() / 2 ]);        // top screw
-        screw([ hp(width_hp) / 2, u3() - panel_lip() / 2 ]); // bottom screw
+        // bottom screw
+        screw([ hp(width_hp) / 2, panel_lip() / 2 ]);
+        // top screw
+        screw([ hp(width_hp) / 2, u3() - panel_lip() / 2 ]);
     }
     else
     {
         space_between = hp(width_hp - 2) / (count - 1);
         for (i = [0:count - 1])
         {
-            screw([ hp() + i * space_between, panel_lip() / 2 ]);        // top screw
-            screw([ hp() + i * space_between, u3() - panel_lip() / 2 ]); // bottom screw
+            // bottom screw
+            screw([ hp() + i * space_between, panel_lip() / 2 ]);
+            // top screw
+            screw([ hp() + i * space_between, u3() - panel_lip() / 2 ]);
         }
     }
 }
