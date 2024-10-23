@@ -31,7 +31,7 @@ def main():
     clusters = list(find_clusters(doc.modelspace()))
 
     print("OBJECT\tx\ty")
-    for i, cluster in enumerate(clusters):
+    for i, cluster in enumerate(reversed(clusters)):
         # make a new layer from each cluster
         for el in cluster:
             el.layer = f"layer{i}"
