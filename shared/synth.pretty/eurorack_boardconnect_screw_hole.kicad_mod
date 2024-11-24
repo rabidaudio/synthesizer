@@ -1,4 +1,4 @@
-(footprint "eurorack_screw_hole"
+(footprint "eurorack_boardconnect_screw_hole"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
@@ -15,7 +15,7 @@
 			)
 		)
 	)
-	(property "Value" "eurorack_screw_hole"
+	(property "Value" "eurorack_boardconnect_screw_hole"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -65,69 +65,27 @@
 		)
 	)
 	(attr through_hole)
-	(fp_line
-		(start 1 -3)
-		(end -1 -3)
+	(fp_circle
+		(center 0 0)
+		(end 0 -3)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
-		(layer "F.CrtYd")
-		(uuid "a41695a8-1e91-4374-a53a-a61b9beffd66")
+		(fill none)
+		(layer "B.CrtYd")
+		(uuid "53a85e4f-bf28-4cb6-82d0-302f520d4fb1")
 	)
-	(fp_line
-		(start 1 3)
-		(end -1 3)
+	(fp_circle
+		(center 0 0)
+		(end 0 -3)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
+		(fill none)
 		(layer "F.CrtYd")
-		(uuid "397ef588-5474-4096-8c94-65399e46470c")
-	)
-	(fp_arc
-		(start -4 0)
-		(mid -3.12132 -2.12132)
-		(end -1 -3)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "F.CrtYd")
-		(uuid "39dbccbd-646d-4f9f-8459-692414d76092")
-	)
-	(fp_arc
-		(start -1 3)
-		(mid -3.12132 2.12132)
-		(end -4 0)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "F.CrtYd")
-		(uuid "34a435a0-e15e-4fd9-8903-428341ecea97")
-	)
-	(fp_arc
-		(start 1 -3)
-		(mid 3.12132 -2.12132)
-		(end 4 0)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "F.CrtYd")
-		(uuid "bdb02d2b-6832-467f-a793-a76a7a3f3f8e")
-	)
-	(fp_arc
-		(start 4 0)
-		(mid 3.12132 2.12132)
-		(end 1 3)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "F.CrtYd")
-		(uuid "ff13efb4-6ff9-4fbd-9ae7-881e43a65d4b")
+		(uuid "618ad62d-b099-43b2-8b6c-39552738c258")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 2.5 0)
@@ -142,10 +100,10 @@
 			)
 		)
 	)
-	(pad "1" thru_hole oval
+	(pad "1" thru_hole circle
 		(at 0 0)
-		(size 5.8 4.2)
-		(drill oval 4.8 3.2)
+		(size 4.2 4.2)
+		(drill oval 3.2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "00128334-ee6d-4d03-8ea8-f880ff083f96")
@@ -153,8 +111,8 @@
 	(zone
 		(net 0)
 		(net_name "")
-		(layers "F.Cu" "F.Fab")
-		(uuid "0fdebb08-894d-4bb2-9caa-82ffd81a643f")
+		(layers "F&B.Cu" "*.Fab")
+		(uuid "a11b9d0c-11cc-40cf-8a71-60f67e8b420a")
 		(hatch full 0.5)
 		(connect_pads
 			(clearance 0)
@@ -174,9 +132,9 @@
 		)
 		(polygon
 			(pts
-				(xy 0.25 -3) (xy 1.25 -3) (xy 2.25 -2.75) (xy 3.5 -1.75) (xy 4 -0.5) (xy 4 0.25) (xy 3.75 1.25)
-				(xy 2.75 2.5) (xy 1.25 3) (xy 0.25 3) (xy -0.25 3) (xy -1.5 3) (xy -3 2.25) (xy -3.75 1.25) (xy -4 0)
-				(xy -3.75 -1.25) (xy -3.25 -2) (xy -2.25 -2.75) (xy -1.25 -3) (xy -0.25 -3)
+				(xy 3 -0.25) (xy 2.75 -1.25) (xy 2 -2.25) (xy 1.25 -2.75) (xy 0.25 -3) (xy -0.25 -3) (xy -1.25 -2.75)
+				(xy -2 -2.25) (xy -2.25 -2) (xy -2.75 -1.25) (xy -3 -0.25) (xy -3 0.25) (xy -2.75 1.25) (xy -2.25 2)
+				(xy -1.25 2.75) (xy -0.25 3) (xy 0.25 3) (xy 1.25 2.75) (xy 2.25 2) (xy 2.75 1.25) (xy 3 0.25)
 			)
 		)
 	)

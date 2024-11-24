@@ -1,18 +1,138 @@
-(footprint "knob_hole" (version 20211014) (generator pcbnew)
-  (layer "F.Cu")
-  (tedit 0)
-  (attr through_hole)
-  (fp_text reference "REF**" (at 0 5.842 unlocked) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 6dc32ad8-f036-4e24-aeea-90f1dbad9c27)
-  )
-  (fp_text value "knob_hole" (at 0 1 unlocked) (layer "F.Fab")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 5fd8f4d6-da52-43f8-8853-68acb6deb9a9)
-  )
-  (fp_text user "${REFERENCE}" (at 0 2.5 unlocked) (layer "F.Fab")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp c9c7858c-e6f0-499e-91c7-4ec280dad7a4)
-  )
-  (pad "1" thru_hole circle (at 0 0) (size 9 9) (drill 7) (layers *.Cu *.Mask) (tstamp 53d8656c-2924-4c57-afdd-077f719365b6))
+(footprint "knob_hole"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 5.842 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "6dc32ad8-f036-4e24-aeea-90f1dbad9c27")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "knob_hole"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "5fd8f4d6-da52-43f8-8853-68acb6deb9a9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cdc98969-9c9f-4d4c-9ded-d7c076d8f380")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2dca3b46-b99f-4c70-aea2-edee79cb156c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c84e69ad-0fc5-4938-8279-b870612d9075")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 4.5 0)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "B.CrtYd")
+		(uuid "72f2411f-e132-4e5f-baf8-f839f982127d")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0 -5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "430cb71e-efb2-41ca-be61-845349a350dd")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "c9c7858c-e6f0-499e-91c7-4ec280dad7a4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 9 9)
+		(drill 7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "53d8656c-2924-4c57-afdd-077f719365b6")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layers "*.Fab" "F.Cu")
+		(uuid "f2f7568d-9152-4e57-a781-e5d7759dd028")
+		(hatch full 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads not_allowed)
+			(copperpour allowed)
+			(footprints not_allowed)
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 2 -5) (xy 4 -3.5) (xy 5 -1.25) (xy 5 1.25) (xy 3.5 4) (xy 1 5) (xy -1 5) (xy -3.25 4.25) (xy -5 1.5)
+				(xy -5 -1.25) (xy -4 -3.25) (xy -1.75 -5)
+			)
+		)
+	)
 )
