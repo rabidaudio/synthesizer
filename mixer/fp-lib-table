@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "synth")(type "KiCad")(uri "/Users/personal/projects/synthesizer/shared/synth.pretty")(options "")(descr ""))
+)

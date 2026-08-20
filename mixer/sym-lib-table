@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "synth")(type "KiCad")(uri "/Users/personal/projects/synthesizer/shared/synth.kicad_sym")(options "")(descr ""))
+)
