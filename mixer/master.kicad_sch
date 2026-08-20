@@ -658,170 +658,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R_Potentiometer"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "RV"
-				(at -4.445 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R_Potentiometer"
-				(at -2.54 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Potentiometer"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "resistor variable"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Potentiometer*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Potentiometer_0_1"
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.524 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Potentiometer_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_Potentiometer_Dual_Separate"
 			(pin_names
 				(offset 1.016)
@@ -2976,7 +2812,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical"
+		(property "Footprint" "synth:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles"
 			(at 72.39 133.35 0)
 			(effects
 				(font
@@ -3435,76 +3271,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 128.27 125.73 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5ee850f5-292a-4d13-b6ff-3cb7d7673cec")
-		(property "Reference" "RV3"
-			(at 128.27 128.016 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "A100K_MASTER_FADER_L"
-			(at 128.27 130.556 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 128.27 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Potentiometer"
-			(at 128.27 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "df0fe302-7d91-41a0-8f2e-fce900e284e5")
-		)
-		(pin "2"
-			(uuid "d2a6f292-8fd8-48f4-8744-ec402348e447")
-		)
-		(pin "1"
-			(uuid "1788f5a2-aa93-4771-9547-7d7da6a42767")
-		)
-		(instances
-			(project "mixer"
-				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/33e847a2-c80a-4a2a-9bd4-e640d7127b7a"
-					(reference "RV3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "synth:AudioJack_SwitchT")
 		(at 60.96 36.83 0)
 		(unit 1)
@@ -3950,76 +3716,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Potentiometer")
-		(at 128.27 90.17 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a5d43d5b-a557-421c-8743-21cd0de9e883")
-		(property "Reference" "RV1"
-			(at 128.27 92.456 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "A100K_MASTER_FADER_R"
-			(at 128.27 94.996 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 128.27 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Potentiometer"
-			(at 128.27 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "249a0b1a-1f30-448b-a4f4-1dceaf15a62c")
-		)
-		(pin "2"
-			(uuid "4ca2b3fa-86e2-4714-8543-f4fcc2e096ad")
-		)
-		(pin "1"
-			(uuid "540437a4-c644-4f1a-acdc-b28646a73cbd")
-		)
-		(instances
-			(project "mixer"
-				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/33e847a2-c80a-4a2a-9bd4-e640d7127b7a"
-					(reference "RV1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 68.58 20.32 90)
 		(unit 1)
@@ -4390,6 +4086,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Potentiometer_Dual_Separate")
+		(at 128.27 90.17 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c535df40-cbb5-49b5-b609-31643ef3d714")
+		(property "Reference" "RV7"
+			(at 128.27 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "A100K_MASTER_FADER"
+			(at 128.27 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "synth:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles"
+			(at 128.27 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual potentiometer, separate units"
+			(at 128.27 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d15832fa-291e-4fd0-b4f2-9f5ec3ce0d16")
+		)
+		(pin "1"
+			(uuid "9e15bad0-2a0c-4bf3-b5ae-746f0b3eb08d")
+		)
+		(pin "6"
+			(uuid "eaa3e363-b555-47c8-b5ed-d41174c62773")
+		)
+		(pin "5"
+			(uuid "29c0eb8b-4ae5-4044-9b5b-203bbbbb9505")
+		)
+		(pin "4"
+			(uuid "6c2168bd-29e8-4349-8abf-acb386979e34")
+		)
+		(pin "2"
+			(uuid "86923c1e-ef6b-4bd4-aed2-355aea3d756f")
+		)
+		(instances
+			(project ""
+				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/33e847a2-c80a-4a2a-9bd4-e640d7127b7a"
+					(reference "RV7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 114.3 109.22 0)
 		(unit 1)
@@ -4451,6 +4227,86 @@
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/33e847a2-c80a-4a2a-9bd4-e640d7127b7a"
 					(reference "#PWR04")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer_Dual_Separate")
+		(at 128.27 125.73 90)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cfb1b4dc-664f-43c2-ac1d-73b5789821cf")
+		(property "Reference" "RV7"
+			(at 128.27 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "A100K_MASTER_FADER"
+			(at 128.27 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "synth:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles"
+			(at 128.27 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual potentiometer, separate units"
+			(at 128.27 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d15832fa-291e-4fd0-b4f2-9f5ec3ce0d17")
+		)
+		(pin "1"
+			(uuid "9e15bad0-2a0c-4bf3-b5ae-746f0b3eb08e")
+		)
+		(pin "6"
+			(uuid "eaa3e363-b555-47c8-b5ed-d41174c62774")
+		)
+		(pin "5"
+			(uuid "29c0eb8b-4ae5-4044-9b5b-203bbbbb9506")
+		)
+		(pin "4"
+			(uuid "6c2168bd-29e8-4349-8abf-acb386979e35")
+		)
+		(pin "2"
+			(uuid "86923c1e-ef6b-4bd4-aed2-355aea3d7570")
+		)
+		(instances
+			(project ""
+				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/33e847a2-c80a-4a2a-9bd4-e640d7127b7a"
+					(reference "RV7")
+					(unit 2)
 				)
 			)
 		)
@@ -4760,7 +4616,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical"
+		(property "Footprint" "synth:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles"
 			(at 67.31 85.09 0)
 			(effects
 				(font

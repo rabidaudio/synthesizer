@@ -1,7 +1,7 @@
 (footprint "Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "TRS 3.5mm, vertical, Thonkiconn, PCB mount, (http://www.qingpu-electronics.com/en/products/WQP-PJ398SM-362.html)")
 	(tags "WQP-PJ398SM WQP-PJ301M-12 TRS 3.5mm mono vertical jack thonkiconn qingpu")
@@ -23,18 +23,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 -6.48 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "ac1c3051-bfe1-4033-9cf2-13c4ef22c13a")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -151,7 +139,7 @@
 			(width 0.12)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "15fddfa4-c856-46b1-8a29-af60e1edad9d")
 	)
@@ -212,7 +200,7 @@
 			(width 0.12)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "Dwgs.User")
 		(uuid "f8b9cbc1-df2b-4e5e-9c32-cf2a99352911")
 	)
@@ -313,7 +301,7 @@
 			(width 0.1)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "3d9b0f6a-a7a6-4c1a-b63a-273078f32728")
 	)
@@ -363,6 +351,7 @@
 		(remove_unused_layers no)
 		(uuid "857dcfd9-bee5-4e6a-8cab-b1833352f107")
 	)
+	(embedded_fonts no)
 	(model "${KISYS3DMOD}/Connector_Audio.3dshapes/Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical.wrl"
 		(offset
 			(xyz 0 0 0)
@@ -372,6 +361,17 @@
 		)
 		(rotate
 			(xyz 0 0 0)
+		)
+	)
+	(model "${KIPRJMOD}/../shared/synth.pretty/PJ301M-12 Thonkiconn v0.2.stp"
+		(offset
+			(xyz 0 -0.5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
 		)
 	)
 )

@@ -51,3 +51,7 @@ S_LED = S_Switch
 Global_Solo = Global_Solo || S_Switch
 Channel Muted = M_Switch || (Global_Solo && !S_Switch)
 
+
+
+https://docs.google.com/spreadsheets/d/1g7xjcmLrPR7thaU7WiNtqLLgusEtm41Zfw6h4pZd12A/edit?gid=347525464#gid=347525464
+
