@@ -619,8 +619,16 @@
       "Master Module"
     ],
     [
-      "9bc6275a-af5f-4184-8773-046feb5d105b",
-      "Channel"
+      "206f6037-7ae6-4b64-94eb-9a85666ebdcd",
+      "Channel1"
+    ],
+    [
+      "45f99337-f06b-4142-99e3-547e8fb47392",
+      "Channel Module"
+    ],
+    [
+      "5c9695de-fd6a-48f6-b871-1584ea81abcb",
+      "Channel2"
     ]
   ],
   "text_variables": {}
