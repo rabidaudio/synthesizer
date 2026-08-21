@@ -6,7 +6,7 @@
 	(descr "Potentiometer, vertical, 9mm, single, http://www.taiwanalpha.com.tw/downloads?target=products&id=113")
 	(tags "potentiometer vertical 9mm single")
 	(property "Reference" "REF**"
-		(at 6.71 -4.64 180)
+		(at -0.79 -7.14 180)
 		(layer "F.SilkS")
 		(uuid "95300d82-3a82-443f-b6c4-467c7c45d480")
 		(effects
@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
-		(at 0 9.86 180)
+		(at -7.5 7.36 180)
 		(layer "F.Fab")
 		(uuid "8ca2830a-7268-4e8f-9a3b-4c50c308d2d2")
 		(effects
@@ -53,8 +53,8 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start 0.88 -2.38)
-		(end 5.6 -2.38)
+		(start -6.62 -4.88)
+		(end -1.9 -4.88)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -63,8 +63,8 @@
 		(uuid "fcbd7408-4cdf-4b1d-bd22-048e23b979f4")
 	)
 	(fp_line
-		(start 0.88 -1.19)
-		(end 0.88 -2.37)
+		(start -6.62 -3.69)
+		(end -6.62 -4.87)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -73,8 +73,8 @@
 		(uuid "c0a93abb-00fd-4f56-82f2-e0374fad4c0a")
 	)
 	(fp_line
-		(start 0.88 1.71)
-		(end 0.88 1.18)
+		(start -6.62 -0.79)
+		(end -6.62 -1.32)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -83,8 +83,8 @@
 		(uuid "c176b876-fa7e-4669-bbaa-3d459e295169")
 	)
 	(fp_line
-		(start 0.88 4.16)
-		(end 0.88 3.33)
+		(start -6.62 1.66)
+		(end -6.62 0.83)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -93,8 +93,8 @@
 		(uuid "92d21bfb-97dc-4fac-b262-491359fe9131")
 	)
 	(fp_line
-		(start 0.88 7.37)
-		(end 0.88 5.88)
+		(start -6.62 4.87)
+		(end -6.62 3.38)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -103,8 +103,8 @@
 		(uuid "eedac0fc-ba51-4748-8085-52b63c5994da")
 	)
 	(fp_line
-		(start 0.88 7.37)
-		(end 5.6 7.37)
+		(start -6.62 4.87)
+		(end -1.9 4.87)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -113,8 +113,8 @@
 		(uuid "01e20302-559c-4098-b2c4-ab62def02aa3")
 	)
 	(fp_line
-		(start 9.41 -2.37)
-		(end 12.47 -2.37)
+		(start 1.91 -4.87)
+		(end 4.97 -4.87)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -123,8 +123,8 @@
 		(uuid "56e555b1-8f7c-4bd6-8761-ebc833d880cb")
 	)
 	(fp_line
-		(start 9.41 7.37)
-		(end 12.47 7.37)
+		(start 1.91 4.87)
+		(end 4.97 4.87)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -133,8 +133,8 @@
 		(uuid "d39b5b50-629c-4658-9127-02b3696dfeef")
 	)
 	(fp_line
-		(start 12.47 7.37)
-		(end 12.47 -2.37)
+		(start 4.97 4.87)
+		(end 4.97 -4.87)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -143,8 +143,8 @@
 		(uuid "b790180e-2fe2-4564-86fa-200e1b87de34")
 	)
 	(fp_line
-		(start -1.15 -3.91)
-		(end -1.15 8.91)
+		(start -8.65 -6.41)
+		(end -8.65 6.41)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -153,8 +153,8 @@
 		(uuid "5bcf6c7f-fc6f-421d-a429-7b0d9d2b8584")
 	)
 	(fp_line
-		(start -1.15 8.91)
-		(end 12.6 8.91)
+		(start -8.65 6.41)
+		(end 5.1 6.41)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -163,8 +163,8 @@
 		(uuid "ee34fd16-1496-4f39-a2e9-9f53db7ae026")
 	)
 	(fp_line
-		(start 12.6 -3.91)
-		(end -1.15 -3.91)
+		(start 5.1 -6.41)
+		(end -8.65 -6.41)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -173,8 +173,8 @@
 		(uuid "0b986104-7571-42a9-9ae3-282fcb53b8eb")
 	)
 	(fp_line
-		(start 12.6 8.91)
-		(end 12.6 -3.91)
+		(start 5.1 6.41)
+		(end 5.1 -6.41)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -183,8 +183,8 @@
 		(uuid "06bd1ce2-9a44-4f07-a927-dfa42b9ba500")
 	)
 	(fp_line
-		(start 1 -2.25)
-		(end 12.35 -2.25)
+		(start -6.5 -4.75)
+		(end 4.85 -4.75)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -193,8 +193,8 @@
 		(uuid "fb0d8e2a-097a-4c14-88ec-99b5a7d301c3")
 	)
 	(fp_line
-		(start 1 7.25)
-		(end 1 -2.25)
+		(start -6.5 4.75)
+		(end -6.5 -4.75)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -203,8 +203,8 @@
 		(uuid "d3c1cc05-9034-4ff9-a39f-3496883ff2d6")
 	)
 	(fp_line
-		(start 1 7.25)
-		(end 12.35 7.25)
+		(start -6.5 4.75)
+		(end 4.85 4.75)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -213,8 +213,8 @@
 		(uuid "51f3e887-f058-477d-9589-3af91825fc8c")
 	)
 	(fp_line
-		(start 12.35 7.25)
-		(end 12.35 -2.25)
+		(start 4.85 4.75)
+		(end 4.85 -4.75)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -223,8 +223,8 @@
 		(uuid "ef3aaa09-1439-4b8e-8c9e-8ee902b14c35")
 	)
 	(fp_circle
-		(center 7.5 2.5)
-		(end 7.5 -1)
+		(center 0 0)
+		(end 0 -3.5)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -234,7 +234,7 @@
 		(uuid "c6dce891-9ba3-402d-8329-345764bb8f5f")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 7.62 2.54 0)
+		(at 0.12 0.04 0)
 		(layer "F.Fab")
 		(uuid "bb6f38ba-188f-4805-a017-3cde1421d2b9")
 		(effects
@@ -244,24 +244,24 @@
 			)
 		)
 	)
-	(pad "" thru_hole oval
-		(at 7.5 -2.3 90)
-		(size 2.72 3.24)
-		(drill oval 1.1 1.8)
+	(pad "" thru_hole circle
+		(at 0 -4.8 90)
+		(size 3.24 3.24)
+		(drill 1.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "e59eb9f1-af3e-4a95-b933-940d46f71eec")
 	)
-	(pad "" thru_hole oval
-		(at 7.5 7.3 90)
-		(size 2.72 3.24)
-		(drill oval 1.1 1.8)
+	(pad "" thru_hole circle
+		(at 0 4.8 90)
+		(size 3.24 3.24)
+		(drill 1.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "35b2a5d1-a68c-42ab-9e2f-7b3bb8ab82cd")
 	)
 	(pad "1" thru_hole rect
-		(at 0 0 90)
+		(at -7.5 -2.5 90)
 		(size 1.8 1.8)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -269,7 +269,7 @@
 		(uuid "565abab1-f045-479f-9410-4850a4fca01d")
 	)
 	(pad "2" thru_hole circle
-		(at 0 2.5 90)
+		(at -7.5 0 90)
 		(size 1.8 1.8)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -277,7 +277,7 @@
 		(uuid "e20ceacd-6ee1-4654-9c31-808881dc06ba")
 	)
 	(pad "3" thru_hole circle
-		(at 0 5 90)
+		(at -7.5 2.5 90)
 		(size 1.8 1.8)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
