@@ -319,12 +319,12 @@
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz -0 -0 -0)
 		)
 	)
 	(model "${KIPRJMOD}/../shared/synth.pretty/RD902F-40-00D.stp"
 		(offset
-			(xyz 7.5 -2.5 0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)

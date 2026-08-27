@@ -298,7 +298,7 @@
 	)
 	(model "${KIPRJMOD}/../shared/synth.pretty/RD901F-40-15F-B10K-00DL1.stp"
 		(offset
-			(xyz 7.5 -2.5 0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
