@@ -7013,13 +7013,13 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 158.75 99.06 0)
-		(unit 2)
+		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "6b0d340f-ad1b-4602-8dff-c24b75ed35bf")
-		(property "Reference" "U2"
+		(property "Reference" "U4"
 			(at 160.528 92.456 0)
 			(effects
 				(font
@@ -7107,12 +7107,12 @@
 		(instances
 			(project "mixer"
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/206f6037-7ae6-4b64-94eb-9a85666ebdcd"
-					(reference "U2")
-					(unit 2)
+					(reference "U4")
+					(unit 3)
 				)
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/5c9695de-fd6a-48f6-b871-1584ea81abcb"
-					(reference "U2")
-					(unit 4)
+					(reference "U4")
+					(unit 2)
 				)
 			)
 		)
@@ -7754,13 +7754,13 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 218.44 81.28 0)
-		(unit 1)
+		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "ada0b18a-c6e8-4b73-9445-1b8ad1cf16c4")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 220.218 74.676 0)
 			(effects
 				(font
@@ -7848,12 +7848,12 @@
 		(instances
 			(project "mixer"
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/206f6037-7ae6-4b64-94eb-9a85666ebdcd"
-					(reference "U4")
-					(unit 1)
+					(reference "U2")
+					(unit 3)
 				)
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/5c9695de-fd6a-48f6-b871-1584ea81abcb"
-					(reference "U4")
-					(unit 3)
+					(reference "U2")
+					(unit 2)
 				)
 			)
 		)
@@ -8003,13 +8003,13 @@
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
 		(at 218.44 114.3 0)
-		(unit 2)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "c24f9468-916f-44bd-8938-4a30d8457605")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 220.218 107.696 0)
 			(effects
 				(font
@@ -8097,12 +8097,12 @@
 		(instances
 			(project "mixer"
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/206f6037-7ae6-4b64-94eb-9a85666ebdcd"
-					(reference "U4")
-					(unit 2)
+					(reference "U2")
+					(unit 4)
 				)
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/5c9695de-fd6a-48f6-b871-1584ea81abcb"
-					(reference "U4")
-					(unit 4)
+					(reference "U2")
+					(unit 1)
 				)
 			)
 		)
@@ -8270,13 +8270,13 @@
 		(lib_id "Amplifier_Operational:TL074")
 		(at 109.22 78.74 0)
 		(mirror x)
-		(unit 1)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "c6590cd2-845a-4c89-adfc-ef1f55898644")
-		(property "Reference" "U2"
+		(property "Reference" "U4"
 			(at 111.252 86.106 0)
 			(effects
 				(font
@@ -8364,12 +8364,12 @@
 		(instances
 			(project "mixer"
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/206f6037-7ae6-4b64-94eb-9a85666ebdcd"
-					(reference "U2")
-					(unit 1)
+					(reference "U4")
+					(unit 4)
 				)
 				(path "/7887173d-29cc-4936-b1a7-ffeb730ae153/45f99337-f06b-4142-99e3-547e8fb47392/5c9695de-fd6a-48f6-b871-1584ea81abcb"
-					(reference "U2")
-					(unit 3)
+					(reference "U4")
+					(unit 1)
 				)
 			)
 		)
