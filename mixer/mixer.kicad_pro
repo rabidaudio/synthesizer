@@ -268,10 +268,6 @@
           ""
         ],
         [
-          "silk_overlap|84582000|125651611|1de27a8b-92a8-43d0-aefb-d9042acf4ee1|c6c46862-7d35-48d7-8cc2-37bc3c0860c5",
-          ""
-        ],
-        [
           "silk_overlap|85170000|159742094|b121b5ea-68d6-4200-8765-7d44306a7a0c|d6dd5ea6-1195-43c1-a73c-d30a0cde2ad7",
           ""
         ],
@@ -296,15 +292,11 @@
           ""
         ],
         [
-          "silk_overlap|99451390|123714190|23aaeb36-2125-4e18-ab4d-27ef97c12bb5|8b62dc87-4e12-4f30-9858-586c1cc2029b",
-          ""
-        ],
-        [
           "unconnected_items|106425500|121430624|F.Cu|4|89941c12-ec5c-4690-b39a-487219aac313|f07a9e05-5063-4774-b402-ef763ec94024",
           ""
         ],
         [
-          "unconnected_items|138684000|147824000|F.Cu|4|0390a72a-e650-42c9-9f16-0112560e9f0d|22d415b1-ba79-461d-ab32-a72d140af327",
+          "unconnected_items|138684000|147824000|F.Cu|4|ca53c9cf-eb24-4801-ac8c-b8cd8f0a1c53|22d415b1-ba79-461d-ab32-a72d140af327",
           "power rails"
         ],
         [
@@ -312,7 +304,7 @@
           "power rails"
         ],
         [
-          "unconnected_items|97536000|115316000|F.Cu|4|eae47ed1-e4dc-4e0c-a7f8-d0f083d579fd|6254be9c-26d5-4395-9d00-85195d682550",
+          "unconnected_items|97536000|115316000|F.Cu|4|7a8d66a2-b926-41de-ba33-4d2a3134b679|6254be9c-26d5-4395-9d00-85195d682550",
           "power rails"
         ]
       ],
@@ -951,6 +943,10 @@
     [
       "5c9695de-fd6a-48f6-b871-1584ea81abcb",
       "Channel2"
+    ],
+    [
+      "f523c00c-bcc5-481a-b6b7-9364f419aa59",
+      "Panel"
     ]
   ],
   "text_variables": {}

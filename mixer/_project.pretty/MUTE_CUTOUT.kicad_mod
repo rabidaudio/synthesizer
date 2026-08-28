@@ -1,0 +1,117 @@
+(footprint "MUTE_CUTOUT"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -13.716 -17.78 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "13ecb2ab-fbf4-4973-abcf-8ddb17ae9824")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MUTE_CUTOUT"
+		(at -13.716 -16.28 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "6a841181-2cd0-4657-8538-0e3c3fca49b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31d2d5ba-6cd1-48dd-8cf6-9b96b46e4f98")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "14aba1fc-9f1f-47ac-8f0d-883de4df2a30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole exclude_from_bom)
+	(fp_rect
+		(start -2.921 -2.54)
+		(end 2.921 2.54)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6ee65249-f2b3-4245-abcc-2dd03a66b4ce")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -13.716 -14.78 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "7b273cae-f54f-420f-91d1-cc380754e902")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layers "F.Cu" "F.Mask" "B.Cu" "B.Mask" "F.SilkS" "B.SilkS" "F.Adhes" "B.Adhes"
+			"F.Paste" "B.Paste"
+		)
+		(uuid "7d0cd442-62a2-408c-a0a0-27b4a7f32d1e")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads not_allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 2.850447 -2.54) (xy 1.714502 -2.54) (xy 0 -0.486833) (xy -1.721556 -2.54) (xy -2.850445 -2.54)
+				(xy -2.850445 2.540002) (xy -1.756834 2.540002) (xy -1.756834 -0.860777) (xy 0 1.220613) (xy 1.749779 -0.867833)
+				(xy 1.749779 2.540002) (xy 2.850447 2.540002)
+			)
+		)
+	)
+	(embedded_fonts no)
+)
