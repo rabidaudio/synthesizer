@@ -7477,7 +7477,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide"
+		(property "Footprint" "_project:Potentiometer_Bourns_PTA3043_Single_Slide"
 			(at 142.24 96.52 0)
 			(effects
 				(font
