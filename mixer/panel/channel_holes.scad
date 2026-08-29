@@ -41,7 +41,7 @@ mirror([0,-1,0]) {
 
     // gain thumbwheels
     thumbwheel_x = center[0];
-    thumbwheel_cutout = [8.636, 2.54];
+    thumbwheel_cutout = [8.636, 3.048];
     translate([thumbwheel_x, origin+1.27, 0])
         square(thumbwheel_cutout, center = true);
     translate([thumbwheel_x, origin+9.144, 0])
