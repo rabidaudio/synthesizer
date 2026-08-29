@@ -8,7 +8,10 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
-   sodipodi:docname="panel.svg"
+   sodipodi:docname="channel_design.svg"
+   inkscape:export-filename="/Users/personal/Desktop/channel_design.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,13 +26,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2.094728"
-     inkscape:cx="45.113256"
-     inkscape:cy="199.07119"
-     inkscape:window-width="1512"
-     inkscape:window-height="834"
-     inkscape:window-x="92"
-     inkscape:window-y="99"
+     inkscape:zoom="3.4554699"
+     inkscape:cx="87.976457"
+     inkscape:cy="160.75961"
+     inkscape:window-width="1083"
+     inkscape:window-height="749"
+     inkscape:window-x="0"
+     inkscape:window-y="95"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer2" />
   <defs
@@ -329,15 +332,16 @@
          y="21.320002">PAN</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.64583px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="25.234407"
-       y="37.612297"
-       id="text7320-6-2-1-8-4"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.64615px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="25.237503"
+       y="37.608131"
+       id="text7320-6-2-1-8-4"
+       transform="scale(0.99987739,1.0001226)"><tspan
          sodipodi:role="line"
          id="tspan7318-5-3-4-9-6"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.64583px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="25.234407"
-         y="37.612297">AUX</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.64615px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="25.237503"
+         y="37.608131">AUX</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.41111px;line-height:1.25;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"

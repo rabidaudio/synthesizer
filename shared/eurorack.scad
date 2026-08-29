@@ -107,7 +107,7 @@ module screws(width_hp, count_per_side = -1)
     }
 }
 
-module jack(center_pos)
+module jack(center_pos = [0, 0])
 {
     drill_dia = 8;
     // jacks = 14mm wide, 9mm high (12+ recommended)

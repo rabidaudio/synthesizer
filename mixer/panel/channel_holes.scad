@@ -1,4 +1,4 @@
-use <../shared/eurorack.scad>
+use <../../shared/eurorack.scad>
 
 // PANEL GENERATION DIRECTIONS
 // Initialize git submodules
@@ -22,7 +22,7 @@ mirror([0,-1,0]) {
     bounds(width_hp);
     screws(width_hp);
 
-    origin = 8.128;
+    origin = 9.259;
     
     // origin reference
     translate([0, origin, 0])
@@ -80,7 +80,7 @@ mirror([0,-1,0]) {
     l_fader_offset = 0.762;
     r_fader_offset = 0.508;
     fader_cutout_width = (max(l_fader_offset, r_fader_offset) + fader_min_cutout_width/2)*2;
-   // l_center_line+ r_center_line
+
     fader_cutout = [fader_cutout_width, 31];
     
     translate([l_center_line, fader_row, 0]) {
