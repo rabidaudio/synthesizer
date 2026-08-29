@@ -961,7 +961,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "_project:MUTE_CUTOUT"
+		(property "Footprint" "_project:MUTE_CUTOUT_ALT"
 			(at 44.45 148.59 0)
 			(effects
 				(font
@@ -1316,7 +1316,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "_project:MUTE_CUTOUT"
+		(property "Footprint" "_project:MUTE_CUTOUT_ALT"
 			(at 63.5 148.59 0)
 			(effects
 				(font
@@ -2926,7 +2926,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "_project:SOLO_CUTOUT"
+		(property "Footprint" "_project:SOLO_CUTOUT_ALT"
 			(at 44.45 140.97 0)
 			(effects
 				(font
@@ -3793,7 +3793,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "_project:SOLO_CUTOUT"
+		(property "Footprint" "_project:SOLO_CUTOUT_ALT"
 			(at 63.5 140.97 0)
 			(effects
 				(font
