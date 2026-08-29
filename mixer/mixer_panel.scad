@@ -27,6 +27,12 @@ mirror([0,-1,0]) {
     // origin reference
     translate([0, origin, 0])
     square([1,1], center=false);
+    
+    translate([0, 0, 0])
+    square([1,1], center=false);   
+    
+    translate([hp(width_hp)-1, 128.5-1, 0])
+    square([1,1], center=false);    
 
     // jacks
     jack_row = origin + 6.604;
@@ -52,7 +58,7 @@ mirror([0,-1,0]) {
 
     // pre-post fader slide switches
     toggle_row = origin+31.496;
-    toggle_cutout = [7, 4.5 ];
+    toggle_cutout = [ 5.5, 3 ];
     translate([l_center_line, toggle_row, 0]) {
         square(toggle_cutout, center = true);
     }
@@ -61,17 +67,26 @@ mirror([0,-1,0]) {
     }
 
     // pan knobs
-    pan_row = origin+39.624;
+    pan_row = origin+45.72;
     knob([ l_center_line, pan_row ]);
     knob([ r_center_line, pan_row ]);
 
     // faders
+    
     fader_row = origin + 74.168;
-    fader_cutout = [ 2.5, 31 ];
-    translate([l_center_line+0.762, fader_row, 0]) {
+    fader_min_cutout_width = 2.5;
+    // make fader cutout wide enough for both
+    // ofsets while still centered
+    l_fader_offset = 0.762;
+    r_fader_offset = 0.508;
+    fader_cutout_width = (max(l_fader_offset, r_fader_offset) + fader_min_cutout_width/2)*2;
+   // l_center_line+ r_center_line
+    fader_cutout = [fader_cutout_width, 31];
+    
+    translate([l_center_line, fader_row, 0]) {
         square(fader_cutout, center = true);
     }
-    translate([r_center_line+0.508, fader_row, 0]) {
+    translate([r_center_line, fader_row, 0]) {
         square(fader_cutout, center = true);
     }
 
