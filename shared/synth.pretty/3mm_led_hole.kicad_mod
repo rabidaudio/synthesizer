@@ -1,18 +1,64 @@
-(footprint "3mm_led_hole" (version 20211014) (generator pcbnew)
-  (layer "F.Cu")
-  (tedit 0)
-  (attr through_hole)
-  (fp_text reference "REF**" (at 0 2.54 unlocked) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 8a6c2ce5-57fb-4ecb-9c2c-c21c7bcf2e99)
-  )
-  (fp_text value "3mm_led_hole" (at 0 1 unlocked) (layer "F.Fab") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp dd61a2cc-8c06-4f4a-a806-3b85ac5fa9bf)
-  )
-  (fp_text user "${REFERENCE}" (at 0 2.5 unlocked) (layer "F.Fab") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 2e777016-785d-4557-a03e-661d0c9c810a)
-  )
-  (pad "" np_thru_hole circle (at 0 0) (size 3 3) (drill 3) (layers F&B.Cu *.Mask) (tstamp d70c5e72-0115-4c01-af22-c0b75ae47b52))
+(footprint "3mm_led_hole"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 2.54 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8a6c2ce5-57fb-4ecb-9c2c-c21c7bcf2e99")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "3mm_led_hole"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dd61a2cc-8c06-4f4a-a806-3b85ac5fa9bf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b0b0b7db-6b8c-4954-a303-54c05f81aa82")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "57f09739-a7bd-4588-869b-6a6129af62c6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole allow_missing_courtyard)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 3 3)
+		(drill 3)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "d70c5e72-0115-4c01-af22-c0b75ae47b52")
+	)
+	(embedded_fonts no)
 )

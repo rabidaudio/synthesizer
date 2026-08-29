@@ -1,18 +1,75 @@
-(footprint "toggle_sw_hole" (version 20211014) (generator pcbnew)
-  (layer "F.Cu")
-  (tedit 0)
-  (attr through_hole)
-  (fp_text reference "REF**" (at 0 3.81 unlocked) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 73a18a36-fd85-46b2-b7b4-41099a8aeb99)
-  )
-  (fp_text value "toggle_sw_hole" (at 0 1 unlocked) (layer "F.Fab") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp c3b0e48d-d5a0-4e79-9e5c-f63eaf084302)
-  )
-  (fp_text user "${REFERENCE}" (at 0 2.5 unlocked) (layer "F.Fab") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 899322fc-c33e-4528-85cf-d95a29f28253)
-  )
-  (pad "" np_thru_hole circle (at 0 0) (size 5.2 5.2) (drill 5.2) (layers F&B.Cu *.Mask) (tstamp b9983bc1-8471-4304-8d3c-c0c22820b71a))
+(footprint "toggle_sw_hole"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 3.81 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "73a18a36-fd85-46b2-b7b4-41099a8aeb99")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "toggle_sw_hole"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3b0e48d-d5a0-4e79-9e5c-f63eaf084302")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c8d2445-af14-4f1d-b9a9-8a3251ac9600")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03674a59-f9e9-4c3f-a884-4c29d1e931cc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole allow_missing_courtyard)
+	(fp_circle
+		(center 0 0)
+		(end 2.032 -1.778)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "fe392e0a-1b29-4f3b-9ec7-2c74c63d3a7a")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 5.2 5.2)
+		(drill 5.2)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "b9983bc1-8471-4304-8d3c-c0c22820b71a")
+	)
+	(embedded_fonts no)
 )

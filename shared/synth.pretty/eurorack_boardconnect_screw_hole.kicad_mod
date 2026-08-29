@@ -1,7 +1,7 @@
 (footprint "eurorack_boardconnect_screw_hole"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 3.302 0)
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "0f5abe1b-1eb2-4295-8b64-d5ded773e633")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -72,7 +60,7 @@
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "B.CrtYd")
 		(uuid "53a85e4f-bf28-4cb6-82d0-302f520d4fb1")
 	)
@@ -83,22 +71,9 @@
 			(width 0.05)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.CrtYd")
 		(uuid "618ad62d-b099-43b2-8b6c-39552738c258")
-	)
-	(fp_text user "${REFERENCE}"
-		(at 0 2.5 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "b5672d1e-a7d0-4c05-86dd-d3b94dc2b63c")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
 	)
 	(pad "1" thru_hole circle
 		(at 0 0)
@@ -111,7 +86,7 @@
 	(zone
 		(net 0)
 		(net_name "")
-		(layers "F&B.Cu" "*.Fab")
+		(layers "F.Cu" "B.Cu" "B.Fab" "F.Fab")
 		(uuid "a11b9d0c-11cc-40cf-8a71-60f67e8b420a")
 		(hatch full 0.5)
 		(connect_pads
@@ -126,6 +101,10 @@
 			(copperpour allowed)
 			(footprints allowed)
 		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
 		(fill
 			(thermal_gap 0.5)
 			(thermal_bridge_width 0.5)
@@ -138,4 +117,5 @@
 			)
 		)
 	)
+	(embedded_fonts no)
 )

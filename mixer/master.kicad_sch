@@ -3432,7 +3432,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_Dual_Separate")
-		(at 135.89 139.7 0)
+		(at 130.81 91.44 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3441,7 +3441,7 @@
 		(dnp no)
 		(uuid "478372ae-2846-4c7a-8df9-a2e338cfcc4a")
 		(property "Reference" "RV1"
-			(at 133.35 140.9701 0)
+			(at 128.27 92.7101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3450,7 +3450,7 @@
 			)
 		)
 		(property "Value" "B100K - AUX_RETURN_LEVEL"
-			(at 133.35 138.4301 0)
+			(at 128.27 90.1701 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3459,7 +3459,7 @@
 			)
 		)
 		(property "Footprint" "synth:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles"
-			(at 135.89 139.7 0)
+			(at 130.81 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3468,7 +3468,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.89 139.7 0)
+			(at 130.81 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3477,7 +3477,7 @@
 			)
 		)
 		(property "Description" "Dual potentiometer, separate units"
-			(at 135.89 139.7 0)
+			(at 130.81 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5670,7 +5670,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_Dual_Separate")
-		(at 130.81 91.44 0)
+		(at 135.89 139.7 0)
 		(mirror x)
 		(unit 2)
 		(exclude_from_sim no)
@@ -5679,7 +5679,7 @@
 		(dnp no)
 		(uuid "e6c5361e-1a60-4ad2-ae1d-dd289644ec61")
 		(property "Reference" "RV1"
-			(at 128.27 92.7101 0)
+			(at 133.35 140.9701 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5688,7 +5688,7 @@
 			)
 		)
 		(property "Value" "B100K - AUX_RETURN_LEVEL"
-			(at 128.27 90.1701 0)
+			(at 133.35 138.4301 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5697,7 +5697,7 @@
 			)
 		)
 		(property "Footprint" "synth:Potentiometer_Alpha_RD902F-40-00D_Dual_Vertical_CircularHoles"
-			(at 130.81 91.44 0)
+			(at 135.89 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5706,7 +5706,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 130.81 91.44 0)
+			(at 135.89 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5715,7 +5715,7 @@
 			)
 		)
 		(property "Description" "Dual potentiometer, separate units"
-			(at 130.81 91.44 0)
+			(at 135.89 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
