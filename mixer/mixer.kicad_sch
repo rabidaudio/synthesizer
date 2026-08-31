@@ -784,16 +784,6 @@
 		)
 		(uuid "004d76bd-4e55-4857-920f-e5177819831a")
 	)
-	(text "TODO: test both a gain of 10db (100k/3.1 ~=> 33k) and 5-6db (~=> 56k)"
-		(exclude_from_sim no)
-		(at 78.486 139.954 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "1cc39f0e-177d-4b14-a20d-6e59217ba0e2")
-	)
 	(text "RA2045F - Alpha 20mm sliders\nhttps://www.thonk.co.uk/wp-content/uploads/2019/05/RA_c3_a2_c2_96_c2_a1_c3_a2_c2_96_c2_a145F-2303679.pdf\nBourns equiv: PTA2043\n\nPTA2043-20..A..\n\nDigikey: Bourns, largest audio = 100k\nMouser: Alphas are all linear, similar bourns selection to digikey\n\nDual-gang are completely unavailable\nSwitch to Dual pot instead of two sliders?\n\nMay want 30mm instead of 20mm travel - PTA3043\nDual B100K available - PTA3044\n30mm are 45mm long\n20mm are 35mm long"
 		(exclude_from_sim no)
 		(at 31.242 169.672 0)
@@ -807,7 +797,7 @@
 	)
 	(text "N of these units can be dasy chained together"
 		(exclude_from_sim no)
-		(at 114.3 50.038 0)
+		(at 42.672 71.628 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -941,7 +931,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 24.13) (xy 156.21 24.13)
+			(xy 156.21 40.64) (xy 158.75 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1081,7 +1071,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 31.75) (xy 156.21 31.75)
+			(xy 156.21 48.26) (xy 158.75 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1131,7 +1121,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 29.21) (xy 156.21 29.21)
+			(xy 156.21 45.72) (xy 158.75 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1371,7 +1361,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 36.83) (xy 156.21 36.83)
+			(xy 156.21 53.34) (xy 158.75 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1421,7 +1411,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 26.67) (xy 156.21 26.67)
+			(xy 156.21 43.18) (xy 158.75 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1611,7 +1601,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 21.59) (xy 156.21 21.59)
+			(xy 156.21 38.1) (xy 158.75 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1661,7 +1651,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 34.29) (xy 156.21 34.29)
+			(xy 156.21 50.8) (xy 158.75 50.8)
 		)
 		(stroke
 			(width 0)
@@ -1681,7 +1671,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 19.05) (xy 156.21 19.05)
+			(xy 156.21 35.56) (xy 158.75 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1786,7 +1776,7 @@
 		(dnp no)
 		(uuid "129d8dc5-8936-4523-9bd0-491334ca21d4")
 		(property "Reference" "J14"
-			(at 156.718 69.342 90)
+			(at 155.956 69.342 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1795,7 +1785,7 @@
 			)
 		)
 		(property "Value" "C_BOARD_OUT"
-			(at 154.178 69.342 90)
+			(at 153.67 65.278 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2071,7 +2061,7 @@
 		(dnp no)
 		(uuid "6a968ea0-d23f-4c9a-b1d9-a8f90cfcf3fb")
 		(property "Reference" "J12"
-			(at 158.242 69.342 90)
+			(at 159.512 69.596 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2080,7 +2070,7 @@
 			)
 		)
 		(property "Value" "M_BOARD_IN"
-			(at 160.782 69.342 90)
+			(at 161.036 65.278 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2357,7 +2347,7 @@
 		(dnp no)
 		(uuid "b04fa787-25f9-48ab-a0ec-c5540d30a740")
 		(property "Reference" "J10"
-			(at 66.802 69.342 90)
+			(at 67.818 69.342 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2366,7 +2356,7 @@
 			)
 		)
 		(property "Value" "C_BOARD_IN"
-			(at 69.342 69.342 90)
+			(at 69.596 65.278 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2568,7 +2558,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x08")
-		(at 148.59 29.21 180)
+		(at 151.13 45.72 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2576,7 +2566,7 @@
 		(dnp no)
 		(uuid "d09e3579-367e-44a5-b460-3f73aeb83b88")
 		(property "Reference" "J11"
-			(at 143.002 26.162 90)
+			(at 145.542 42.672 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2585,7 +2575,7 @@
 			)
 		)
 		(property "Value" "INTERCONNECT1"
-			(at 145.288 22.352 90)
+			(at 147.828 38.862 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2594,7 +2584,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x08_P1.27mm_Vertical"
-			(at 148.59 29.21 0)
+			(at 151.13 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2603,7 +2593,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 148.59 29.21 0)
+			(at 151.13 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2612,7 +2602,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 148.59 29.21 0)
+			(at 151.13 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2789,7 +2779,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x08")
-		(at 161.29 29.21 0)
+		(at 163.83 45.72 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2798,7 +2788,7 @@
 		(dnp no)
 		(uuid "e3120259-2d4c-4310-ab97-c6f925b374e1")
 		(property "Reference" "J13"
-			(at 166.878 26.162 90)
+			(at 169.418 42.672 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2807,7 +2797,7 @@
 			)
 		)
 		(property "Value" "INTERCONNECT2"
-			(at 164.338 26.162 90)
+			(at 166.624 36.83 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2816,7 +2806,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x08_P1.27mm_Vertical"
-			(at 161.29 29.21 0)
+			(at 163.83 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2825,7 +2815,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 29.21 0)
+			(at 163.83 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2834,7 +2824,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 161.29 29.21 0)
+			(at 163.83 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)

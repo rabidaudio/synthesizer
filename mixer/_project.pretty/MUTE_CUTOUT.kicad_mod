@@ -4,9 +4,10 @@
 	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at -13.716 -17.78 0)
+		(at 0 -1.986833 0)
 		(unlocked yes)
 		(layer "F.SilkS")
+		(hide yes)
 		(uuid "13ecb2ab-fbf4-4973-abcf-8ddb17ae9824")
 		(effects
 			(font
@@ -16,7 +17,7 @@
 		)
 	)
 	(property "Value" "MUTE_CUTOUT"
-		(at -13.716 -16.28 0)
+		(at 0 -0.486833 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "6a841181-2cd0-4657-8538-0e3c3fca49b5")
@@ -66,7 +67,7 @@
 		(uuid "6ee65249-f2b3-4245-abcc-2dd03a66b4ce")
 	)
 	(fp_text user "${REFERENCE}"
-		(at -13.716 -14.78 0)
+		(at 0 1.013167 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "7b273cae-f54f-420f-91d1-cc380754e902")
