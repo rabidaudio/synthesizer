@@ -1,0 +1,28 @@
+[project]
+name = "eurorack-layout-tool"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Julien",email = "julien@rabidaudio.com"}
+]
+license = "MIT"
+requires-python = ">=3.14"
+dependencies = [
+    "ezdxf (>=1.4.4,<2.0.0)",
+]
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^5.13.2"
+tox = "^4.61.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+urack = "eurorack_layout_tool.cli:main"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3 # Vertical Hanging Indent
