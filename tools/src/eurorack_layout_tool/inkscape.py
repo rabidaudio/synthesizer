@@ -62,7 +62,7 @@ class InkscapeFile:
                 self.soup = BeautifulSoup(f, "xml")
                 yield self
                 f.seek(0)
-                f.write(self.soup.prettify())
+                f.write(str(self.soup))
             finally:
                 self.soup = None
 
