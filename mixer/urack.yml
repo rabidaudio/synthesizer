@@ -1,6 +1,6 @@
 
 settings:
-  width_hp: 12
+  width_hp: 6
   # kicad:
   #   libs:
   #     synth:
@@ -59,6 +59,7 @@ components:
     hole:
       type: circle
       d: 5.2
+    center_offset: [3.25, 2.25]
   mute_led:
     type: footprint
     footprint: _project:MUTE_CUTOUT

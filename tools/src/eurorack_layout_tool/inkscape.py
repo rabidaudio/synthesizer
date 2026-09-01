@@ -7,7 +7,12 @@ from bs4 import BeautifulSoup
 from .errors import URackError
 from .shapes import Circle, Line, Oval, Rect, Vec2
 
-DEFAULT_COLOR = "#cccccc"
+DEFAULT_COLORS = {
+    "holes": "#333333",
+    "centers": "#5fcc1e",
+    "mounts": "#666666",
+    "bounds": "#ffffff",
+}
 LAYERS = ["bounds", "mounts", "holes", "centers"]
 
 
@@ -29,7 +34,7 @@ class Layer:
 
     @property
     def is_disabled(self):
-        if self.conf is None or not self.conf:
+        if self.conf is None or self.conf == False:
             return True
         if "enabled" in self.conf:
             return not self.conf["enabled"]
@@ -39,7 +44,7 @@ class Layer:
     def style(self):
         if isinstance(self.conf, dict) and "style" in self.conf:
             return self.conf["style"]
-        return f"fill:'{DEFAULT_COLOR}'"
+        return f"fill:{DEFAULT_COLORS[self.type]}"
 
 
 class InkscapeFile:
@@ -69,21 +74,21 @@ class InkscapeFile:
 
     def add_elements(self, elements):
         for type in LAYERS:
-            layer = self.layers[type]
-            if layer.is_disabled:
+            layer_conf = self.layers[type]
+            if layer_conf.is_disabled:
                 continue
-            layer = self.find_or_create_layer(layer.name)
+            layer = self.find_or_create_layer(layer_conf.name)
             layer.clear()  # delete all elements
             for el in elements:
                 if type == "holes":
-                    self.draw(layer, el.hole, layer.style)
+                    self.draw(layer, el.hole, layer_conf.style)
                 if type == "mounts" and el.mount is not None:
-                    self.draw(layer, el.mount, layer.style)
+                    self.draw(layer, el.mount, layer_conf.style)
                 if type == "bounds":
                     for b in el.bounds:
-                        self.draw(layer, b, layer.style)
+                        self.draw(layer, b, layer_conf.style)
                 if type == "centers":
-                    self.draw_cross(layer, el.center, 0.2, 2, layer.style)
+                    self.draw_cross(layer, el.center, 0.2, 2, layer_conf.style)
 
     def get_layer(self, name):
         return self.soup.svg.find(
@@ -122,14 +127,14 @@ class InkscapeFile:
         cc = cssutils.parseStyle(style, validate=False)
         if "fill" in cc:
             return cc["fill"]
-        return DEFAULT_COLOR
+        return "#000000"
 
     def join_styles(self, style1, style2):
         a = cssutils.parseStyle(style1, validate=False)
         b = cssutils.parseStyle(style2, validate=False)
         for property in b:
             a[property.name] = property.value
-        return a.getCssText()
+        return a.getCssText(separator="")
 
     def draw(self, layer, shape, style):
         # TODO: ids?

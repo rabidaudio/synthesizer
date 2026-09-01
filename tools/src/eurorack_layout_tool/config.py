@@ -189,11 +189,11 @@ class KicadFootprintSource(Source):
             kf = self.kicad_board.find_footprint(footprint["ref"])
             center_ki = KBoard.cord_to_mm(kf.position)
             component = self.config.find_component(footprint["type"])
-            rotation = kf.orientation.degrees
+            rotation = -1 * kf.orientation.degrees
             center_panel: Vec2 = (
                 center_ki
                 - self.panel_outline.start
-                - component.center_offset.rotated(degrees=rotation)
+                + component.center_offset.rotated(degrees=rotation)
             )
             extra = {k: v for k, v in footprint.items() if k != "name" and k != "type"}
             self._elements.append(
