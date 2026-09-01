@@ -1,4 +1,6 @@
 import pathlib
+import platform
+import subprocess
 from contextlib import contextmanager
 
 import cssutils
@@ -48,12 +50,24 @@ class Layer:
         return f"fill:{DEFAULT_COLORS[self.type]}"
 
 
-class InkscapeFile:
+def object_to_path(src_file, dest_file, inkscape_path=None):
+    #  --actions "select-all;object-to-path" channel_design.svg -o channel_rendered.svg
+    if inkscape_path is None:
+        if platform.system() == "Darwin":
+            inkscape_path = "/Applications/Inkscape.app/Contents/MacOS/inkscape"
+        else:
+            inkscape_path = "inkscape"  # hope it's in path
+    subprocess.run(
+        f"{inkscape_path} --actions 'select-all;object-to-path' {src_file} -o {dest_file}",
+        shell=True,
+        check=True,
+        stderr=subprocess.STDOUT,
+    )
 
-    def __init__(self, graphics, config):
-        self.path = pathlib.Path(graphics["file"])
-        if not self.path.is_absolute():
-            self.path = config.project_dir / self.path
+
+class InkscapeFile:
+    def __init__(self, path, graphics, config):
+        self.path = path
         self.layers = Layer.from_conf(graphics["layers"])
 
     @contextmanager
@@ -98,6 +112,9 @@ class InkscapeFile:
             "svg:g", attrs={"inkscape:groupmode": "layer", "inkscape:label": name}
         )
 
+    def all_layers(self):
+        return self.soup.svg.find_all("svg:g", attrs={"inkscape:groupmode": "layer"})
+
     def find_or_create_layer(self, name):
         l = self.get_layer(name)
         if l is not None:
@@ -114,15 +131,23 @@ class InkscapeFile:
         self.soup.svg.append(new_layer)
         return new_layer
 
+    def layer_is_hidden(self, layer):
+        if "style" not in layer.attrs:
+            return False
+        style = cssutils.parseStyle(layer.attrs["style"], validate=False)
+        if style["display"] == "none":
+            return True
+        if style["opacity"] == "0":
+            return True
+        return False
+
+    def remove_invisible_layers(self):
+        for layer in self.all_layers():
+            if self.layer_is_hidden(layer):
+                layer.decompose()
+
     def next_layer_id(self):
-        last_id = max(
-            [
-                g["id"]
-                for g in self.soup.svg.find_all(
-                    "svg:g", attrs={"inkscape:groupmode": "layer"}
-                )
-            ]
-        )
+        last_id = max([g["id"] for g in self.all_layers()])
         n = int(last_id.removeprefix("layer")) + 1
         return f"layer{n}"
 

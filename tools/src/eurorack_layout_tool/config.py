@@ -1,11 +1,12 @@
 import pathlib
+import tempfile
 from dataclasses import dataclass
 
 import yaml
 
 from .errors import URackError
 from .eurorack import EURORACK_HEIGHT, compute_screw_locations, hp_to_mm
-from .inkscape import InkscapeFile
+from .inkscape import InkscapeFile, object_to_path
 from .kicad import KBoard
 from .shapes import Rect, Shape, Vec2
 
@@ -20,6 +21,12 @@ class Config(dict):
     def from_file(path):
         with open(path, "r") as f:
             return Config(path, yaml.safe_load(f))
+
+    def relative_path(self, path):
+        path = pathlib.Path(path)
+        if not path.is_absolute():
+            path = self.project_dir / path
+        return path
 
     @property
     def width_hp(self):
@@ -106,6 +113,7 @@ class Element:
     @property
     def bounds(self) -> list[Shape]:
         return [b + self.center for b in self.component.bounds]
+
 
 class Source:
     def __init__(self, config):
@@ -230,7 +238,23 @@ class InkscapeSync(Sync):
         self.config = config
         self.graphics = config["graphics"]
 
+    @property
+    def path(self):
+        return self.config.relative_path(self.graphics["file"])
+
     def sync(self):
-        with InkscapeFile(self.graphics, self.config).open() as i:
+        with InkscapeFile(self.path, self.graphics, self.config).open() as i:
             i.set_canvas_size(hp_to_mm(self.config.width_hp), EURORACK_HEIGHT)
             i.add_elements(self.config.source.elements)
+
+    def render(self):
+        name = pathlib.Path(self.graphics["file"])
+        tmpdir = pathlib.Path(tempfile.mkdtemp())
+        tmp_path = tmpdir / f"{name}_urack_rendered.svg"
+        inkscape_path = (
+            self.graphics["inkscape_path"] if "inkscape_path" in self.graphics else None
+        )
+        object_to_path(self.path, tmp_path, inkscape_path)
+        with InkscapeFile(tmp_path, self.graphics, self.config).open() as i:
+            i.remove_invisible_layers()
+        return tmp_path

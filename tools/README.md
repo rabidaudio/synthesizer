@@ -10,7 +10,7 @@ urack compute
 # update the graphics svg with the computed coordinates
 urack sync
 # TODO: create a pcbnew file for the panel (also convert all svg graphics to paths and hide reference layers)
-# urack generate
+urack generate
 # TODO: generate separate gerber files for panel and all boards
 # urack gerbers
 ```

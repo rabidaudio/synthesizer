@@ -40,6 +40,8 @@ def main():
         help="Update the reference layers in the graphics document with the computed locations",
     )
 
+    subparsers.add_parser("generate", help="Create a KiCad pcb for the panel")
+
     args = parser.parse_args()
     print(args)
     if args.command == None or args.command == "help":
@@ -66,6 +68,9 @@ def main():
                 print(f"center: {e.center}")
     if args.command == "sync":
         config.sync.sync()
+    if args.command == "generate":
+        svg_path = config.sync.render()
+        print(svg_path)
 
 
 if __name__ == "__main__":
