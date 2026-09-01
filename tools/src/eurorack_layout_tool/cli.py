@@ -36,7 +36,8 @@ def main():
     parser_create.add_argument("--json", help="Output the coordinates in JSON format")
 
     subparsers.add_parser(
-        "sync", help="Update the reference layers in the graphics document with the computed locations"
+        "sync",
+        help="Update the reference layers in the graphics document with the computed locations",
     )
 
     args = parser.parse_args()
@@ -65,6 +66,7 @@ def main():
                 print(f"center: {e.center}")
     if args.command == "sync":
         config.sync.sync()
+
 
 if __name__ == "__main__":
     main()

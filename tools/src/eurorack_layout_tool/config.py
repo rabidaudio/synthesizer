@@ -1,13 +1,13 @@
+import pathlib
 from dataclasses import dataclass
 
-import pathlib
 import yaml
 
 from .errors import URackError
 from .eurorack import EURORACK_HEIGHT, compute_screw_locations, hp_to_mm
+from .inkscape import InkscapeFile
 from .kicad import KBoard
 from .shapes import Rect, Shape, Vec2
-from .inkscape import InkscapeFile
 
 
 class Config(dict):
@@ -97,11 +97,16 @@ class Element:
 
     @property
     def mount(self) -> Shape | None:
-        return self.component.mount + self.center if self.component.mount is not None else None
+        return (
+            self.component.mount + self.center
+            if self.component.mount is not None
+            else None
+        )
 
     @property
     def bounds(self) -> list[Shape]:
-        return [ b + self.center for b in self.component.bounds ]
+        return [b + self.center for b in self.component.bounds]
+
 
 class Source:
     def __init__(self, config):
@@ -186,7 +191,9 @@ class KicadFootprintSource(Source):
             component = self.config.find_component(footprint["type"])
             rotation = kf.orientation.degrees
             center_panel: Vec2 = (
-                center_ki - self.panel_outline.start - component.center_offset.rotated(degrees=rotation)
+                center_ki
+                - self.panel_outline.start
+                - component.center_offset.rotated(degrees=rotation)
             )
             extra = {k: v for k, v in footprint.items() if k != "name" and k != "type"}
             self._elements.append(
@@ -198,7 +205,8 @@ class KicadFootprintSource(Source):
                 )
             )
 
-class Sync():
+
+class Sync:
     def __init__(self):
         pass
 
@@ -219,8 +227,6 @@ class InkscapeSync(Sync):
         self.graphics = config["graphics"]
 
     def sync(self):
-        path = pathlib.Path(self.graphics["file"])
-        if not path.is_absolute():
-            path = self.config.project_dir / path
-        with InkscapeFile(path).open() as i:
-            i.add_elements(self.graphics["layers"], self.config.source.elements, self.graphics["colors"])
+        with InkscapeFile(self.graphics, self.config).open() as i:
+            i.set_canvas_size(hp_to_mm(self.config.width_hp), EURORACK_HEIGHT)
+            i.add_elements(self.config.source.elements)

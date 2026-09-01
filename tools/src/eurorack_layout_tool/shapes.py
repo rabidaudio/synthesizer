@@ -1,13 +1,13 @@
-from dataclasses import dataclass
 import math
+from dataclasses import dataclass
 
 from .errors import URackError
 
+# TODO: rotation
+# transform="rotate(-53.181839)"
+
 
 class Shape:
-    def __init__(self, config):
-        pass
-
     def from_config(config):
         center = Vec2(0, 0)
         if "center" in config:
@@ -38,14 +38,16 @@ class Vec2:
     def __mul__(self, scalar):
         return Vec2(self.x * scalar, self.y * scalar)
 
-    def rotated(self, degrees):
-        rads = math.radians(degrees)
-        cos_theta = math.cos(rads)
-        sin_theta = math.sin(rads)
+    def rotated(self, degrees=None, radians=0):
+        if degrees is not None:
+            radians += math.radians(degrees)
+        cos_theta = math.cos(radians)
+        sin_theta = math.sin(radians)
         return Vec2(
             x=self.x * cos_theta - self.y * sin_theta,
-            y=self.x * sin_theta + self.y * cos_theta
+            y=self.x * sin_theta + self.y * cos_theta,
         )
+
 
 @dataclass
 class Rect(Shape):
@@ -79,7 +81,8 @@ class Rect(Shape):
         return self.start + self.size
 
     def __add__(self, offset: Vec2):
-        return Rect(center=self.center + offset, size=self.size)
+        return type(self)(center=self.center + offset, size=self.size)
+
 
 @dataclass
 class Circle(Shape):
@@ -109,16 +112,15 @@ class Circle(Shape):
     def __add__(self, offset: Vec2):
         return Circle(center=self.center + offset, diameter=self.diameter)
 
+
 @dataclass
 class Oval(Rect):
     center: Vec2
     size: Vec2
 
-    # TODO: rotation?
-
     @property
     def radius(self) -> Vec2:
-        return self.size*0.5
+        return self.size * 0.5
 
 
 @dataclass

@@ -1,6 +1,6 @@
 
 settings:
-  width_hp: 6
+  width_hp: 12
   # kicad:
   #   libs:
   #     synth:
@@ -8,12 +8,10 @@ settings:
 graphics:
   type: inkscape_svg
   file: panel/channel_design.svg
-  colors:
-    holes: "#cccccc"
-    centers: '#1ce300'
   layers:
     # holes, centers, mounts, bounds
-    # holes: elements # rename layer
+    holes:
+      style: "fill:#cccccc"
     bounds: false
 components:
   jack:
@@ -78,6 +76,7 @@ components:
   screw:
     type: footprint
     footprint: synth:eurorack_screw_hole
+    # TODO: rounded-rect instead of oval
     hole:
       type: oval
       size: [5.8, 4.2]

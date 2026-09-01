@@ -1,17 +1,58 @@
-from bs4 import BeautifulSoup
+import pathlib
 from contextlib import contextmanager
 
-from .shapes import Rect, Circle, Oval, Line, Vec2
+import cssutils
+from bs4 import BeautifulSoup
+
 from .errors import URackError
+from .shapes import Circle, Line, Oval, Rect, Vec2
 
-class InkscapeFile():
+DEFAULT_COLOR = "#cccccc"
+LAYERS = ["bounds", "mounts", "holes", "centers"]
 
-    def __init__(self, path):
-        self.path = path
+
+class Layer:
+    def __init__(self, type, conf={}):
+        self.type = type
+        self.conf = conf
+
+    def from_conf(layers):
+        return {
+            type: Layer(type, layers[type] if type in layers else {}) for type in LAYERS
+        }
+
+    @property
+    def name(self):
+        if isinstance(self.conf, dict) and "name" in self.conf:
+            return self.conf["name"]
+        return "_" + self.type
+
+    @property
+    def is_disabled(self):
+        if self.conf is None or not self.conf:
+            return True
+        if "enabled" in self.conf:
+            return not self.conf["enabled"]
+        return False
+
+    @property
+    def style(self):
+        if isinstance(self.conf, dict) and "style" in self.conf:
+            return self.conf["style"]
+        return f"fill:'{DEFAULT_COLOR}'"
+
+
+class InkscapeFile:
+
+    def __init__(self, graphics, config):
+        self.path = pathlib.Path(graphics["file"])
+        if not self.path.is_absolute():
+            self.path = config.project_dir / self.path
+        self.layers = Layer.from_conf(graphics["layers"])
 
     @contextmanager
     def open(self):
-        with open(self.path, 'r+') as f:
+        with open(self.path, "r+") as f:
             try:
                 self.soup = BeautifulSoup(f, "xml")
                 yield self
@@ -20,74 +61,130 @@ class InkscapeFile():
             finally:
                 self.soup = None
 
-    def add_elements(self, layers, elements, colors):
-        for type in ["bounds", "mounts", "holes", "centers"]:
-            if type in layers and (layers[type] is None or layers[type] == False):
+    def set_canvas_size(self, width, height):
+        el = self.soup.find("svg:svg")
+        el.attrs["width"] = f"{width}mm"
+        el.attrs["height"] = f"{height}mm"
+        el.attrs["viewBox"] = f"0 0 {width} {height}"
+
+    def add_elements(self, elements):
+        for type in LAYERS:
+            layer = self.layers[type]
+            if layer.is_disabled:
                 continue
-            name = layers[type] if type in layers else type
-            layer = self.find_or_create_layer(name)
-            layer.clear() # delete all elements
+            layer = self.find_or_create_layer(layer.name)
+            layer.clear()  # delete all elements
             for el in elements:
-                color = colors[type] if type in colors else "#aaaaaa"
                 if type == "holes":
-                    self.draw(layer, el.hole, color)
+                    self.draw(layer, el.hole, layer.style)
                 if type == "mounts" and el.mount is not None:
-                    self.draw(layer, el.mount, color)
+                    self.draw(layer, el.mount, layer.style)
                 if type == "bounds":
                     for b in el.bounds:
-                        self.draw(layer, b, color)
+                        self.draw(layer, b, layer.style)
                 if type == "centers":
-                    self.draw_cross(layer, el.center, 0.2, 2, color)
+                    self.draw_cross(layer, el.center, 0.2, 2, layer.style)
 
     def get_layer(self, name):
-        return self.soup.svg.find('svg:g', attrs={'inkscape:groupmode': 'layer', 'inkscape:label': name})
+        return self.soup.svg.find(
+            "svg:g", attrs={"inkscape:groupmode": "layer", "inkscape:label": name}
+        )
 
     def find_or_create_layer(self, name):
         l = self.get_layer(name)
         if l is not None:
             return l
 
-        last_id = len([ g['id'] for g in self.soup.svg.find_all('svg:g', attrs={'inkscape:groupmode': 'layer'}) ])
-        
-        new_layer = self.soup.new_tag("svg:g", attrs={
-            "inkscape:label": name,
-            "inkscape:groupmode": "layer",
-            "id": f"layer{last_id+1}"
-        })
+        new_layer = self.soup.new_tag(
+            "svg:g",
+            attrs={
+                "inkscape:label": name,
+                "inkscape:groupmode": "layer",
+                "id": self.next_layer_id(),
+            },
+        )
         self.soup.svg.append(new_layer)
         return new_layer
 
-    def draw(self, layer, shape, color):
+    def next_layer_id(self):
+        last_id = max(
+            [
+                g["id"]
+                for g in self.soup.svg.find_all(
+                    "svg:g", attrs={"inkscape:groupmode": "layer"}
+                )
+            ]
+        )
+        n = int(last_id.removeprefix("layer")) + 1
+        return f"layer{n}"
+
+    def get_color(self, style):
+        cc = cssutils.parseStyle(style, validate=False)
+        if "fill" in cc:
+            return cc["fill"]
+        return DEFAULT_COLOR
+
+    def join_styles(self, style1, style2):
+        a = cssutils.parseStyle(style1, validate=False)
+        b = cssutils.parseStyle(style2, validate=False)
+        for property in b:
+            a[property.name] = property.value
+        return a.getCssText()
+
+    def draw(self, layer, shape, style):
         # TODO: ids?
+        color = self.get_color(style)
         if isinstance(shape, Line):
-            el = self.soup.new_tag("path",
-                                   style=f"fill:none;stroke-width:{shape.stroke};stroke:{color};stroke-opacity:1",
-                                   d=f"m {shape.start.x},{shape.start.y} {shape.len.x},{shape.len.y}")
+            el = self.soup.new_tag(
+                "path",
+                style=self.join_styles(
+                    style,
+                    f"fill:none;stroke-width:{shape.stroke};stroke:{color};stroke-opacity:1",
+                ),
+                d=f"m {shape.start.x},{shape.start.y} {shape.len.x},{shape.len.y}",
+            )
         elif isinstance(shape, Circle):
-            el = self.soup.new_tag("circle",
-                                    style=f"fill:{color};stroke-width:0",
-                                        cx=shape.center.x,
-                                        cy=shape.center.y,
-                                        r=shape.radius)
+            el = self.soup.new_tag(
+                "circle",
+                style=self.join_styles(
+                    style,
+                    f"fill:{color};stroke-width:0",
+                ),
+                cx=shape.center.x,
+                cy=shape.center.y,
+                r=shape.radius,
+            )
         elif isinstance(shape, Oval):
-            el = self.soup.new_tag("ellipse",
-                                    style=f"fill:{color};stroke-width:0",
-                                        cx=shape.center.x,
-                                        cy=shape.center.y,
-                                        rx=shape.radius.x,
-                                        ry=shape.radius.y)
+            el = self.soup.new_tag(
+                "ellipse",
+                style=self.join_styles(
+                    style,
+                    f"fill:{color};stroke-width:0",
+                ),
+                cx=shape.center.x,
+                cy=shape.center.y,
+                rx=shape.radius.x,
+                ry=shape.radius.y,
+            )
         elif isinstance(shape, Rect):
-            el = self.soup.new_tag("rect",
-                                   style=f"fill:{color};stroke-width:0",
-                                   width=shape.width, height=shape.height,
-                                   x=shape.start.x, y=shape.start.y)
+            el = self.soup.new_tag(
+                "rect",
+                style=self.join_styles(
+                    style,
+                    f"fill:{color};stroke-width:0",
+                ),
+                width=shape.width,
+                height=shape.height,
+                x=shape.start.x,
+                y=shape.start.y,
+            )
         else:
             raise URackError(f"Unknown shape: {shape}")
         layer.append(el)
 
     def draw_cross(self, layer, center, width, length, color):
-        for v in [ Vec2(-1, 0), Vec2(0, -1), Vec2(1, 0), Vec2(0, 1) ]:
-            self.draw(layer, Line(center, len=v*length, stroke=width), color)
+        for v in [Vec2(-1, 0), Vec2(0, -1), Vec2(1, 0), Vec2(0, 1)]:
+            self.draw(layer, Line(center, len=v * length, stroke=width), color)
 
     def close(self):
         self.f.close()
