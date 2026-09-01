@@ -1,10 +1,6 @@
 
 settings:
   width_hp: 6
-  # kicad:
-  #   libs:
-  #     synth:
-  #     _project:
 graphics:
   type: inkscape_svg
   file: panel/channel_design.svg
@@ -13,6 +9,12 @@ graphics:
     holes:
       style: "fill:#cccccc"
     bounds: false
+output:
+  project: mixer.kicad_pcb
+  start: [25.4, 41.541]
+  copper_zone:
+    fill: true
+    layers: ['F.Cu', 'B.Cu']
 components:
   jack:
     type: footprint
@@ -99,9 +101,11 @@ elements:
   - type: jack
     ref: J7
     name: IN 1
+    panel_ref: J15
   - type: jack
     ref: J9
     name: IN 2
+    panel_ref: J16
   - type: thumbwheel
     ref: RV3
     name: GAIN 1
@@ -111,9 +115,11 @@ elements:
   - type: pot
     ref: RV5
     name: AUX SEND 1
+    panel_ref: J17
   - type: pot
     ref: RV9
     name: AUX SEND 2
+    panel_ref: J19
   - type: toggle
     ref: SW3
     name: PRE_POST 1
@@ -123,9 +129,11 @@ elements:
   - type: pot
     ref: RV6
     name: PAN 1
+    panel_ref: J18
   - type: pot
     ref: RV10
     name: PAN 2
+    panel_ref: J20
   - type: fader
     ref: RV4
     name: FADER 1
@@ -137,24 +145,32 @@ elements:
   - type: button
     ref: SW1
     name: MUTE BTN 1
+    panel_ref: FID5
   - type: button
     ref: SW2
     name: SOLO BTN 1
+    panel_ref: FID6
   - type: button
     ref: SW4
     name: MUTE BTN 2
+    panel_ref: FID7
   - type: button
     ref: SW5
     name: SOLO BTN 2
+    panel_ref: FID8
   - type: mute_led
     ref: D1
     name: MUTE LED 1
+    panel_ref: FID10
   - type: solo_led
     ref: D2
     name: SOLO LED 1
+    panel_ref: FID9
   - type: mute_led
     ref: D3
     name: MUTE LED 2
+    panel_ref: FID12
   - type: solo_led
     ref: D4
     name: SOLO LED 2
+    panel_ref: FID11

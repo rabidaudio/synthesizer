@@ -83,6 +83,16 @@ class Rect(Shape):
     def __add__(self, offset: Vec2):
         return type(self)(center=self.center + offset, size=self.size)
 
+    def contains(self, other: Rect | Vec2) -> bool:
+        if isinstance(other, Rect):
+            return self.contains(other.start) or self.contains(other.end)
+        return (
+            other.x >= self.start.x
+            and other.x <= self.end.x
+            and other.y >= self.start.y
+            and other.y <= self.end.y
+        )
+
 
 @dataclass
 class Circle(Shape):

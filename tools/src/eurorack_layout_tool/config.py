@@ -7,7 +7,7 @@ import yaml
 from .errors import URackError
 from .eurorack import EURORACK_HEIGHT, compute_screw_locations, hp_to_mm
 from .inkscape import InkscapeFile, object_to_path
-from .kicad import KBoard
+from .kicad import KBoard, cord_to_mm
 from .shapes import Rect, Shape, Vec2
 
 
@@ -31,6 +31,12 @@ class Config(dict):
     @property
     def width_hp(self):
         return self["settings"]["width_hp"]
+
+    @property
+    def output_panel_bounds(self) -> Rect:
+        start = Vec2(*self["output"]["start"])
+        size = Vec2(hp_to_mm(self.width_hp), EURORACK_HEIGHT)
+        return Rect.from_start_end(start, start + size)
 
     @property
     def components(self) -> dict[str, Component]:
@@ -92,6 +98,7 @@ class Element:
     center: Vec2
     name: str
     component: Component
+    panel_ref: str
     extra: dict
 
     @property
@@ -153,6 +160,7 @@ class Source:
                     center=center,
                     name=f"top screw {i+1}",
                     component=component,
+                    panel_ref=None,
                     extra={"computed": True},
                 )
             )
@@ -162,6 +170,7 @@ class Source:
                     center=center,
                     name=f"bottom screw {i+1}",
                     component=component,
+                    panel_ref=None,
                     extra={"computed": True},
                 )
             )
@@ -194,7 +203,7 @@ class KicadFootprintSource(Source):
     def resolve(self) -> list[Element]:
         for footprint in self.data["footprints"]:
             kf = self.kicad_board.find_footprint(footprint["ref"])
-            center_ki = KBoard.cord_to_mm(kf.position)
+            center_ki = cord_to_mm(kf.position)
             component = self.config.find_component(footprint["type"])
             rotation = -1 * kf.orientation.degrees
             translate = Vec2(0, 0)
@@ -208,11 +217,13 @@ class KicadFootprintSource(Source):
             )
 
             extra = {k: v for k, v in footprint.items() if k != "name" and k != "type"}
+            panel_ref = footprint["panel_ref"] if "panel_ref" in footprint else None
             self._elements.append(
                 Element(
                     center=center_panel,
                     name=footprint["name"],
                     component=component,
+                    panel_ref=panel_ref,
                     extra=extra,
                 )
             )

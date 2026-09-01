@@ -6,6 +6,7 @@ from dataclasses import asdict
 
 from .config import Config
 from .errors import URackError
+from .shapes import Rect
 
 
 def main():
@@ -71,6 +72,12 @@ def main():
     if args.command == "generate":
         svg_path = config.sync.render()
         print(svg_path)
+        config.source.kicad_board.delete_all_within(config.output_panel_bounds)
+        print("panel deleted")
+        config.source.kicad_board.insert_elements(
+            config.output_panel_bounds, config.source.elements
+        )
+        print("objects added")
 
 
 if __name__ == "__main__":

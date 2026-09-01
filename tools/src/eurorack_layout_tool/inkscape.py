@@ -145,6 +145,9 @@ class InkscapeFile:
         for layer in self.all_layers():
             if self.layer_is_hidden(layer):
                 layer.decompose()
+        import pdb
+
+        pdb.set_trace()
 
     def next_layer_id(self):
         last_id = max([g["id"] for g in self.all_layers()])
