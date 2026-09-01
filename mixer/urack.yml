@@ -1,0 +1,147 @@
+
+settings:
+  width_hp: 6
+  # kicad:
+  #   libs:
+  #     synth:
+  #     _project:
+components:
+  jack:
+    type: footprint
+    footprint: synth:thonkiconn_hole
+    hole:
+      type: circle
+      d: 6
+    mount:
+      type: circle
+      d: 8
+  pot:
+    type: footprint
+    footprint: synth:thonkiconn_hole
+    hole:
+      type: circle
+      d: 7
+    mount:
+      type: circle
+      d: 12
+    bounds:
+      # medium nut
+      - type: circle
+        d: 15
+  thumbwheel:
+    type: edgecut
+    hole:
+      type: rect
+      size: [9, 4.5] # TODO: confirm
+    center_offset: [0, -1.875] # the center of the footprint is ~2mm _above_ the hole center
+  toggle:
+    type: edgecut
+    hole:
+      type: rect
+      size: [5.5, 3] # TODO: confirm
+  fader:
+    type: edgecut
+    hole:
+      type: rect
+      size: [4, 36] # TODO: confirm
+  button:
+    type: footprint
+    footprint: synth:toggle_sw_hole
+    hole:
+      type: circle
+      d: 5.2
+  mute_led:
+    type: footprint
+    footprint: _project:MUTE_CUTOUT
+    center_offset: [1.27, 0]
+    hole:
+      type: rect
+      size: [5.08, 5.08]
+  solo_led:
+    type: footprint
+    footprint: _project:SOLO_CUTOUT
+    center_offset: [1.27, 0]
+    hole:
+      type: rect
+      size: [5.08, 5.08]
+  screw:
+    type: footprint
+    footprint: synth:eurorack_screw_hole
+    hole:
+      type: oval
+      size: [5.8, 4.2]
+    mount:
+      type: oval
+      size: [4.8, 3.2]
+elements:
+  source: kicad
+  project: mixer.kicad_pcb
+  board:
+    type: rect
+    start: [76.2, 50.8]
+    end: [106.68, 160.8]
+  extra:
+    compute_screws:
+      compute: true
+      type: screw
+  footprints:
+  - type: jack
+    ref: J7
+    name: IN 1
+  - type: jack
+    ref: J9
+    name: IN 2
+  - type: thumbwheel
+    ref: RV3
+    name: GAIN 1
+  - type: thumbwheel
+    ref: RV7
+    name: GAIN 2
+  - type: pot
+    ref: RV5
+    name: PAN 1
+  - type: pot
+    ref: RV9
+    name: PAN 2
+  - type: toggle
+    ref: SW3
+    name: PRE_POST 1
+  - type: toggle
+    ref: SW6
+    name: PRE_POST 2
+  - type: pot
+    ref: RV6
+    name: AUX SEND 1
+  - type: pot
+    ref: RV10
+    name: AUX SEND 2
+  - type: fader
+    ref: RV4
+    name: FADER 1
+  - type: fader
+    ref: RV8
+    name: FADER 2
+  - type: button
+    ref: SW1
+    name: MUTE BTN 1
+  - type: button
+    ref: SW2
+    name: SOLO BTN 1
+  - type: button
+    ref: SW4
+    name: MUTE BTN 2
+  - type: button
+    ref: SW5
+    name: SOLO BTN 2
+  - type: mute_led
+    ref: D1
+    name: MUTE LED 1
+  - type: solo_led
+    ref: D2
+    name: SOLO LED 1
+  - type: mute_led
+    ref: D3
+    name: MUTE LED 2
+  - type: solo_led
+    ref: D4
+    name: SOLO LED 2
