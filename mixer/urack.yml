@@ -5,6 +5,16 @@ settings:
   #   libs:
   #     synth:
   #     _project:
+graphics:
+  type: inkscape_svg
+  file: panel/channel_design.svg
+  colors:
+    holes: "#cccccc"
+    centers: '#1ce300'
+  layers:
+    # holes, centers, mounts, bounds
+    # holes: elements # rename layer
+    bounds: false
 components:
   jack:
     type: footprint
@@ -33,7 +43,7 @@ components:
     hole:
       type: rect
       size: [9, 4.5] # TODO: confirm
-    center_offset: [0, -1.875] # the center of the footprint is ~2mm _above_ the hole center
+    center_offset: [0, 1.875] # the center of the footprint is ~2mm below the hole center
   toggle:
     type: edgecut
     hole:
@@ -44,6 +54,7 @@ components:
     hole:
       type: rect
       size: [4, 36] # TODO: confirm
+    center_offset: [21.8444, 1.778]
   button:
     type: footprint
     footprint: synth:toggle_sw_hole

@@ -27,12 +27,17 @@ def main():
         title="subcommands", dest="command", required=True, help="Available subcommands"
     )
 
-    parser_help = subparsers.add_parser("help", help="Show help docs")
+    subparsers.add_parser("help", help="Show help docs")
+
     parser_create = subparsers.add_parser(
         "compute",
         help="Determine the coordinates of the elements, relative to panel origin",
     )
     parser_create.add_argument("--json", help="Output the coordinates in JSON format")
+
+    subparsers.add_parser(
+        "sync", help="Update the reference layers in the graphics document with the computed locations"
+    )
 
     args = parser.parse_args()
     print(args)
@@ -58,7 +63,8 @@ def main():
             for e in elements:
                 print(f"{e.name} [{e.type}]")
                 print(f"center: {e.center}")
-
+    if args.command == "sync":
+        config.sync.sync()
 
 if __name__ == "__main__":
     main()

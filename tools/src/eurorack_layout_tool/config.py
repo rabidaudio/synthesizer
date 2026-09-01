@@ -1,22 +1,25 @@
-import math
 from dataclasses import dataclass
 
+import pathlib
 import yaml
 
 from .errors import URackError
-from .eurorack import EURORACK_HEIGHT, LIP_CENTER, compute_screw_locations, hp_to_mm
+from .eurorack import EURORACK_HEIGHT, compute_screw_locations, hp_to_mm
 from .kicad import KBoard
 from .shapes import Rect, Shape, Vec2
+from .inkscape import InkscapeFile
 
 
 class Config(dict):
-    def __init__(self, data={}):
+    def __init__(self, path, data):
         super().__init__(data)
+        self.project_dir = path.parent
         self.source = Source.from_config(self)
+        self.sync = Sync.from_config(self)
 
     def from_file(path):
         with open(path, "r") as f:
-            return Config(yaml.safe_load(f))
+            return Config(path, yaml.safe_load(f))
 
     @property
     def width_hp(self):
@@ -88,6 +91,17 @@ class Element:
     def type(self):
         return self.component.name
 
+    @property
+    def hole(self) -> Shape:
+        return self.component.hole + self.center
+
+    @property
+    def mount(self) -> Shape | None:
+        return self.component.mount + self.center if self.component.mount is not None else None
+
+    @property
+    def bounds(self) -> list[Shape]:
+        return [ b + self.center for b in self.component.bounds ]
 
 class Source:
     def __init__(self, config):
@@ -170,8 +184,9 @@ class KicadFootprintSource(Source):
             kf = self.kicad_board.find_footprint(footprint["ref"])
             center_ki = KBoard.cord_to_mm(kf.position)
             component = self.config.find_component(footprint["type"])
+            rotation = kf.orientation.degrees
             center_panel: Vec2 = (
-                center_ki - self.panel_outline.start - component.center_offset
+                center_ki - self.panel_outline.start - component.center_offset.rotated(degrees=rotation)
             )
             extra = {k: v for k, v in footprint.items() if k != "name" and k != "type"}
             self._elements.append(
@@ -182,3 +197,30 @@ class KicadFootprintSource(Source):
                     extra=extra,
                 )
             )
+
+class Sync():
+    def __init__(self):
+        pass
+
+    def from_config(config):
+        if config["graphics"]["type"] == "inkscape_svg":
+            return InkscapeSync(config)
+        raise URackError(f"Unknown type: {config["graphics"]["type"]}")
+
+    def sync(self):
+        raise NotImplementedError()
+
+
+class InkscapeSync(Sync):
+
+    def __init__(self, config):
+        super().__init__()
+        self.config = config
+        self.graphics = config["graphics"]
+
+    def sync(self):
+        path = pathlib.Path(self.graphics["file"])
+        if not path.is_absolute():
+            path = self.config.project_dir / path
+        with InkscapeFile(path).open() as i:
+            i.add_elements(self.graphics["layers"], self.config.source.elements, self.graphics["colors"])
