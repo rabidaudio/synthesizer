@@ -1,9 +1,12 @@
+import math
 from dataclasses import dataclass
+
 import yaml
 
+from .errors import URackError
+from .eurorack import EURORACK_HEIGHT, LIP_CENTER, compute_screw_locations, hp_to_mm
 from .kicad import KBoard
 from .shapes import Rect, Shape, Vec2
-from .utils import EURORACK_HEIGHT, URackError, hp_to_mm
 
 
 class Config(dict):
@@ -31,6 +34,7 @@ class Config(dict):
             return self.components[name]
         except KeyError:
             raise URackError(f"Unknown component: {name}")
+
 
 # a component is a type of element that appears on a panel.
 # it has a cut type (edgecut, footprint, etc), a hole size,
@@ -86,8 +90,9 @@ class Element:
 
 
 class Source:
-    def __init__(self):
+    def __init__(self, config):
         self._elements = None
+        self.config = config
 
     def from_config(config) -> Source:
         if config["elements"]["source"] == "kicad":
@@ -99,10 +104,41 @@ class Source:
         if self._elements is None:
             self._elements = []
             self.resolve()
+            self.compute_screw_locations()
         return self._elements
 
     def resolve(self) -> list[Element]:
         raise NotImplementedError()
+
+    def compute_screw_locations(self):
+        try:
+            if not self.config["elements"]["extra"]["compute_screws"]["compute"]:
+                return
+        except KeyError:
+            return
+        conf = self.config["elements"]["extra"]["compute_screws"]
+        component = self.config.find_component(conf["type"])
+        width_hp = self.config.width_hp
+        count = conf["count"] if "count" in conf else None
+        (top, bottom) = compute_screw_locations(width_hp, count)
+        for i, center in enumerate(top):
+            self._elements.append(
+                Element(
+                    center=center,
+                    name=f"top screw {i+1}",
+                    component=component,
+                    extra={"computed": True},
+                )
+            )
+        for i, center in enumerate(bottom):
+            self._elements.append(
+                Element(
+                    center=center,
+                    name=f"bottom screw {i+1}",
+                    component=component,
+                    extra={"computed": True},
+                )
+            )
 
 
 class KicadFootprintSource(Source):
@@ -113,7 +149,7 @@ class KicadFootprintSource(Source):
     # element locations are reported in panel coordinates
 
     def __init__(self, config):
-        super().__init__()
+        super().__init__(config)
         self.data = config["elements"]
         self.config = config
         self.kicad_board = KBoard()
@@ -134,9 +170,9 @@ class KicadFootprintSource(Source):
             kf = self.kicad_board.find_footprint(footprint["ref"])
             center_ki = KBoard.cord_to_mm(kf.position)
             component = self.config.find_component(footprint["type"])
-            if footprint["type"] == "solo_led":
-                import pdb; pdb.set_trace()
-            center_panel: Vec2 = center_ki - self.panel_outline.start - component.center_offset
+            center_panel: Vec2 = (
+                center_ki - self.panel_outline.start - component.center_offset
+            )
             extra = {k: v for k, v in footprint.items() if k != "name" and k != "type"}
             self._elements.append(
                 Element(
@@ -146,4 +182,3 @@ class KicadFootprintSource(Source):
                     extra=extra,
                 )
             )
-        # TODO: if compute_screws, append

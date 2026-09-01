@@ -1,6 +1,6 @@
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 
-from eurorack_layout_tool.utils import URackError
+from .errors import URackError
 
 
 class Shape:
@@ -32,6 +32,7 @@ class Vec2:
 
     def __mul__(self, scalar):
         return Vec2(self.x * scalar, self.y * scalar)
+
 
 # class Circle(Shape):
 #     def __init__(self):

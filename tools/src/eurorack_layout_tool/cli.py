@@ -1,12 +1,11 @@
-from dataclasses import asdict
-
 import argparse
 import json
 import pathlib
 import sys
+from dataclasses import asdict
 
 from .config import Config
-from .utils import URackError
+from .errors import URackError
 
 
 def main():
@@ -45,8 +44,8 @@ def main():
     config_path: pathlib.Path = args.config
     if not config_path.exists():
         raise URackError(
-            f"Unable to find config at path {config_path}. Make sure you are in the working "\
-                "directory or specify with --config"
+            f"Unable to find config at path {config_path}. Make sure you are in the working "
+            "directory or specify with --config"
         )
 
     config = Config.from_file(config_path)

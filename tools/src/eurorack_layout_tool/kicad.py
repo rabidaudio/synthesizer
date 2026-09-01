@@ -1,7 +1,7 @@
 import kipy
 
+from .errors import URackError
 from .shapes import Vec2
-from .utils import URackError
 
 
 class KBoard:
