@@ -12,8 +12,9 @@ DEFAULT_COLORS = {
     "centers": "#5fcc1e",
     "mounts": "#666666",
     "bounds": "#ffffff",
+    "names": "#9E33D4",
 }
-LAYERS = ["bounds", "mounts", "holes", "centers"]
+LAYERS = ["bounds", "mounts", "holes", "centers", "names"]
 
 
 class Layer:
@@ -68,9 +69,9 @@ class InkscapeFile:
 
     def set_canvas_size(self, width, height):
         el = self.soup.find("svg:svg")
-        el.attrs["width"] = f"{width}mm"
-        el.attrs["height"] = f"{height}mm"
-        el.attrs["viewBox"] = f"0 0 {width} {height}"
+        el.attrs["width"] = f"{width:.4f}mm"
+        el.attrs["height"] = f"{height:.4f}mm"
+        el.attrs["viewBox"] = f"0 0 {width:.4f} {height:.4f}"
 
     def add_elements(self, elements):
         for type in LAYERS:
@@ -89,6 +90,8 @@ class InkscapeFile:
                         self.draw(layer, b, layer_conf.style)
                 if type == "centers":
                     self.draw_cross(layer, el.center, 0.2, 2, layer_conf.style)
+                if type == "names":
+                    self.draw_text(layer, el.center, el.name, layer_conf.style)
 
     def get_layer(self, name):
         return self.soup.svg.find(
@@ -146,7 +149,7 @@ class InkscapeFile:
                     style,
                     f"fill:none;stroke-width:{shape.stroke};stroke:{color};stroke-opacity:1",
                 ),
-                d=f"m {shape.start.x},{shape.start.y} {shape.len.x},{shape.len.y}",
+                d=f"m {shape.start.x:.4f},{shape.start.y:.4f} {shape.len.x:.4f},{shape.len.y:.4f}",
             )
         elif isinstance(shape, Circle):
             el = self.soup.new_tag(
@@ -155,9 +158,9 @@ class InkscapeFile:
                     style,
                     f"fill:{color};stroke-width:0",
                 ),
-                cx=shape.center.x,
-                cy=shape.center.y,
-                r=shape.radius,
+                cx=f"{shape.center.x:.4f}",
+                cy=f"{shape.center.y:.4f}",
+                r=f"{shape.radius:.4f}",
             )
         elif isinstance(shape, Oval):
             el = self.soup.new_tag(
@@ -166,10 +169,10 @@ class InkscapeFile:
                     style,
                     f"fill:{color};stroke-width:0",
                 ),
-                cx=shape.center.x,
-                cy=shape.center.y,
-                rx=shape.radius.x,
-                ry=shape.radius.y,
+                cx=f"{shape.center.x:.4f}",
+                cy=f"{shape.center.y:.4f}",
+                rx=f"{shape.radius.x:.4f}",
+                ry=f"{shape.radius.y:.4f}",
             )
         elif isinstance(shape, Rect):
             el = self.soup.new_tag(
@@ -178,10 +181,10 @@ class InkscapeFile:
                     style,
                     f"fill:{color};stroke-width:0",
                 ),
-                width=shape.width,
-                height=shape.height,
-                x=shape.start.x,
-                y=shape.start.y,
+                width=f"{shape.width:.4f}",
+                height=f"{shape.height:.4f}",
+                x=f"{shape.start.x:.4f}",
+                y=f"{shape.start.y:.4f}",
             )
         else:
             raise URackError(f"Unknown shape: {shape}")
@@ -191,5 +194,25 @@ class InkscapeFile:
         for v in [Vec2(-1, 0), Vec2(0, -1), Vec2(1, 0), Vec2(0, 1)]:
             self.draw(layer, Line(center, len=v * length, stroke=width), color)
 
-    def close(self):
-        self.f.close()
+    def draw_text(self, layer, start, text, style):
+        t = self.soup.new_tag(
+            "text",
+            style=self.join_styles(
+                "font-size:1.5px;line-height:1.25;fill:#ffffff;fill-opacity:1",
+                style,
+            ),
+            x=f"{start.x:.4f}",
+            y=f"{start.y:.4f}",
+        )
+        ts = self.soup.new_tag(
+            "tspan",
+            style=self.join_styles(
+                "font-size:1.5px;line-height:1.25;fill:#ffffff;fill-opacity:1",
+                style,
+            ),
+            x=f"{start.x:.4f}",
+            y=f"{start.y:.4f}",
+        )
+        ts.string = text
+        t.append(ts)
+        layer.append(t)

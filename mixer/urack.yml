@@ -110,10 +110,10 @@ elements:
     name: GAIN 2
   - type: pot
     ref: RV5
-    name: PAN 1
+    name: AUX SEND 1
   - type: pot
     ref: RV9
-    name: PAN 2
+    name: AUX SEND 2
   - type: toggle
     ref: SW3
     name: PRE_POST 1
@@ -122,16 +122,18 @@ elements:
     name: PRE_POST 2
   - type: pot
     ref: RV6
-    name: AUX SEND 1
+    name: PAN 1
   - type: pot
     ref: RV10
-    name: AUX SEND 2
+    name: PAN 2
   - type: fader
     ref: RV4
     name: FADER 1
+    translate: [-0.762, 0]
   - type: fader
     ref: RV8
     name: FADER 2
+    translate: [-0.508, 0]
   - type: button
     ref: SW1
     name: MUTE BTN 1

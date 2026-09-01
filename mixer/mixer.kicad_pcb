@@ -8646,7 +8646,7 @@
 			)
 		)
 		(property "Value" "A100K_PAN"
-			(at -1.524 -8.636 90)
+			(at -1.524 -23.876 90)
 			(layer "F.Fab")
 			(uuid "6c6d0ddd-48fb-4bb4-a1ed-87fc7478c43f")
 			(effects
@@ -13964,7 +13964,7 @@
 			)
 		)
 		(property "Value" "A100K_PAN"
-			(at -0.508 8.636 90)
+			(at -0.762 25.146 90)
 			(layer "F.Fab")
 			(uuid "82bc8612-86c0-4c7a-b582-a23596f970de")
 			(effects
@@ -25972,6 +25972,18 @@
 		(at 236.347 75.946 0)
 		(layer "User.1")
 		(uuid "8a33cda8-bf53-4331-8a0e-63c7d1b93702")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "TODO: ensure pan knobs are center detent"
+		(at 238.252 79.502 0)
+		(layer "User.1")
+		(uuid "8d20cd5e-07e4-437d-8e8d-53d2b81deeae")
 		(effects
 			(font
 				(size 1 1)

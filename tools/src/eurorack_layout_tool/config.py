@@ -107,7 +107,6 @@ class Element:
     def bounds(self) -> list[Shape]:
         return [b + self.center for b in self.component.bounds]
 
-
 class Source:
     def __init__(self, config):
         self._elements = None
@@ -190,11 +189,16 @@ class KicadFootprintSource(Source):
             center_ki = KBoard.cord_to_mm(kf.position)
             component = self.config.find_component(footprint["type"])
             rotation = -1 * kf.orientation.degrees
+            translate = Vec2(0, 0)
+            if "translate" in footprint:
+                translate = Vec2(*footprint["translate"])
             center_panel: Vec2 = (
                 center_ki
                 - self.panel_outline.start
                 + component.center_offset.rotated(degrees=rotation)
+                + translate
             )
+
             extra = {k: v for k, v in footprint.items() if k != "name" and k != "type"}
             self._elements.append(
                 Element(
